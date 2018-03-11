@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Models\gifts;
 use App\Models\orders;
 
@@ -12,6 +12,7 @@ class GiftsController extends Controller
     private $gift_price = [];
 
     public function give_gift(Request $request) {
+        DB::beginTransaction();
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
 
@@ -32,6 +33,11 @@ class GiftsController extends Controller
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
 
         $insert_id = orders::insert_gift_order($arr);
+
+        //微信支付
+        //支付成功后
+        //call_user_func(callback,$state);DB::commit();
+        //如果没有成功
     }
 
     private function get_gifts_total($gifts = []) {
