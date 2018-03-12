@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::any('/wechat','WechatController@pay');
+
 Route::group(['prefix' => 'admin'],function() {
 
     Route::group(['prefix' => 'message'],function() {

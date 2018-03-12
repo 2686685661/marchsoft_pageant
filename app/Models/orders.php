@@ -21,4 +21,10 @@ class orders extends Model
     public static function update_order_state($order_id = 0) {
         DB::table('orders')->where('id',$order_id)->update(['state' => 1]);
     }
+
+    public static function find_order($order_id = 0) {
+
+        $order_find = DB::table('orders')->where('id',$order_id)->first();
+        return $order_find;
+    }
 }

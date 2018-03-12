@@ -12,7 +12,6 @@ class GiftsController extends Controller
     private $gift_price = [];
 
     public function give_gift(Request $request) {
-        DB::beginTransaction();
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
 

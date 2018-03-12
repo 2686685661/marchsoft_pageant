@@ -177,6 +177,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //微信支付　laravel-wechat
+        Overtrue\LaravelWeChat\ServiceProvider::class,
+
     ],
 
     /*
@@ -225,6 +228,9 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+         //微信支付　laravel-wechat
+        'Wechat' => Overtrue\LaravelWeChat\Facade::class,
 
     ],
 
