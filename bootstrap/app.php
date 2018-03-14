@@ -41,6 +41,10 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+//Omnipay for laravel
+// $app->register(Ignited\LaravelOmnipay\LumenOmnipayServiceProvider::class);
+// $app->configure('laravel-omnipay');
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//支付宝支付处理
+Route::get('alipay/pay','OmniPayController@pay');
+//支付后跳转页面
+Route::post('alipay/return','AlipayController@result');
+
 Route::any('/wechat','WechatController@pay');
 
 Route::group(['prefix' => 'admin'],function() {
