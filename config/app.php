@@ -180,6 +180,9 @@ return [
         //微信支付　laravel-wechat
         Overtrue\LaravelWeChat\ServiceProvider::class,
 
+        //支付宝OmniPay For Laravel
+        Ignited\LaravelOmnipay\LaravelOmnipayServiceProvider::class
+
     ],
 
     /*
@@ -231,6 +234,9 @@ return [
 
          //微信支付　laravel-wechat
         'Wechat' => Overtrue\LaravelWeChat\Facade::class,
+
+        //支付宝支付 OmniPay for laravel
+        'Omnipay' => Ignited\LaravelOmnipay\Facades\OmnipayFacade::class
 
     ],
 

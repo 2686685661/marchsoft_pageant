@@ -54,4 +54,14 @@ class GiftsController extends Controller
         }
         return $total;
     }
+
+    public function get_gifts_info() {
+        $gifts_info_msg = gifts::get_gifts_msg();
+
+        if($gifts_info_msg) {
+            return responseToJson(0,'',$gifts_info_msg);
+        }else {
+            return responseToJson(1,'无法获得礼物信息');
+        }
+    }
 }
