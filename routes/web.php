@@ -30,3 +30,14 @@ Route::group(['prefix' => 'admin'],function() {
     });
 });
 
+
+
+Route::group(['prefix' => 'front'],function() {
+
+	Route::get("celebration",function() {
+		return view('test');
+	});
+
+});
+
+

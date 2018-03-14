@@ -4,7 +4,7 @@
  * 页面json输出
  */
 function responseToJson($code = 0, $msg = '', $paras = null) {
-    $rec["code"] = $code;
+    $res["code"] = $code;
     $res["msg"] = $msg;
     $res["result"] = $paras;
 

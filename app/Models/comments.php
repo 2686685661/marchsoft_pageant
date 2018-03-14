@@ -12,6 +12,7 @@ class comments extends Model
             'message' => $msg,
             'create_time' => time()
         ]);
+
         return $id;
     }
 

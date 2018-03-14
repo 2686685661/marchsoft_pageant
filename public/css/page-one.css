@@ -1,0 +1,351 @@
+.animation-one .yan-one img{
+	margin: -100px 0 0 10%;
+}
+.animation-one .yun-one img{
+	margin: 2% 0 0 40%;
+	animation: yun 0.8s 1 linear;
+}
+.yun-two{
+	margin: 0 0 0 60%;
+	display: flex;
+}
+.animation-one .yun-two .yun img{
+	animation: yun 0.8s 1 linear;
+}
+.animation-one .yun-three img{
+	margin: 0 0 0 5%;
+	animation: yun 0.8s 1 linear;
+}
+@keyframes yun{
+	0%{transform:scale(0.2);opacity: 0.5;}
+	50%{opacity: 0.7;transform:scale(1) rotate(360deg);}
+	100%{transform:scale(1) rotate(360deg);opacity: 1;}
+}
+.animation-two .time{
+	margin: 5% 0 0 10%;
+}
+.animation-two .time img{
+	width: 240px;
+	animation: chin 0.8s 1 linear;
+}
+.animation-two .age{
+	margin: 5% 0 0 30%;
+}
+.animation-two .age img{
+	width: 215px;
+	animation: china 1s 1 linear;
+}
+@keyframes chin{
+	0%{transform:translate(-100%);}
+	50%{transform:translate(-50%);}
+	100%{transform:translate(0px);}
+}
+@keyframes china{
+	0%{transform:translate(100%);}
+	50%{transform:translate(50%);}
+	100%{transform:translate(0px);}
+}
+.animation-three .qiu-one{
+	margin: 30px 0 0 10%;
+	display: inline-block;
+}
+.animation-three .qiu-two{
+	margin: 0 0 0 40%;
+	display: inline-block;
+}
+.animation-three .qiu-two img{
+	animation: qiu 1s 1 linear;
+}
+.animation-three .qiu-one img{
+	animation: qiu 1s 1 linear;
+}
+@keyframes qiu{
+	0%{transform:scale(0.2);}
+	50%{transform:scale(1) rotate(360deg);}
+	100%{transform:scale(1) rotate(360deg);}
+}
+.animation-three .pao{
+	margin: 0 0 0 60%;
+	animation: pao 1s 1 linear;
+}
+.animation-three .pao img{
+	width: 167px;
+}
+@keyframes pao{
+	0%{transform:scale(0.2);}
+	50%{transform:scale(1) rotate(360deg);}
+	100%{transform:scale(1) rotate(360deg);}
+}
+.lists img{
+	width: 400px;
+	margin: 180px auto 0 auto;
+	opacity: 0;
+}
+.list img{
+	width: 400px;
+	margin: 20% auto 0 auto;
+	animation: qiu 1s 1 linear;
+}
+.pays img{
+	margin: 0 0 0 60%;
+	width: 150px;
+	opacity: 0;
+}
+.pay img{
+	margin: 0 0 0 60%;
+	width: 150px;
+	animation: qiu 1s 1 linear;
+}
+.thinks img{
+	width: 180px;
+	margin: 0 0 0 55%;
+	opacity: 0;
+}
+.think img{
+	width: 180px;
+	margin: 0 0 0 55%;
+	animation: qiu 1.5s 1 linear;
+}
+
+@media screen and (max-width:360px){ 
+	.animation-one .yan-one img{
+		width: 55px;
+	}
+	.animation-one .yun-one img{
+		width: 55px;
+	}
+	.animation-one .yun-two .yun img{
+		width: 55px;
+	}
+	.animation-one .yun-three img{
+		width: 55px;
+	}
+	.animation-two .time img{
+		width: 200px;
+	}
+	.animation-two .age img{
+		width: 185px;
+	}
+	.animation-three .qiu-one img{
+		width: 50px;
+	}
+	.animation-three .qiu-two img{
+		width: 30px;
+	}
+	.animation-three .pao img{
+		width: 130px;
+	}
+	.lists img{
+		width: 363px;
+	}
+	.list img{
+		width: 363px;
+	}
+	.pays img{
+		width: 100px;
+	}
+	.pay img{
+		width: 100px;
+	}
+	.thinks img{
+		width: 130px;
+	}
+	.think img{
+		width: 130px;
+	}
+	#ewmsrc{
+		width: 264px;
+		margin: 0 0 0 20px;
+	}
+	.close1{
+	    height: 66px;
+    	width: 336px;
+    	margin: 43px 0 0 0;
+	}
+} 
+@media screen and (min-width:320px) and (max-width:568px){
+	.animation-one .yan-one img{
+		width: 40px;
+	}
+	.animation-one .yun-one img{
+		width: 45px;
+	}
+	.animation-one .yun-two .yun img{
+		width: 40px;
+	}
+	.animation-one .yun-three img{
+		width: 40px;
+	}
+	.animation-two .time img{
+		width: 200px;
+	}
+	.animation-two .age img{
+		width: 185px;
+	}
+	.animation-three .qiu-one img{
+		width: 35px;
+	}
+	.animation-three .qiu-two img{
+		width: 30px;
+	}
+	.animation-three .pao img{
+		width: 130px;
+	}
+	.lists img{
+		width: 320px;
+	}
+	.list img{
+		width: 320px;
+	}
+	.pays img{
+		width: 100px;
+	}
+	.pay img{
+		width: 100px;
+	}
+	.thinks img{
+		width: 130px;
+	}
+	.think img{
+		width: 130px;
+	}
+	#ewmsrc{
+		width: 250px;
+		margin: 37px 0 0 -16px;
+	}
+	.close1{
+	    height: 25px;
+    	width: 336px;
+    	margin: 43px 0 0 0;
+	}
+	#closebt img {
+    	width: 25px;
+	}
+}
+@media screen and (min-width:375px) and (max-width:667px){  
+    .animation-one .yan-one img{
+		width: 70px;
+	}
+	.animation-one .yun-one img{
+		width: 70px;
+	}
+	.animation-one .yun-two .yun img{
+		width: 70px;
+	}
+	.animation-one .yun-three img{
+		width: 55px;
+	}
+	.animation-two .time img{
+		width: 200px;
+	}
+	.animation-two .age img{
+		width: 185px;
+	}
+	.animation-three .qiu-one img{
+		width: 50px;
+	}
+	.animation-three .qiu-two img{
+		width: 30px;
+	}
+	.animation-three .pao img{
+		width: 140px;
+	}
+	.lists img{
+		width: 375px;
+	}
+	.list img{
+		width: 375px;
+	}
+	.pays img{
+		width: 100px;
+	}
+	.pay img{
+		width: 100px;
+	}
+	.thinks img{
+		width: 130px;
+	}
+	.think img{
+		width: 130px;
+	}
+	#ewmsrc{
+		width: 264px;
+		margin: 0 0 0 35px;
+	}
+	.close1{
+	    height: 66px;
+    	width: 336px;
+    	margin: 43px 0 0 0;
+	}
+}
+
+@media screen and (min-width:412px) and (max-width:732px){  
+	.animation-three .qiu-one img{
+		width: 50px;
+	}
+	.lists img{
+		width: 410px;
+	}
+	.list img{
+		width: 410px;
+	}
+	.pays img{
+		width: 100px;
+	}
+	.pay img{
+		width: 100px;
+	}
+	.thinks img{
+		width: 140px;
+	}
+	.think img{
+		width: 170px;
+	}
+	#ewmsrc{
+		width: 264px;
+		margin: 0 0 0 45px;
+	}
+	.close1{
+	    height: 66px;
+    	width: 336px;
+    	margin: 43px 0 0 0;
+	}
+}
+@media screen and (min-width:768px) and (max-width:1024px){
+	.animation-three .qiu-one img{
+		width: 100px;
+	}
+	.animation-three .qiu-two img{
+		width: 80px;
+	}
+	.animation-one .yan-one img{
+		width: 115px;
+	}
+	.animation-one .yun-one img{
+		width: 115px;
+	}
+	.animation-one .yun-two .yun img{
+		width: 115px;
+	}
+	.animation-two .time img{
+		width: 400px;
+	}
+	.animation-two .age img{
+		width: 400px;
+	}
+	.animation-three .pao img{
+		width: 300px;
+	}
+	.lists img{
+		width: 777px;
+	}
+	.list img{
+		width: 777px;
+	}
+	.thinks img{
+		width: 145px;
+	}
+	.think img{
+		width: 145px;
+	}
+}

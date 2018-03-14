@@ -6,13 +6,20 @@ use App\Models\comments;
 class MessageController extends Controller
 {
 
+
+    /*
+    新增留言
+    */
     public function insert_message(Request $request) {
         $msg_info = $request->all();
         $name = trim($msg_info['name']);
         $msg = trim($msg_info['message']);
-        if($name == '' || $msg == '')  return responseToJson(1,'请输入昵称或留言');
-        else if(mb_strlen($name,'utf-8')>=10)  return responseToJson(1,'昵称长度不能超过10个字符');
-        else if(mb_strlen($msg,'utf-8') >= 45) return responseToJson(1,'留言长度不能超过45个字符');
+        if($name == '' || $msg == '') 
+            return responseToJson(1,'请输入昵称或留言');
+        else if(mb_strlen($name,'utf-8')>=10)  
+            return responseToJson(1,'昵称长度不能超过10个字符');
+        else if(mb_strlen($msg,'utf-8') >= 45) 
+            return responseToJson(1,'留言长度不能超过45个字符');
         $ist_boo = comments::insert_msg($name,$msg);
 
         //当留言成功时向嵌入太返回成功的留言
