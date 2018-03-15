@@ -6,11 +6,19 @@ use DB;
 use App\Models\gifts;
 use App\Models\orders;
 
+use App\Http\Controllers\AlipayController;
+
 class GiftsController extends Controller
 {
 
+    //用于存放所有礼物的金额，便于之后获得所送礼物的总价钱
     private $gift_price = [];
 
+
+    /**
+     * 赠送礼物的方法
+     * 
+     */
     public function give_gift(Request $request) {
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
@@ -33,12 +41,24 @@ class GiftsController extends Controller
 
         $insert_id = orders::insert_gift_order($arr);
 
+        if($insert_id>0) {
+            $wait_order = orders::find_order($insert_id);
+            $alipay = new AlipayController($wait_order);
+        }else {
+            return responseToJson('暂时无法支付');
+        }
+
         //微信支付
         //支付成功后
         //call_user_func(callback,$state);DB::commit();
         //如果没有成功
     }
 
+
+    /**
+     * 计算前台赠送的礼物总价值
+     * return int $total
+     */
     private function get_gifts_total($gifts = []) {
 
         $total = 0;
@@ -55,13 +75,29 @@ class GiftsController extends Controller
         return $total;
     }
 
+
+
+    /**
+     * 得到所有礼物的信息
+     * return Array $gifts_info_msg
+     */
     public function get_gifts_info() {
         $gifts_info_msg = gifts::get_gifts_msg();
 
-        if($gifts_info_msg) {
+        if(count($gifts_info_msg) >= 1) {
             return responseToJson(0,'',$gifts_info_msg);
         }else {
             return responseToJson(1,'无法获得礼物信息');
         }
     }
+
+
+
+
+    public function test() {
+        $a = new AlipayController();
+
+        dd($a);
+    }
+
 }
