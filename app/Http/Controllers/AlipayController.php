@@ -49,8 +49,29 @@ class AlipayController extends Controller
         $arr=$_GET;
         $result = $alipaySevice->check($arr);
         if($result) {
-            $alipaySevice->appid == $arr['app_id'];
+
+            //更多签名检验
+            if($alipaySevice->appid == $arr['app_id']) {
+                
+                echo '验证成功';
+            }else {
+                echo '验证失败';
+            }
         }
+
+    }
+
+
+    /**
+     * 支付结果异步通知
+     */
+    public function notify_url() {
+        $status = $_POST['trade_status'];
+        if($status == 'TRADE_SUCCESS' || $status == 'TRADE_FINISHED') {
+            //交易成功
+            echo 'success';
+        }
+        echo 'fail';
     }
 
 }
@@ -82,3 +103,4 @@ class AlipayController extends Controller
 // &app_id=2017012005273465
 // &out_trade_no=1521102802935
 // &version=1.0
+

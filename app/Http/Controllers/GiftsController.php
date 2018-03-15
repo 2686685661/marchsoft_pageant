@@ -44,8 +44,14 @@ class GiftsController extends Controller
         if($insert_id>0) {
             $wait_order = orders::find_order($insert_id);
             $alipay = new AlipayController($wait_order);
+
+            if($alipay) {
+                orders::update_order_state($insert_id);
+                return responseToJson(0,'支付成功');
+            }
+            
         }else {
-            return responseToJson('暂时无法支付');
+            return responseToJson(1,'暂时无法支付');
         }
 
         //微信支付
