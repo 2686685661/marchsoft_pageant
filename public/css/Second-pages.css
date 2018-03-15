@@ -1,0 +1,1295 @@
+.page1{
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.page2{
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.page3{
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.page4{
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+.page5{
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*   page1   */
+.page1-upper{
+	display: flex;
+	height: 33%;
+}
+.Lballoon{
+	width: 29px;
+	height: 36px;
+	transform:rotate(-30deg);
+	position: relative;
+	left: 53px;
+	top: 12px;
+	background: url(../img/Lballoon.png) no-repeat center center;
+	background-size: 100% 100%;
+}
+.frame1{
+	display: flex;
+	width: 171px;
+	height: 141px;
+	position: relative;
+	left: 8px; 
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	justify-content:center;
+	align-items:center;
+}
+.frame1 img{
+	opacity: 0;
+	width: 95%;
+	position: relative;
+	top: 7px;
+	transform:rotate(-201deg);
+}
+.text1{
+	width: 142px;
+	height: 79px;
+	position: relative;
+	top: 56px;
+	left: 5px;
+}
+.text1 img{
+	/*opacity: 0;*/
+	width: 100%;
+	height: 100%;
+}
+.page1-center{
+	display: flex;
+	height: 33%;
+}
+.text3{
+	width: 142px;
+	height: 105px;
+}
+.text3 img{
+	/*opacity: 0;*/
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 16px;
+}
+.stars{
+	width: 25px;
+	position: relative;
+	left: 109px;
+	bottom: 10px;
+}
+.stars img{
+	width: 100%;
+	height: 100%;
+}
+.frame2{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 158px;
+	height: 140px;
+	position: relative;
+	left: 13px;
+	bottom: 29px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(25deg);
+}
+.frame2 img{
+	opacity: 0;
+	width: 100%;
+	position: relative;
+	top: 7px;
+}
+.page1-lower{
+	display: flex;
+	height: 33%;
+}
+.balloon{
+	width: 40px;
+	height: 52px;	
+	background: url(../img/balloon.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(7deg);
+	position: relative;
+	left: 121px;
+	bottom: 7px;
+}
+.baby{
+	width: 176px;
+	height: 205px;	
+	background: url(../img/baby.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(2deg);
+	position: relative;
+	bottom: 66px;
+}
+.cloud{
+	width: 43px;
+	height: 22px;
+	position: relative;
+	top: 47px;
+	left: 21px;
+}
+.cloud img{
+	width: 100%;
+	height: 100%;
+}
+.Map{
+	width: 75px;
+	height: 66px;
+	position: relative;
+	top: 75px;
+	left: 43px;
+}
+.Map img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*   page2   */
+.page2-upper{
+	display: flex;
+	height: 33%;
+}
+.page2-center{
+	display: flex;
+	height: 33%;
+}
+.page2-lower{
+	display: flex;
+	height: 33%;
+}
+.Bird{
+	width: 101px;
+	height: 36px;
+	position: relative;
+	top: 64px;
+	left: 20px;
+}
+.Bird img{
+	width: 100%;
+	height: 100%;
+}
+.text4{
+	width: 214px;
+	height: 128px;
+	position: relative;
+	left: 22px;
+	top: -2px;
+}
+.text4 img{
+	width: 100%;
+	height: 100%;
+}
+.text5{
+	width: 107px;
+	height: 148px;
+	position: relative;
+	left: 16px;
+	bottom: 13px;
+}
+.text5 img{
+	width: 100%;
+	height: 100%;
+}
+.cloud2{
+	width: 41px;
+	height: 21px;
+	position: relative;
+	left: 134px;
+	bottom: 53px;
+}
+.cloud2 img{
+	width: 100%;
+	height: 100%;
+}
+.aircraft{
+	width: 186px;
+	height: 78px;
+	position: relative;
+	left: 2px; 
+	top: 8px;
+}
+.aircraft img{
+	width: 100%;
+	height: 100%;
+}
+.frame3{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 182px;
+	height: 155px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(25deg);
+	position: relative;
+	left: 26px;
+	bottom: 38px;
+}
+.frame3 img{
+	opacity: 0;
+	transform:rotate(-24deg);
+	width: 100%;
+	position: relative;
+	top: 16px;
+	right: 5px;
+
+}
+.frame4{
+	width: 150px;
+	height: 142px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(-9deg);
+	position: relative;
+	left: 12px;
+	bottom: 23px;
+}
+.glasses{
+	width: 56px;
+	height: 19px;
+	position: relative;
+	left: 104px;
+	bottom: 16px;
+}
+.glasses img{
+	width: 100%;
+	height: 100%;
+}
+.three{
+	opacity: 0;
+	width: 500px;
+	height: 600px;
+	position: relative;
+	left: 50px;
+	top: 20px;
+}
+.three img{
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*   page3   */
+.page3-upper{
+	display: flex;
+	height: 33%;
+}
+.page3-center{
+	display: flex;
+	height: 33%;
+}
+.page3-lower{
+	display: flex;
+	height: 33%;
+}
+.frame5{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 164px;
+	height: 141px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 9px;
+	top: 10px;
+}
+.frame5 img{
+	opacity: 0;
+	width: 80%;
+	position: relative;
+	top: 7px;
+}
+.frame6{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 174px;
+	height: 160px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(21deg);
+	position: relative;
+	bottom: 26px;
+}
+.frame6 img{
+	opacity: 0;
+	width: 97%;
+	transform:rotate(-20deg);
+	position: relative;
+	top: 7px;
+	right: 2px;
+}
+.Bird2{
+	width: 48px;
+	height: 34px;
+	position: relative;
+	top: 21px;
+	left: 36px;
+}
+.Bird2 img{
+	width: 100%;
+	height: 100%;
+}
+.cloud3{
+	width: 53px;
+	height: 27px;
+	position: relative;
+	top: 26px;
+}
+.cloud3 img{
+	width: 100%;
+	height: 100%;
+}
+.Bird3{
+	width: 120px;
+	height: 80px;
+	position: relative;
+	top: 40px;
+	left: 390px;
+}
+.Bird3 img{
+	width: 100%;
+	height: 100%;
+}
+.text6{
+	width: 157px;
+	height: 94px;
+	position: relative;
+	bottom: 38px;
+}
+.text6 img{
+	width: 100%;
+	height: 100%;
+}
+.text7{
+	height: 151px;
+	position: relative;
+	left: 6px;
+	top: 16px;
+}
+.text7 img{
+	width: 100%;
+	height: 100%;
+}
+.balloon3{
+	width: 35px;
+	height: 43px;	
+	background: url(../img/Lballoon.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 110px;
+	bottom: 10px;
+}
+
+.eight{
+	width: 361px;
+}
+.eight img{
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/*right: 120px;*/
+	bottom: 41px;
+}
+.cloud4{
+	width: 44px;
+	height: 22px;
+	position: relative;
+	top: 20px;
+	left: 146px;
+}
+.cloud4 img{
+	width: 100%;
+	height: 100%;
+}
+.text8{
+	width: 149px;
+	height: 116px;
+	position: relative;
+	top: 54px;
+	right: 84px;
+}
+.text8 img{
+	width: 100%;
+}
+.Stars2{
+	width: 27px;
+	position: relative;
+	left: 36px;
+	top: 37px;
+}
+.Stars2 img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*  page4   */
+.page4-upper{
+	display: flex;
+	height: 33%;
+}
+.page4-center{
+	display: flex;
+	height: 33%;
+}
+.page4-lower{
+	display: flex;
+	height: 33%;
+}
+.frame7{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 176px;
+	height: 159px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(22deg);
+	position: relative;
+	left: 6px;
+	bottom: 3px;
+}
+.frame7 img{
+	opacity: 0;
+	width: 95%;
+	transform:rotate(-25deg);
+	position: relative;
+	top: 9px;	
+}
+.frame8{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 153px;
+	height: 135px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 9px;
+	top: 11px;
+}
+.frame8 img{
+	opacity: 0;
+	transform:rotate(-11deg);
+	width: 83%;
+	position: relative;
+	top: 6px;
+}
+.Bicycle{
+	width: 77px;
+	height: 48px;
+	position: relative;
+	top: 26px;
+	left: 24px;
+}
+.Bicycle img{
+	width: 100%;
+	height: 100%;
+}
+.Bird4{
+	width: 37px;
+	height: 26px;
+	position: relative;
+	top: 15px;
+	left: 111px;
+}
+.Bird4 img{
+	width: 100%;
+	height: 100%;
+}
+.text9{
+	width: 136px;
+	height: 90px;
+	position: relative;
+	/*left: 50px;*/
+	top: 36px;
+}
+.text9 img{
+	width: 100%;
+	height: 100%;
+}
+.tra{
+	width: 52px;
+	height: 40px; 
+	position: relative;
+	left: 2px;
+	top: -10px;
+}
+.tra img{
+	width: 100%;
+	height: 100%;
+}
+.text10{
+	width: 149px;
+	height: 111px;
+	position: relative;
+	left: 15px;
+	bottom: 16px;
+}
+.text10 img{
+	width: 100%;
+	height: 100%;
+}
+.Stars3{
+	width: 27px;
+	position: relative;
+	left: 16px;
+	bottom: 10px;
+}
+.Stars3 img{
+	width: 100%;
+	height: 100%
+}
+.text11{
+	width: 152px;
+	height: 114px;
+	position: relative;
+	left: 19px;
+	top: 18px;
+}
+.text11 img{
+	width: 100%;
+	height: 100%;
+}
+.car{
+	width: 54px;
+	position: relative;
+	left: 14px;
+	top: 22px;
+}
+.car img{
+	width: 100%;
+	height: 100%;
+}
+.ten{
+	height: 288px;
+	position: relative;
+	top: 12px;
+	right: 62px;
+}
+.ten img{
+	opacity: 0;
+	height: 100%;
+}
+
+
+
+/*   page5    */
+.page5-upper{
+	display: flex;
+	height: 33%;
+}
+.page5-center{
+	display: flex;
+	height: 33%;
+}
+.page5-lower{
+	display: flex;
+	height: 33%;
+}
+.frame9{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 157px;
+	height: 134px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 13px;
+	top: 18px;
+}
+.frame9 img{
+	opacity: 0;
+	width: 90%;
+	position: relative;
+	top: 16px;
+}
+.frame10{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 176px;
+	height: 152px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(22deg);
+	position: relative;
+	left: 12px;
+	top: 39px;
+}
+.frame10 img{
+	opacity: 0;
+	width: 81%;
+	transform:rotate(-10deg);
+	position: relative;
+	top: 7px;
+}
+.Bird5{
+	width: 52px;
+	height: 34px;
+	position: relative;
+	top: 19px;
+	left: 42px;
+}
+.Bird5 img{
+	width: 100%;
+	height: 100%;
+}
+.camera{
+	width: 87px;
+	height: 60px;
+	position: relative;
+	top: 22px;
+	left: 40px;
+}
+.camera img{
+	width: 100%;
+	height: 100%;
+}
+.text12{
+	width: 147px;
+	height: 110px;
+	position: relative;
+	left: 17px;
+	top: 39px;
+}
+.text12 img{
+	width: 100%;
+	height: 100%;
+}
+.balloon4{
+	width: 32px;
+	height: 42px;	
+	background: url(../img/balloon.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 108px;
+	top: 3px;
+}
+.text13{
+	width: 125px;
+	height: 68px;
+	position: relative;
+	left: 14px;
+	top: 24px;
+	/*bottom: 71px;*/
+}
+.text13 img{
+	width: 100%;
+	/*height: 100%;*/
+}
+.Twelve{
+	width: 850px;
+	height: 750px;
+	position: relative;
+	right: 80px;
+	bottom: 45px;
+}
+.Twelve img{
+	opacity: 0;
+	/*width: 100%;*/
+	height: 100%;
+}
+.text14{
+	height: 102px;
+	position: relative;
+	top: 18px;
+	left: 77px;
+}
+.text14 img{
+	/*width: 100%;*/
+	height: 100%;
+}
+.book{
+	width: 88px;
+	height: 76px;
+	position: relative;
+	left: 169px;
+	/*top: 50px;*/
+	/*right: 20px;*/
+}
+.book img{
+	width: 100%;
+	height: 100%;
+}
+
+
+@media screen and (min-width:360px) and (max-width:640px) {		
+		/*    page1   */
+		.Lballoon{
+			width: 36px;
+		    height: 43px;		   
+		    left: 58px;
+		    top: 11px;		   
+		}
+		.frame1{			
+	    	width: 191px;
+    		height: 170px;		   
+		    left: 8px;
+	    	bottom: 7px;		    
+		}
+		.text1 {
+		    width: 153px;
+    		height: 82px;
+		    position: relative;
+		    top: 73px;
+		    left: 5px;
+		}
+		.text3 {
+		    width: 153px;
+    		height: 116px;
+		}
+		.stars {
+		    width: 25px;
+		    position: relative;
+		    left: 123px;
+		    bottom: 3px;
+		}
+		.frame2 {		    
+		    width: 183px;
+    		height: 165px;
+		    left: 15px;
+		    bottom: 29px;		    
+		}
+		.frame2 img {
+		    width: 100%;
+		    top: 10px;
+		}
+		.baby {
+		    width: 178px;
+		    height: 222px;
+		    bottom: 117px;
+		}
+		.balloon {
+		    width: 40px;
+		    height: 52px;	    
+		    left: 137px;
+		    bottom: 43px;
+		}
+		.cloud {
+		    width: 43px;
+		    height: 22px;
+		    position: relative;
+		    top: 20px;
+		    left: 47px;
+		}
+		.Map {
+		    width: 75px;
+		    height: 66px;
+		    position: relative;
+		    top: 49px;
+		    left: 77px;
+		}
+
+
+		/*   page2   */
+		.Bird {
+		    width: 83px;
+		    height: 46px;
+		    position: relative;
+		    top: 64px;
+		    left: 26px;
+		}
+		.text4{
+		    width: 189px;
+		    height: 128px;
+		    position: relative;
+		    left: 24px;
+		    top: -2px;
+		}
+		.aircraft {
+		    width: 150px;
+    		height: 98px;
+		    position: relative;
+		    left: 2px;
+		    top: 16px;
+		}
+		.cloud2 {
+		    width: 47px;
+		    height: 25px;
+		    position: relative;
+		    left: 134px;
+		    bottom: 42px;
+		}
+		.frame3 {		    
+		    width: 217px;
+		    height: 194px;		    
+		    left: 26px;
+		    bottom: 47px;
+		}
+		.frame4 {
+		    width: 162px;
+		    height: 139px;		    
+		    left: 12px;
+		    bottom: 28px;
+		}
+		.march3{
+		    width: 282px;
+		    height: 211px;
+		    position: relative;
+		    top: 12px;	    
+		}
+
+
+		/*   page3   */
+		.Bird2 {
+		    width: 64px;
+		    height: 43px;
+		    position: relative;
+		    top: 21px;
+		    left: 36px;
+		}
+		.frame5 {		    
+		    width: 183px;
+		    height: 166px;		    
+		    left: 9px;
+		    top: 29px;
+		}
+		.cloud3 {
+		    width: 53px;
+		    height: 27px;
+		    position: relative;
+		    top: 60px;
+		}
+		.Bird3 {
+		    width: 56px;
+		    height: 31px;
+		    position: relative;
+		    top: 25px;
+		    left: 115px;
+		}
+		.text6{
+		    width: 189px;
+		    height: 99px;		 
+		    left: 8px;
+		    top: 43px;
+
+		}
+		
+		.text7{
+		    width: 161px;
+		    height: 161px;
+		    position: relative;
+		    left: 6px;
+		    top: 37px;
+		}
+		.balloon3 {
+		    width: 35px;
+		    height: 43px;
+		    left: 108px;
+		    top: 10px;
+		}
+		.frame6{
+		    
+		    width: 195px;
+		    height: 176px;		    
+		    bottom: 8px;
+		}
+		.march8 {
+		    width: 246px;
+		    height: 277px;	    
+		}
+		.cloud4 {		   
+		    top: 36px;
+		}
+		.texte8 {		    
+		     top: 67px;
+		     right: 70px;
+		}
+		.Stars2 {
+		    
+		    left: 40px;
+		    top: 52pxt;
+		}
+
+		/*   page4   */
+		.Bicycle {
+		    width: 88px;
+   	 		height: 54px;
+		    position: relative;
+		    top: 26px;
+		    left: 24px;
+		}
+		.Bird4 {
+		    width: 50px;
+		    height: 34px;
+		    top: 22px;
+		    left: 126px;
+		}
+		.text9 {
+		    width: 142px;
+    		height: 93px;
+		    top: 40px;
+		}
+		.frame7 {		    
+		    width: 200px;
+		    height: 179px;  
+		    left: 9px;
+		}
+		.frame8 {		    
+		    width: 178px;
+		    height: 166px;		    
+		    left: 9px;
+		    top: 11px;
+		}
+		.tra {
+		    width: 63px;
+		    height: 50px;
+		    left: 2px;
+		    top: -10px;
+		}
+		.text10 {
+		    width: 169px;
+		    height: 128px;
+		    position: relative;
+		    left: 13px;
+		    bottom: 10px;
+		}
+		.Stars3 {
+		    width: 31px;
+		    position: relative;
+		    left: 14px;
+    		bottom: -19px;
+		}
+		.text11{
+		    width: 154pxt;
+		     position: relative;
+		    left: 32px;
+    		top: 35px;
+		}
+		.marchten {
+		    height: 293px;
+		    position: relative;
+		    top: 27px;
+		    /*right: -137px !important;*/
+		}
+		.marchten img{
+			position: relative;
+		    right: -137px;
+		}
+
+
+		/*   page5   */
+		.frame9 {
+		    width: 161px;
+		    height: 145px;	    
+		    left: 11px;
+		    top: 25px;
+		}
+		.text12 {
+		    width: 154px;
+		    height: 113px;
+		    position: relative;
+		    left: 33px;
+		    top: 43px;
+		}
+		.camera {	    
+		    left: 68px;
+		}
+		.balloon4 {
+		    width: 35px;
+		    height: 45px;		    
+		    left: 118px;
+		    top: -5px;
+		}
+		.text13 {
+		    width: 125px;
+		    left: 24px;
+		    top: 47px;
+		}
+		.frame10 {		    
+		    width: 185px;
+		    height: 165px;	    
+		    position: relative;
+		    left: 40px;
+		    top: 20px;
+		}
+		.march12 {
+		    width: 78px;
+		    height: 255px;
+		    position: relative;
+		    top: 38px;
+		    left: -162px;
+		    /* right: 559px; */
+		}
+		.text14{
+		    /* width: 450px; */
+		    height: 115px;
+		    position: relative;
+		    /* right: 250px; */
+		    top: 38px;
+		    left: 103px;
+		}
+		.book {
+		    width: 75px;
+		    height: 70px;
+		    left: 200px;
+		    top: 26px;
+		}
+
+}
+@media screen and (min-width:370px) and (max-width:390px){
+	.Lballoon {
+	    width: 35px;
+	    height: 43px;
+	    left: 58px;
+	    top: 11px;
+	}
+	.frame1 {	    
+	    width: 193px;
+	    height: 167px;
+	    left: 17px;   
+	}
+	.text1 {
+	    width: 159px;
+	    height: 90px;
+	    position: relative;
+	    top: 75px;
+	    left: 17px;
+	}
+	.text3{
+	    width: 160px;
+	    height: 120px;
+	}
+	.frame2 {	   
+	    width: 194px;
+	    height: 182px;
+	    left: 13px;
+	    bottom: 29px;	    
+	    transform: rotate(23deg);
+	}
+	.stars {
+	    width: 31px;
+	    position: relative;
+	    left: 125px;
+	    bottom: 0px;
+	}
+	.marchbaby {
+	    width: 194px;
+	    height: 237px;	    
+	    bottom: 67px;
+	}
+	.balloon {
+	    width: 45px;
+	    height: 57px;
+	    left: 142px;
+	    top: 12px;
+	}
+	.cloud {
+	    width: 48px;
+	    height: 25px;
+	    position: relative;
+	    top: 81px;
+	    left: 38px;
+	}
+	.Map {
+	    width: 80px;
+	    height: 68px;
+	    position: relative;
+	    top: 113px;
+	    left: 69px;
+	}
+
+
+	/*   page2   */
+	.Bird {	    
+	    top: 64px;
+	}
+	.text4{
+		height: 147px;
+	}
+	.text5 {
+	    width: 122px;
+	    height: 167px;
+	    left: 16px;
+	    bottom: 9px;
+	}
+	.cloud2 {
+	    width: 50px;
+	    height: 27px;
+	    left: 145px;
+	    bottom: 57px;
+	}
+	.frame3 {    
+	    width: 212px;
+	    height: 193px;	    
+	    transform: rotate(22deg);	   
+	    left: 32px;
+	    bottom: 60px;
+	}
+	.frame4 {
+	    width: 162px;
+	    height: 147px;	   
+	    transform: rotate(-10deg);
+	    left: 12px;
+	    bottom: 25px;
+	} 
+	.glasses {  
+	    left: 138px;
+	    bottom: 24px;
+	}
+	.march3 {
+    	height: 233px;   
+	}
+
+
+	/*   page3   */
+	.frame5{    
+	    width: 198px;
+	    height: 180px;	    
+	}
+	.Bird2 {
+	    width: 66px;
+	    height: 45px;	    
+	}
+	.cloud3 {
+	    width: 55px;
+	    height: 30px;
+	}
+	.text6 {
+	    width: 178px;
+	    height: 99px;
+	    top: 50px;
+	    left: 5px;
+	}
+	.text7 {
+	    width: 172px;
+	    height: 170px;
+	    top: 38px;
+	}
+	.balloon3 {
+	    width: 37px;
+	    height: 45px;
+	    left: 108px;
+	    top: 8px;
+	}
+	.frame6{
+	    width: 208px;
+	    height: 196px;
+	    bottom: 5px;
+	}
+	.march8 {
+	    width: 263px;
+	    height: 294px;
+	    bottom: 45px;
+	}
+	.cloud4 {
+	    width: 47px;
+	    height: 24px;
+	    left: 163px;
+	}
+	.text8 {
+	    width: 154px;
+	    top: 73px;
+	    right: 73px;
+	}
+	.Stars2 {
+	    width: 32px;
+	    left: 36px;
+	    top: 44px;
+	}
+
+
+		/*   page4   */
+		.Bicycle {
+		    width: 98px;
+		    height: 63px;
+		    position: relative;
+		    top: 30px;
+		    left: 24px;
+		}
+		.frame7 {		  
+		    width: 218px;
+		    height: 197px;		    
+		    transform: rotate(20deg);
+		    left: 2px;
+		    top: 5px;
+		}
+		.Bird4 {
+		    width: 49px;
+		    height: 32px;
+		    top: 22px;
+		    left: 141px;
+		}
+		.text9 {
+		    width: 147px;
+		    height: 98px;
+		    top: 55px;
+		}
+		.frame8 {		    
+		    width: 191px;
+		    height: 166px;	    
+		    top: 18px;
+		}
+		.frame8 img {
+		    top: 8px;
+		}
+		.text10 {
+		    width: 180px;
+		    height: 131px;
+		    left: 8px;
+		    top: 5px;
+		}
+		.tra {
+		    width: 61px;
+		    height: 50px;
+		    top: 7px;
+		}
+		.Stars3 {
+		    width: 32px;
+		    left: 4px;		    
+		}
+		.text11 {
+		    width: 172px;
+		    height: 128px;
+		    position: relative;
+		    left: 30px;
+		    top: 36px;
+		}
+		.march10 img {
+		    position: relative;
+		    right: -43px;
+		}
+		.march10 {
+		    height: 294px;
+		    top: 37px;
+		}
+		.car {
+		    width: 63px;
+		    position: relative;
+		    left: 33px;
+		    top: 28px;
+		}
+}
+
+

@@ -1,0 +1,1633 @@
+
+/*   page1   */
+.frameone{
+	display: flex;
+	width: 171px;
+	height: 141px;
+	position: relative;
+	left: 8px; 
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	justify-content:center;
+	align-items:center;
+}
+.frameone img{
+	width: 95%;
+	position: relative;
+	top: 7px;
+	animation:first 2s;
+	-moz-animotion:first 2s;
+	-webkit-animotion:first 2s;
+	-o-animotion:first 2s; 
+	width: 84%;
+	transform:rotate(-10deg);
+}
+.frametwo{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 158px;
+	height: 140px;
+	position: relative;
+	left: 13px;
+	bottom: 29px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(25deg);
+}
+.frametwo img{
+	width: 100%;
+	position: relative;
+	top: 7px;
+	animation:first 4s;
+	-moz-animotion:first 4s;
+	-webkit-animotion:first 4s;
+	-o-animotion:first 4s; 
+	transform:rotate(-21deg);
+}
+
+@keyframes first{
+		0%{transform: scale(0.3);}
+	}
+
+	@-webkit-keyframes first{
+		0%{transform: scale(0.3);}
+	}
+
+	@-moz-keyframes first{
+		0%{transform: scale(0.3);}
+	}
+
+	@-o-keyframes first{
+		0%{transform: scale(0.3);}
+	}
+
+.textone{
+	width: 142px;
+	height: 79px;
+	position: relative;
+	top: 56px;
+	left: 5px;
+}
+.textone img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+
+@keyframes beat {
+	0% {
+		transform: translateY(0px);
+	}
+	2% {
+		transform: translateY(-7px);
+	}
+	6% {
+		transform: translateY(7px);
+	}
+	8% {
+		transform: translateY(0px);
+	}
+	10% {
+		transform: translateY(-5px);
+	}
+	12% {
+		transform: translateY(5px);
+	}
+	16% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+.textthree{
+	width: 142px;
+	height: 105px;
+}
+.textthree img{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 16px;
+	animation: beat 5s ease 4s 1 normal;
+}
+
+.cloud img{
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
+	/*  Webkit内核浏览器：Safari and Chrome*/  
+    -webkit-transition-property: all;   
+    -webkit-transition-duration: .5s;   
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
+    /*  Mozilla内核浏览器：firefox3.5+*/  
+    -moz-transition-property: all;   
+    -moz-transition-duration: .5s;   
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
+    /*  Opera*/  
+    -o-transition-property: all;   
+    -o-transition-duration: .5s;   
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
+    /*  IE9*/  
+    -ms-transition-property: all;   
+    -ms-transition-duration: .5s;   
+    -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+} 
+
+.marchbaby{
+	width: 176px;
+	height: 205px;	
+	background: url(../img/baby.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(2deg);
+	position: relative;
+	bottom: 66px;
+}
+.marchbaby{
+	 -webkit-animation: slideOut 3s ease-in-out;
+     -moz-animation: slideOut 3s ease-in-out;
+     -o-animation: slideOut 3s ease-in-out;
+     -ms-animation: slideOut 3s ease-in-out;
+     animation: slideOut 3s ease-in-out;
+}
+@-webkit-keyframes slideOut{
+    0%{ transform: translateX(-400px);}
+    100%{ transform: translateX(16px); }
+}
+@-moz-keyframes slideOut{
+    0%{ left: -600px; }
+    100%{ left: 5px; }
+}
+@-o-keyframes slideOut{
+    0%{ left: -600px; }
+    100%{ left: 5px; }
+}
+@-ms-keyframes slideOut{
+    0%{ left: -600px; }
+    100%{ left: 5px; }
+}
+@keyframes slideOut{
+    0%{ left: -600px; }
+    100%{ left: 5px; }
+}
+
+
+/*   page2   */
+.textfour{
+	width: 214px;
+	height: 128px;
+	position: relative;
+	left: 22px;
+	top: -2px;
+}
+.textfour img{
+	width: 100%;
+	height: 100%;
+	animation: beat 5s ease 4s 1 normal;
+}
+.textfive{
+	width: 107px;
+	height: 148px;
+	position: relative;
+	left: 16px;
+	bottom: 13px;
+}
+.textfive img{
+	width: 100%;
+	height: 100%;
+	animation: beat 5s ease 5s 1 normal;
+}
+.framethree{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 182px;
+	height: 155px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(25deg);
+	position: relative;
+	left: 26px;
+	bottom: 38px;
+}
+.framethree img{
+	transform:rotate(-23deg);
+	width: 100%;
+	position: relative;
+	top: 6px;
+	right: 2px;
+	animation:first 3s;
+	-moz-animotion:first 3s;
+	-webkit-animotion:first 3s;
+	-o-animotion:first 3s; 
+}
+.framefour{
+	width: 150px;
+	height: 142px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(-9deg);
+	position: relative;
+	left: 12px;
+	bottom: 23px;
+}
+.marchthree{
+	width: 312px;
+	height: 202px;
+	position: relative;
+	/*top: -8px;*/
+	left: 10px;
+	/*left: 550px;*/
+	/*bottom: 47px;*/
+	/*right: 5px;*/
+}
+.marchthree img{
+	/*opacity: 0;*/
+	width: 90%;
+	height: 100%;
+	position: relative;
+	/*right: 50px;	*/
+	left: 122px;
+}
+
+/*    page3   */
+
+.framefive{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 164px;
+	height: 141px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 9px;
+	top: 10px;
+}
+.framefive img{
+	/*opacity: 0;*/
+	width: 80%;
+	position: relative;
+	top: 7px;
+	transform:rotate(-10deg);
+	animation:first 2s;
+	-moz-animotion:first 2s;
+	-webkit-animotion:first 2s;
+	-o-animotion:first 2s;
+}
+.framesix{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 174px;
+	height: 160px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(21deg);
+	position: relative;
+	bottom: 26px;
+	/*left: 30px;*/
+}
+.framesix img{
+	width: 97%;
+	transform:rotate(-20deg);
+	position: relative;
+	top: 7px;
+	right: 2px;
+	animation:first 5s;
+	-moz-animotion:first 5s;
+	-webkit-animotion:first 5s;
+	-o-animotion:first 5s;
+}
+.textsix{
+	width: 157px;
+	height: 94px;
+	position: relative;
+	bottom: 38px;
+}
+.textsix img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.textseven{
+	/*width: 187px;*/
+	height: 151px;
+	position: relative;
+	left: 6px;
+	top: 16px;
+}
+.textseven img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.marcheight{
+	width: 242px;
+	height: 251px;
+	position: relative;
+	right: 185px;
+	bottom: 41px;
+}
+.marcheight img{
+	/*opacity: 0;*/
+	width: 100%;
+	height: 100%;
+	position: relative;
+	/*right: 120px;*/
+	/*bottom: 103px;*/
+	/*-webkit-animation: slideOut 4s ease-in-out;
+    -moz-animation: slideOut 4s ease-in-out;
+    -o-animation: slideOut 4s ease-in-out;
+    -ms-animation: slideOut 4s ease-in-out;
+    animation: slideOut 4s ease-in-out;*/
+}
+.texteight{
+	width: 149px;
+	height: 116px;
+	position: relative;
+	top: 54px;
+	right: 84px;
+}
+.texteight img{
+	width: 100%;
+	/*height: 100%;*/
+	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+
+
+/*   page4   */
+.frameseven{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 176px;
+	height: 159px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(22deg);
+	position: relative;
+	left: 6px;
+	bottom: 3px;
+}
+.frameseven img{
+	width: 95%;
+	transform:rotate(-23deg);
+	position: relative;
+	top: 9px;	
+	animation:first 3s;
+	-moz-animotion:first 3s;
+	-webkit-animotion:first 3s;
+	-o-animotion:first 3s;
+}
+.frameeight{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 153px;
+	height: 135px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 9px;
+	top: 11px;
+}
+.frameeight img{
+	transform:rotate(-11deg);
+	width: 83%;
+	position: relative;
+	top: 6px;
+	animation:first 6s;
+	-moz-animotion:first 6s;
+	-webkit-animotion:first 6s;
+	-o-animotion:first 6s;
+}
+.textnine{
+	width: 135px;
+	height: 87px;
+	position: relative;
+	/*left: 50px;*/
+	top: 40px;
+}
+.textnine img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.textten{
+	width: 149px;
+	height: 111px;
+	position: relative;
+	left: 15px;
+	bottom: 16px;
+}
+.textten img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.texteleven{
+	width: 152px;
+	height: 114px;
+	position: relative;
+	left: 19px;
+	top: 18px;
+}
+.texteleven img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.marchten{
+	height: 288px;
+	position: relative;
+	top: 12px;
+	right: -93px;
+}
+.marchten img{
+	/*width: 100%;*/
+	height: 100%;
+	position: relative;
+	bottom: 45px;
+}
+
+
+
+/*   page5   */
+.framenine{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 157px;
+	height: 134px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	position: relative;
+	left: 13px;
+	top: 18px;
+	
+}
+.framenine img{
+	transform:rotate(-10deg);
+	width: 84%;
+	position: relative;
+	top: 7px;
+	animation:first 3s;
+	-moz-animotion:first 3s;
+	-webkit-animotion:first 3s;
+	-o-animotion:first 3s;
+}
+.frameten{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 176px;
+	height: 152px;
+	background: url(../img/Photo-frame.png) no-repeat center center;
+	background-size: 100% 100%;
+	transform:rotate(22deg);
+	position: relative;
+	left: 12px;
+	top: 39px;
+}
+.frameten img{
+	width: 81%;
+	transform:rotate(-10deg);
+	position: relative;
+	top: 7px;
+	animation:first 6s;
+	-moz-animotion:first 6s;
+	-webkit-animotion:first 6s;
+	-o-animotion:first 6s;
+}
+.texttwelve{
+	width: 147px;
+	height: 110px;
+	position: relative;
+	left: 17px;
+	top: 39px;
+}
+.texttwelve img{
+	width: 100%;
+	height: 100%;
+	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.textthirteen{
+	width: 125px;
+	height: 68px;
+	position: relative;
+	left: 14px;
+	top: 24px;
+}
+.textthirteen img{
+	width: 100%;
+	/*height: 100%;*/
+	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.textfourteen{
+	/*width: 450px;*/
+	height: 102px;
+	position: relative;
+	/*right: 250px;*/
+	top: 18px;
+	left: 77px;
+}
+.textfourteen img{
+	/*width: 100%;*/
+	height: 100%;
+	animation: beat 6s ease 6s 1 normal; /*名字 总时间 频率 开始时间 次数*/
+}
+.marchTwelve{
+	width: 55px;
+	height: 217px;
+	position: relative;
+	top: 49px;
+	left: -162px;
+	/*right: 559px;*/
+	/*-webkit-animation: slideOut 4s ease-in-out;
+    -moz-animation: slideOut 4s ease-in-out;
+    -o-animation: slideOut 4s ease-in-out;
+    -ms-animation: slideOut 4s ease-in-out;
+    animation: slideOut 4s ease-in-out;*/
+}
+.marchTwelve img{
+	/*width: 100%;*/
+	height: 100%;
+	position: relative;
+	bottom: 45px;
+
+}
+@media screen and (min-width:360px) and (max-width:365px) {		
+		/*    page1   */
+		.Lballoon{
+			width: 36px;
+		    height: 43px;		   
+		    left: 58px;
+		    top: 11px;		   
+		}
+		.frame1{			
+	    	width: 191px;
+    		height: 170px;		   
+		    left: 8px;
+	    	bottom: 7px;		    
+		}
+		.text1 {
+		    width: 153px;
+    		height: 82px;
+		    position: relative;
+		    top: 73px;
+		    left: 5px;
+		}
+		.text3 {
+		    width: 153px;
+    		height: 116px;
+		}
+		.stars {
+		    width: 25px;
+		    position: relative;
+		    left: 123px;
+		    bottom: 3px;
+		}
+		.frame2 {		    
+		    width: 183px;
+    		height: 165px;
+		    left: 15px;
+		    bottom: 29px;		    
+		}
+		.frame2 img {
+		    width: 100%;
+		    top: 10px;
+		}
+		.baby {
+		    width: 178px;
+		    height: 222px;
+		    bottom: 117px;
+		}
+		.balloon {
+		    width: 40px;
+		    height: 52px;	    
+		    left: 137px;
+		    bottom: 43px;
+		}
+		.cloud {
+		    width: 43px;
+		    height: 22px;
+		    position: relative;
+		    top: 20px;
+		    left: 47px;
+		}
+		.Map {
+		    width: 75px;
+		    height: 66px;
+		    position: relative;
+		    top: 49px;
+		    left: 77px;
+		}
+
+
+		/*   page2   */
+		.Bird {
+		    width: 83px;
+		    height: 46px;
+		    position: relative;
+		    top: 64px;
+		    left: 26px;
+		}
+		.textfour {
+		    width: 189px;
+		    height: 128px;
+		    position: relative;
+		    left: 24px;
+		    top: -2px;
+		}
+		.aircraft {
+		    width: 150px;
+    		height: 98px;
+		    position: relative;
+		    left: 2px;
+		    top: 16px;
+		}
+		.cloud2 {
+		    width: 47px;
+		    height: 25px;
+		    position: relative;
+		    left: 134px;
+		    bottom: 42px;
+		}
+		.framethree {		    
+		    width: 217px;
+		    height: 194px;		    
+		    left: 26px;
+		    bottom: 47px;
+		}
+		.framefour {
+		    width: 162px;
+		    height: 139px;		    
+		    left: 12px;
+		    bottom: 28px;
+		}
+		.marchthree {
+		    width: 282px;
+		    height: 211px;
+		    position: relative;
+		    top: 12px;	    
+		}
+
+
+		/*   page3   */
+		.Bird2 {
+		    width: 64px;
+		    height: 43px;
+		    position: relative;
+		    top: 21px;
+		    left: 36px;
+		}
+		.framefive {		    
+		    width: 183px;
+		    height: 166px;		    
+		    left: 9px;
+		    top: 29px;
+		}
+		.cloud3 {
+		    width: 53px;
+		    height: 27px;
+		    position: relative;
+		    top: 60px;
+		}
+		.Bird3 {
+		    width: 56px;
+		    height: 31px;
+		    position: relative;
+		    top: 25px;
+		    left: 115px;
+		}
+		.textsix {
+		    width: 189px;
+		    height: 99px;		 
+		    left: 8px;
+		    top: 43px;
+
+		}
+		
+		.textseven {
+		    width: 161px;
+		    height: 161px;
+		    position: relative;
+		    left: 6px;
+		    top: 37px;
+		}
+		.balloon3 {
+		    width: 35px;
+		    height: 43px;
+		    left: 108px;
+		    top: 10px;
+		}
+		.framesix {
+		    
+		    width: 195px;
+		    height: 176px;		    
+		    bottom: 8px;
+		}
+		.marcheight {
+		    width: 246px;
+		    height: 277px;	    
+		}
+		.cloud4 {		   
+		    top: 36px;
+		}
+		.texteight {
+		    top: 67px;
+		    right: 70px;
+		}
+		.Stars2 {
+		    
+		    left: 40px;
+		    top: 52pxt;
+		}
+
+		/*   page4   */
+		.Bicycle {
+		    width: 88px;
+   	 		height: 54px;
+		    position: relative;
+		    top: 26px;
+		    left: 24px;
+		}
+		.Bird4 {
+		    width: 50px;
+		    height: 34px;
+		    top: 22px;
+		    left: 126px;
+		}
+		.textnine {
+		    width: 142px;
+    		height: 93px;
+		    top: 40px;
+		}
+		.frameseven {		    
+		    width: 200px;
+		    height: 179px;  
+		    left: 9px;
+		}
+		.frameeight {		    
+		    width: 178px;
+		    height: 166px;		    
+		    left: 9px;
+		    top: 11px;
+		}
+		.tra {
+		    width: 63px;
+		    height: 50px;
+		    left: 2px;
+		    top: -10px;
+		}
+		.textten {
+		    width: 169px;
+		    height: 128px;
+		    position: relative;
+		    left: 13px;
+		    bottom: 10px;
+		}
+		.Stars3 {
+		    width: 31px;
+		    position: relative;
+		    left: 14px;
+    		bottom: -19px;
+		}
+		.texteleven {
+		    width: 154pxt;
+		     position: relative;
+		    left: 32px;
+    		top: 35px;
+		}
+		.marchten {
+		    height: 293px;
+		    position: relative;
+		    top: 27px;
+		    /*right: -137px !important;*/
+		}
+		.marchten img{
+			position: relative;
+		    right: -93px;
+		}
+
+
+		/*   page5   */
+		.framenine {
+		    width: 161px;
+		    height: 145px;	    
+		    left: 11px;
+		    top: 25px;
+		}
+		.texttwelve {
+		    width: 154px;
+		    height: 113px;
+		    position: relative;
+		    left: 33px;
+		    top: 43px;
+		}
+		.camera {	    
+		    left: 68px;
+		}
+		.balloon4 {
+		    width: 35px;
+		    height: 45px;		    
+		    left: 118px;
+		    top: -5px;
+		}
+		.textthirteen {
+		    width: 125px;
+		    left: 24px;
+		    top: 47px;
+		}
+		.frameten {		    
+		    width: 185px;
+		    height: 165px;	    
+		    position: relative;
+		    left: 40px;
+		    top: 20px;
+		}
+		.marchTwelve {
+		    width: 78px;
+		    height: 255px;
+		    position: relative;
+		    top: 38px;
+		    left: -162px;
+		    /* right: 559px; */
+		}
+		.textfourteen {
+		    /* width: 450px; */
+		    height: 115px;
+		    position: relative;
+		    /* right: 250px; */
+		    top: 38px;
+		    left: 103px;
+		}
+		.book {
+		    width: 75px;
+		    height: 70px;
+		    left: 200px;
+		    top: 26px;
+		}
+
+} 
+@media screen and (min-width:370px) and (max-width:390px){
+	.Lballoon {
+	    width: 35px;
+	    height: 43px;
+	    left: 58px;
+	    top: 11px;
+	}
+	.frameone {	    
+	    width: 193px;
+	    height: 167px;
+	    left: 17px;   
+	}
+	.textone {
+	    width: 159px;
+	    height: 90px;
+	    position: relative;
+	    top: 75px;
+	    left: 17px;
+	}
+	.textthree {
+	    width: 160px;
+	    height: 120px;
+	}
+	.frametwo {	   
+	    width: 194px;
+	    height: 182px;
+	    left: 13px;
+	    bottom: 29px;	    
+	    transform: rotate(23deg);
+	}
+	.stars {
+	    width: 31px;
+	    position: relative;
+	    left: 125px;
+	    bottom: 0px;
+	}
+	.marchbaby {
+	    width: 194px;
+	    height: 237px;	    
+	    bottom: 67px;
+	}
+	.balloon {
+	    width: 45px;
+	    height: 57px;
+	    left: 142px;
+	    top: 12px;
+	}
+	.cloud {
+	    width: 48px;
+	    height: 25px;
+	    position: relative;
+	    top: 81px;
+	    left: 38px;
+	}
+	.Map {
+	    width: 80px;
+	    height: 68px;
+	    position: relative;
+	    top: 113px;
+	    left: 69px;
+	}
+
+
+	/*   page2   */
+	.Bird {	    
+	    top: 64px;
+	}
+	.textfour{
+		height: 147px;
+	}
+	.textfive {
+	    width: 122px;
+	    height: 167px;
+	    left: 16px;
+	    bottom: 9px;
+	}
+	.cloud2 {
+	    width: 50px;
+	    height: 27px;
+	    left: 145px;
+	    bottom: 57px;
+	}
+	.framethree {    
+	    width: 212px;
+	    height: 193px;	    
+	    transform: rotate(22deg);	   
+	    left: 32px;
+	    bottom: 60px;
+	}
+	.framefour {
+	    width: 162px;
+	    height: 147px;	   
+	    transform: rotate(-10deg);
+	    left: 12px;
+	    bottom: 25px;
+	} 
+	.glasses {  
+	    left: 138px;
+	    bottom: 24px;
+	}
+	.marchthree {
+    	height: 233px;   
+	}
+
+
+	/*   page3   */
+	.framefive {    
+	    width: 198px;
+	    height: 180px;	    
+	}
+	.Bird2 {
+	    width: 66px;
+	    height: 45px;	    
+	}
+	.cloud3 {
+	    width: 55px;
+	    height: 30px;
+	}
+	.textsix {
+	    width: 178px;
+	    height: 99px;
+	    top: 50px;
+	    left: 5px;
+	}
+	.textseven {
+	    width: 172px;
+	    height: 170px;
+	    top: 38px;
+	}
+	.balloon3 {
+	    width: 37px;
+	    height: 45px;
+	    left: 108px;
+	    top: 8px;
+	}
+	.framesix {
+	    width: 208px;
+	    height: 196px;
+	    position: relative;
+	    bottom: 5px;
+	}
+	.marcheight {
+	    width: 263px;
+	    height: 294px;
+	    bottom: 45px;
+	}
+	.cloud4 {
+	    width: 47px;
+	    height: 24px;
+	    left: 163px;
+	}
+	.texteight {
+	    width: 154px;
+	    position: relative;
+	    top: 73px;
+	    right: 73px;
+	}
+	.Stars2 {
+	    width: 32px;
+	    position: relative;
+	    left: 36px;
+	    top: 44px;
+	    /*left: 24px;*/ 
+	}
+
+
+		/*   page4   */
+		.Bicycle {
+		    width: 98px;
+		    height: 63px;
+		    position: relative;
+		    top: 30px;
+		    left: 24px;
+		}
+		.frameseven {		  
+		    width: 218px;
+		    height: 197px;		    
+		    transform: rotate(20deg);
+		    left: 2px;
+		    top: 5px;
+		}
+		.Bird4 {
+		    width: 49px;
+		    height: 32px;
+		    top: 22px;
+		    left: 141px;
+		}
+		.textnine {
+		    width: 147px;
+		    height: 98px;
+		    top: 55px;
+		}
+		.frameeight {		    
+		    width: 191px;
+		    height: 166px;	    
+		    top: 18px;
+		}
+		.frameeight img {
+		    top: 8px;
+		}
+		.textten {
+		    width: 180px;
+		    height: 131px;
+		    left: 8px;
+		    top: 5px;
+		}
+		.tra {
+		    width: 61px;
+		    height: 50px;
+		    top: 7px;
+		}
+		.Stars3 {
+		    width: 32px;
+		    left: 4px;		    
+		}
+		.texteleven {
+		    width: 172px;
+		    height: 128px;
+		    position: relative;
+		    left: 30px;
+		    top: 36px;
+		}
+		.marchten img {
+		    position: relative;
+		    right: -43px;
+		}
+		.marchten {
+		    height: 294px;
+		    top: 37px;
+		}
+		.car {
+		    width: 63px;
+		    position: relative;
+		    left: 33px;
+		    top: 28px;
+		}
+}
+
+@media screen and (min-width:320px) and (max-width:360px) {
+	.framenine {
+	   left: 17px;
+	}
+	.frame9 {
+	   left: 17px;
+	}
+	.camera {
+        top: 22px;
+    	left: 49px;
+	}
+	.texttwelve {
+    	left: 15px;
+    	top: 54px;
+	}
+	.text12 {
+    	left: 15px;
+    	top: 54px;
+	}
+	.frameten {
+	    left: 8px;
+    	top: 48px;
+	}
+	.frame10 {
+	    left: 8px;
+    	top: 48px;
+	}
+	.textthirteen {
+	    left: 16px;
+    	top: 25px;
+	}
+	.text13 {
+	    left: 16px;
+    	top: 25px;
+	}
+	.book {
+	    left: 154px;
+    	top: 0px;
+	}
+	.textfourteen {
+        top: 30px;
+    	left: 74px;
+	}
+	.text14 {
+        top: 30px;
+    	left: 74px;
+	}
+}
+@media screen and (min-width:360px) and (max-width:375px) {
+	.framenine {
+		left: 20px;
+	   	width: 170px;
+    	height: 150px;
+	}
+	.frame9 {
+		left: 20px;
+	   	width: 170px;
+    	height: 150px;
+	}
+	.camera {
+        top: 22px;
+    	left: 44px;
+	}
+	.texttwelve {
+	    left: 22px;
+    	top: 46px;
+        width: 177px;
+    	height: 135px;
+	}
+	.text12 {
+	    left: 22px;
+    	top: 46px;
+        width: 177px;
+    	height: 135px;
+	}
+	.frameten {
+        left: 25px;
+		top: 48px;
+	}
+	.frame10 {
+        left: 25px;
+		top: 48px;
+	}
+	.textthirteen {
+        left: 20px;
+    	top: 34px;
+    	width: 148px;
+	}
+	.text13{
+        left: 20px;
+    	top: 34px;
+    	width: 148px;
+	}
+	.book {
+        width: 104px;
+    	height: 88px;
+    	left: 180px;
+    	top: -14px;
+	}
+	.textfourteen {
+	    height: 121px;
+    	top: -5px;
+    	left: 70px;
+	}
+	.text14 {
+	    height: 121px;
+    	top: -5px;
+    	left: 70px;
+	}
+}
+@media screen and (min-width:375px) and (max-width:412px){
+	.framenine {
+		left: 26px;
+	   	width: 170px;
+    	height: 150px;
+	}
+	.frame9 {
+		left: 26px;
+	   	width: 170px;
+    	height: 150px;
+	}
+	.camera {
+        top: 22px;
+    	left: 49px;
+	}
+	.texttwelve {
+	    left: 27px;
+    	top: 46px;
+        width: 177px;
+    	height: 135px;
+	}
+	.text12 {
+	    left: 27px;
+    	top: 46px;
+        width: 177px;
+    	height: 135px;
+	}
+	.frameten {
+        left: 30px;
+		top: 48px;
+	}
+	.frame10 {
+        left: 30px;
+		top: 48px;
+	}
+	.textthirteen {
+        left: 26px;
+    	top: 34px;
+    	width: 148px;
+	}
+	.text13{
+        left: 26px;
+    	top: 34px;
+    	width: 148px;
+	}
+	.book {
+        width: 104px;
+    	height: 88px;
+    	left: 190px;
+    	top: -14px;
+	}
+	.textfourteen {
+	    height: 121px;
+    	top: -5px;
+    	left: 74px;
+	}
+	.text14 {
+	    height: 121px;
+    	top: -5px;
+    	left: 74px;
+	}
+}
+@media screen and (min-width:412px) and (max-width:732px) {
+	.framenine {
+        width: 195px;
+	    height: 165px;
+	    left: 26px;
+	}
+	.frame9{
+		width: 195px;
+	    height: 165px;
+	    left: 26px;
+	}
+	.frame10{
+		left: 44px;
+	    width: 200px;
+	    height: 183px;
+	}
+	.frameten {
+		left: 44px;
+	    width: 200px;
+	    height: 183px;
+	}
+	.text12{
+	   	left: 25px;
+        width: 189px;
+    	height: 137px;
+	}
+	.texttwelve {
+	   	left: 25px;
+        width: 189px;
+    	height: 137px;
+	}
+	.text13 {
+	    width: 160px;
+	    left: 28px;
+	}
+	.textthirteen {
+	    width: 160px;
+	    left: 28px;
+	}
+	.book {
+	    left: 217px;
+	    top: 10px;
+	}
+	.text14 {
+	    height: 135px;
+	}
+	.textfourteen {
+	    height: 135px;
+	}
+	.Bicycle {
+	    width: 120px;
+	    height: 76px;
+	    top: 41px;
+	    left: 47px;
+	}
+	.frameseven {
+	    left: 63px;
+        bottom: -31px;
+	}
+	.frame7 {
+	    left: 63px;
+        bottom: -31px;
+	}
+	.textnine {
+	    top: 62px;
+	    left: 42px;
+	}
+	.text9 {
+	    top: 62px;
+	    left: 42px;
+	}
+	.frameeight {
+	    left: 48px;
+	    top: 23px;
+	}
+	.frame8 {
+	    left: 48px;
+	    top: 23px;
+	}
+	.textten {
+        left: 70px;
+    	bottom: -32px;
+    	width: 173px;
+    	height: 121px;
+	}
+	.text10 {
+        left: 70px;
+    	bottom: -32px;
+    	width: 173px;
+    	height: 121px;
+	}
+	.tra {
+	    left: 49px;
+	}
+	.texteleven {
+	    left: 42px;
+	    width: 162px;
+	}
+	.text11 {
+	    left: 42px;
+	    width: 162px;
+	}
+	.marchten {
+        top: 29px;
+    	right: 11px;
+	}
+	.march10 {
+        top: 29px;
+    	right: 11px;
+	}
+	.car {
+	    left: 60px;
+	}
+	.framefive {
+	    left: 51px;
+    	top: 30px;
+	}
+	.frame5 {
+	    left: 51px;
+    	top: 30px;
+	}
+	.textsix {
+	    bottom: 18px;
+    	left: 66px;
+	}
+	.text6 {
+	    bottom: 18px;
+    	left: 66px;
+	}
+	.textseven {
+	    width: 177px;
+	    height: 151px;
+	    position: relative;
+	    left: 28px;
+	    top: 16px;
+	}
+	.text7 {
+	    width: 177px;
+	    height: 151px;
+	    position: relative;
+	    left: 28px;
+	    top: 16px;
+	}
+	.framesix {
+	    bottom: -17px;
+	    left: 25px;
+	}
+	.frame6 {
+	    bottom: -17px;
+	    left: 25px;
+	}
+	.marcheight {
+	    right: 13px;
+	    bottom: 35px;
+	}
+	.text8 {
+	    top: 24px;
+	    right: 17px;
+	}
+	.texteight {
+	    top: 24px;
+	    right: 17px;
+	}
+	.textfour {
+	    width: 171px;
+	    height: 133px;
+	    left: 36px;
+	    top: 18px;
+	}
+	.text4{
+	    width: 171px;
+	    height: 133px;
+	    left: 36px;
+	    top: 18px;
+	}
+	.textfive {
+	    left: 49px;
+	}
+	.text5{
+	    left: 49px;
+	}
+	.frame3{
+	    left: 84px;
+	    bottom: 23px;
+	}
+	.framethree {
+	    left: 84px;
+	    bottom: 23px;
+	}
+	.frame4 {
+	    left: 43px;
+	}
+	.framefour {
+	    left: 43px;
+	}
+	.march3 {
+	    left: -92px;
+	}
+	.marchthree {
+	    left: -92px;
+	}
+	.frame1 {
+	    left: 50px;
+	}
+	.text1 {
+	    left: 58px;
+	}
+	.text3 {
+	    width: 156px;
+	    height: 116px;
+	}
+	.text3 img {
+	    left: 20%;
+	}
+	.frame2 {
+	    left: 53px;
+	    bottom: 10px;
+	}
+	.baby {
+	    left: 22%;
+	}
+	.Map {
+	    left: 97px;
+	}
+}
+@media screen and (min-width:414px) and (max-width:736px) {
+	.frame9 {
+	    left: 27px;
+	}
+	.framenine {
+	    left: 27px;
+	}
+	.frame10 {
+	    left: 33px;
+	}
+	.frameten {
+	    left: 33px;
+	}
+	.text12 {
+	   	left: 25px;
+        width: 189px;
+    	height: 137px;
+	}
+	.texttwelve {
+	   	left: 25px;
+        width: 189px;
+    	height: 137px;
+	}
+	.text13 {
+	    left: 22px;
+	}
+	.textthirteen {
+	    left: 22px;
+	}
+	.book{
+        top: -21px;
+	    width: 116px;
+	    height: 98px;
+	}
+	.text14{
+        top: -5px;
+    	left: 86px;
+	}
+	.textfourteen {
+        top: -5px;
+    	left: 86px;
+	}
+}
+@media screen and (min-width:768px) and (max-width:1024px) {
+	.frame9 {
+	    width: 300px;
+    	height: 262px;
+	    left: 103px;
+    	top: 32px;
+	}
+	.framenine {
+        width: 300px;
+    	height: 262px;
+    	left: 103px;
+    	top: 32px;
+	}
+	.frame10 {
+	    left: 97px;
+    	top: 45px;
+	    width: 300px;
+    	height: 273px;
+	}
+	.frameten {
+   	    left: 97px;
+    	top: 45px;
+	    width: 300px;
+    	height: 273px;
+	}
+	.text12 {
+	   	left: 25px;
+        width: 189px;
+    	height: 137px;
+	}
+	.texttwelve {
+   	 	width: 350px;
+    	height: 255px;
+    	left: 99px;
+    	top: 65px;
+	}
+	.text13 {
+     	width: 269px;
+    	height: 68px;
+    	left: 94px;
+    	top: 41px;
+	}
+	.textthirteen {
+        width: 269px;
+    	height: 68px;
+    	left: 94px;
+    	top: 41px;
+	}
+	.book{
+        top: -21px;
+	    width: 116px;
+	    height: 98px;
+	}
+	.textfourteen {
+        width: 300px;
+    	height: 230px;
+	    top: -2px;
+    	left: -10px;
+	}
+	.text14 {
+        width: 300px;
+    	height: 230px;
+	    top: -2px;
+    	left: -10px;
+	}
+	.marchTwelve {
+	    width: 350px;
+	    height: 356px;
+        left: 53px;
+        top: 71px;
+	}
+	.march12 {
+	    width: 350px;
+	    height: 356px;
+        left: 53px;
+        top: 71px;
+	}
+}

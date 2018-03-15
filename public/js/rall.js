@@ -5,7 +5,7 @@ window.onload=function(){
 	var blessing_message_large2 = document.getElementById("blessing_message_large2");
 	var air1 = document.getElementById("air");
 	var cover1 = document.getElementById("cover");
-	var large_one = document.getElementsByClassName("message_large_one");
+	var large_one = null;
 	var input1 = document.getElementById("input");
 	var input2 = document.getElementById("input2");
 	var input_bless = document.getElementById("input_bless");
@@ -15,6 +15,50 @@ window.onload=function(){
 	var sent_bless = document.getElementById("sent_bless");
 	var pay = document.getElementById("pay");//支付按钮
 
+	// bless_air();
+	//读取数据库中的祝福语
+	// function bless_air(){
+	//     setInterval(function(){
+	//     	axios.post('/admin/gift/getgift')
+	// 		.then(function (response) {
+				
+	// 		})
+	// 		.catch(function (error) {
+	// 		    console.log(error);
+	// 		});
+	//     },3000);
+	// }
+
+
+	
+	//更新气泡内容
+	setInterval(function(){
+    	moment2();
+    },5000);
+
+	moment();
+    function moment(){
+    	setTimeout(function(){
+    		$("#p1").text("1");
+    	},0);
+    	setTimeout(function(){
+    		$("#p2").text("2");
+    	},1000);
+    	setTimeout(function(){
+    		$("#p3").text("3");
+    	},1000);
+    }
+    function moment2(){
+    	setTimeout(function(){
+    		$("#p1").text("4"); 
+    	},1000);
+    	setTimeout(function(){
+    		$("#p2").text("5");
+    	},2000);
+    	setTimeout(function(){
+    		$("#p3").text("6");
+    	},5000);
+    }
 
 	//存放留言
 	sent_bless.onclick = function(){
@@ -49,50 +93,69 @@ window.onload=function(){
 	}
 
 	
-
-	//点击赠送后弹出输入框填写赠送人，以获得选中的礼物
-	go.onfocus = function(){
+	var myArray=new Array();
+	//点击赠送后弹出输入框填写赠送人和以选中的礼物
+	go.onclick = function(){
+		large_one = document.getElementsByClassName("message_large_one");
 		birth_glass.style.display="block";
 		document.getElementById("blessing").style.display="none";
 		document.getElementById("input3").focus();
-		var myArray=new Array();
+		show();
 		for (var i = 0; i < large_one.length; i++) {
-			if (this.className=='message_large_one sative') {
-				myArray[i] = i;
+			if (large_one[i].className=='message_large_one sative') {
+				myArray[i] = large_one[i].getAttribute("value");
+			}else{
+				myArray[i] = -1;
 			}
 		};
-		pay.onclick = function(){
-			var name = $("#input3").val();//赠送人姓名
-			var list = $("#birth_list").val();//礼物ID
-			var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-			axios.post('/admin/gift/give', {
-			    name: name,
-				message: list,
-				_token:token
-			})
-			.then(function (response) {
-				var res = response.data;
-				console.log(res);
-				if (res.code) {
-					$(function(){
-					    $.message({
-							message:res.msg,
-							type:'warning'
-						});
-					})
-				}else{
-					$(function(){
-					    $.message(res.msg);
-					})
+		var birth="";
+		axios.post('/admin/gift/getgift')
+		.then(function (response) {
+			var res = response.data.result;
+			for (var i=0; i <res.length; i++) {
+				if (res[i].id==myArray[i]) {
+					birth = birth + res[i].name + "(" + res[i].price + ")  "
 				};
-			    
-			})
-			.catch(function (error) {
-			    console.log(error);
-			});
-		}
-		show();
+			};
+			$("#birth_list").val(birth);
+		})
+		.catch(function (error) {
+		    console.log(error);
+		});
 	}
+
+	//点击支付的时候存放赠送人及礼物，并完成支付
+	pay.onclick = function(){
+		var name = $("#input3").val();//赠送人姓名
+		var list = myArray;//礼物ID
+		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		axios.post('/admin/gift/give', {
+		    name: name,
+			message: list,
+			_token:token
+		})
+		.then(function (response) {
+			var res = response.data;
+			console.log(res);
+			// if (res.code) { 
+			// 	$(function(){
+			// 	    $.message({
+			// 			message:res.msg,
+			// 			type:'warning'
+			// 		});
+			// 	})
+			// }else{
+			// 	$(function(){
+			// 	    $.message(res.msg);
+			// 	})
+			// };
+		    
+		})
+		.catch(function (error) {
+		    console.log(error);
+		});
+	}
+
 
 	//输入框获得焦点是时，底部送祝福框出来
 	input1.onfocus = function(){
@@ -111,15 +174,18 @@ window.onload=function(){
 	});
 
 	//标示礼物是否被选中
-	for (var i = 0; i < large_one.length; i++) {
-		large_one[i].onclick = function(){
-			if (this.className=='message_large_one sative') {
-				this.setAttribute("class", "message_large_one"); 
-			}else{
-				this.setAttribute("class", "message_large_one sative"); 
+	function active(){
+		large_one = document.getElementsByClassName("message_large_one");
+		for (var i = 0; i < large_one.length; i++) {
+			large_one[i].onclick = function(){
+				if (this.className=='message_large_one sative') {
+					this.setAttribute("class", "message_large_one"); 
+				}else{
+					this.setAttribute("class", "message_large_one sative"); 
+				}
 			}
-		}
-	};
+		};
+	}
 
 	//转换到毕业生送祝福页面
 	btn1.onclick=function(){
@@ -157,5 +223,25 @@ window.onload=function(){
 		blessing_glass1.style.display="none";
 		birth_glass.style.display="none";
 		input.disabled=false;
+	}
+
+	great_bless();
+	//从后台得到礼物
+	function great_bless(){
+		var father  = $("#blessing_message_large1");
+		var father2  = $("#blessing_message_large2");
+		axios.post('/admin/gift/getgift').then(function(response) {
+			var data = response.data;
+			if(data.code == 0) {
+				var giftArr = data.result; 
+				for (var i = 0; i<giftArr.length/2; i++) {
+					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+				};
+				for (var i = giftArr.length/2; i<giftArr.length; i++) {
+					father2.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+				};
+				active();
+			}
+		})
 	}
 }

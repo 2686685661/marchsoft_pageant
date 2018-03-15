@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin'],function() {
 
     Route::group(['prefix' => 'gift'],function() {
         Route::post("/give",'GiftsController@give_gift');
+        Route::post("/getgift",'GiftsController@get_gifts_info');
     });
 });
 

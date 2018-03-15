@@ -14,12 +14,14 @@ class GiftsController extends Controller
     public function give_gift(Request $request) {
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
-
         //$gifts是一个包含礼物id的一维数组
         $gifts = $give_all['gifts'];
-        if($give_name == '') return responseToJson(1,'昵称不能为空');
-        else if(mb_strlen($give_name,'utf-8') >= 10) return responseToJson(1,'昵称长度不能超过10个字符');
-        else if(!count($gifts)) return responseToJson(1,'礼物不能为空');
+        if($give_name == '')
+            return responseToJson(1,'昵称不能为空');
+        else if(mb_strlen($give_name,'utf-8') >= 10) 
+            return responseToJson(1,'昵称长度不能超过10个字符');
+        else if(!count($gifts)) 
+            return responseToJson(1,'礼物不能为空');
         $total = get_gifts_total($gifts);
 
         $gifts_id = '';

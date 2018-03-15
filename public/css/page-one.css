@@ -106,7 +106,73 @@
 	margin: 0 0 0 55%;
 	animation: qiu 1.5s 1 linear;
 }
-
+.page8 .title img{
+	width: 120px;
+    margin: 12px 0% 0 35%;
+}
+.background{
+	position: relative;
+}
+.background img{
+	width: 290px;
+    margin: 0px 0 0 9%;
+}
+.gift-one{
+	position: absolute;
+	top: 2%;
+	left: 15%;
+}
+.gift-one img{
+	width: 100px;
+}
+.gift-two{
+	position: absolute;
+	top: 2%;
+	left: 50%;
+}
+.gift-two img{
+	width: 100px;
+}
+.gift-three{
+	position: absolute;
+	top: 30%;
+	left: 15%;
+}
+.gift-three img{
+	width: 100px;
+}
+.gift-four{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+}
+.gift-four img{
+	width: 100px;
+}
+.gift-five{
+	position: absolute;
+	top: 60%;
+	left: 15%;
+}
+.gift-five img{
+	width: 100px;
+}
+.gift-sex{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+}
+.gift-sex img{
+	width: 100px;
+}
+.give{
+	position: absolute;
+	top: 85%;
+	left: 15%;
+}
+.give img{
+	width: 100px;
+}
 @media screen and (max-width:360px){ 
 	.animation-one .yan-one img{
 		width: 55px;
@@ -163,7 +229,7 @@
     	margin: 43px 0 0 0;
 	}
 } 
-@media screen and (min-width:320px) and (max-width:568px){
+@media screen and (min-width:320px) and (max-width:360px){
 	.animation-one .yan-one img{
 		width: 40px;
 	}
@@ -221,8 +287,126 @@
 	#closebt img {
     	width: 25px;
 	}
+	.background .back{
+	    width: 268px;
+    	margin: -36px 0 0 12%;
+	}
+	.gift-one{
+		top: -5%;
+		left: 20%;
+	}
+	.gift-one img{
+		width: 90px;
+	}
+	.gift-two{
+		top: -5%;
+		left: 65%;
+	}
+	.gift-two img{
+		width: 90px;
+	}
+	.gift-three{
+		top: 25%;
+		left: 20%;
+	}
+	.gift-three img{
+		width: 90px;
+	}
+	.gift-four{
+		top: 25%;
+		left: 65%;
+	}
+	.gift-four img{
+		width: 90px;
+	}
+	.gift-five{
+		top: 55%;
+		left: 20%;
+	}
+	.gift-five img{
+		width: 90px;
+	}
+	.gift-sex{
+		top: 55%;
+		left: 65%;
+	}
+	.gift-sex img{
+		width: 90px;
+	}
+	.give{
+		top: 83%;
+		left: 43%;
+	}
+	.give img{
+		width: 100px;
+	}
 }
-@media screen and (min-width:375px) and (max-width:667px){  
+@media screen and (min-width:360px) and (max-width:375px){
+	.lists img{
+		width: 350px;
+	}
+	.list img{
+		width: 350px;
+	}
+	#ewmsrc{
+		width: 250px;
+		margin: 0 0 0 20px;
+	}
+	.background .back {
+	    width: 310px;
+	    margin: 0px 0 0 -2%;
+	}
+	.gift-one{
+		top: 4%;
+		left: 10%;
+	}
+	.gift-one img{
+		width: 100px;
+	}
+	.gift-two{
+		top: 4%;
+		left: 60%;
+	}
+	.gift-two img{
+		width: 100px;
+	}
+	.gift-three{
+		top: 32%;
+		left: 10%;
+	}
+	.gift-three img{
+		width: 100px;
+	}
+	.gift-four{
+		top: 32%;
+		left: 60%;
+	}
+	.gift-four img{
+		width: 100px;
+	}
+	.gift-five{
+		top: 60%;
+		left: 10%;
+	}
+	.gift-five img{
+		width: 100px;
+	}
+	.gift-sex{
+		top: 60%;
+		left: 60%;
+	}
+	.gift-sex img{
+		width: 100px;
+	}
+	.give{
+		top: 85%;
+		left: 35%;
+	}
+	.give img{
+		width: 100px;
+	}
+}
+@media screen and (min-width:375px) and (max-width:412px){  
     .animation-one .yan-one img{
 		width: 70px;
 	}
@@ -277,9 +461,61 @@
     	width: 336px;
     	margin: 43px 0 0 0;
 	}
+	.background .back{
+       	margin: 0px 0 0 -9%;
+    	width: 330px;
+	}
+	.gift-one{
+		top: 2%;
+		left: 5%;
+	}
+	.gift-one img{
+		width: 110px;
+	}
+	.gift-two{
+		top: 2%;
+		left: 55%;
+	}
+	.gift-two img{
+		width: 110px;
+	}
+	.gift-three{
+		top: 30%;
+		left: 5%;
+	}
+	.gift-three img{
+		width: 110px;
+	}
+	.gift-four{
+		top: 30%;
+		left: 55%;
+	}
+	.gift-four img{
+		width: 110px;
+	}
+	.gift-five{
+		top: 60%;
+		left: 5%;
+	}
+	.gift-five img{
+		width: 110px;
+	}
+	.gift-sex{
+		top: 60%;
+		left: 55%;
+	}
+	.gift-sex img{
+		width: 110px;
+	}
+	.give{
+		top: 85%;
+		left: 32%;
+	}
+	.give img{
+		width: 100px;
+	}
 }
-
-@media screen and (min-width:412px) and (max-width:732px){  
+@media screen and (min-width:412px) and (max-width:736px){  
 	.animation-three .qiu-one img{
 		width: 50px;
 	}
@@ -309,6 +545,65 @@
 	    height: 66px;
     	width: 336px;
     	margin: 43px 0 0 0;
+	}
+	.background .back{
+	    width: 350px;
+    	margin: 0px 0 0 -12%;
+	}
+	.gift-one{
+		top: 5%;
+		left: 0%;
+	}
+	.gift-one img{
+		width: 110px;
+	}
+	.gift-two{
+		top: 5%;
+		left: 55%;
+	}
+	.gift-two img{
+		width: 110px;
+	}
+	.gift-three{
+		top: 32%;
+		left: 0%;
+	}
+	.gift-three img{
+		width: 110px;
+	}
+	.gift-four{
+		top: 32%;
+		left: 55%;
+	}
+	.gift-four img{
+		width: 110px;
+	}
+	.gift-five{
+		top: 60%;
+		left: 0%;
+	}
+	.gift-five img{
+		width: 110px;
+	}
+	.gift-sex{
+		top: 60%;
+		left: 55%;
+	}
+	.gift-sex img{
+		width: 110px;
+	}
+	.give{
+		top: 85%;
+		left: 35%;
+	}
+	.give img{
+		width: 100px;
+	}
+}
+@media screen and (min-width:414px) and (max-width:736px){
+	.background .back{
+	    width: 352px;
+    	margin: 0px 0 0 -13%;
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
@@ -347,5 +642,9 @@
 	}
 	.think img{
 		width: 145px;
+	}
+	.background .back {
+    	width: 550px;
+    	margin: 1px 0 0 13%;
 	}
 }
