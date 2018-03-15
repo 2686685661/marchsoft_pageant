@@ -32,3 +32,11 @@ function is_stat($gift_id,$stat) {
     }
     return false;
 }
+
+function get_rand_string() {
+    $vNow = time();
+    $rand = rand(111,999);
+    $str = strval($vNow.$rand);
+
+    return $str;
+}
