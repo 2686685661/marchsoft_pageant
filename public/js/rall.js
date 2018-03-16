@@ -128,15 +128,38 @@ window.onload=function(){
 	pay.onclick = function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
+		var gift_arr = [];
+		for(var i=0;i<list.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr.push(list[i]);
+		}
+
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		// window.location.href="localhost/admin/gift/give?name="+name+"&gifts="+gift_arr+"&_token="+token;
 		axios.post('/admin/gift/give', {
-		    name: name,
-			message: list,
-			_token:token
+			// params: {
+				name: name,
+				gifts: gift_arr,
+				_token:token
+			// }
 		})
 		.then(function (response) {
-			var res = response.data;
-			console.log(res);
+			var data = response.data;
+			if(data.code == 0) {
+				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+			}else {
+				$(function(){
+					$.message({
+						message:data.msg,
+						type:'warning'
+					});
+				})
+				// console.log(data.msg);
+			}
+			// console.log(data.msg);
+			
+			// var res = response.data;
+			// console.log(res);
 			// if (res.code) { 
 			// 	$(function(){
 			// 	    $.message({
@@ -234,6 +257,7 @@ window.onload=function(){
 			var data = response.data;
 			if(data.code == 0) {
 				var giftArr = data.result; 
+				
 				for (var i = 0; i<giftArr.length/2; i++) {
 					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
 				};

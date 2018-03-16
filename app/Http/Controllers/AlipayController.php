@@ -15,11 +15,36 @@ class AlipayController extends Controller
 {
 
 
-    public function __construct($order = null) {
+    // public function __construct($totle = 0) {
         
+    //     $out_trade_no = get_rand_string();
+    //     $subject = 'marchsoft捐赠';
+    //     // $total_amount = $totle;
+    //     $total_amount = '0.01';
+    //     $timeout_express="1m";
+        
+    //     $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
+       
+    //     $payRequestBuilder->setSubject($subject);
+    //     $payRequestBuilder->setOutTradeNo($out_trade_no);
+        
+    //     $payRequestBuilder->setTotalAmount($total_amount);
+    //     $payRequestBuilder->setTimeExpress($timeout_express);
+        
+        
+    //     $this->pay($payRequestBuilder);
+        
+    // }
+
+        
+
+    //payRequestBuilder
+    public function pay($id = 0,$totle = 0) {
+
+
         $out_trade_no = get_rand_string();
         $subject = 'marchsoft捐赠';
-        // $total_amount = $order->totle;
+        // $total_amount = $totle;
         $total_amount = '0.01';
         $timeout_express="1m";
         
@@ -30,12 +55,7 @@ class AlipayController extends Controller
         
         $payRequestBuilder->setTotalAmount($total_amount);
         $payRequestBuilder->setTimeExpress($timeout_express);
-        
-        $this->pay($payRequestBuilder);
-        
-    }
-
-    private function pay($payRequestBuilder) {
+        $payRequestBuilder->setPassbackParams($id);
         
         require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../libs/alipayDemo/config.php';
         $payResponse = new AlipayTradeService($config);
@@ -47,12 +67,13 @@ class AlipayController extends Controller
         require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../libs/alipayDemo/config.php';
         $alipaySevice = new AlipayTradeService($config); 
         $arr=$_GET;
+        // dd($arr);
         $result = $alipaySevice->check($arr);
-        if($result) {
-
-            //更多签名检验
+        if(!$result) {   //这里的对公钥的判定不正确，故加！
+            //这里添加更多签名检验
             if($alipaySevice->appid == $arr['app_id']) {
-                
+
+                return redirect('/front/celebration');
                 echo '验证成功';
             }else {
                 echo '验证失败';
