@@ -241,6 +241,9 @@ window.onload=function(){
 		});
 	}
 
+
+	
+	
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
 		var name = $("#input3").val();//赠送人姓名
@@ -259,11 +262,10 @@ window.onload=function(){
 		.then(function (response) {
 			var data = response.data;
 			disapear();
+			gif_show();
 			document.getElementById("goon").style.display="block";
 			console.log(data.msg);
-			console.log(789);
-			if(data.code == 0) {
-				
+			if(data.code == 0) {	
 				// window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
 			}else {
 				$(function(){
