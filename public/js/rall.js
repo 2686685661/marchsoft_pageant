@@ -16,6 +16,15 @@ window.onload=function(){
 	var sent_bless = document.getElementById("sent_bless");
 	var gift_button = document.getElementById("gift_button");
 	var pay = document.getElementById("pay");//支付按钮
+	var heig =  document.body.clientHeight;
+	document.getElementById("gif").style.height = heig+"px";
+
+	$("#goon").click(function(){
+		$("#gif").css("display","none");
+		show();
+		document.getElementById("blessing").style.display="block";
+	});
+
 
 	// document.getElementById("max_air3").style.display="none";
 	// document.getElementById("max_air2").style.display="none";
@@ -237,45 +246,25 @@ window.onload=function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
 		var gift_arr = [];
-<<<<<<< HEAD
-		for(var i = 0;i<list.length;i++) {
-			if(list[i] == -1) continue;
-			gift_arr.push(list[i]);
-		}
-		// disapear();
-
-	// 	var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-	// 	axios.post('/admin/gift/give', {
-	// 	    name: name,
-	// 		gifts: gift_arr,
-	// 		_token:token
-	// 	})
-	// 	.then(function (response) {
-	// 		var res = response.data;
-			
-	// 	})
-	// 	.catch(function (error) {
-	// 	    console.log(error);
-	// 	});
-=======
 		for(var i=0;i<list.length;i++) {
 			if(list[i] == -1) continue;
 			gift_arr.push(list[i]);
 		}
-
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-		// window.location.href="localhost/admin/gift/give?name="+name+"&gifts="+gift_arr+"&_token="+token;
 		axios.post('/admin/gift/give', {
-			// params: {
-				name: name,
-				gifts: gift_arr,
-				_token:token
-			// }
+			name: name,
+			gifts: gift_arr,
+			_token:token
 		})
 		.then(function (response) {
 			var data = response.data;
+			disapear();
+			document.getElementById("goon").style.display="block";
+			console.log(data.msg);
+			console.log(789);
 			if(data.code == 0) {
-				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				
+				// window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
 			}else {
 				$(function(){
 					$.message({
@@ -283,30 +272,13 @@ window.onload=function(){
 						type:'warning'
 					});
 				})
-				// console.log(data.msg);
+				
 			}
-			// console.log(data.msg);
 			
-			// var res = response.data;
-			// console.log(res);
-			// if (res.code) { 
-			// 	$(function(){
-			// 	    $.message({
-			// 			message:res.msg,
-			// 			type:'warning'
-			// 		});
-			// 	})
-			// }else{
-			// 	$(function(){
-			// 	    $.message(res.msg);
-			// 	})
-			// };
-		    
 		})
 		.catch(function (error) {
 		    console.log(error);
 		});
->>>>>>> dadd2f28f0fa933e8fe4f5a6d246fc763eafa18e
 	}
 
 
@@ -377,8 +349,8 @@ window.onload=function(){
 		disapear();
 		document.getElementById("blessing").style.display="none";
 	}
+	
 	function show(){
-		var heig =  document.body.clientHeight;
 		cover1.style.display="block";
 		cover1.style.height=heig+"px";
 	}
