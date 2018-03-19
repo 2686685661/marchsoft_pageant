@@ -41,4 +41,13 @@ class orders extends Model
         $order_find = DB::table('orders')->where('id',$order_id)->first();
         return $order_find;
     }
+
+
+
+    public static function find_orders_info() {
+        $orders_info = DB::table('orders')->where('status',1)->select('id','name','gifts_id')->get()->toArray();
+        return $orders_info;
+    }
+
+
 }

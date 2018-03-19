@@ -20,4 +20,9 @@ class gifts extends Model
 
         return $gifts_info_msg;
     }
+
+    public static function get_namimg() {
+        $gift_namimg = DB::table('gifts')->where('v_state',0)->select('id','name','image')->get()->toArray();
+        return $gift_namimg;
+    }
 }
