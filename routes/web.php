@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//微信支付处理
+Route::get('/alipay/wxpay/{id}/{totle}','GiftsController@wxPay');
 //支付宝支付处理
 Route::get('/alipay/pay/{id}/{totle}','GiftsController@alipay');
 //支付后同步跳转跳转页面
@@ -32,6 +33,7 @@ Route::group(['prefix' => 'admin'],function() {
 
     Route::group(['prefix' => 'gift'],function() {
         Route::post("/give",'GiftsController@give_gift');
+        Route::post("/wxgive",'GiftsController@wxgive_gift');
         Route::post("/getgift",'GiftsController@get_gifts_info');
     });
 });
