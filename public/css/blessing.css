@@ -14,6 +14,10 @@ body,div,p{
 	left: 0;
 	width: 100%;
 }
+#air_minbox{
+	display: flex;
+	flex-direction:column-reverse;
+}
 .air{
 	display: flex;
 	align-items:center;
@@ -109,7 +113,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	100% {
 		transform: translateY(-68px);
@@ -126,7 +130,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.1;
 	}
 }
 @keyframes beatu {
@@ -192,7 +196,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	100% {
 		transform: translateY(-34px);
@@ -209,7 +213,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.1;
 	}
 }
 @keyframes beatt {
@@ -276,7 +280,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 	100% {
 		transform: translateY(0px);
@@ -293,7 +297,7 @@ body,div,p{
 		padding: 2px 15px;
 		font-size: 11px;
 		color: #fff;
-		opacity: 0.5;
+		opacity: 0.1;
 	}
 }
 .air_min p{

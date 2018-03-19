@@ -96,6 +96,7 @@ class GiftsController extends Controller
         else if(!count($gifts)) 
             return responseToJson(1,'礼物不能为空');
 
+
         $total = $this->get_gifts_total($gifts);
         $gifts_id = '';
         for($i=0;$i<count($gifts);$i++) {
@@ -105,7 +106,7 @@ class GiftsController extends Controller
                 $gifts_id .= $gifts[$i].',';
             }
         }
-       
+
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
         $insert_id = orders::insert_gift_order($arr);
         
@@ -134,16 +135,18 @@ class GiftsController extends Controller
     private function get_gifts_total($gifts = []) {
 
         $total = 0;
-
         if($this->gift_price == []) {
             $this->gift_price = gifts::get_gifts_price();
         }
+
+
 
         foreach($gifts as $gift_id) {
             if(is_stat($gift_id,$this->gift_price)) {
                 $total += $this->gift_price[$gift_id];
             }
         }
+
         return $total;
     }
 

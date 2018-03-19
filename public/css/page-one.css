@@ -87,14 +87,61 @@
 	animation: qiu 1s 1 linear;
 }
 .pays img{
-	margin: 0 0 0 60%;
+	margin: 0 0 0 10%;
 	width: 150px;
 	opacity: 0;
 }
 .pay img{
-	margin: 0 0 0 60%;
+	margin: 0 0 0 10%;
 	width: 150px;
-	animation: qiu 1s 1 linear;
+	animation: pay 6s ease 0s infinite normal; /*名字 总时间 频率 开始时间 次数*/;
+}
+@keyframes pay {
+	0% {
+		transform: translateY(0px);
+	}
+	2% {
+		transform: translateY(-7px);
+	}
+	6% {
+		transform: translateY(7px);
+	}
+	8% {
+		transform: translateY(0px);
+	}
+	10% {
+		transform: translateY(-5px);
+	}
+	12% {
+		transform: translateY(5px);
+	}
+	16% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	52% {
+		transform: translateY(-7px);
+	}
+	56% {
+		transform: translateY(7px);
+	}
+	58% {
+		transform: translateY(0px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
+	62% {
+		transform: translateY(5px);
+	}
+	66% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 .thinks img{
 	width: 180px;
@@ -113,65 +160,66 @@
 .background{
 	position: relative;
 }
-.background img{
+.background .back{
 	width: 290px;
     margin: 0px 0 0 9%;
 }
-.gift-one{
+.gift{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left: 0px;
 	position: absolute;
-	top: 2%;
-	left: 15%;
-}
-.gift-one img{
-	width: 100px;
+	top: 20px;
+	left: 0;
 }
 .gift-two{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    left: 0px;
 	position: absolute;
-	top: 2%;
-	left: 50%;
+	top: 20px;
+	left: 30px;
 }
-.gift-two img{
-	width: 100px;
+figure{
+    width: 100px;
+    margin: 6px 10px;
+    border: 1px solid rgb(255,246,231);
+    border-radius: 5px;
+    text-align: center;
 }
-.gift-three{
-	position: absolute;
-	top: 30%;
-	left: 15%;
+.gift figure img{
+	width: 65%;
 }
-.gift-three img{
-	width: 100px;
+.gift-two figure img{
+	width: 65%;
 }
-.gift-four{
-	position: absolute;
-	top: 30%;
-	left: 50%;
-}
-.gift-four img{
-	width: 100px;
-}
-.gift-five{
-	position: absolute;
-	top: 60%;
-	left: 15%;
-}
-.gift-five img{
-	width: 100px;
-}
-.gift-sex{
-	position: absolute;
-	top: 60%;
-	left: 50%;
-}
-.gift-sex img{
-	width: 100px;
+figure figcaption{
+	font-size: 15px;
+	color: #ef3297;
 }
 .give{
-	position: absolute;
-	top: 85%;
-	left: 15%;
+    position: absolute;
+    top: 80%;
+    left: 32%;
+}
+.give2{
+    position: absolute;
+    top: 80%;
+    left: 32%;
 }
 .give img{
 	width: 100px;
+    margin: 15px 10px;
+    text-align: center;
+}
+.give2 img{
+	width: 100px;
+    margin: 15px 10px;
+    text-align: center;
 }
 @media screen and (max-width:360px){ 
 	.animation-one .yan-one img{
@@ -264,16 +312,18 @@
 		width: 320px;
 	}
 	.pays img{
-		width: 100px;
+		width: 80px;
 	}
 	.pay img{
-		width: 100px;
+		width: 80px;
 	}
 	.thinks img{
-		width: 130px;
+	    width: 145px;
+        margin: -37px 0 0 52%;
 	}
 	.think img{
-		width: 130px;
+		width: 145px;
+	    margin: -37px 0 0 52%;
 	}
 	#ewmsrc{
 		width: 250px;
@@ -291,54 +341,46 @@
 	    width: 268px;
     	margin: -36px 0 0 12%;
 	}
-	.gift-one{
-		top: -5%;
-		left: 20%;
+	.gift{
+		top: -24px;
+    	left: 36px;
+    	width: 228px;
 	}
-	.gift-one img{
+	.gift figure{
 		width: 90px;
+		/*margin: 5px 10px;*/
 	}
 	.gift-two{
-		top: -5%;
-		left: 65%;
+	    top: -30px;
+    	left: 38px;
+    	width: 280px;
 	}
-	.gift-two img{
-		width: 90px;
+	.gift-two figure{
+		width: 85px;
 	}
-	.gift-three{
-		top: 25%;
-		left: 20%;
+	figure figcaption{
+		font-size: 10px;
 	}
-	.gift-three img{
-		width: 90px;
-	}
-	.gift-four{
-		top: 25%;
-		left: 65%;
-	}
-	.gift-four img{
-		width: 90px;
-	}
-	.gift-five{
-		top: 55%;
-		left: 20%;
-	}
-	.gift-five img{
-		width: 90px;
-	}
-	.gift-sex{
-		top: 55%;
-		left: 65%;
-	}
-	.gift-sex img{
-		width: 90px;
-	}
-	.give{
-		top: 83%;
-		left: 43%;
+	figure img{
+		width: 75px;
 	}
 	.give img{
-		width: 100px;
+	    margin: -6px 10px;
+        width: 78px;
+	}
+	.give2 img{
+	    margin: -6px 10px;
+        width: 78px;
+	}
+	.give{
+	    position: absolute;
+        top: 87%;
+    	left: 39%;
+	}
+	.give2{
+	    position: absolute;
+	    top: 87%;
+    	left: 50%;
 	}
 }
 @media screen and (min-width:360px) and (max-width:375px){
@@ -356,54 +398,52 @@
 	    width: 310px;
 	    margin: 0px 0 0 -2%;
 	}
-	.gift-one{
-		top: 4%;
-		left: 10%;
-	}
-	.gift-one img{
-		width: 100px;
-	}
 	.gift-two{
-		top: 4%;
-		left: 60%;
+		top: 3%;
+    	left: 2%;
+    	width: 318px;
 	}
 	.gift-two img{
 		width: 100px;
 	}
-	.gift-three{
-		top: 32%;
-		left: 10%;
-	}
-	.gift-three img{
-		width: 100px;
-	}
-	.gift-four{
-		top: 32%;
-		left: 60%;
-	}
-	.gift-four img{
-		width: 100px;
-	}
-	.gift-five{
-		top: 60%;
-		left: 10%;
-	}
-	.gift-five img{
-		width: 100px;
-	}
-	.gift-sex{
-		top: 60%;
-		left: 60%;
-	}
-	.gift-sex img{
-		width: 100px;
-	}
-	.give{
-		top: 85%;
-		left: 35%;
+	.gift-two figure{
+		/*margin: 10px 10px;*/
 	}
 	.give img{
 		width: 100px;
+		margin: 6px 10px;
+	}
+	.give2 img{
+		width: 100px;
+		margin: 6px 10px;
+	}
+	.give{
+		margin: 0;
+	}
+	.gift{
+		left: 12px;
+    	width: 250px;
+    	top: 22px;
+	}
+	.gift figure{
+		width: 93px;
+	}
+	.gift-two{
+	    top: 5%;
+	}
+	.gift-two figure {
+   	 	/*margin: 17px 10px;*/
+   	 	width: 96px;
+	}
+	.give{
+	    position: absolute;
+        top: 81%;
+    	left: 29%;
+	}
+	.give2{
+	    position: absolute;
+        top: 81%;
+    	left: 40%;
 	}
 }
 @media screen and (min-width:375px) and (max-width:412px){  
@@ -442,9 +482,11 @@
 	}
 	.pays img{
 		width: 100px;
+	    margin: -14px 0 0 10%;
 	}
 	.pay img{
 		width: 100px;
+	    margin: -14px 0 0 10%;
 	}
 	.thinks img{
 		width: 130px;
@@ -465,54 +507,20 @@
        	margin: 0px 0 0 -9%;
     	width: 330px;
 	}
-	.gift-one{
-		top: 2%;
-		left: 5%;
-	}
-	.gift-one img{
-		width: 110px;
-	}
 	.gift-two{
-		top: 2%;
-		left: 55%;
-	}
-	.gift-two img{
-		width: 110px;
-	}
-	.gift-three{
-		top: 30%;
-		left: 5%;
-	}
-	.gift-three img{
-		width: 110px;
-	}
-	.gift-four{
-		top: 30%;
-		left: 55%;
-	}
-	.gift-four img{
-		width: 110px;
-	}
-	.gift-five{
-		top: 60%;
-		left: 5%;
-	}
-	.gift-five img{
-		width: 110px;
-	}
-	.gift-sex{
-		top: 60%;
-		left: 55%;
-	}
-	.gift-sex img{
-		width: 110px;
-	}
+		top: 4%;
+		left: 7%;
+		width: 267px;
+	}	
 	.give{
-		top: 85%;
-		left: 32%;
+	    position: absolute;
+	    top: 80%;
+        left: 26%;
 	}
-	.give img{
-		width: 100px;
+	.give2{
+	    position: absolute;
+	    top: 80%;
+        left: 34%;
 	}
 }
 @media screen and (min-width:412px) and (max-width:736px){  
@@ -527,15 +535,19 @@
 	}
 	.pays img{
 		width: 100px;
+	    margin: -26px 0 0 10%;
 	}
 	.pay img{
+        margin: -26px 0 0 10%;
 		width: 100px;
 	}
 	.thinks img{
 		width: 140px;
+	    margin: -40px 0 0 49%;
 	}
 	.think img{
 		width: 170px;
+	    margin: -40px 0 0 49%;
 	}
 	#ewmsrc{
 		width: 264px;
@@ -550,53 +562,35 @@
 	    width: 350px;
     	margin: 0px 0 0 -12%;
 	}
-	.gift-one{
-		top: 5%;
-		left: 0%;
+	.gift{
+		top: 36px;
 	}
-	.gift-one img{
+	.gift figure{
+		width: 110px;
+	}
+	.gift-two figure{
 		width: 110px;
 	}
 	.gift-two{
-		top: 5%;
-		left: 55%;
+	    top: 7%;
+    	left: 2%;
+    	width: 312px;
 	}
 	.gift-two img{
 		width: 110px;
 	}
-	.gift-three{
-		top: 32%;
-		left: 0%;
-	}
-	.gift-three img{
-		width: 110px;
-	}
-	.gift-four{
-		top: 32%;
-		left: 55%;
-	}
-	.gift-four img{
-		width: 110px;
-	}
-	.gift-five{
-		top: 60%;
-		left: 0%;
-	}
-	.gift-five img{
-		width: 110px;
-	}
-	.gift-sex{
-		top: 60%;
-		left: 55%;
-	}
-	.gift-sex img{
-		width: 110px;
-	}
 	.give{
-		top: 85%;
-		left: 35%;
+		left: 27%;
+	}
+	.give2{
+	    position: absolute;
+	    top: 80%;
+    	left: 38%;
 	}
 	.give img{
+		width: 100px;
+	}
+	.give2 img{
 		width: 100px;
 	}
 }

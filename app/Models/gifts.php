@@ -8,7 +8,9 @@ class gifts extends Model
 {
 
     public static function get_gifts_price() {
+
         $gifts_price = DB::table('gifts')->pluck('price','id')->toArray();
+
         return $gifts_price;
     }
     

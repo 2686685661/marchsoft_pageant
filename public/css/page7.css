@@ -98,3 +98,93 @@ address, cite, dfn, em, var {
 	z-index:2;
 	background:#f60;
 }
+
+
+
+.banner-two{
+	position: relative;
+	overflow: auto;
+	text-align: center;
+	width:400px;
+	margin:0 auto
+}
+.banner-two .dots{
+	position:absolute;
+	left:0;right:0;
+	bottom:70px;
+	z-index:3;
+}
+.banner-two .dots li{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	margin:0 4px;
+	text-indent:-999em;
+	border:2px solid #fff;
+	border-radius:6px;
+	cursor:pointer;
+	opacity:.4;
+	-webkit-transition:background .5s,opacity .5s;
+	-moz-transition:background .5s,opacity .5s;
+	transition:background .5s,opacity .5s
+}
+.banner-two .dots li.active{
+	background:#fff;
+	opacity:1;
+}
+.banner-two .arrow{
+	position:absolute;
+	width:20px;
+	height:37px;
+	top: 0%; 
+	margin-top: 0px; 
+	overflow: hidden;
+	z-index: 2; 
+	-webkit-transition: all 0.5s; 
+	-moz-transition: all 0.5s;  
+	-ms-transition: all 0.5s; 
+	-o-transition: all 0.5s; 
+	transition: all 0.5s;
+}
+.banner-two #al{
+	left:15px
+}
+.banner-two #ar{
+	right:15px
+}
+.banner-two ul{
+	z-index: 1;
+	width: 800px;
+	height: 640px;
+	overflow: hidden;
+}
+.banner-two ul .slider-item {
+	width:400px; 
+	float: left;
+	height:640px; 
+	position: relative; 
+	overflow: hidden;
+}
+.banner-two ul .slider-item .slider-title {
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	width: 305px;
+	max-height: 56px;
+	padding: 15px;
+	text-align:left;
+	line-height: 28px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	background: -webkit-linear-gradient(top, transparent, rgba(0,0,0,0.9));
+}
+.banner-two .progress{
+	position:absolute;
+	left:0;bottom:0;
+	width:25%;
+	min-height:3px;
+	overflow:hidden;
+	z-index:2;
+	background:#f60;
+}
