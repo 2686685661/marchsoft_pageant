@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\gifts;
 use App\Models\orders;
+use Illuminate\Support\Facades\Input;  
 
 use App\Http\Controllers\AlipayController;
 
@@ -22,7 +23,6 @@ class GiftsController extends Controller
     public function give_gift(Request $request) {
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
-        //$gifts是一个包含礼物id的一维数组
         $gifts = $give_all['gifts'];
         if($give_name == '')
             return responseToJson(1,'昵称不能为空');
@@ -31,33 +31,31 @@ class GiftsController extends Controller
         else if(!count($gifts)) 
             return responseToJson(1,'礼物不能为空');
 
-        $total = $this->get_gifts_total($gifts);
 
+        $total = $this->get_gifts_total($gifts);
         $gifts_id = '';
         for($i=0;$i<count($gifts);$i++) {
             if($i == count($gifts)-1) {
-                $gifts_id += $gifts[$i];
+                $gifts_id .= $gifts[$i];
+            }else{
+                $gifts_id .= $gifts[$i].',';
             }
-            $gifts_id += $gifts[$i].',';
         }
 
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
-
         $insert_id = orders::insert_gift_order($arr);
-
+        
         if($insert_id>0) {
             $wait_order = orders::find_order($insert_id);
-            $alipay = new AlipayController($wait_order);
-
-            if($alipay) {
-                orders::update_order_state($insert_id);
-                return responseToJson(0,'支付成功');
-            }
-            
+            return responseToJson(0,'/alipay/pay',$wait_order);
+            // $alipay = new AlipayController($wait_order);
+            // if($alipay) {
+            //     orders::update_order_state($insert_id);
+            //     // return responseToJson(0,'支付成功');
+            // }
         }else {
             return responseToJson(1,'暂时无法支付');
         }
-
         //微信支付
         //支付成功后
         //call_user_func(callback,$state);DB::commit();
@@ -104,12 +102,15 @@ class GiftsController extends Controller
     }
 
 
+    public function alipay(Request $request) {
+        $id = $request->id;
+        $totle = $request->totle;
+        $alipay = new AlipayController();
+        $alipay->pay($id,$totle);
+
+        orders::update_order_state($id);
 
 
-    public function test() {
-        $a = new AlipayController();
-
-        dd($a);
     }
 
 }

@@ -582,6 +582,8 @@ class AopClient {
 	 **/
 	public function rsaCheckV1($params, $rsaPublicKeyFilePath,$signType='RSA') {
 		$sign = $params['sign'];
+		// dd($this->getSignContent($params));
+		
 		$params['sign_type'] = null;
 		$params['sign'] = null;
 		return $this->verify($this->getSignContent($params), $sign, $rsaPublicKeyFilePath,$signType);
@@ -593,7 +595,6 @@ class AopClient {
 	}
 
 	function verify($data, $sign, $rsaPublicKeyFilePath, $signType = 'RSA') {
-
 		if($this->checkEmpty($this->alipayPublicKey)){
 
 			$pubKey= $this->alipayrsaPublicKey;
@@ -613,6 +614,7 @@ class AopClient {
 
 		if ("RSA2" == $signType) {
 			$result = (bool)openssl_verify($data, base64_decode($sign), $res, OPENSSL_ALGO_SHA256);
+			// dd();
 		} else {
 			$result = (bool)openssl_verify($data, base64_decode($sign), $res);
 		}

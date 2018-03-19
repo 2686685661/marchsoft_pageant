@@ -79,7 +79,6 @@ class AlipayTradeService {
 	 * @return $response 支付宝返回的信息
  	*/
 	function wapPay($builder,$return_url,$notify_url) {
-
 	
 		$biz_content=$builder->getBizContent();
 		//打印业务参数
@@ -227,6 +226,7 @@ class AlipayTradeService {
 	function check($arr){
 		$aop = new AopClient();
 		$aop->alipayrsaPublicKey = $this->alipay_public_key;
+		
 		$result = $aop->rsaCheckV1($arr, $this->alipay_public_key, $this->signtype);
 		return $result;
 	}

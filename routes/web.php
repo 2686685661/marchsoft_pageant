@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 //支付宝支付处理
-Route::get('alipay/pay','GiftsController@test');
-//支付后跳转页面
-Route::post('alipay/return','AlipayController@result');
+Route::get('/alipay/pay/{id}/{totle}','GiftsController@alipay');
+//支付后同步跳转跳转页面
+Route::get('/alipay/return','AlipayController@return_url');
 
 Route::any('/wechat','WechatController@pay');
 

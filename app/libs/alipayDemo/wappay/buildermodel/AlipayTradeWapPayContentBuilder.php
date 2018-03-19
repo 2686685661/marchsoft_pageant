@@ -16,6 +16,10 @@ class AlipayTradeWapPayContentBuilder
     // 订单描述，可以对交易或商品进行一个详细地描述，比如填写"购买商品2件共15.00元"
     private $body;
 
+
+    //公共回传参数
+    private $passback_params;
+
     // 订单标题，粗略描述用户的支付目的。
     private $subject;
 
@@ -65,6 +69,15 @@ class AlipayTradeWapPayContentBuilder
     {
         $this->body = $body;
         $this->bizContentarr['body'] = $body;
+    }
+
+    public function getPassbackParams() {
+        return $this->passback_params;
+    }
+
+    public function setPassbackParams($PassbackParams) {
+        $this->passback_params = $PassbackParams;
+        $this->bizContentarr['passback_params'] = $PassbackParams;
     }
 
     public function setSubject($subject)
