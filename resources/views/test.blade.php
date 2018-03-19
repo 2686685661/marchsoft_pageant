@@ -26,13 +26,13 @@
 .page8 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
 p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color: #fff; text-align: center;}
 </style>
-<!-- <script src="http://cdn.staticfile.org/jquery/1.9.0/jquery.min.js"></script> -->
+<!-- <script src="http://cdn.staticfile.org/jqueryuer/1.9.0/jqy.min.js"></script> -->
 <script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.onepage-scroll.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/unslider.min.js') }}"></script>
 <script src="{{ asset('js/axios.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/rall.js') }}"></script>
-<!-- <script src="js/jquery-3.1.1.js"></script> -->
+<!-- <script src="{{ asset('js/jquery-3.1.1.js') }}"></script> -->
 </head>
 <body id="main_body">
 <script type="text/javascript">
@@ -266,28 +266,11 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 						<div class="code-img" style="width:300px;">
 		    				<div class="background" id="ewmsrc">
 								<img src="{{ asset('img/back.png') }}" alt="" class="back">
-								<div class="gift">
-									<div class="gift-one">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-two">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-three">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-four">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-five">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-sex">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="give">
-										<img src="{{ asset('img/bo.png') }}" alt="">
-									</div>
+								<div class="gift" id="gift">
+									
+								</div>
+								<div class="give">
+									<img src="{{ asset('img/bo.png') }}" alt="" id="gift_button">
 								</div>
 							</div>
 		    			</div>
@@ -296,28 +279,11 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 						<div class="code-img">
 		    				<div class="background" id="ewmsrc">
 								<img src="{{ asset('img/back-2.png') }}" alt="" class="back">
-								<div class="gift">
-									<div class="gift-one">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-two">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-three">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-four">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-five">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="gift-sex">	
-										<img src="{{ asset('img/gift-one.png') }}" alt="礼物">
-									</div>
-									<div class="give">
-										<img src="{{ asset('img/bo.png') }}" alt="">
-									</div>
+								<div class="gift-two"  id="gift2">
+									
+								</div>
+								<div class="give2">
+									<img src="{{ asset('img/bo.png') }}" alt="" id="gift_button2">
 								</div>
 							</div>
 		    			</div>	
@@ -329,6 +295,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 
 
 	<div class="air_box">
+		<div id="air_minbox">
 			<div class="air">
 				<input type="text" placeholder="请留下您的祝福..." id="input">
 				<button id="air"></button>
@@ -344,13 +311,15 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<p id="p3"><span>王琦3：</span>祝三月生日快乐</p>
 				</div>
 			</div>
-			<div class="max_air" id="max_air">
+			<div class="max_air">
 				<img src="{{ asset('img/shu.jpg') }}" alt="">
 				<div>
 					<p>婚礼纪 送了 百合花</p>
 					<p>百年好合</p>
 				</div>
 			</div>
+		</div>
+			
 			<div id="cover"></div>
 			<div class="blessing_glass" id="blessing_glass">
 				<div class="blessing_input_box name">
@@ -509,13 +478,29 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
     var list_ele = document.getElementById("list_div");
     var pays_ele = document.getElementById("pays_div");
     var thinks_ele = document.getElementById("thinks_div");
+    var b = 2;
 
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
 		pagination: false,
 		direction:"vertical",
 		afterMove: function(index){
-			if(index==3){
+			if(index==2&&b++==2){
+				var frame1 = document.getElementsByClassName('frame1');
+				frame1[0].className="frameone";
+				var frames = document.getElementsByClassName('frame2');
+				frames[0].className="frametwo";
+				var text1 = document.getElementsByClassName('text1');
+				text1[0].className="textone";
+				var text3 = document.getElementsByClassName('text3');
+				text3[0].className="textthree";
+				var one = document.getElementsByClassName('baby');
+				one[0].className="marchbaby";
+				// pagetwomove();
+				// $('.marchthree').animate({left:'50px'},3000);
+			}
+
+			else if(index==3&&b++==3){
 				var frame3 = document.getElementsByClassName('frame3');
 				frame3[0].className="framethree";
 				var frames = document.getElementsByClassName('frame4');
@@ -529,7 +514,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				pagetwomove();
 				// $('.marchthree').animate({left:'50px'},3000);
 			}
-			else if(index==4){
+			else if(index==4&&b++==4){
 				var frame = document.getElementsByClassName('frame5');
 				frame[0].className="framefive";
 				var frames = document.getElementsByClassName('frame6');
@@ -545,7 +530,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				pagethreemove();
 				// $('.marcheight').animate({right:'120px'},3000);
 			}
-			else if(index==5){
+			else if(index==5&&b++==5){
 				var frame7 = document.getElementsByClassName('frame7');
 				frame7[0].className="frameseven";
 				var frames = document.getElementsByClassName('frame8');
@@ -560,7 +545,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				ten[0].className="marchten";
 				pagefourmove();
 			}
-			else if(index==6){
+			else if(index==6&&b++==6){
 				var frame7 = document.getElementsByClassName('frame9');
 				frame7[0].className="framenine";
 				var frames = document.getElementsByClassName('frame10');
@@ -601,6 +586,24 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
  //        data04[fn]();
  //    });
 // });
+</script>
+<script type="text/javascript">
+	//背景音乐
+   var audio1 = document.getElementById('qq');
+   var img = document.getElementById('imgmusic');
+   var flag = true;
+   audio1.play();
+   function aa(){
+      if(flag){
+        audio1.pause();
+        flag = !flag;
+        img.setAttribute("class","");
+      }else{
+        flag = !flag;
+        audio1.play();
+        img.setAttribute("class","kk");
+      }   
+   }
 </script>
 <script type="text/javascript" src="{{ asset('js/message.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/slide.js') }}"></script>

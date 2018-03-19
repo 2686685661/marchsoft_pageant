@@ -6,6 +6,7 @@ window.onload=function(){
 	var air1 = document.getElementById("air");
 	var cover1 = document.getElementById("cover");
 	var large_one = null;
+	var gift_list = null;//存放礼物页面的6种礼物
 	var input1 = document.getElementById("input");
 	var input2 = document.getElementById("input2");
 	var input_bless = document.getElementById("input_bless");
@@ -13,32 +14,104 @@ window.onload=function(){
 	var go = document.getElementById("go");
 	var birth_glass = document.getElementById("birth_glass");
 	var sent_bless = document.getElementById("sent_bless");
+	var gift_button = document.getElementById("gift_button");
 	var pay = document.getElementById("pay");//支付按钮
 
-	// bless_air();
-	//读取数据库中的祝福语
-	// function bless_air(){
-	//     setInterval(function(){
-	//     	axios.post('/admin/gift/getgift')
-	// 		.then(function (response) {
+	// document.getElementById("max_air3").style.display="none";
+	// document.getElementById("max_air2").style.display="none";
+	// document.getElementById("max_air").style.display="none";
+	//礼物专区毕业生赠送礼物
+	gift_button.onclick = function(){
+		Area();
+	}
+	gift_button2.onclick = function(){
+		Area();
+	}
+	function Area(){
+		var gift_Arr = new Array();
+		gift_list = document.getElementsByTagName("figure");
+
+		for (var i = 0; i < gift_list.length; i++) {
+			if (gift_list[i].className=='sative') {
+				if (i<6) {
+					gift_Arr[i] = gift_list[i].getAttribute("value");
+				}else{
+					gift_Arr[i] = gift_list[i].getAttribute("value")+2;
+				};
+			}else{
+				gift_Arr[i] = -1;
+			}
+		};
+		var birth="";
+		axios.post('/admin/gift/getgift')
+		.then(function (response) {
+			var res = response.data.result;
+			for (var i=0; i <8; i++) {
+				if (res[i].id==gift_Arr[i]) {
+					birth = birth + res[i].name + "(" + res[i].price + ")  "
+				};
+			};
+			for (var i=8; i <16; i++) {
+				if (res[i].id==gift_Arr[i]) {
+					birth = birth + res[i].name + "(" + res[i].price + ")  "
+				};
+			};
+			if (birth=="") {
+				$(function(){
+				    $.message({
+						message:"您需要选择礼物哦",
+						type:'warning'
+					});
+				})
+				return 0;
+			};
+			birth_glass.style.display="block";
+			document.getElementById("blessing").style.display="none";
+			document.getElementById("input3").focus();
+			show();
+			$("#birth_list").val(birth);
+		})
+		.catch(function (error) {
+		    console.log(error);
+		});
+	}
+
+
+	//读取数据库中的所有礼物
+	// var LW_bless=new Array();//存放从后台读取出来的礼物
+	// bless_gift();
+	// function bless_gift(){
+ //    	axios.post('/admin/***/***')
+	// 	.then(function (response) {
+	// 		var data = response.data.result;
+	// 		for (var i = 0; i < data.length; i++) {
 				
-	// 		})
-	// 		.catch(function (error) {
-	// 		    console.log(error);
-	// 		});
-	//     },3000);
+	// 		};
+	// 	})
+	// 	.catch(function (error) {
+	// 	    console.log(error);
+	// 	});
 	// }
 
+	//读取数据库中的祝福语
+	var Z_bless=new Array();//存放从后台读取出来的祝福语
+	bless_air();
+	function bless_air(){
+    	axios.post('/admin/message/selectmsg')
+		.then(function (response) {
+			var data = response.data.result;
+			for (var i = 0; i < data.length; i++) {
+				Z_bless[i] = data[i].give_name + ":" + data[i].message;
+			};
+		})
+		.catch(function (error) {
+		    console.log(error);
+		});
+	}
 
-	
-	//更新气泡内容
-	setInterval(function(){
-    	moment2();
-    },5000);
-
-	moment();
-    function moment(){
-    	setTimeout(function(){
+	comment();
+	function comment(){
+		setTimeout(function(){
     		$("#p1").text("1");
     	},0);
     	setTimeout(function(){
@@ -47,18 +120,36 @@ window.onload=function(){
     	setTimeout(function(){
     		$("#p3").text("3");
     	},1000);
-    }
-    function moment2(){
     	setTimeout(function(){
-    		$("#p1").text("4"); 
-    	},1000);
-    	setTimeout(function(){
-    		$("#p2").text("5");
-    	},2000);
-    	setTimeout(function(){
-    		$("#p3").text("6");
-    	},5000);
-    }
+    		
+    	},4000);
+	}
+	//更新气泡内容
+	var oer = 0;
+	Interval();
+	function Interval(){
+		setTimeout(function(){
+	    	setTimeout(function(){
+	    		$("#p1").text(Z_bless[oer]);
+	    	},0);
+	    	setTimeout(function(){
+	    		$("#p2").text(Z_bless[oer+1]);
+	    	},2000);
+	    	setTimeout(function(){
+	    		$("#p3").text(Z_bless[oer+2]);
+	    	},4000);
+	    	
+	    	if (oer+3>=Z_bless.length) {
+	    		oer = 0;
+	    	}else{
+	    		oer = oer+3;
+	    	};
+	    	setTimeout(function(){
+	    		Interval();
+	    	},1000);
+	    },5000);
+	}
+
 
 	//存放留言
 	sent_bless.onclick = function(){
@@ -72,8 +163,8 @@ window.onload=function(){
 		})
 		.then(function (response) {
 			var res = response.data;
-			console.log(res);
 			if (res.code) {
+				
 				$(function(){
 				    $.message({
 						message:res.msg,
@@ -81,9 +172,15 @@ window.onload=function(){
 					});
 				})
 			}else{
+				if (Z_bless.length<=oer+4) {
+					Z_bless[4] = name + ":" + message;
+				}else{
+					Z_bless[oer+4] = name + ":" + message;
+				};
 				$(function(){
 				    $.message(res.msg);
 				})
+				disapear();
 			};
 		    
 		})
@@ -97,10 +194,7 @@ window.onload=function(){
 	//点击赠送后弹出输入框填写赠送人和以选中的礼物
 	go.onclick = function(){
 		large_one = document.getElementsByClassName("message_large_one");
-		birth_glass.style.display="block";
-		document.getElementById("blessing").style.display="none";
-		document.getElementById("input3").focus();
-		show();
+		// gift_list = document.getElementsByTagName("figure");
 		for (var i = 0; i < large_one.length; i++) {
 			if (large_one[i].className=='message_large_one sative') {
 				myArray[i] = large_one[i].getAttribute("value");
@@ -108,6 +202,7 @@ window.onload=function(){
 				myArray[i] = -1;
 			}
 		};
+		
 		var birth="";
 		axios.post('/admin/gift/getgift')
 		.then(function (response) {
@@ -117,6 +212,19 @@ window.onload=function(){
 					birth = birth + res[i].name + "(" + res[i].price + ")  "
 				};
 			};
+			if (birth=="") {
+				$(function(){
+				    $.message({
+						message:"您需要选择礼物哦",
+						type:'warning'
+					});
+				})
+				return 0;
+			};
+			birth_glass.style.display="block";
+			document.getElementById("blessing").style.display="none";
+			document.getElementById("input3").focus();
+			show();
 			$("#birth_list").val(birth);
 		})
 		.catch(function (error) {
@@ -124,19 +232,103 @@ window.onload=function(){
 		});
 	}
 
+	// //点击支付的时候存放赠送人及礼物，并完成支付
+	// pay.onclick = function(){
+	// 	var name = $("#input3").val();//赠送人姓名
+	// 	var list = myArray;//礼物ID
+	// 	var gift_arr = [];
+	// 	for(var i=0;i<list.length;i++) {
+	// 		if(list[i] == -1) continue;
+	// 		gift_arr.push(list[i]);
+	// 	}
+
+	// 	var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+	// 	// window.location.href="localhost/admin/gift/give?name="+name+"&gifts="+gift_arr+"&_token="+token;
+	// 	axios.post('/admin/gift/give', {
+	// 		// params: {
+	// 			name: name,
+	// 			gifts: gift_arr,
+	// 			_token:token
+	// 		// }
+	// 	})
+	// 	.then(function (response) {
+	// 		var data = response.data;
+	// 		if(data.code == 0) {
+	// 			window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+	// 		}else {
+	// 			$(function(){
+	// 				$.message({
+	// 					message:data.msg,
+	// 					type:'warning'
+	// 				});
+	// 			})
+	// 			// console.log(data.msg);
+	// 		}
+	// 		// console.log(data.msg);
+			
+	// 		// var res = response.data;
+	// 		// console.log(res);
+	// 		// if (res.code) { 
+	// 		// 	$(function(){
+	// 		// 	    $.message({
+	// 		// 			message:res.msg,
+	// 		// 			type:'warning'
+	// 		// 		});
+	// 		// 	})
+	// 		// }else{
+	// 		// 	$(function(){
+	// 		// 	    $.message(res.msg);
+	// 		// 	})
+	// 		// };
+		    
+	// 	})
+	// 	.catch(function (error) {
+	// 	    console.log(error);
+	// 	});
+
+	// 	var name = $("#input3").val();//赠送人姓名
+	// 	var list = myArray;//礼物ID
+	// 	var gift_arr = [];
+	// 	for(var i=0;i<list.length;i++) {
+	// 		if(list[i] == -1) continue;
+	// 		gift_arr.push(list[i]);
+	// 	}
+	// }
+
+	
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
 		var gift_arr = [];
+<<<<<<< HEAD
+		for(var i = 0;i<list.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr.push(list[i]);
+		}
+		// disapear();
+
+	// 	var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+	// 	axios.post('/admin/gift/give', {
+	// 	    name: name,
+	// 		gifts: gift_arr,
+	// 		_token:token
+	// 	})
+	// 	.then(function (response) {
+	// 		var res = response.data;
+			
+	// 	})
+	// 	.catch(function (error) {
+	// 	    console.log(error);
+	// 	});
+=======
 		for(var i=0;i<list.length;i++) {
 			if(list[i] == -1) continue;
 			gift_arr.push(list[i]);
 		}
-
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		// window.location.href="localhost/admin/gift/give?name="+name+"&gifts="+gift_arr+"&_token="+token;
-		axios.post('/admin/gift/give', {
+		axios.post('/admin/gift/wxgive', {
 			// params: {
 				name: name,
 				gifts: gift_arr,
@@ -156,29 +348,9 @@ window.onload=function(){
 				})
 				// console.log(data.msg);
 			}
-			// console.log(data.msg);
-			
-			// var res = response.data;
-			// console.log(res);
-			// if (res.code) { 
-			// 	$(function(){
-			// 	    $.message({
-			// 			message:res.msg,
-			// 			type:'warning'
-			// 		});
-			// 	})
-			// }else{
-			// 	$(function(){
-			// 	    $.message(res.msg);
-			// 	})
-			// };
-		    
-		})
-		.catch(function (error) {
-		    console.log(error);
 		});
+>>>>>>> dadd2f28f0fa933e8fe4f5a6d246fc763eafa18e
 	}
-
 
 	//输入框获得焦点是时，底部送祝福框出来
 	input1.onfocus = function(){
@@ -196,15 +368,26 @@ window.onload=function(){
 		setInterval(show,2000);
 	});
 
+	
 	//标示礼物是否被选中
 	function active(){
 		large_one = document.getElementsByClassName("message_large_one");
+		gift_list = document.getElementsByTagName("figure");
 		for (var i = 0; i < large_one.length; i++) {
 			large_one[i].onclick = function(){
 				if (this.className=='message_large_one sative') {
 					this.setAttribute("class", "message_large_one"); 
 				}else{
 					this.setAttribute("class", "message_large_one sative"); 
+				}
+			}
+		};
+		for (var i = 0; i < gift_list.length; i++) {
+			gift_list[i].onclick = function(){
+				if (this.className=='sative') {
+					this.setAttribute("class", ""); 
+				}else{
+					this.setAttribute("class", "sative"); 
 				}
 			}
 		};
@@ -248,11 +431,14 @@ window.onload=function(){
 		input.disabled=false;
 	}
 
-	great_bless();
+	
 	//从后台得到礼物
+	great_bless();
 	function great_bless(){
 		var father  = $("#blessing_message_large1");
 		var father2  = $("#blessing_message_large2");
+		var gift_large = $("#gift");
+		var gift_large2 = $("#gift2");
 		axios.post('/admin/gift/getgift').then(function(response) {
 			var data = response.data;
 			if(data.code == 0) {
@@ -260,9 +446,15 @@ window.onload=function(){
 				
 				for (var i = 0; i<giftArr.length/2; i++) {
 					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+					if (i<6) {
+						gift_large.append('<figure value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><figcaption>'+giftArr[i].name+'</figcaption><figcaption>¥'+giftArr[i].price +'</figcaption></figure>');
+					};
 				};
 				for (var i = giftArr.length/2; i<giftArr.length; i++) {
 					father2.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+					if (i<14) {
+						gift_large2.append('<figure value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><figcaption>'+giftArr[i].name+'</figcaption><figcaption>¥'+giftArr[i].price +'</figcaption></figure>');
+					};
 				};
 				active();
 			}
