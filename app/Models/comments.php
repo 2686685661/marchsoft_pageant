@@ -17,7 +17,7 @@ class comments extends Model
     }
 
     public static function get_all_msg() {
-        $all_msg = DB::table('comments')->select('id','give_name','message')->orderBy('create_time','desc')-get();
+        $all_msg = DB::table('comments')->select('id','give_name','message')->orderBy('create_time','desc')->get();
 
         return $all_msg;
     }
