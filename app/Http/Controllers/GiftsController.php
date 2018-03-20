@@ -59,6 +59,7 @@ class GiftsController extends Controller
     }
     public function wxPay(){
         //①、获取用户openid
+        return "dasdasd";
         $tools = new JsApiPay();
         $openId = $tools->GetOpenid();
 
