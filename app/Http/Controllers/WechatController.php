@@ -23,6 +23,7 @@ class WechatController extends Controller
         $code=$request->get('code');
         $get_token_url='https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code='+$code+'&grant_type=authorization_code';
         $ch = curl_init();
+        dump($get_token_url);
         curl_setopt($ch,CURLOPT_URL,$get_token_url);
         curl_setopt($ch,CURLOPT_HEADER,0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
