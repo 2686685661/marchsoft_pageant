@@ -39,7 +39,7 @@ class WechatController extends Controller
             'openid' => $openId->openid,
         ]);
         $config=$app->configForJSSDKPayment($result['prepay_id']);
-        dump($result['prepay_id']);
+        dump($config);
     }
     public function wechatNotify(){
         echo "dasdasd";
