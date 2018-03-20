@@ -9,7 +9,6 @@
         <script src="{{ asset('js/axios.min.js') }}"></script>
     </head>
     <body>
-        {{ $result }}
         <button onClick="test();">支付宝</button>
         <button onClick="wxtest();">微信</button>
     </body>
