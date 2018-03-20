@@ -21,7 +21,13 @@ class WechatController extends Controller
         
         $app = Factory::payment($config);
         $code=$request->get('code');
-        $openid=file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code='+$code+'&grant_type=authorization_code');
+        $curlobj = curl_init(); 
+        curl_setopt($ch, CURLOPT_URL, 'https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code='+$code+'&grant_type=authorization_code'); 
+        curl_setopt($ch, CURLOPT_HEADER, false); 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //如果把这行注释掉的话，就会直接输出 
+        $openid=curl_exec($ch); 
+        curl_close($ch); 
+        dump($openid);
         $res=$app->authCodeToOpenid($openid);
         dump($res);
         // $result = $app->order->unify([
