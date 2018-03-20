@@ -50,6 +50,7 @@
         function callpay()
         {
             if (typeof WeixinJSBridge == "undefined"){
+                alert("dsa11111");
                 if( document.addEventListener ){
                     document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
                 }else if (document.attachEvent){
