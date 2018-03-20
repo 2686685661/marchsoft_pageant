@@ -39,6 +39,7 @@ class WechatController extends Controller
             'trade_type' => 'JSAPI',
             'openid' => $openId->openid,
         ]);
+        dump($result);
         $paySign=MakeSign($result['sign']);
         $result['paySign']=$paySign;
         dump($result);
