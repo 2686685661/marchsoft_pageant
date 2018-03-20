@@ -29,8 +29,9 @@ class WechatController extends Controller
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
         $openid = curl_exec($ch);
         curl_close($ch);
-        dump($openid['openid']);
-        $res=$app->authCodeToOpenid($openid['openid']);
+        dump($openid);
+        dump($openid->openid);
+        $res=$app->authCodeToOpenid($openid->openid);
         dump($res);
         $result = $app->order->unify([
             'body' => '腾讯充值中心-QQ会员充值',
