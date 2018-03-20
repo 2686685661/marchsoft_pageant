@@ -14,7 +14,9 @@ use App\libs\lib\JsApiPay;
 
 class GiftsController extends Controller
 {
-
+    public function phpinfo(){
+        phpinfo();
+    }
     //用于存放所有礼物的金额，便于之后获得所送礼物的总价钱
     private $gift_price = [];
 
