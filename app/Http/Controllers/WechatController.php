@@ -20,9 +20,10 @@ class WechatController extends Controller
         ];
         
         $app = Factory::payment($config);
-
-        $openid=$app->authCodeToOpenid($request->get('code'));
-        dump($openid);
+        $code=$request->get('code');
+        $openid=file_get_contents('https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code='+$code+'&grant_type=authorization_code');
+        $res=$app->authCodeToOpenid($openid);
+        dump($res);
         // $result = $app->order->unify([
         //     'body' => '腾讯充值中心-QQ会员充值',
         //     'out_trade_no' => '20150806125346',
