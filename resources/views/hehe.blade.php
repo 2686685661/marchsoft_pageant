@@ -44,13 +44,11 @@
             window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
         }
         window.onload = function () {
-            alert("dsad");
             callpay();
         }
         function callpay()
         {
             if (typeof WeixinJSBridge == "undefined"){
-                alert("dsa11111");
                 if( document.addEventListener ){
                     document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
                 }else if (document.attachEvent){
@@ -58,7 +56,7 @@
                     document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
                 }
             }else{
-                alert("dsa");
+                alert("das");
                 jsApiCall();
             }
         }
