@@ -40,16 +40,7 @@
             });
         }
         function wxtest(){
-            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.get('/wechat', {
-
-            })
-            .then(function (response) {
-               console.log(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=https://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
         }
     </script>
 </html>
