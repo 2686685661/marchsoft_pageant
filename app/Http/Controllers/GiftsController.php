@@ -83,7 +83,7 @@ class GiftsController extends Controller
         $editAddress = $tools->GetEditAddressParameters();
 
         orders::update_order_state($id);
-
+            return  $jsApiParameters;
     }
     /**
      * 赠送礼物的方法
