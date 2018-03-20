@@ -21,29 +21,27 @@ class WechatController extends Controller
         
         $app = Factory::payment($config);
         $code=$request->get('code');
-        dump($code);
         $get_token_url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code=".$code."&grant_type=authorization_code";
-        dump($get_token_url);
         $ch = curl_init();
         curl_setopt($ch,CURLOPT_URL,$get_token_url);
         curl_setopt($ch,CURLOPT_HEADER,0);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-        $res = curl_exec($ch);
+        $openid = curl_exec($ch);
         curl_close($ch);
-        dump($res['openid']);
-        // $res=$app->authCodeToOpenid($openid);
-        // dump($res);
-        // $result = $app->order->unify([
-        //     'body' => '腾讯充值中心-QQ会员充值',
-        //     'out_trade_no' => '20150806125346',
-        //     'total_fee' => 88,
-        //     'spbill_create_ip' => '123.12.12.123', // 可选，如不传该参数，SDK 将会自动获取相应 IP 地址
-        //     'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
-        //     'trade_type' => 'JSAPI',
-        //     'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
-        // ]);
-        // dump($result);
+        dump($openid['openid']);
+        $res=$app->authCodeToOpenid($openid['openid']);
+        dump($res);
+        $result = $app->order->unify([
+            'body' => '腾讯充值中心-QQ会员充值',
+            'out_trade_no' => '20150806125346',
+            'total_fee' => 88,
+            'spbill_create_ip' => '123.12.12.123', // 可选，如不传该参数，SDK 将会自动获取相应 IP 地址
+            'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'trade_type' => 'JSAPI',
+            'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+        ]);
+        dump($result);
     }
     public function wechatNotify(){
         echo "dasdasd";
