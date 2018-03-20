@@ -14,7 +14,7 @@ class WechatController extends Controller
         //①、获取用户openid
         $tools = new JsApiPay();
         $openId = $tools->GetOpenid();
-
+        return $openId;
         // $config = [
         //     'app_id'             => env('WECHAT_PAYMENT_APPID', 'wx2fffc402a50e03a5'),
         //     'mch_id'             => env('WECHAT_PAYMENT_MCH_ID', '1439601702'),

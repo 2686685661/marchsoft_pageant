@@ -1,5 +1,5 @@
 <?php
-namespace App\libs\WxpayAPI\lib;
+namespace App\libs\lib;
 /**
 * 	配置账号信息
 */

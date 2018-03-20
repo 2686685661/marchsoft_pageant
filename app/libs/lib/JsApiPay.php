@@ -1,6 +1,6 @@
 <?php
 namespace App\libs\lib;
-require_once "../lib/WxPayApi.php";
+require_once "WxPayApi.php";
 
 /**
  * 

@@ -47,7 +47,7 @@
                 _token:token
             })
             .then(function (response) {
-                var data = response.data;
+                alert(response.data);
             })
             .catch(function (error) {
                 console.log(error);

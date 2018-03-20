@@ -1,7 +1,7 @@
 <?php
-namespace App\libs\WxpayAPI\lib;
-require_once "WxPay.Exception.php";
-require_once "WxPay.Config.php";
+namespace App\libs\lib;
+
+require_once "WxPayConfig.php";
 require_once "WxPay.Data.php";
 
 /**
