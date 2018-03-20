@@ -32,7 +32,7 @@ class WechatController extends Controller
         $openId=json_decode($openid);
         
         if(!isset($openId)){
-            session(['openId' => $id]);
+            session(['openId' => $openId->openid]);
         }
         
         curl_close($ch);
