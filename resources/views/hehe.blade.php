@@ -40,19 +40,7 @@
             });
         }
         function wxtest(){
-            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.post('/wechat', {
-                name: "dd",
-                gifts: ["2"],
-                _token:token
-            })
-            .then(function (response) {
-                alert(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-            // window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
         }
     </script>
 </html>
