@@ -40,31 +40,16 @@
             });
         }
         function wxtest(){
-            // var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            // axios.get('/admin/gift/give', {
-            //     name: "dd",
-            //     gifts: ["2"],
-            //     _token:token
-            // })
-            // .then(function (response) {
-            //     var data = response.data;
-            //     if(data.code == 0) {	
-                    // window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
-                    window.location.href="http://jk.mrwangqi.com/wechat";
-            //     }else {
-            //         $(function(){
-            //             $.message({
-            //                 message:data.msg,
-            //                 type:'warning'
-            //             });
-            //         })
-                    
-            //     }
-                
-            // })
-            // .catch(function (error) {
-            //     console.log(error);
-            // });
+            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            axios.get('/wechat', {
+
+            })
+            .then(function (response) {
+               console.log(response.data);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         }
     </script>
 </html>
