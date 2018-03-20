@@ -44,6 +44,7 @@
             window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
         }
         window.onload = function () {
+            alert(result);
             callpay();
         }
         function callpay()
