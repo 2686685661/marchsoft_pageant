@@ -61,7 +61,11 @@
         }
         function jsApiCall()
         {
-            {{ $result }}
+            if (typeof(result) == "undefined") {
+                alert(result);
+            }else{
+                alert(result);
+            }
             // WeixinJSBridge.invoke(
             //     'getBrandWCPayRequest',
             //     res,
