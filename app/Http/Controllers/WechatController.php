@@ -21,6 +21,6 @@ class WechatController extends Controller
         $app = Factory::payment($config);
     }
     public function wechatNotify(){
-        return "hdikashniudhausi";
+        echo "dasdasd";
     }
 }
