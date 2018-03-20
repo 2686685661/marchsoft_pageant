@@ -22,6 +22,7 @@ Route::get('/alipay/pay/{id}/{totle}','GiftsController@alipay');
 Route::get('/alipay/return','AlipayController@return_url');
 
 Route::any('/wechat','WechatController@pay');
+Route::any('/payments/wechatNotify','WechatController@wechatNotify');
 
 Route::group(['prefix' => 'admin'],function() {
 
