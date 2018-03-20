@@ -60,14 +60,11 @@
         }
         function jsApiCall()
         {
-            alert("dasda");
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest',
                 { $result },
                 function(res){
-                    WeixinJSBridge.log(res.err_msg);
-                    document.write(res);
-                    alert(res);
+
                 }
             );
         }
