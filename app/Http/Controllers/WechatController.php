@@ -19,6 +19,7 @@ class WechatController extends Controller
             'notify_url'         => 'http://jk.mrwangqi.com/payments/wechatNotify',                           // 默认支付结果通知地址
         ];
         $app = Factory::payment($config);
+        return $app;
     }
     public function wechatNotify(){
         echo "dasdasd";
