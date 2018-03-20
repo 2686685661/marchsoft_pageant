@@ -7,7 +7,7 @@ use EasyWeChat\Factory;
 use App\libs\lib\JsApiPay;
 use App\libs\lib\WxPayApi;
 use App\Models\orders; //订单表
-
+use Session;
 class WechatController extends Controller 
 {
     public function pay(Request $request){
