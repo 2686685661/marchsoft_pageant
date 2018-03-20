@@ -40,7 +40,7 @@ class WechatController extends Controller
             'openid' => $openId->openid,
         ]);
         dump($result);
-        $paySign=MakeSign($result['sign']);
+        $paySign=$this->MakeSign($result['sign']);
         $result['paySign']=$paySign;
         dump($result);
         // return view('test')->with('result', $result);
