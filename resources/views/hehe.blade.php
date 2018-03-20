@@ -9,6 +9,7 @@
         <script src="{{ asset('js/axios.min.js') }}"></script>
     </head>
     <body>
+        {{ $result }}
         <button onClick="test();">支付宝</button>
         <button onClick="wxtest();">微信</button>
     </body>
@@ -41,6 +42,34 @@
         }
         function wxtest(){
             window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
+        }
+        window.onload = function () {
+            callpay();
+        }
+        function callpay()
+        {
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }
+        function jsApiCall()
+        {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                {$jsApiParameters},
+                function(res){
+                    WeixinJSBridge.log(res.err_msg);
+                    document.write(res);
+                    alert(res);
+                }
+            );
         }
     </script>
 </html>

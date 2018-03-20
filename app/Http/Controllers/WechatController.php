@@ -40,11 +40,10 @@ class WechatController extends Controller
             'trade_type' => 'JSAPI',
             'openid' => session('openId'),
         ]);
-        dump($result);
         $paySign=$this->MakeSign($result);
         $result['paySign']=$paySign;
         dump($result);
-        // return view('test')->with('result', $result);
+        return view('hehe')->with('result', $result);
     }
 
     /**
