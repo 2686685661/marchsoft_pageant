@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;  
 use App\Http\Controllers\Controller;  
 use EasyWeChat\Factory;
-
+use App\libs\WxpayAPI\example\WxPayJsApiPay;
+use App\libs\WxpayAPI\lib\WxPayApi;
+use App\libs\WxpayAPI\example\log;
 use App\Models\orders; //订单表
 
 class WechatController extends Controller 
 {
     public function pay(Request $request){
+        //①、获取用户openid
+        $tools = new JsApiPay();
+        $openId = $tools->GetOpenid();
+        
         $config = [
             'app_id'             => env('WECHAT_PAYMENT_APPID', 'wx2fffc402a50e03a5'),
             'mch_id'             => env('WECHAT_PAYMENT_MCH_ID', '1439601702'),
