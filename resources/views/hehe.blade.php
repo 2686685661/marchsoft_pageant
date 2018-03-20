@@ -11,10 +11,7 @@
     <body>
         <button onClick="test();">支付宝</button>
         <button onClick="wxtest();">微信</button>
-        @if ($result))
-            {{ $result }}
-        @endif
-        
+
     </body>
     <script>
         function test(){
@@ -64,6 +61,7 @@
         }
         function jsApiCall()
         {
+            {{ $result }}
             // WeixinJSBridge.invoke(
             //     'getBrandWCPayRequest',
             //     res,
