@@ -21,7 +21,7 @@ Route::get('/alipay/pay/{id}/{totle}','GiftsController@alipay');
 //支付后同步跳转跳转页面
 Route::get('/alipay/return','AlipayController@return_url');
 
-Route::any('/wechat/{code}','WechatController@pay');
+Route::any('/wechat','WechatController@pay');
 Route::any('/payments/wechatNotify','WechatController@wechatNotify');
 
 Route::group(['prefix' => 'admin'],function() {

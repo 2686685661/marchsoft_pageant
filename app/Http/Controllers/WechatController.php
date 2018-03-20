@@ -18,9 +18,9 @@ class WechatController extends Controller
         //     'key_path'           => env('WECHAT_PAYMENT_KEY_PATH', 'E:\Apache24\htdocs\marchsoft_pageant\public\path\to\apiclient_key.pem'),      // XXX: 绝对路径！！！！
         //     'notify_url'         => 'http://jk.mrwangqi.com/payments/wechatNotify',                           // 默认支付结果通知地址
         // ];
-
+        
         // $app = Factory::payment($config);
-        dump($request->input['code']);
+        dump($request->all());
         // $openid=$app->authCodeToOpenid($request->input['code']);
         // dump($openid);
         // $result = $app->order->unify([
