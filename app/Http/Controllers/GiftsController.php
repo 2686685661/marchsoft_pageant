@@ -11,7 +11,7 @@ use App\Http\Controllers\AlipayController;
 use App\libs\lib\WxPayDataBase;
 use App\libs\lib\WxPayConfig;
 use App\libs\lib\JsApiPay;
-
+use Log;
 class GiftsController extends Controller
 {
     public function phpinfo(){
@@ -60,6 +60,7 @@ class GiftsController extends Controller
     public function wxPay(){
         //①、获取用户openid
         $tools = new JsApiPay();
+        Log::info("dddddddddddddddddddddddddddddddddd");
         $openId = $tools->GetOpenid();
 
         //②、统一下单
