@@ -42,8 +42,8 @@ class WechatController extends Controller
         ]);
         dump($result);
         $paySign=$this->MakeSign($result);
-        // $result['paySign']=$paySign;
-        dump($paySign);
+        $result['paySign']=$paySign;
+        dump($result);
         // return view('test')->with('result', $result);
     }
 
