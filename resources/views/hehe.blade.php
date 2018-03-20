@@ -62,15 +62,13 @@
         }
         function jsApiCall()
         {
-            var res= @json($result);
-            alert(res);
-            WeixinJSBridge.invoke(
-                'getBrandWCPayRequest',
-                res,
-                function(res){
+            // WeixinJSBridge.invoke(
+            //     'getBrandWCPayRequest',
+            //     res,
+            //     function(res){
 
-                }
-            );
+            //     }
+            // );
         }
     </script>
 </html>
