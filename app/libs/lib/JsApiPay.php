@@ -114,7 +114,7 @@ class JsApiPay
 		//取出openid
 		$data = json_decode($res,true);
 		$this->data = $data;
-		$openid = $data['openid'];
+		$openid = $data['openId'];
 		return $openid;
 	}
 	
