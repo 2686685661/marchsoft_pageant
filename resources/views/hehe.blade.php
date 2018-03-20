@@ -56,6 +56,7 @@
                     document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
                 }
             }else{
+                alert("dsa");
                 jsApiCall();
             }
         }
