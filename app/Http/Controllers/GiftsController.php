@@ -8,7 +8,10 @@ use App\Models\orders;
 use Illuminate\Support\Facades\Input;  
 use App\libs\lib\WxPayApi;
 use App\Http\Controllers\AlipayController;
-
+use App\libs\lib\WxPayDataBase;
+use App\libs\lib\WxPayData;
+use App\libs\lib\WxPayConfig;
+use App\libs\lib\JsApiPay;
 use Log;
 class GiftsController extends Controller
 {
@@ -56,9 +59,6 @@ class GiftsController extends Controller
         //如果没有成功
     }
     public function wxPay(){
-        require_once("ThinkPHP/Library/Vendor/WxpayAPI_php_v3/example/log.php");
-        require_once("App/libs/WxpayAPI/example/WxPay.JsApiPay.php");
-        require_once("App/libs/WxpayAPI/example/WxPay.Api.php");
         //①、获取用户openid
         $tools = new JsApiPay();
         Log::info("dddddddddddddddddddddddddddddddddd");
