@@ -20,7 +20,7 @@ class WechatController extends Controller
         // ];
         
         // $app = Factory::payment($config);
-        dump($request->all());
+        dump($request->get('code'));
         // $openid=$app->authCodeToOpenid($request->input['code']);
         // dump($openid);
         // $result = $app->order->unify([
