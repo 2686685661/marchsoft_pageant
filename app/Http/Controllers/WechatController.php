@@ -39,6 +39,7 @@ class WechatController extends Controller
             'trade_type' => 'JSAPI',
             'openid' => $openId->openid,
         ]);
+        $config = $app->order->configForJSSDKPayment($prepayId);
         dump($result['prepay_id']);
     }
     public function wechatNotify(){
