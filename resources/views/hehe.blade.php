@@ -11,7 +11,7 @@
     <body>
         <button onClick="test();">支付宝</button>
         <button onClick="wxtest();">微信</button>
-   
+        {{ $result }}
     </body>
     <script>
         function test(){
