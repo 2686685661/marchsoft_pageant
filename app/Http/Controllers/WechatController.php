@@ -46,7 +46,7 @@ class WechatController extends Controller
             $result['paySign']=$paySign;
             dump($result);
         }
-        
+        dump($result);
        
         // return view('test')->with('result', $result);
     }
