@@ -57,8 +57,8 @@ class GiftsController extends Controller
     }
     public function wxPay(){
         require_once("ThinkPHP/Library/Vendor/WxpayAPI_php_v3/example/log.php");
-        require_once("App\libs\WxpayAPI\example\WxPay.JsApiPay.php");
-        require_once("App\libs\WxpayAPI\example\WxPay.Api.php");
+        require_once("App/libs/WxpayAPI/example/WxPay.JsApiPay.php");
+        require_once("App/libs/WxpayAPI/example/WxPay.Api.php");
         //①、获取用户openid
         $tools = new JsApiPay();
         Log::info("dddddddddddddddddddddddddddddddddd");
