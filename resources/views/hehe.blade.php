@@ -41,25 +41,11 @@
         }
         function wxtest(){
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.post('/admin/gift/wxgive', {
-                name: "dd",
-                gifts: ["2"],
+            axios.get('/alipay/wxpay/', {
                 _token:token
             })
             .then(function (response) {
-                var data = response.data;
-                if(data.code == 0) {	
-                    window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
-                }else {
-                    $(function(){
-                        $.message({
-                            message:data.msg,
-                            type:'warning'
-                        });
-                    })
-                    
-                }
-                
+                alert(response.data);
             })
             .catch(function (error) {
                 console.log(error);
