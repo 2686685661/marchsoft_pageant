@@ -9,10 +9,10 @@ use Validator;
 
 use EasyWeChat\Foundation\Application;  
 // use EasyWeChat\Payment\Order;  
-use Overtrue\Wechat\Payment;
-use Overtrue\Wechat\Payment\Order;
-use Overtrue\Wechat\Payment\Business;
-use Overtrue\Wechat\Payment\UnifiedOrder;
+use Overtrue\Wechat\src\Payment;
+use Overtrue\Wechat\src\Payment\Order;
+use Overtrue\Wechat\src\Payment\Business;
+use Overtrue\Wechat\src\Payment\UnifiedOrder;
 
 use App\Models\orders; //订单表
 
