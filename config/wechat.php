@@ -110,8 +110,8 @@ return [
             'app_id'             => env('WECHAT_PAYMENT_APPID', 'wx2fffc402a50e03a5'),
             'mch_id'             => env('WECHAT_PAYMENT_MCH_ID', '1439601702'),
             'key'                => env('WECHAT_PAYMENT_KEY', 'def56bbd76f33932dbce862cd87d59de'),
-            // 'cert_path'          => env('WECHAT_PAYMENT_CERT_PATH', 'path/to/cert/apiclient_cert.pem'),    // XXX: 绝对路径！！！！
-            // 'key_path'           => env('WECHAT_PAYMENT_KEY_PATH', 'path/to/cert/apiclient_key.pem'),      // XXX: 绝对路径！！！！
+            'cert_path'          => env('WECHAT_PAYMENT_CERT_PATH', 'path/to/cert/apiclient_cert.pem'),    // XXX: 绝对路径！！！！
+            'key_path'           => env('WECHAT_PAYMENT_KEY_PATH', 'path/to/cert/apiclient_key.pem'),      // XXX: 绝对路径！！！！
             'notify_url'         => 'http://example.com/payments/wechat-notify',                           // 默认支付结果通知地址
         ],
         // ...
