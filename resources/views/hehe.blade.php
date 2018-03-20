@@ -40,16 +40,31 @@
             });
         }
         function wxtest(){
-            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.get('/alipay/wxpay/', {
-                _token:token
-            })
-            .then(function (response) {
-                alert(response.data);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+            window.location.href="http://jk.mrwangqi.com/alipay/wxpay/144/520";
+            // var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            // axios.get('/alipay/wxpay/', {
+            //     name: "dd",
+            //     gifts: ["2"],
+            //     _token:token
+            // })
+            // .then(function (response) {
+            //     var data = response.data;
+            //     if(data.code == 0) {	
+            //         window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+            //     }else {
+            //         $(function(){
+            //             $.message({
+            //                 message:data.msg,
+            //                 type:'warning'
+            //             });
+            //         })
+                    
+            //     }
+                
+            // })
+            // .catch(function (error) {
+            //     console.log(error);
+            // });
         }
     </script>
 </html>
