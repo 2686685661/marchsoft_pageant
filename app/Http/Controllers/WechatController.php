@@ -31,16 +31,15 @@ class WechatController extends Controller
         $openId=json_decode($openid);
         curl_close($ch);
         dump($openId->openid);
-        $res=$app->authCodeToOpenid($openId->openid);
+        $res=$app->authCodeToOpenid($code);
         dump($res);
         $result = $app->order->unify([
-            'body' => '腾讯充值中心-QQ会员充值',
+            'body' => '助力三月',
             'out_trade_no' => '20150806125346',
-            'total_fee' => 88,
-            'spbill_create_ip' => '123.12.12.123', // 可选，如不传该参数，SDK 将会自动获取相应 IP 地址
+            'total_fee' => 1,
             'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'trade_type' => 'JSAPI',
-            'openid' => 'oUpF8uMuAJO_M2pxb1Q9zNjWeS6o',
+            'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
         ]);
         dump($result);
     }
