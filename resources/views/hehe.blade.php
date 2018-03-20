@@ -59,8 +59,7 @@
                 onBridgeReady();
              }
         }
-        function onBridgeReady(){   
-            alert(result);   
+        function onBridgeReady(){    
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest', {
                     "appId":"wx2421b1c4370ec43b",     //公众号名称，由商户传入     
