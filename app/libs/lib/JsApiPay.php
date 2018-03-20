@@ -1,5 +1,6 @@
 <?php
 namespace App\libs\lib;
+use Log;
 require_once "WxPayApi.php";
 /**
  * 
@@ -49,6 +50,7 @@ class JsApiPay
 			Header("Location: $url");
 			exit();
 		} else {
+			Log::info("ddd");
 			//获取code码，以获取openid
 		    $code = $_GET['code'];
 			$openid = $this->getOpenidFromMp($code);
