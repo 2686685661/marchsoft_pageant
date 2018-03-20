@@ -22,7 +22,7 @@ class WechatController extends Controller
         $app = Factory::payment($config);
         $code=$request->get('code');
         dump($code);
-        $get_token_url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code".$code."&grant_type=authorization_code";
+        $get_token_url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code=".$code."&grant_type=authorization_code";
         dump($get_token_url);
         $ch = curl_init();
         
