@@ -11,7 +11,37 @@
     <body>
         <button onClick="test();">支付宝</button>
         <button onClick="wxtest();">微信</button>
-
+        <button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button><button onClick="test();">支付宝</button>
+        <button onClick="wxtest();">微信</button>
     </body>
     <script>
         function test(){
@@ -44,7 +74,6 @@
             window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect";
         }
         window.onload = function () {
-            alert("dsadsa");
             callpay();
         }
         function callpay()
