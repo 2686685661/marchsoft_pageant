@@ -55,7 +55,7 @@ class WechatController extends Controller
 	{
         //签名步骤一：按字典序排序参数
 		ksort($sign);
-		$string = $this->ToUrlParams();
+		$string = $this->ToUrlParams($sign);
 		//签名步骤二：在string后加入KEY
 		$string = $string . "&key=def56bbd76f33932dbce862cd87d59de";
 		//签名步骤三：MD5加密
@@ -68,10 +68,10 @@ class WechatController extends Controller
     /**
 	 * 格式化参数格式化成url参数
 	 */
-	public function ToUrlParams()
+	public function ToUrlParams($sign)
 	{
 		$buff = "";
-		foreach ($this->values as $k => $v)
+		foreach ($sign as $k => $v)
 		{
 			if($k != "sign" && $v != "" && !is_array($v)){
 				$buff .= $k . "=" . $v . "&";
