@@ -18,6 +18,8 @@ class GiftsController extends Controller
     //用于存放所有礼物的金额，便于之后获得所送礼物的总价钱
     private $gift_price = [];
 
+    private $gift_info = [];
+
     public function wxgive_gift(Request $request) {
         $give_all = $request->all();
         $give_name = trim($give_all['name']);
@@ -113,18 +115,9 @@ class GiftsController extends Controller
         if($insert_id>0) {
             $wait_order = orders::find_order($insert_id);
             return responseToJson(0,'/alipay/pay',$wait_order);
-            // $alipay = new AlipayController($wait_order);
-            // if($alipay) {
-            //     orders::update_order_state($insert_id);
-            //     // return responseToJson(0,'支付成功');
-            // }
         }else {
             return responseToJson(1,'暂时无法支付');
         }
-        //微信支付
-        //支付成功后
-        //call_user_func(callback,$state);DB::commit();
-        //如果没有成功
     }
 
 
@@ -148,6 +141,32 @@ class GiftsController extends Controller
         }
 
         return $total;
+    }
+
+    private function get_gift_namimg($order_gift) {
+
+        if($this->gift_info == []) {
+            $this->gift_info = gifts::get_namimg();
+        }
+
+        $gift_arr = [];
+
+        if(is_string($order_gift) && $order_gift != '') {
+            foreach($this->gift_info as $gift) {
+                if($gift->id == (int)$order_gift) {
+                    array_push($gift_arr,(array)$gift);
+                }
+            }
+        }else if(is_array($order_gift) && $order_gift != []) {
+            foreach($order_gift as $key => $value) {
+                foreach($this->gift_info as $gift) {
+                    if($gift->id == (int)$value) {
+                        array_push($gift_arr,(array)$gift);
+                    }
+                }
+            }
+        }
+        return $gift_arr;
     }
 
 
@@ -176,6 +195,27 @@ class GiftsController extends Controller
         orders::update_order_state($id);
 
 
+    }
+
+
+    /**
+     * 获得已支付订单中name,并通过gift_id获得礼物名称和图片名称
+     */
+    public function get_orders_info() {
+        $orders_info = orders::find_orders_info();
+       foreach($orders_info as $order) {
+           foreach($order as $key => $value) {
+               if($key == 'gifts_id' && (strpos($value,',') > 0)) {
+                   $order->$key = explode(',',$value);
+               }
+               else continue;
+               
+           }
+       }
+       foreach($orders_info as $order) {
+           $order->gifts_id = $this->get_gift_namimg($order->gifts_id);
+       }
+       return responseToJson(0,'',$orders_info);
     }
 
 }

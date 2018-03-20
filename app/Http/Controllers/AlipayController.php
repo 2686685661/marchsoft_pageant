@@ -36,11 +36,12 @@ class AlipayController extends Controller
         
     // }
 
-        
+    private $id = 0;
 
     //payRequestBuilder
     public function pay($id = 0,$totle = 0) {
 
+        $this->id = $id;
 
         $out_trade_no = get_rand_string();
         $subject = 'marchsoft捐赠';
@@ -74,6 +75,7 @@ class AlipayController extends Controller
             if($alipaySevice->appid == $arr['app_id']) {
 
                 return redirect('/front/celebration');
+                // dd($this->id);
                 echo '验证成功';
             }else {
                 echo '验证失败';

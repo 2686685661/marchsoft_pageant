@@ -36,6 +36,10 @@ Route::group(['prefix' => 'admin'],function() {
         Route::post("/wxgive",'GiftsController@wxgive_gift');
         Route::post("/getgift",'GiftsController@get_gifts_info');
     });
+
+    Route::group(['prefix' => 'order'],function() {
+        Route::get("/getorder",'GiftsController@get_orders_info');
+    });
 });
 
 

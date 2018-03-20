@@ -295,7 +295,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 
 
 	<div class="air_box">
-		<div id="air_minbox">
+		<div id="air_minbox"><!-- 气泡层 -->
 			<div class="air">
 				<input type="text" placeholder="请留下您的祝福..." id="input">
 				<button id="air"></button>
@@ -320,57 +320,69 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>
 			
-			<div id="cover"></div>
-			<div class="blessing_glass" id="blessing_glass">
-				<div class="blessing_input_box name">
-					<div class="blessing_input">
-						<span><strong>*</strong>名字：</span>
-						<input type="text" placeholder="请输入您的姓名" id="input2">
-					</div>
-				</div>
-				<div class="blessing_input_box">
-					<div class="blessing_input blessing_input_sent">
-						<span><strong>*</strong>祝福：</span>
-						<input type="text" placeholder="生日快乐啊" id="input_bless">
-					</div>
-					<button id="sent_bless">发送</button>
+		<div id="cover"></div><!-- 遮盖层 -->
+		<div class="blessing_glass" id="blessing_glass"><!-- 送祝福 -->
+			<div class="blessing_input_box name">
+				<div class="blessing_input">
+					<span><strong>*</strong>名字：</span>
+					<input type="text" placeholder="请输入您的姓名" id="input2">
 				</div>
 			</div>
-			<div class="blessing_glass" id="birth_glass">
-				<div class="blessing_input_box name">
-					<div class="blessing_input blessing_input_sent">
-						<span><strong>*</strong>赠送人：</span>
-						<input type="text" id="input3">
-					</div>
-					<button id="pay">支付</button>
+			<div class="blessing_input_box">
+				<div class="blessing_input blessing_input_sent">
+					<span><strong>*</strong>祝福：</span>
+					<input type="text" placeholder="生日快乐啊" id="input_bless">
 				</div>
-				<div class="blessing_input_box">
-					<div class="blessing_input">
-						<span><strong>*</strong>礼物：</span>
-						<input type="text" id="birth_list">
-					</div>
+				<button id="sent_bless">发送</button>
+			</div>
+		</div>
+		<div class="blessing_glass" id="birth_glass"><!-- 挑选礼物 -->
+			<div class="blessing_input_box name">
+				<div class="blessing_input blessing_input_sent">
+					<span><strong>*</strong>赠送人：</span>
+					<input type="text" id="input3">
+				</div>
+				<button id="pay">支付</button>
+			</div>
+			<div class="blessing_input_box">
+				<div class="blessing_input">
+					<span><strong>*</strong>礼物：</span>
+					<input type="text" id="birth_list">
 				</div>
 			</div>
-			<div class="blessing" id="blessing">
-				<div class="blessing_message">
-					<div class="blessing_message_large" id="blessing_message_large1">
-						
-					</div>
-					<div class="blessing_message_large" id="blessing_message_large2">
-						
-					</div>
+		</div>
+		<div class="blessing" id="blessing"><!-- 赠送礼物 -->
+			<div class="blessing_message">
+				<div class="blessing_message_large" id="blessing_message_large1">
+					
 				</div>
-				<div class="button">
-					<button id="graduate">毕业生</button>
-					<button id="in_student">在校生</button>
-				</div>
-				<div class="message_button">
-					<p><img src="{{ asset('img/smile.png') }}" alt="">大家放心送，礼物都会转入三月软件工作室哦！</p>
-					<button id="go">赠送礼物</button>
+				<div class="blessing_message_large" id="blessing_message_large2">
+					
 				</div>
 			</div>
+			<div class="button">
+				<button id="graduate">毕业生</button>
+				<button id="in_student">在校生</button>
+			</div>
+			<div class="message_button">
+				<p><img src="{{ asset('img/smile.png') }}" alt="">大家放心送，礼物都会转入三月软件工作室哦！</p>
+				<button id="go">赠送礼物</button>
+			</div>
+		</div>
 	</div>
-
+	<div class="gif" id="gif">
+		<div class="img">
+			<img src="{{ asset('img/xin2.jpg') }}" alt="" width="100%">
+		</div>
+		<div class="font">
+			<img src="{{ asset('img/xin22.png') }}" alt="">
+		</div>
+		
+		<div class="fin_button">
+			<button>我要分享</button>
+			<button id="goon">继续赠送</button>
+		</div>
+	</div>
 
 	<div class="music">
 	    <img src="{{ asset('img/music.png') }}" id="imgmusic" onclick="aa()" class="kk">

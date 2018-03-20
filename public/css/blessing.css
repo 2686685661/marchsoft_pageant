@@ -2,10 +2,39 @@ body,div,p{
 	margin: 0;
 	padding: 0;
 }
-/*.page1{
+
+.gif{
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*height: 500px;*/
+	background-color: rgb(254,211,213);
+	z-index: 20;
+}
+.img>img{
+	margin-top: 60px;
+}
+.font>img{
+	width: 100%;
+}
+.fin_button{
+	width: 100%;
 	display: flex;
-	align-items:flex-end;
-}*/
+	justify-content:center;
+}
+.fin_button>button{
+	background-color: red;
+	border: none;
+	width: 24%;
+	height: 38px;
+	border-radius:5px;
+	color: #fff;
+	margin: 0 20px;
+}
+
+
+
 .air_box{
 	display: flex;
 	flex-direction:column-reverse;
