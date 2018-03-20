@@ -60,6 +60,8 @@
         }
         function jsApiCall()
         {
+            var res=<?php echo json_encode($result); ?>;
+            alert(res);
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest',
                 { $result },
