@@ -2,7 +2,7 @@
 
 namespace App\libs\lib;
 
-require_once "WxPay.Exception.php";
+require_once "WxPayException.php";
 require_once "WxPayConfig.php";
 require_once "WxPayData.php";
 

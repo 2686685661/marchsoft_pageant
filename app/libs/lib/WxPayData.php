@@ -5,7 +5,7 @@ namespace App\libs\lib;
 * 2015-06-29 修复签名问题
 **/
 require_once "WxPayConfig.php";
-require_once "WxPay.Exception.php";
+require_once "WxPayException.php";
 
 /**
  * 

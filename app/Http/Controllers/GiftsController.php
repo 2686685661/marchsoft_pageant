@@ -10,6 +10,7 @@ use App\libs\lib\WxPayApi;
 use App\Http\Controllers\AlipayController;
 use App\libs\lib\WxPayDataBase;
 use App\libs\lib\WxPayUnifiedOrder;
+use App\libs\lib\WxPayException;
 use App\libs\lib\WxPayConfig;
 use App\libs\lib\JsApiPay;
 use Log;
