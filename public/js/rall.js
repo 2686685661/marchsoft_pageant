@@ -301,27 +301,6 @@ window.onload=function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
 		var gift_arr = [];
-<<<<<<< HEAD
-		for(var i = 0;i<list.length;i++) {
-			if(list[i] == -1) continue;
-			gift_arr.push(list[i]);
-		}
-		// disapear();
-
-	// 	var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-	// 	axios.post('/admin/gift/give', {
-	// 	    name: name,
-	// 		gifts: gift_arr,
-	// 		_token:token
-	// 	})
-	// 	.then(function (response) {
-	// 		var res = response.data;
-			
-	// 	})
-	// 	.catch(function (error) {
-	// 	    console.log(error);
-	// 	});
-=======
 		for(var i=0;i<list.length;i++) {
 			if(list[i] == -1) continue;
 			gift_arr.push(list[i]);
@@ -349,7 +328,6 @@ window.onload=function(){
 				// console.log(data.msg);
 			}
 		});
->>>>>>> dadd2f28f0fa933e8fe4f5a6d246fc763eafa18e
 	}
 
 	//输入框获得焦点是时，底部送祝福框出来
