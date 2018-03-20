@@ -50,6 +50,9 @@ Route::group(['prefix' => 'front'],function() {
 		return view('test');
 	});
 
+    Route::get("hehe",function() {
+		return view('hehe');
+	});
 });
 
 

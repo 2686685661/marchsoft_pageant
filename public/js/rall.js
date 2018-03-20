@@ -267,7 +267,7 @@ window.onload=function(){
 			console.log(data.msg);
 			if(data.code == 0) {	
 				alert("dasda");
-				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				// window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
 			}else {
 				alert("dasda2");
 				$(function(){
