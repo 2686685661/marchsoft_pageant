@@ -30,6 +30,7 @@ class WechatController extends Controller
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
         $openid = curl_exec($ch);
         $openId=json_decode($openid);
+        $id=$openId->openid;
         curl_close($ch);
         $result = $app->order->unify([
             'body' => '助力三月',
@@ -37,7 +38,7 @@ class WechatController extends Controller
             'total_fee' => 1,
             'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'trade_type' => 'JSAPI',
-            'openid' => $openId->openid,
+            'openid' => $id,
         ]);
         $paySign=$this->MakeSign($result);
         $result['paySign']=$paySign;
