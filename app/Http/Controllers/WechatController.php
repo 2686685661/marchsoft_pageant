@@ -39,7 +39,7 @@ class WechatController extends Controller
             'trade_type' => 'JSAPI',
             'openid' => $openId->openid,
         ]);
-        $paySign=$this->MakeSign($result['sign']);
+        $paySign=$this->MakeSign($result);
         $result['paySign']=$paySign;
         dump($result);
         // return view('test')->with('result', $result);
@@ -52,7 +52,6 @@ class WechatController extends Controller
 	public function MakeSign($sign)
 	{
         //签名步骤一：按字典序排序参数
-        dump($sign);
 		ksort($sign);
 		$string = $this->ToUrlParams();
 		//签名步骤二：在string后加入KEY
