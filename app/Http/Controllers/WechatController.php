@@ -30,18 +30,15 @@ class WechatController extends Controller
         $openid = curl_exec($ch);
         $openId=json_decode($openid);
         curl_close($ch);
-        dump($openId->openid);
-        $res=$app->authCodeToOpenid($code);
-        dump($res);
         $result = $app->order->unify([
             'body' => '助力三月',
-            'out_trade_no' => '20150806125346',
+            'out_trade_no' => time(),
             'total_fee' => 1,
             'notify_url' => 'https://pay.weixin.qq.com/wxpay/pay.action', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'trade_type' => 'JSAPI',
-            'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
+            'openid' => $openId->openid,
         ]);
-        dump($result);
+        dump($result['prepay_id']);
     }
     public function wechatNotify(){
         echo "dasdasd";
