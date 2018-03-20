@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Input;
 use App\libs\lib\WxPayApi;
 use App\Http\Controllers\AlipayController;
 use App\libs\lib\WxPayDataBase;
-use App\libs\lib\WxPayData;
+use App\libs\lib\WxPayUnifiedOrder;
 use App\libs\lib\WxPayConfig;
 use App\libs\lib\JsApiPay;
 use Log;
