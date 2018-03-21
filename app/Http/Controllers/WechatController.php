@@ -30,8 +30,8 @@ class WechatController extends Controller
         ]);
         $paySign=$this->MakeSign($result);
         $result['paySign']=$paySign;
-        dump($result);
-        // return responseToJson(1,'下单成功',$result);
+        // dump($result);
+        return responseToJson(1,'下单成功',$result);
     }
 
     /**
