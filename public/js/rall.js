@@ -328,10 +328,17 @@ window.onload=function(){
 		wxtest();
 	}
 	function wxtest(){
+		var name = $("#input3").val();//赠送人姓名
+		var list = myArray;//礼物ID
+		var gift_arr = [];
+		for(var i=0;i<list.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr.push(list[i]);
+		}
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		axios.post('/wechat', {
-			name: "dd",
-			gifts: ["2"],
+			name: name,
+			gifts: gift_arr,
 			_token:token
 		})
 		.then(function (response) {
