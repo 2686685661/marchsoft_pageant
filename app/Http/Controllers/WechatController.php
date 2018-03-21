@@ -158,6 +158,6 @@ class WechatController extends Controller
                 return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
             }
         } 
-        return view('hehe');
+        return view('test');
     }
 }

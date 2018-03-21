@@ -13,32 +13,6 @@
         <button onClick="wxtest();">微信</button>
     </body>
     <script>
-        function test(){
-            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.post('/admin/gift/give', {
-                name: "dd",
-                gifts: ["2"],
-                _token:token
-            })
-            .then(function (response) {
-                var data = response.data;
-                if(data.code == 0) {	
-                    window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
-                }else {
-                    $(function(){
-                        $.message({
-                            message:data.msg,
-                            type:'warning'
-                        });
-                    })
-                    
-                }
-                
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-        }
         function updateOrder(id){
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             axios.post('/updateOrder', {
