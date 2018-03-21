@@ -40,7 +40,6 @@
             });
         }
         function updateOrder(id){
-            alert(id);
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             axios.post('/updateOrder', {
                 id : id,
@@ -50,7 +49,7 @@
                 alert(response.data.result);
             })
             .catch(function (error) {
-                console.log(error);
+                alert(error);
             });        
         }
         function wxtest(){
