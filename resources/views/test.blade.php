@@ -37,11 +37,11 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 <body id="main_body">
 <script type="text/javascript">
 	// Todo 上线以后要打开检测
-	/*var userInfo = navigator.userAgent;
-	if ((userInfo.indexOf("Windows") != -1) || (userInfo.indexOf("Mac OS") != -1)) {
-		document.getElementById("main_body").style.display = "none";
-		alert("请在手机端打开！");
-	}*/
+	// var userInfo = navigator.userAgent;
+	// if ((userInfo.indexOf("Windows") != -1) || (userInfo.indexOf("Mac OS") != -1)) {
+	// 	document.getElementById("main_body").style.display = "none";
+	// 	alert("请在手机端打开！");
+	// }
 </script>
 	<div class="main">
 		<div class="page page1">
@@ -298,7 +298,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div id="air_box"><!-- 气泡 层 -->
 			<div id="air_minbox">
 				<div class="air" id="air">
-					<input type="text" placeholder="请留下您的祝福..." id="input">
+					<input type="text" placeholder="请留下您的祝福..." id="input" disabled>
 					<button id="air"></button>
 				</div>
 				<div class="air_min_box" id="air_min_box">

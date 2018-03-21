@@ -279,7 +279,7 @@ figure figcaption{
 } 
 @media screen and (min-width:320px) and (max-width:360px){
 	#ewmsrc {
-	    margin: -27px 0 0 -16px;
+	    margin: 20px 0 0 -16px;
 	}
 	.animation-one .yan-one img{
 		width: 40px;
@@ -344,7 +344,7 @@ figure figcaption{
 	}
 	.background .back{
 	    width: 268px;
-    	margin: -36px 0 0 12%;
+    	margin: -66px 0 0 12%;
 	}
 	.gift{
 		top: -24px;
@@ -403,7 +403,7 @@ figure figcaption{
 	}
 	.background .back {
 	    width: 310px;
-	    margin: 0px 0 0 -2%;
+	    margin: -44px 0 0 -2%;
 	}
 	.gift-two{
 		top: 3%;
@@ -418,7 +418,7 @@ figure figcaption{
 	}
 	.give img{
 		width: 100px;
-		margin: 6px 10px;
+		margin: 17px 10px;
 	}
 	.give2 img{
 		width: 100px;
@@ -514,7 +514,7 @@ figure figcaption{
     	margin: 43px 0 0 0;
 	}
 	.background .back{
-       	margin: 0px 0 0 -9%;
+       	margin: -44px 0 0 -9%;
     	width: 330px;
 	}
 	.gift-two{
@@ -573,7 +573,7 @@ figure figcaption{
 	}
 	.background .back{
 	    width: 350px;
-    	margin: 0px 0 0 -12%;
+    	margin: -38px 0 0 -12%;
 	}
 	.gift{
 		top: 36px;

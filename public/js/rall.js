@@ -28,9 +28,7 @@ window.onload=function(){
 	});
 
 
-	// document.getElementById("max_air3").style.display="none";
-	// document.getElementById("max_air2").style.display="none";
-	// document.getElementById("max_air").style.display="none";
+
 	//礼物专区毕业生赠送礼物
 	gift_button.onclick = function(){
 		Area();
