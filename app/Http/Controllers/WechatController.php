@@ -21,9 +21,8 @@ class WechatController extends Controller
         ];
         $app = Factory::payment($config);
 
-        $give_all = $request->all();
-        $give_name = trim($give_all['name']);
-        $gifts = $give_all['gifts'];
+        $give_name = trim($request->get('name'));
+        $gifts = $request->get('gifts');
         if($give_name == '')
             return responseToJson(1,'昵称不能为空');
         else if(mb_strlen($give_name,'utf-8') >= 10) 
@@ -66,7 +65,7 @@ class WechatController extends Controller
             $wcPayParams['payId']=$insert_id;
             return responseToJson(1,'下单成功',$wcPayParams);
         }else{
-            
+
         }
     }
 
