@@ -32,7 +32,7 @@ class WechatController extends Controller
         $openId=json_decode($openid);
        
         session(['openId' => $openId->openid]);
-        dump(session('openId'));
+        // dump(session('openId'));
         // curl_close($ch);
         // $result = $app->order->unify([
         //     'body' => '助力三月',
