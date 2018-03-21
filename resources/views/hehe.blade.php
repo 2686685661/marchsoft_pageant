@@ -48,7 +48,11 @@
             })
             .then(function (response) {
                 alert(response.data.result);
-               callpay(response.data.result);
+                if(response.data.code==1){
+                    callpay(response.data.result);
+                }else{
+                    alert(response.data.msg);
+                }
             })
             .catch(function (error) {
                 console.log(error);
