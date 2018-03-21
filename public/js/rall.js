@@ -463,6 +463,7 @@ window.onload=function(){
 	cover1.onclick=function(){
 		disapear();
 		document.getElementById("blessing").style.display="none";
+		document.getElementById("pay_select").style.display="none";
 	}
 	
 	function show(){
