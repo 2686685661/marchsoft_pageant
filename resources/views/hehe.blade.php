@@ -47,7 +47,8 @@
                 _token:token
             })
             .then(function (response) {
-               callpay(response.data.wcPayParams);
+                alert(response.data.result);
+               callpay(response.data.result);
             })
             .catch(function (error) {
                 console.log(error);
