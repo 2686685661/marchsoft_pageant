@@ -21,8 +21,8 @@ class WechatController extends Controller
         ];
         $app = Factory::payment($config);
 
-        $give_name = trim($request->get('name'));
-        $gifts = $request->get('gifts');
+        $give_name = trim($request->post('name'));
+        $gifts = $request->post('gifts');
         if($give_name == '')
             return responseToJson(1,'昵称不能为空');
         else if(mb_strlen($give_name,'utf-8') >= 10) 
@@ -43,7 +43,7 @@ class WechatController extends Controller
 
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
         $insert_id = orders::insert_gift_order($arr);
-        dump($insert_id);
+
         if($insert_id){
             $result = $app->order->unify([
                 'body' => '助力三月',
@@ -70,6 +70,28 @@ class WechatController extends Controller
         }
     }
 
+    /**
+     * 计算前台赠送的礼物总价值
+     * return int $total
+     */
+    private function get_gifts_total($gifts = []) {
+        
+        $total = 0;
+        if($this->gift_price == []) {
+            $this->gift_price = gifts::get_gifts_price();
+        }
+
+
+
+        foreach($gifts as $gift_id) {
+            if(is_stat($gift_id,$this->gift_price)) {
+                $total += $this->gift_price[$gift_id];
+            }
+        }
+
+        return $total;
+    }
+        
     /**
 	 * 生成签名
 	 * @return 签名，本函数不覆盖sign成员变量，如要设置签名需要调用SetSign方法赋值
