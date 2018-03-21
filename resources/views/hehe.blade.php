@@ -67,7 +67,11 @@
              }
         }
         function onBridgeReady(result){    
-            alert(result.appid+result.timeStamp+result.nonce_str+result.prepay_id+result.paySign);
+            alert(result.appid);
+            alert(new Date().getTime()/1000);
+            alert(result.nonce_str);
+            alert("prepay_id="+result.prepay_id);
+            alert(result.paySign);
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest',{
                     "appId":result.appid,     //公众号名称，由商户传入     
@@ -77,7 +81,8 @@
                     "signType":"MD5",         //微信签名方式：     
                     "paySign":result.paySign //微信签名 
                 }  ,
-                function(res){     
+                function(res){   
+                    alert(res.err_msg);  
                     if(res.err_msg == "get_brand_wcpay_request:ok" ) {
                         alert("???");
                     }     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
