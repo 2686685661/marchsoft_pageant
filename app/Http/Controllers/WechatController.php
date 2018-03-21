@@ -21,8 +21,8 @@ class WechatController extends Controller
         ];
         $app = Factory::payment($config);
 
-        $give_name = trim($request->post('name'));
-        $gifts = $request->post('gifts');
+        $give_name = trim($request->get('name'));
+        $gifts = $request->get('gifts');
         if($give_name == '')
             return responseToJson(1,'昵称不能为空');
         else if(mb_strlen($give_name,'utf-8') >= 10) 
@@ -43,7 +43,7 @@ class WechatController extends Controller
 
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
         $insert_id = orders::insert_gift_order($arr);
-
+        dump($insert_id);
         if($insert_id){
             $result = $app->order->unify([
                 'body' => '助力三月',
