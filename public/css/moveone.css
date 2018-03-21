@@ -1104,7 +1104,6 @@
 	    bottom: 25px;
 	} 
 	.framefour img{
-		opacity: 0;
 		width: 83%;
 	    transform: rotate(-10deg);
 	    position: relative;
@@ -1112,6 +1111,7 @@
 	    left: 14px;
 	}
 	.frame4 img{
+		opacity: 0;
 		width: 83%;
 	    transform: rotate(-10deg);
 	    position: relative;
