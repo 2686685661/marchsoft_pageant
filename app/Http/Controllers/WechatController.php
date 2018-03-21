@@ -29,7 +29,7 @@ class WechatController extends Controller
             'openid' => session('openId'),
         ]);
         $paySign=$this->MakeSign($result);
-        $result['paySign']=$paySign;
+        // $result['paySign']=$paySign;
         return responseToJson(1,'下单成功',$result);
     }
 
