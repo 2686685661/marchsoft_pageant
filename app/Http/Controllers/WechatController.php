@@ -43,6 +43,7 @@ class WechatController extends Controller
 
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
         $insert_id = orders::insert_gift_order($arr);
+        dump($insert_id);
         if($insert_id){
             $result = $app->order->unify([
                 'body' => '助力三月',
