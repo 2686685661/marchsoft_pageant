@@ -26,12 +26,12 @@ class WechatController extends Controller
             'total_fee' => 1,
             'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
             'trade_type' => 'JSAPI',
-            'openid' => session('openId'),
+            'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
         ]);
         // $paySign=$this->MakeSign($result);
         // $result['paySign']=$paySign;
         dump($result);
-        return responseToJson(1,'下单成功',$result);
+        // return responseToJson(1,'下单成功',$result);
     }
 
     /**
