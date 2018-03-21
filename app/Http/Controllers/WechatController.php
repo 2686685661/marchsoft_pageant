@@ -134,6 +134,11 @@ class WechatController extends Controller
         echo "dasdasd";
     }
 
+    public function updateOrder(){
+        $id = $request->get('id');
+        orders::update_order_state($id);
+    }
+
     public function index(Request $request){
         if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { 
             if($request->get('code')){

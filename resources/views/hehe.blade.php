@@ -39,6 +39,18 @@
                 console.log(error);
             });
         }
+        function updateOrder(id){
+            var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            axios.post('/updateOrder', {
+                id : id
+            })
+            .then(function (response) {
+        
+            })
+            .catch(function (error) {
+                console.log(error);
+            });        
+        }
         function wxtest(){
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             axios.post('/wechat', {
@@ -47,7 +59,6 @@
                 _token:token
             })
             .then(function (response) {
-                alert(response.data.result);
                 if(response.data.code==1){
                     callpay(response.data.result);
                 }else{
@@ -84,6 +95,7 @@
                 function(res){   
                     if(res.err_msg == "get_brand_wcpay_request:ok" ) {
                         alert("感谢");
+                        updateOrder(result.payId);
                     }     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
                 }
             ); 
