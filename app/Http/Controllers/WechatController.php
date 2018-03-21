@@ -33,17 +33,17 @@ class WechatController extends Controller
        
         session(['openId' => $openId->openid]);
         // dump(session('openId'));
-        // curl_close($ch);
-        // $result = $app->order->unify([
-        //     'body' => '助力三月',
-        //     'out_trade_no' => time(),
-        //     'total_fee' => 1,
-        //     'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
-        //     'trade_type' => 'JSAPI',
-        //     'openid' => session('openId'),
-        // ]);
-        // $paySign=$this->MakeSign($result);
-        // $result['paySign']=$paySign;
+        curl_close($ch);
+        $result = $app->order->unify([
+            'body' => '助力三月',
+            'out_trade_no' => time(),
+            'total_fee' => 1,
+            'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+            'trade_type' => 'JSAPI',
+            'openid' => session('openId'),
+        ]);
+        $paySign=$this->MakeSign($result);
+        $result['paySign']=$paySign;
         // return view('hehe',['result'=>$result]);
     }
 
