@@ -53,7 +53,7 @@ Route::group(['prefix' => 'front'],function() {
 	});
 
     Route::get("hehe",function() {
-		return view('hehe');
+		return view('hehe',['result'=>'aa']);
 	});
 });
 
