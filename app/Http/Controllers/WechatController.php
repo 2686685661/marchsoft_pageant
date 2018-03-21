@@ -84,8 +84,9 @@ class WechatController extends Controller
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
                 $openid = curl_exec($ch);
-                $openId=json_decode($openid);
-                session(['openId' => $openId->openid]);
+                $Id=json_decode($openid);
+                dump($Id);
+                session(['openId' => $Id->openid]);
                 curl_close($ch);
             }else{
                 return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
