@@ -68,7 +68,7 @@
         }
         function onBridgeReady(result){    
             alert(result.appid);
-            alert(new Date().getTime()/1000);
+            alert(parseInt(new Date().getTime() / 1000).toString());
             alert(result.nonce_str);
             alert("prepay_id="+result.prepay_id);
             alert(result.paySign);
