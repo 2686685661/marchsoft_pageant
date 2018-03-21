@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;  
 use App\Http\Controllers\Controller;  
 use EasyWeChat\Factory;
+use App\Models\gifts;
 use App\libs\lib\JsApiPay;
 use App\libs\lib\WxPayApi;
 use App\Models\orders; //订单表
 use Session;
 class WechatController extends Controller 
 {
+    private $gift_price = [];
     public function pay(Request $request){
         $config = [
             'app_id'             => env('WECHAT_PAYMENT_APPID', 'wx2fffc402a50e03a5'),
@@ -21,8 +23,8 @@ class WechatController extends Controller
         ];
         $app = Factory::payment($config);
 
-        $give_name = trim($request->post('name'));
-        $gifts = $request->post('gifts');
+        $give_name = trim($request->get('name'));
+        $gifts = $request->get('gifts');
         if($give_name == '')
             return responseToJson(1,'昵称不能为空');
         else if(mb_strlen($give_name,'utf-8') >= 10) 
