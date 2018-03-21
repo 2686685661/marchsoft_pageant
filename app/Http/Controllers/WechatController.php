@@ -136,7 +136,8 @@ class WechatController extends Controller
 
     public function updateOrder(){
         $id = $request->get('id');
-        orders::update_order_state($id);
+        $res=orders::update_order_state($id);
+        return responseToJson(1,'更新结果',$res);
     }
 
     public function index(Request $request){

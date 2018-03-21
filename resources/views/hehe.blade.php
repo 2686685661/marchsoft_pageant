@@ -40,12 +40,14 @@
             });
         }
         function updateOrder(id){
+            alert(id);
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             axios.post('/updateOrder', {
-                id : id
+                id : id,
+                _token:token
             })
             .then(function (response) {
-        
+                alert(response.data.result);
             })
             .catch(function (error) {
                 console.log(error);
