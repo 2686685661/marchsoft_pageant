@@ -49,9 +49,7 @@ Route::group(['prefix' => 'admin'],function() {
 
 Route::group(['prefix' => 'front'],function() {
 
-	Route::get("celebration",function() {
-		return view('test');
-	});
+	Route::get("celebration",'WechatController@index');
 
     Route::get("hehe",'WechatController@index');
 });
