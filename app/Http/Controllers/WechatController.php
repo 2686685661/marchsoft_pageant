@@ -66,7 +66,7 @@ class WechatController extends Controller
             $wcPayParams['payId']=$insert_id;
             return responseToJson(1,'下单成功',$wcPayParams);
         }else{
-            return responseToJson(0,'下单失败',$wcPayParams)
+            return responseToJson(0,'下单失败',$wcPayParams);
         }
     }
 
