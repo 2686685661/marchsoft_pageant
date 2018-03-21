@@ -20,25 +20,54 @@ class WechatController extends Controller
             'notify_url'         => 'http://jk.mrwangqi.com/payments/wechatNotify',                           // 默认支付结果通知地址
         ];
         $app = Factory::payment($config);
-        $result = $app->order->unify([
-            'body' => '助力三月',
-            'out_trade_no' => time(),
-            'total_fee' => 1,
-            'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
-            'trade_type' => 'JSAPI',
-            'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
-        ]);
-        $wcPayParams = [
-            "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
-            "timeStamp" => time(),         //时间戳，自1970年以来的秒数
-            "nonceStr" => $result['nonce_str'], //随机串
-            // 通过统一下单接口获取
-            "package" => "prepay_id=".$result['prepay_id'],
-            "signType" => "MD5",         //微信签名方式：
-        ];
-        $paySign=$this->MakeSign($wcPayParams);
-        $wcPayParams['paySign']=$paySign;
-        return responseToJson(1,'下单成功',$wcPayParams);
+
+        $give_all = $request->all();
+        $give_name = trim($give_all['name']);
+        $gifts = $give_all['gifts'];
+        if($give_name == '')
+            return responseToJson(1,'昵称不能为空');
+        else if(mb_strlen($give_name,'utf-8') >= 10) 
+            return responseToJson(1,'昵称长度不能超过10个字符');
+        else if(!count($gifts)) 
+            return responseToJson(1,'礼物不能为空');
+
+
+        $total = $this->get_gifts_total($gifts);
+        $gifts_id = '';
+        for($i=0;$i<count($gifts);$i++) {
+            if($i == count($gifts)-1) {
+                $gifts_id .= $gifts[$i];
+            }else{
+                $gifts_id .= $gifts[$i].',';
+            }
+        }
+
+        $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
+        $insert_id = orders::insert_gift_order($arr);
+        if($insert_id){
+            $result = $app->order->unify([
+                'body' => '助力三月',
+                'out_trade_no' => time(),
+                'total_fee' => 1,
+                'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+                'trade_type' => 'JSAPI',
+                'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
+            ]);
+            $wcPayParams = [
+                "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
+                "timeStamp" => time(),         //时间戳，自1970年以来的秒数
+                "nonceStr" => $result['nonce_str'], //随机串
+                // 通过统一下单接口获取
+                "package" => "prepay_id=".$result['prepay_id'],
+                "signType" => "MD5",         //微信签名方式：
+            ];
+            $paySign=$this->MakeSign($wcPayParams);
+            $wcPayParams['paySign']=$paySign;
+            $wcPayParams['payId']=$insert_id;
+            return responseToJson(1,'下单成功',$wcPayParams);
+        }else{
+            
+        }
     }
 
     /**
