@@ -82,7 +82,7 @@ class WechatController extends Controller
                 curl_setopt($ch,CURLOPT_URL,$get_token_url);
                 curl_setopt($ch,CURLOPT_HEADER,0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
-                curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+                curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
                 $openid = curl_exec($ch);
                 $Id=json_decode($openid);
                 dump($Id);
