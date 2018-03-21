@@ -336,6 +336,7 @@ window.onload=function(){
 			gift_arr.push(list[i]);
 		}
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		alert(gift_arr);
 		axios.post('/wechat', {
 			name: name,
 			gifts: gift_arr,
