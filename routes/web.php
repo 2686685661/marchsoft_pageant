@@ -22,6 +22,7 @@ Route::get('/alipay/pay/{id}/{totle}','GiftsController@alipay');
 Route::get('/alipay/return','AlipayController@return_url');
 
 Route::any('/wechat','WechatController@pay');
+Route::any('/payments/wechatNotify','WechatController@wechatNotify');
 
 Route::group(['prefix' => 'admin'],function() {
 
@@ -35,6 +36,7 @@ Route::group(['prefix' => 'admin'],function() {
         Route::post("/give",'GiftsController@give_gift');
         Route::post("/wxgive",'GiftsController@wxgive_gift');
         Route::post("/getgift",'GiftsController@get_gifts_info');
+        Route::get('/phpinfo','GiftsController@phpinfo');
     });
 
     Route::group(['prefix' => 'order'],function() {
@@ -50,6 +52,7 @@ Route::group(['prefix' => 'front'],function() {
 		return view('test');
 	});
 
+    Route::get("hehe",'WechatController@index');
 });
 
 

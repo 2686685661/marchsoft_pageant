@@ -1,6 +1,7 @@
 <?php
 namespace App\libs\lib;
 require_once "WxPayApi.php";
+
 /**
  * 
  * JSAPI支付实现类

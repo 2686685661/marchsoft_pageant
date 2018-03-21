@@ -1,4 +1,6 @@
 <?php
+
+namespace App\libs\WxpayAPI\lib;
 /**
  * 
  * 微信支付API异常类
