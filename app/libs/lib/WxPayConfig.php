@@ -1,8 +1,9 @@
 <?php
+namespace App\libs\lib;
 /**
 * 	配置账号信息
 */
-namespace App\libs\lib;
+
 class WxPayConfig
 {
 	//=======【基本信息设置】=====================================

@@ -329,7 +329,6 @@ window.onload=function(){
 		// 				type:'warning'
 		// 			});
 		// 		})
-				
 		// 	}
 			
 		// })

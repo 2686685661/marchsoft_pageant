@@ -6,15 +6,13 @@ use DB;
 use App\Models\gifts;
 use App\Models\orders;
 use Illuminate\Support\Facades\Input;  
-use App\libs\lib\WxPayApi;
 use App\Http\Controllers\AlipayController;
-use App\libs\lib\WxPayDataBase;
-use App\libs\lib\WxPayConfig;
-use App\libs\lib\JsApiPay;
-
+use Log;
 class GiftsController extends Controller
 {
-
+    public function phpinfo(){
+        phpinfo();
+    }
     //用于存放所有礼物的金额，便于之后获得所送礼物的总价钱
     private $gift_price = [];
 
@@ -58,6 +56,7 @@ class GiftsController extends Controller
     public function wxPay(){
         //①、获取用户openid
         $tools = new JsApiPay();
+        Log::info("dddddddddddddddddddddddddddddddddd");
         $openId = $tools->GetOpenid();
 
         //②、统一下单
@@ -81,7 +80,7 @@ class GiftsController extends Controller
         $editAddress = $tools->GetEditAddressParameters();
 
         orders::update_order_state($id);
-
+            return  $jsApiParameters;
     }
     /**
      * 赠送礼物的方法

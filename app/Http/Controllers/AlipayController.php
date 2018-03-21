@@ -73,9 +73,9 @@ class AlipayController extends Controller
         if(!$result) {   //这里的对公钥的判定不正确，故加！
             //这里添加更多签名检验
             if($alipaySevice->appid == $arr['app_id']) {
-
+                dd($this->id);
                 return redirect('/front/celebration');
-                // dd($this->id);
+                
                 echo '验证成功';
             }else {
                 echo '验证失败';

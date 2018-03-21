@@ -1,10 +1,8 @@
 <?php
-
 namespace App\libs\lib;
 
-require_once "WxPay.Exception.php";
 require_once "WxPayConfig.php";
-require_once "WxPayData.php";
+require_once "WxPay.Data.php";
 
 /**
  * 
@@ -414,7 +412,7 @@ class WxPayApi
 	public static function notify($callback, &$msg)
 	{
 		//获取通知的数据
-		$xml = file_get_contents('php://input');
+		$xml = $GLOBALS['HTTP_RAW_POST_DATA'];
 		//如果返回成功则验证签名
 		try {
 			$result = WxPayResults::Init($xml);
