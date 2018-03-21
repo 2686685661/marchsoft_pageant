@@ -52,12 +52,7 @@ Route::group(['prefix' => 'front'],function() {
 		return view('test');
 	});
 
-    Route::get("hehe",function() {
-        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { 
-            return view('hehe',['result'=>'bb']);
-        } 
-		return view('hehe',['result'=>'aa']);
-	});
+    Route::get("hehe",'WechatController@index');
 });
 
 
