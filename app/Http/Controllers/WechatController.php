@@ -31,9 +31,9 @@ class WechatController extends Controller
         $wcPayParams = [
             "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
             "timeStamp" => time(),         //时间戳，自1970年以来的秒数
-            "nonceStr" => $result->nonce_str, //随机串
+            "nonceStr" => $result['nonce_str'], //随机串
             // 通过统一下单接口获取
-            "package" => "prepay_id="+$result->prepay_id,
+            "package" => "prepay_id="+$result['prepay_id'],
             "signType" => "MD5",         //微信签名方式：
         ];
         $paySign=$this->MakeSign($wcPayParams);
