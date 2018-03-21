@@ -109,7 +109,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 				<div>
 					<div>
-						<div class="cloud"><img src="{{ asset('img/cloud.png') }}"></div>
+						<div class="cloud"><img src="{{ asset('img/yun.png') }}"></div>
 						<div class="Map"><img src="{{ asset('img/Map.png') }}"></div>
 					</div>
 				</div>
@@ -124,7 +124,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page2-center">
 				<div class="text5" id="shake_five"><img src="{{ asset('img/text5.png') }}"></div>
 				<div>
-					<div class="cloud2"><img src="{{ asset('img/cloud.png') }}"></div>
+					<div class="cloud2"><img src="{{ asset('img/yun.png') }}"></div>
 					<div class="frame3" id="enlarge_three"><img src="{{ asset('img/th-p1.png') }}"></div>
 				</div>
 			</div>
@@ -143,7 +143,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="frame5" id="enlarge_five"><img src="{{ asset('img/eight1.png') }}"></div>
 				</div>
 				<div>
-					<div class="cloud3"><img src="{{ asset('img/cloud.png') }}"></div>
+					<div class="cloud3"><img src="{{ asset('img/yun.png') }}"></div>
 					<div class="Bird3"><img src="{{ asset('img/Bird.png') }}"></div>
 					<div class="text6" id="shake_six"><img src="{{ asset('img/text6.png') }}"></div>
 				</div>
@@ -157,7 +157,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 			<div class="page3-lower">
 				<div>
-					<div class="cloud4"><img src="{{ asset('img/cloud.png') }}"></div>
+					<div class="cloud4"><img src="{{ asset('img/yun.png') }}"></div>
 					<div class="eight" id="slide_three"><img src="{{ asset('img/eight.png') }}"></div>
 				</div>
 				<div>
@@ -395,7 +395,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		</div>
 	</div>
 	
-	<div class="gif" id="gif"><!-- 感谢页面 -->
+	<!-- <div class="gif" id="gif">
 		<div class="img">
 			<img src="{{ asset('img/xin2.jpg') }}" alt="" width="100%">
 		</div>
@@ -407,7 +407,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<button>我要分享</button>
 			<button id="goon">继续赠送</button>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="music">
 	    <img src="{{ asset('img/music.png') }}" id="imgmusic" onclick="aa()" class="kk">

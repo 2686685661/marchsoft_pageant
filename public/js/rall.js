@@ -18,7 +18,7 @@ window.onload=function(){
 	var gift_button = document.getElementById("gift_button");
 	var pay = document.getElementById("pay");//支付按钮
 	var heig =  document.body.clientHeight;
-	document.getElementById("gif").style.height = heig+"px";
+	// document.getElementById("gif").style.height = heig+"px";
 	document.getElementById("pay_select").style.height = heig+"px";
 
 	$("#goon").click(function(){

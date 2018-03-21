@@ -187,7 +187,7 @@
 
 .textfour img{
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	animation: beat 5s ease 4s 1 normal;
 }
 .textfive{
@@ -199,7 +199,7 @@
 }
 .textfive img{
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	animation: beat 5s ease 5s 1 normal;
 }
 .framethree{
@@ -308,14 +308,14 @@
 	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
 }
 .textseven{
-	height: 151px;
+	/*height: 151px;*/
 	position: relative;
 	left: 6px;
 	top: 16px;
 }
 .textseven img{
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
 	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
 }
 .marcheight{
@@ -534,6 +534,13 @@
 
 /*320*/
 @media screen and (min-width:310px) and (max-width:340px) {
+		
+		.page2,.page3,.page4,.page5,.page6{
+			min-height: 568px;
+		}	
+
+
+
 		/*page2*/
 
 		.textfour{
@@ -648,6 +655,10 @@
 
 /*360*/
 @media screen and (min-width:355px) and (max-width:365px) {		
+		.page2,.page3,.page4,.page5,.page6{
+			min-height: 640px;
+		}
+
 		/*    page1   */
 		.Lballoon{
 			width: 36px;
@@ -741,11 +752,10 @@
 		    top: -2px;
 		}
 		.textfive{
-			width: 118px;
-		    height: 162px;
+			width: 106px;
 		    position: relative;
 		    left: 16px;
-		    top: -39px;
+		    top: -10px;
 		}
 		.aircraft {
 		    width: 150px;
@@ -765,7 +775,7 @@
 		    width: 208px;
 		    height: 188px;
 		    left: 26px;
-		    bottom: 82px;
+		    bottom: 52px;
 		}
 		.framefour {
 		    width: 162px;
@@ -1008,6 +1018,10 @@
 
 /*375*/
 @media screen and (min-width:370px) and (max-width:390px){
+	.page2,.page3,.page4,.page5,.page6{
+			min-height: 736px;
+		}
+
 	.Lballoon {
 	    width: 35px;
 	    height: 43px;
@@ -1335,6 +1349,9 @@
 /*412&&414  动画前+动画后*/
 @media screen and (min-width:411px) and (max-width:415px) {
 		
+	.page2,.page3,.page4,.page5,.page6{
+			min-height: 736px;
+		}
 	/*page1*/
 	.Lballoon {
 	    width: 39px;
@@ -1869,4 +1886,258 @@
 		
 }
 
+/*415-480    动画前+动画后*/
+@media screen and (min-width:416px) and (max-width:480px){
+	
+	.page2,.page3,.page4,.page5,.page6{
+			min-height: 710px;
+		}
+	/*page2*/
+	.Bird{
+		width: 79px;
+	    position: relative;
+	    top: 85px;
+	    left: 28px;
+	}
+	.Bird img{
+		width: 100%;
+	}
+	.textfour{
+		width: 180px;
+		position: relative;
+	}
+	.textfour img{
+		width: 100%;
+	}
+	.text4{
+		width: 180px;
+		position: relative;
+	}
+	.text4 img{
+		width: 100%;
+	}
+	.aircraft {
+	    width: 130px;
+	    position: relative;
+    	top: 34px;
+	}
+	.aircraft img{
+		width: 100%;
+	}
+	.textfive {
+	    width: 122px;
+	    position: relative;
+	    left: 27px;
+	    bottom: 13px;
+	}
+	.textfive img{
+		width: 100%;
+	}
+	.text5 {
+	    width: 122px;
+	    position: relative;
+	    left: 27px;
+	    bottom: 13px;
+	}
+	.text5 img{
+		width: 100%;
+	}
+	.textsix {
+	    width: 157px;
+	    height: 94px;
+	    position: relative;
+	    bottom: 40px;
+	    left: 23px;
+	}
+	.text6 {
+	    width: 157px;
+	    height: 94px;
+	    position: relative;
+	    bottom: 40px;
+	    left: 23px;
+	}
+	.cloud2 {
+	    width: 41px;
+	    height: 21px;
+	    position: relative;
+	    left: 175px;
+	    bottom: 35px;
+	}
+	.framethree{
+		width: 210px;
+	    height: 188px;
+	    position: relative;
+	    left: 49px;
+	    bottom: 45px;
+	}
+	.framethree img{
+		width: 100%;
+	}
+	.frame3{
+		width: 210px;
+	    height: 188px;
+	    position: relative;
+	    left: 49px;
+	    bottom: 45px;
+	}
+	.frame3 img{
+		opacity: 0;
+		width: 100%;
+	}
+	.marchthree {
+	    width: 228px;
+	    position: relative;
+	    bottom: 16px;
+	    left: 10px;
+	}
+	.three{
+		opacity: 0;
+	}
+	.framefour {
+	    width: 180px;
+	    height: 160px;
+	    position: relative;
+	    left: 12px;
+	    bottom: 23px;
+	}
+	.framefour img {
+	    width: 82%;
+	    position: relative;
+	    top: 33px;
+	    left: 15px;
+	    transform: rotate(-10deg);
+	}
+	.frame4 {
+	    width: 180px;
+	    height: 160px;
+	    position: relative;
+	    left: 12px;
+	    bottom: 23px;
+	}
+	.frame4 img {
+		opacity: 0;	    
+	}
+	.glasses {
+	    width: 56px;
+	    height: 19px;
+	    position: relative;
+	    left: 152px;
+	    bottom: 16px;
+	}
+	.textseven {
+	    width: 141px;
+	    position: relative;
+	    left: 9px;
+	    top: 17px;
+	}
+	.text7 {
+	    width: 141px;
+	    position: relative;
+	    left: 9px;
+	    top: 17px;
+	}
+	.framesix {
+	    width: 177px;
+	    height: 167px;
+	    position: relative;
+	    bottom: 26px;
+	    left: 15px;
+	}
+	.framesix img {
+	    width: 100%;
+	    position: relative;
+	    top: 7px;
+	}
+	.frame6 {
+	    width: 177px;
+	    height: 167px;
+	    position: relative;
+	    bottom: 26px;
+	    left: 15px;
+	}
+	.frame6 img {
+		opacity: 0;
+	}
+	.texteight {
+	    width: 149px;
+	    position: relative;
+	    top: 54px;
+	    right: 70px;
+	}
+	.text8 {
+	    width: 149px;
+	    position: relative;
+	    top: 54px;
+	    right: 70px;
+	}
+	.text8 img{
+		opacity: 0;
+	}
+	.Stars2 {
+	    width: 33px;
+	    position: relative;
+	    left: 41px;
+	    top: 54px;
+	}
+
+
+	/*page5*/
+	 .Bird5{
+	 	top: 42px;
+	 }  
+	.framenine{
+		top: 45px;
+	}
+	.textfourteen {
+	    height: 102px;
+	    position: relative;
+	    top: 42px;
+	    left: 83px;
+	}
+	.text14 {
+	    height: 102px;
+	    position: relative;
+	    top: 42px;
+	    left: 83px;
+	}
+	.book {
+	    width: 79px;
+	    height: 69px;
+	    position: relative;
+	    left: 152px;
+	    top: 42px;
+	}
+	.frameten {
+	    height: 159px;
+	    position: relative;
+	    left: 12px;
+	    top: 62px;
+	}
+	.frame10 {
+	    height: 159px;
+	    position: relative;
+	    left: 12px;
+	    top: 62px;
+	}
+	.balloon4 {
+	    width: 37px;
+	    height: 48px;
+	    position: relative;
+	    left: 109px;
+	}
+	.textthirteen {
+	    width: 125px;
+	    height: 68px;
+	    position: relative;
+	    left: 14px;
+	    top: 53px;
+	}
+	.tex13 {
+	    width: 125px;
+	    height: 68px;
+	    position: relative;
+	    left: 14px;
+	    top: 53px;
+	}
+}
 

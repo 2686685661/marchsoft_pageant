@@ -156,26 +156,25 @@
 		height: 33%;
 	}
 	.Bird{
-		width: 101px;
-		height: 36px;
+		/*width: 101px;*/
 		position: relative;
 		top: 64px;
 		left: 20px;
 	}
 	.Bird img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text4{
-		width: 214px;
-		height: 128px;
+		/*width: 214px;*/
+		/*height: 128px;*/
 		position: relative;
 		left: 22px;
 		top: -2px;
 	}
 	.text4 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text5{
 		width: 107px;
@@ -186,7 +185,7 @@
 	}
 	.text5 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.cloud2{
 		width: 41px;
@@ -208,7 +207,7 @@
 	}
 	.aircraft img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.frame3{
 		display: flex;
@@ -251,7 +250,7 @@
 	}
 	.glasses img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.three{
 		opacity: 0;
@@ -264,7 +263,7 @@
 	.three img{
 		opacity: 0;
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 
 	/*   page3   */
@@ -1490,27 +1489,7 @@
 		.baby img{
 			opacity: 0;
 		}
-		/*.balloon {
-		    width: 43px;
-		    height: 54px;
-		    left: 141px;
-		    top: 18px;
-		}
-		.cloud {
-		    width: 46px;
-		    height: 25px;
-		    position: relative;
-		    top: 90px;
-		    left: 34px;
-		}*/
-		/*.Map {
-		    width: 75px;
-		    height: 66px;
-		    position: relative;
-		    top: 49px;
-		    left: 77px;
-		}*/
-
+		
 
 		/*   page2   */
 		.Bird {
@@ -1528,11 +1507,10 @@
 		    top: -2px;
 		}
 		.text5{
-			width: 118px;
-		    height: 162px;
+			width: 106px;
 		    position: relative;
 		    left: 16px;
-		    top: -39px;
+		    top: -10px;
 		}
 		.aircraft {
 		    width: 150px;
@@ -1541,18 +1519,12 @@
 		    left: 2px;
 		    top: 16px;
 		}
-		/*.cloud2 {
-		    width: 47px;
-		    height: 25px;
-		    position: relative;
-    		left: 152px;
-    		top: 16px;
-		}*/
+		
 		.frame3 {		    
 		    width: 208px;
 		    height: 188px;
 		    left: 26px;
-    		bottom: 82px;
+    		bottom: 52px;
 		}
 		.frame4 {
 		    width: 162px;
@@ -2028,6 +2000,11 @@
 		    left: 193px;
 		    top: 37px;
 		}
+}
+
+/*415-480    动画前+动画后*/
+@media screen and (min-width:416px) and (max-width:480px){
+
 }
 
 
