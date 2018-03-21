@@ -85,7 +85,6 @@ class WechatController extends Controller
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
                 $openid = curl_exec($ch);
                 $Id=json_decode($openid);
-                dump($Id);
                 session(['openId' => $Id->openid]);
                 curl_close($ch);
             }else{
