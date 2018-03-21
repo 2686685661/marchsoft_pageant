@@ -47,16 +47,13 @@
                 _token:token
             })
             .then(function (response) {
-               alert(response.data.result.paySign);
-               callpay();
+               callpay(response.data.result);
             })
             .catch(function (error) {
                 console.log(error);
-            });        }
-        window.onload = function () {
-            callpay();
+            });        
         }
-        function callpay()
+        function callpay(result)
         {
             if (typeof WeixinJSBridge == "undefined"){
                 if( document.addEventListener ){
@@ -66,10 +63,11 @@
                     document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
                 }
              }else{
-                onBridgeReady();
+                onBridgeReady(result);
              }
         }
-        function onBridgeReady(){    
+        function onBridgeReady(result){    
+            alert(result.appId+result.timeStamp+result.nonceStr+result.package+result.paySign);
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest',{
                     "appId":"wx2fffc402a50e03a5",     //公众号名称，由商户传入     
