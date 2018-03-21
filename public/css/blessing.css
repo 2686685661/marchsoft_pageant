@@ -3,12 +3,63 @@ body,div,p{
 	padding: 0;
 }
 
+.pay_select{
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 40%;
+}
+.select_box{
+	width: 80%;
+	background-color: #fff;
+	padding: 15px 20px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.select_box>p{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e6e6e6;
+	font-size: 18px;
+}
+.area{
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+	margin: 15px 0;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e6e6e6;
+}
+.area>button{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	background-color: #fff;
+	background-size: 100%;
+	border: none;
+	border-radius: 8px;
+}
+#zfb>button{
+	background-image: url(../img/zfb.png);
+}
+.tit{
+	font-size: 16px;
+}
+.untit{
+	color: #999;
+	font-size: 12px;
+}
+#wx>button{
+	background-image: url(../img/wx.jpg);
+}
+
+
+/*感谢页面*/
 .gif{
+	display: none;
 	position:fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	/*height: 500px;*/
 	background-color: rgb(254,211,213);
 	z-index: 20;
 }
@@ -33,11 +84,15 @@ body,div,p{
 	margin: 0 20px;
 }
 
-
-
 .air_box{
 	display: flex;
 	flex-direction:column-reverse;
+	position:fixed !important;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+#air_box{
 	position:fixed !important;
 	bottom: 0;
 	left: 0;
@@ -62,7 +117,6 @@ body,div,p{
 	justify-content:flex-start;
 	margin-left: 5px;
 	margin-top: 5px;
-	opacity: 1;
 }
 .air_min_box{
 	display: flex;
@@ -350,18 +404,19 @@ body,div,p{
 	opacity: 0;
 }
 .max_air{
+	display: none;
 	display: flex;
 	align-items:center;
 	position: relative;
 	top: 36px;
 	left: -185px;
+	/*left: 0;*/
 	width: 175px;
 	padding: 6px 5px;
 	margin-left: 5px;
     border-radius: 113px;
     font-size: 13px;
     color: #fff;
-    z-index: 2;
     background: rgba(255,0,0,.7);
     animation: bem 3s ease 0s infinite normal;
 }
@@ -381,8 +436,10 @@ body,div,p{
 	top: 0;
 	left: 0;
 	width: 44px;
+	height: 44px;
 	margin-right: 10px;
 	border-radius: 50%;
+	background-color: #fff;
 }
 .air>input::-webkit-input-placeholder{
 	color: #fff;
@@ -412,7 +469,6 @@ body,div,p{
 	border-radius: 50%;
 	border: none;
 	outline: none;
-	/*margin-left: 9px;*/
 	background: #fff;
 	background-image: url(../img/surprise.png);
 	background-size: 100% 100%;
