@@ -28,8 +28,8 @@ class WechatController extends Controller
             'trade_type' => 'JSAPI',
             'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
         ]);
-        // $paySign=$this->MakeSign($result);
-        // $result['paySign']=$paySign;
+        $paySign=$this->MakeSign($result);
+        $result['paySign']=$paySign;
         dump($result);
         // return responseToJson(1,'下单成功',$result);
     }
