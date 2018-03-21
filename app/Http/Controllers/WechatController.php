@@ -90,9 +90,9 @@ class WechatController extends Controller
     public function index(Request $request){
         if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { 
             if($request->get('code')){
-                return view('hehe',['result'=>'bb']);
+                dump($request->get('code'));
             }else{
-                return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com//wechat&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
+                return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
             }
         } 
         return view('hehe',['result'=>'aa']);
