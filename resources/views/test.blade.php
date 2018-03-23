@@ -339,6 +339,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 						<div>
 							<p class="tit">微信支付</p>
 							<p class="untit">（手续费为全额的1%）</p>
+							<p class="untit">（微信支付请在微信浏览器打开）</p>
 						</div>
 					</div>
 				</div>
@@ -564,6 +565,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
 				 document.getElementById("air_box").style.display = "block";
+				 // Interval();
 			}
 
 			else if(index==3){

@@ -1887,7 +1887,7 @@
 }
 
 /*415-480    动画前+动画后*/
-@media screen and (min-width:416px) and (max-width:480px){
+@media screen and (min-width:416px) and (max-width:640px){
 	
 	.page2,.page3,.page4,.page5,.page6{
 			min-height: 710px;
@@ -1946,15 +1946,15 @@
 	    width: 157px;
 	    height: 94px;
 	    position: relative;
-	    bottom: 40px;
-	    left: 23px;
+	    bottom: -7px;
+    	left: 7px;
 	}
 	.text6 {
 	    width: 157px;
 	    height: 94px;
 	    position: relative;
-	    bottom: 40px;
-	    left: 23px;
+	    bottom: -7px;
+    	left: 7px;
 	}
 	.cloud2 {
 	    width: 41px;
@@ -2078,6 +2078,12 @@
 	    position: relative;
 	    left: 41px;
 	    top: 54px;
+	}
+	.Bird3 {
+	    width: 57px;
+	    position: relative;
+	    top: 5px;
+	    left: 92px;
 	}
 
 
