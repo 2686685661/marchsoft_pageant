@@ -334,13 +334,14 @@ window.onload=function(){
 			gift_arr.push(list[i]);
 		}
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		alert("dasdas");
 		axios.post('/wechat', {
 			name: name,
 			gifts: gift_arr,
 			_token:token
 		})
 		.then(function (response) {
-			alert("dasdas");
+			alert("dasdas2");
 			if(response.data.code==1){
 				callpay(response.data.result);
 			}else{
