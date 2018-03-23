@@ -326,14 +326,14 @@ window.onload=function(){
 		wxtest();
 	}
 	function wxtest(){
-		var name = $("#input3").val();//赠送人姓名
-		var list = myArray;//礼物ID
-		var gift_arr = [];
-		for(var i=0;i<list.length;i++) {
-			if(list[i] == -1) continue;
-			gift_arr.push(list[i]);
-		}
-		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		// var name = $("#input3").val();//赠送人姓名
+		// var list = myArray;//礼物ID
+		// var gift_arr = [];
+		// for(var i=0;i<list.length;i++) {
+		// 	if(list[i] == -1) continue;
+		// 	gift_arr.push(list[i]);
+		// }
+		// var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		alert("感谢");
 		axios.post('/wechat', {
 			name: name,
