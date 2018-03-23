@@ -54,7 +54,6 @@ class WechatController extends Controller
                 'trade_type' => 'JSAPI',
                 'openid' => session('openId'),
             ]);
-            return responseToJson(1,'下单成功',$result);
             $wcPayParams = [
                 "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
                 "timeStamp" => time(),         //时间戳，自1970年以来的秒数
