@@ -45,7 +45,6 @@ class WechatController extends Controller
 
         $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
         $insert_id = orders::insert_gift_order($arr);
-        return responseToJson(1,'下单成功', $insert_id);
         if($insert_id){
             $result = $app->order->unify([
                 'body' => '助力三月',
@@ -66,7 +65,7 @@ class WechatController extends Controller
             $paySign=$this->MakeSign($wcPayParams);
             $wcPayParams['paySign']=$paySign;
             $wcPayParams['payId']=$insert_id;
-            return responseToJson(1,'下单成功',$wcPayParams);
+            return responseToJson(1,session('openId'),$wcPayParams);
         }else{
             return responseToJson(0,'下单失败',$wcPayParams);
         }
