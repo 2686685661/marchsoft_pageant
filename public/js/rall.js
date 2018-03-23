@@ -340,6 +340,7 @@ window.onload=function(){
 			_token:token
 		})
 		.then(function (response) {
+			alert("感谢");
 			if(response.data.code==1){
 				callpay(response.data.result);
 			}else{
