@@ -37,3 +37,11 @@
 // 	// console.log(1);
 // }
 // pagethreemove();
+
+//获取页面最少高度+给页面设置最小高度
+var min_hight = document.body.clientHeight;
+var page = document.getElementsByClassName("page");
+for (var i = 0; i < page.length; i++) {
+	page[i].style.minHeight = min_hight+"px";
+};
+

@@ -238,13 +238,13 @@
 }
 .marchthree{
 	width: 312px;
-	height: 202px;
+	/*height: 202px;*/
 	position: relative;
 	left: 10px;
 }
 .marchthree img{
 	width: 90%;
-	height: 100%;
+	/*height: 100%;*/
 	position: relative;
 	left: 122px;
 }
@@ -535,9 +535,9 @@
 /*320*/
 @media screen and (min-width:310px) and (max-width:340px) {
 		
-		.page2,.page3,.page4,.page5,.page6{
+		/*.page2,.page3,.page4,.page5,.page6{
 			min-height: 568px;
-		}	
+		}*/	
 
 
 
@@ -600,11 +600,7 @@
 		    top: 33px;
 		    left: 14px;
 		}
-
-
-
-
-		
+	
 		.framenine {
 		   left: 17px;
 		}
@@ -655,9 +651,9 @@
 
 /*360*/
 @media screen and (min-width:355px) and (max-width:365px) {		
-		.page2,.page3,.page4,.page5,.page6{
+		/*.page2,.page3,.page4,.page5,.page6{
 			min-height: 640px;
-		}
+		}*/
 
 		/*    page1   */
 		.Lballoon{
@@ -1018,9 +1014,9 @@
 
 /*375*/
 @media screen and (min-width:370px) and (max-width:390px){
-	.page2,.page3,.page4,.page5,.page6{
+	/*.page2,.page3,.page4,.page5,.page6{
 			min-height: 736px;
-		}
+		}*/
 
 	.Lballoon {
 	    width: 35px;
@@ -1349,9 +1345,9 @@
 /*412&&414  动画前+动画后*/
 @media screen and (min-width:411px) and (max-width:415px) {
 		
-	.page2,.page3,.page4,.page5,.page6{
+	/*.page2,.page3,.page4,.page5,.page6{
 			min-height: 736px;
-		}
+		}*/
 	/*page1*/
 	.Lballoon {
 	    width: 39px;
@@ -1886,12 +1882,12 @@
 		
 }
 
-/*415-480    动画前+动画后*/
-@media screen and (min-width:416px) and (max-width:640px){
+/*415-768    动画前+动画后*/
+@media screen and (min-width:416px) and (max-width:768px){
 	
-	.page2,.page3,.page4,.page5,.page6{
+	/*.page2,.page3,.page4,.page5,.page6{
 			min-height: 710px;
-		}
+		}*/
 	/*page2*/
 	.Bird{
 		width: 79px;
@@ -1996,9 +1992,9 @@
 	.framefour {
 	    width: 180px;
 	    height: 160px;
-	    position: relative;
+	    /*position: relative;
 	    left: 12px;
-	    bottom: 23px;
+	    bottom: 23px;*/
 	}
 	.framefour img {
 	    width: 82%;
@@ -2008,6 +2004,9 @@
 	    transform: rotate(-10deg);
 	}
 	.frame4 {
+		display: flex;
+		justify-content:center;
+		align-items:center;
 	    width: 180px;
 	    height: 160px;
 	    position: relative;
@@ -2015,7 +2014,8 @@
 	    bottom: 23px;
 	}
 	.frame4 img {
-		opacity: 0;	    
+		opacity: 0;
+		width: 82%;	    	    
 	}
 	.glasses {
 	    width: 56px;
