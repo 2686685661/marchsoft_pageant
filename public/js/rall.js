@@ -308,7 +308,7 @@ window.onload=function(){
 			var data = response.data;
 			// disapear();
 			// gif_show();
-			document.getElementById("goon").style.display="block";
+			// document.getElementById("goon").style.display="block";
 			console.log(data.msg);
 			if(data.code == 0) {	
 				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;

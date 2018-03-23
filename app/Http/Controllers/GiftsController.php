@@ -189,7 +189,7 @@ class GiftsController extends Controller
         $id = $request->id;
         $totle = $request->totle;
         $alipay = new AlipayController();
-        $alipay->pay($id,$totle);
+        $alipay->pay($id,0.01);
 
         orders::update_order_state($id);
 
