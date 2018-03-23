@@ -155,6 +155,10 @@ window.onload=function(){
 			for (var i = 0; i < data.length; i++) {
 				Z_bless[i] = data[i].give_name + ":" + data[i].message;
 			};
+			var ifshow = document.getElementById("air_box");
+			// if (ifshow.style.display == "block") {
+				Interval();
+			// };
 		})
 		.catch(function (error) {
 		    console.log(error);
@@ -164,13 +168,13 @@ window.onload=function(){
 	comment();
 	function comment(){
 		setTimeout(function(){
-    		// $("#p1").text("1");
+    		$("#p1").text("1");
     	},0);
     	setTimeout(function(){
-    		// $("#p2").text("2");
+    		$("#p2").text("2");
     	},1000);
     	setTimeout(function(){
-    		// $("#p3").text("3");
+    		$("#p3").text("3");
     	},1000);
     	setTimeout(function(){
     		
@@ -178,7 +182,7 @@ window.onload=function(){
 	}
 	//更新气泡内容
 	var oer = 0;
-	Interval();
+	
 	function Interval(){
 		setTimeout(function(){
 	    	setTimeout(function(){
@@ -389,6 +393,7 @@ window.onload=function(){
 			function(res){   
 				if(res.err_msg == "get_brand_wcpay_request:ok" ) {
 					updateOrder(result.payId);
+					
 				}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
 			}
 		); 
