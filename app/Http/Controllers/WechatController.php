@@ -49,12 +49,11 @@ class WechatController extends Controller
             $result = $app->order->unify([
                 'body' => '助力三月',
                 'out_trade_no' => time(),
-                'total_fee' => 0.01,
+                'total_fee' => 1,
                 'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
                 'trade_type' => 'JSAPI',
                 'openid' => session('openId'),
             ]);
-            return responseToJson(1,'下单成功',$result);
             $wcPayParams = [
                 "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
                 "timeStamp" => time(),         //时间戳，自1970年以来的秒数
