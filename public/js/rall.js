@@ -371,7 +371,11 @@ window.onload=function(){
 			// document.getElementById("goon").style.display="block";
 			console.log(data.msg);
 			if(data.code == 0) {	
-				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				if(data.result.hasOwnProperty("out_trade_no") && data.result.out_trade_no != null) {
+					window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle+'/'+data.result.out_trade_no;
+				}else 
+					window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				
 			}else {
 				layui.use(['layer', 'form'], function(){
 					var layer = layui.layer,
@@ -592,5 +596,47 @@ window.onload=function(){
 			}
 		})
 	}
+
+	(function() {
+
+
+		String.prototype.trim = function (char, type) {
+			if (char) {
+			  if (type == 'left') {
+				return this.replace(new RegExp('^\\'+char+'+', 'g'), '');
+			  } else if (type == 'right') {
+				return this.replace(new RegExp('\\'+char+'+$', 'g'), '');
+			  }
+			  return this.replace(new RegExp('^\\'+char+'+|\\'+char+'+$', 'g'), '');
+			}
+			return this.replace(/^\s+|\s+$/g, '');
+		  };
+	
+
+		var pathname = window.location.pathname;
+		pathname = pathname.trim("/");
+
+		patharr = pathname.split("/");
+		if(patharr.length % 2 != 0) {
+			var trade = patharr[patharr.length - 1];
+			var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+			axios.post('/admin/order/getoneorder',{
+				trade : trade,
+				_token:token
+			}).then(function(response) {
+				if(response.data.code == 0) {
+					
+					for(var i = 0;i < response.data.result.gifts_id.length;i++) {
+						var j = {};
+						j.gift = response.data.result.name+" 送了 "+response.data.result.gifts_id[i].name;
+						j.imgs = response.data.result.gifts_id[i].image;
+						j.bless = "生日快乐";
+						json.unshift(j);
+					}
+				}
+			})
+		}
+	})();
+	
 }
 
