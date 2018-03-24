@@ -232,6 +232,9 @@
 
 	}
 	.frame4{
+		display: flex;
+		justify-content:center;
+		align-items:center;
 		width: 150px;
 		height: 142px;
 		background: url(../img/Photo-frame.png) no-repeat center center;
@@ -255,7 +258,7 @@
 	.three{
 		opacity: 0;
 		width: 500px;
-		height: 600px;
+		/*height: 600px;*/
 		position: relative;
 		left: 50px;
 		top: 20px;
