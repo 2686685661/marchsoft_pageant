@@ -1,25 +1,24 @@
 body,div,p{
 	margin: 0;
-	padding: 0;
+	padding: 0
 }
-
 .pay_select{
 	display: none;
 	width: 100%;
 	position: fixed;
-	top: 30%;
+	top: 30%
 }
 .select_box{
 	width: 80%;
 	background-color: #fff;
 	padding: 15px 20px;
 	border-radius: 10px;
-	margin: 0 auto;
+	margin: 0 auto
 }
 .select_box>p{
 	padding-bottom: 5px;
 	border-bottom: 1px solid #e6e6e6;
-	font-size: 18px;
+	font-size: 18px
 }
 .area{
 	display: flex;
@@ -27,7 +26,8 @@ body,div,p{
 	justify-content:flex-start;
 	margin: 15px 0;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #e6e6e6;
+	cursor:pointer;
+	border-bottom: 1px solid #e6e6e6
 }
 .area>button{
 	width: 40px;
@@ -36,23 +36,21 @@ body,div,p{
 	background-color: #fff;
 	background-size: 100%;
 	border: none;
-	border-radius: 8px;
+	border-radius: 8px
 }
 #zfb>button{
-	background-image: url(../img/zfb.png);
+	background-image: url(../img/zfb.png)
 }
 .tit{
-	font-size: 16px;
+	font-size: 16px
 }
 .untit{
 	color: #999;
-	font-size: 12px;
+	font-size: 12px
 }
 #wx>button{
-	background-image: url(../img/wx.jpg);
+	background-image: url(../img/wx.jpg)
 }
-
-
 /*感谢页面*/
 .gif{
 	display: none;
@@ -61,18 +59,18 @@ body,div,p{
 	left: 0;
 	width: 100%;
 	background-color: rgb(254,211,213);
-	z-index: 20;
+	z-index: 20
 }
 .img>img{
-	margin-top: 60px;
+	margin-top: 60px
 }
 .font>img{
-	width: 100%;
+	width: 100%
 }
 .fin_button{
 	width: 100%;
 	display: flex;
-	justify-content:center;
+	justify-content:center
 }
 .fin_button>button{
 	background-color: red;
@@ -81,7 +79,7 @@ body,div,p{
 	height: 38px;
 	border-radius:5px;
 	color: #fff;
-	margin: 0 20px;
+	margin: 0 20px
 }
 
 .air_box{
@@ -90,17 +88,17 @@ body,div,p{
 	position:fixed !important;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 100%
 }
 #air_box{
 	position:fixed !important;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 100%
 }
 #air_minbox{
 	display: flex;
-	flex-direction:column-reverse;
+	flex-direction:column-reverse
 }
 .air{
 	display: flex;
@@ -109,7 +107,8 @@ body,div,p{
 	width: 92%;
 	padding: 7px 5px;
 	background-color: none;
-	z-index: 1;
+	cursor:pointer;
+	z-index: 1
 }
 .air_min{
 	display: flex;
@@ -417,6 +416,7 @@ body,div,p{
     border-radius: 113px;
     font-size: 13px;
     color: #fff;
+    cursor:pointer;
     background: rgba(255,0,0,.7);
     animation: bem 3s ease 0s infinite normal;
 }
@@ -537,6 +537,9 @@ body,div,p{
 	border-radius:5px;
 	border: 2px solid red;
 }
+.blessing_input>input:disabled{
+	background-color: #fff;
+}
 .blessing_input_box>button{
 	background-color: red;
 	border: none;
@@ -545,6 +548,7 @@ body,div,p{
 	margin-left: 4%;
 	border-radius:5px;
 	color: #fff;
+	cursor:pointer;
 }
 .name{
 	align-items:flex-end;
@@ -589,6 +593,7 @@ body,div,p{
 	margin: 5px;
 	padding: 10px 14px;
 	border-radius:5px;
+	cursor:pointer;
 	text-align: center;
 }
 
@@ -615,12 +620,15 @@ body,div,p{
 .button{
 	display: flex;
 	justify-content:center;
+	cursor:pointer;
 }
 #graduate{
-	color: #e6e6e6;
+	color: red;
+	margin-right: 5px;
 }
 #in_student{
-	color: red;
+	color: #e6e6e6;
+	margin-left: 5px;
 }
 .message_button{
 	display: flex;
@@ -650,6 +658,7 @@ body,div,p{
 	outline: none;
 	color: #fff;
 	border-radius: 5px;
+	cursor:pointer;
 	background-image: url(../img/button.png);
 	background-size: 100% 100%;
 }

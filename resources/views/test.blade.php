@@ -13,26 +13,20 @@
 <link rel="stylesheet" href="{{ asset('css/message.css') }}">
 <link rel="stylesheet" href="{{ asset('css/Second-pages.css') }}">
 <link rel="stylesheet" href="{{ asset('css/moveone.css') }}">
+<link rel="stylesheet" href="{{ asset('layui/css/layui.css') }}">
 <script type="text/javascript" src="{{ asset('js/jquery-1.9.0.min.js') }}"></script>
-
 <style>
 .page1 { background: url("{{ asset('img/bg-one.jpg') }}"); background-size: cover;}
-.page2 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
-.page3 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
-.page4 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
-.page5 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
-.page6 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
+.page2,.page3,.page4,.page5,.page6,.page8{ background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
 .page7 { background: url("{{ asset('img/list.jpg') }}"); background-size: cover;}
-.page8 { background: url("{{ asset('img/bg.png') }}"); background-size: cover;}
 p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color: #fff; text-align: center;}
 </style>
-<!-- <script src="http://cdn.staticfile.org/jqueryuer/1.9.0/jqy.min.js"></script> -->
-<script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ URL::asset('js/jquery-1.11.1.min.js') }}"></script> -->
 <script type="text/javascript" src="{{ asset('js/jquery.onepage-scroll.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/unslider.min.js') }}"></script>
 <script src="{{ asset('js/axios.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('layui/layui.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/rall.js') }}"></script>
-<!-- <script src="{{ asset('js/jquery-3.1.1.js') }}"></script> -->
 </head>
 <body id="main_body">
 <script type="text/javascript">
@@ -217,7 +211,6 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
 					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
 				</div>
-				
 			</div>
 		</div>
 		<div class="page page7" >
@@ -235,7 +228,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		        <div class="close1">
 		        	<a href="javascript:void(0)" id="closebt"><img src="{{ asset('img/close.png') }}"></a>
 		        </div>
-		        <div class="banner" id="b04" style="width:500px;height:1020px;">
+		        <div class="banner b04" id="b04" style="width:500px;height:1020px;">
 					<ul>
 						<li class="slider-item">
 							<div class="code-img">
@@ -260,7 +253,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="title">
 				<img src="{{ asset('img/title.png') }}" alt="标题">
 			</div>
-			<div class="banner-two" id="b04">
+			<div class="banner-two b04" id="b04">
 				<ul>
 					<li class="slider-item">
 						<div class="code-img" style="width:300px;">
@@ -293,13 +286,12 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		</div>
 	</div>
 
-
 	<div class="air_box">
 		<div id="air_box"><!-- 气泡 层 -->
 			<div id="air_minbox">
 				<div class="air" id="air">
-					<input type="text" placeholder="请留下您的祝福..." id="input" disabled>
-					<button id="air"></button>
+					<input type="text" placeholder="请留下您的祝福..." id="input">
+					<button id="air2"></button>
 				</div>
 				<div class="air_min_box" id="air_min_box">
 					<div class="air_min bub1">
@@ -344,7 +336,6 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		<div class="blessing_glass" id="blessing_glass"><!-- 送祝福 -->
 			<div class="blessing_input_box name">
@@ -372,7 +363,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="blessing_input_box">
 				<div class="blessing_input">
 					<span><strong>*</strong>礼物：</span>
-					<input type="text" id="birth_list">
+					<input type="text" id="birth_list" disabled>
 				</div>
 			</div>
 		</div>
@@ -410,33 +401,82 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		</div>
 	</div> -->
 
-	<div class="music">
+	<!-- <div class="music">
 	    <img src="{{ asset('img/music.png') }}" id="imgmusic" onclick="aa()" class="kk">
 	    <audio controls id="qq" loop>
 	    	<source src="{{ asset('img/love.mp3') }}" type="audio/mpeg">
 	    </audio>
-  	</div>
+  	</div> -->
+  	<div class="audio-box music">
+		<div class="audio-container">
+			<div class="audio-view">
+				<div class="audio-cover"></div>
+				<div class="audio-body">
+					<div class="audio-backs">
+						<div class="audio-setbacks">
+							<i class="audio-this-setbacks" style="width: 30.4741%;">
+								<span class="audio-backs-btn"></span>
+							</i>
+							<span class="audio-cache-setbacks" style="width: 100%;">
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="audio-btn">
+					<div class="audio-select" background="#000";height="100px";>
+						<img src="{{ asset('img/music.png') }}" action="play" data-on="icon-play" data-off="icon-pause" class="icon-pause kk" id="imgmusic"></div><!-- 点击暂停与播放 -->
+						<div action="volume" class="icon-volume-up">
+							<div class="audio-set-volume">
+								<div class="volume-box">
+									<i style="width: 100%;"><span class="audio-backs-btn"></span></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.icon-pause{
+			width: 30px;
+			height: 30px;
+			animation: music 2s linear infinite;
+		}
+		@keyframes music{
+			0%{transform: rotate(0deg);}
+			25%{transform: rotate(90deg);}
+			50%{transform: rotate(180deg);}
+			75%{transform: rotate(270deg);}
+			100%{transform: rotate(360deg);}
+		}
+		.icon-play{
+			width: 30px;
+			height: 30px;
+		}
+	</style>
 
 <script type="text/javascript" src="{{ URL::asset('js/page7.js') }}"></script>
-<a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
-<a href="http://www.dowebok.com/118.html" style="display: none;">onepage-scroll – jQuery单页/全屏滚动插件</a>
+<script type="text/javascript" src="{{URL::asset('js/audio.js.下载')}}"></script>
 <script type="text/javascript">
-	document.getElementById("air_box").style.display = "none";
-	var progress = $(".progress"),li_width = $("#b04 li").length;
-    var unslider04 = $('#b04').unslider({
-		// dots: true,
-		complete:function(index){//自己添加的，官方没有
-			// progress.animate({"width":(100/li_width)*(index+1)+"%"});
-		}
-	}),
-
-	data04 = unslider04.data('unslider');
-
+var pagess = 1;
+	var data04 = [];
+	var len = $('.b04').length;
+	for (var i = 0; i < len ; i++) {
+		var unslider04 = $('.b04').eq(i).unslider({
+			complete:function(index){//自己添加的，官方没有
+				// progress.animate({"width":(100/li_width)*(index+1)+"%"});
+			}
+		})
+		data04[i] = unslider04.data('unslider');
+	};
+    
 	$('.unslider-arrow04').click(function() {
         var fn = this.className.split(' ')[1];
-        data04[fn]();
+        for (var i = 0; i < len; i++) {
+        	data04[i][fn]();
+        };
     });
-
 
 	var startx, starty;
     //获得角度
@@ -484,10 +524,14 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
                 console.log("未滑动！");
                 break;
             case 1:
-                console.log("向上！")
+            	if(pagess<8)
+            		$(".page").moveTo(++pagess);
+                console.log("向上！",pagess)
                 break;
             case 2:
-                console.log("向下！")
+            	if(pagess>1)
+                	$(".page").moveTo(--pagess);
+                console.log("向下！",pagess)
                 break;
             case 3:
             	left();
@@ -506,12 +550,15 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
     }
     function right(){
     	// console.log("right");
-		data04.prev();
+    	for (var i = 0; i < len; i++) {
+	    	data04[i].prev();
+	    }
     }
     function left(){
     	// console.log("left");
-    	data04.next();
-    
+    	for (var i = 0; i < len; i++) {
+	    	data04[i].next();
+	    }
     }
 
     var list_ele = document.getElementById("list_div");
@@ -554,9 +601,17 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		sectionContainer: '.page',
 		pagination: false,
 		direction:"vertical",
+		keyboard: false,
+		beforeMove: function(index,d) {
+			if(pagess==8&&index==1) {
+				$(".page").moveTo(8);
+			} else if(pagess==1&&index==8){
+				$(".page").moveTo(1);
+			}
+		},
 		afterMove: function(index){
 			if (index == 1) {
-				document.getElementById("air_box").style.display = "none";
+				document.getElementById("air_box").style.display = "block";
 			}
 			if(index==2){
 				 large_one.className = "frameone";
@@ -565,47 +620,46 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
 				 document.getElementById("air_box").style.display = "block";
-				 // Interval();
 			}
 
 			else if(index==3){
-				 large_three.className = "framethree";
-				 large_four.className = "framefour";
-				 Sha_three.className = "textfour";
-				 Sha_four.className = "textfive";
-				 Slide_two.className = "marchthree";				
-				 pagetwomove();
-				 document.getElementById("air_box").style.display = "block";
+				large_three.className = "framethree";
+				large_four.className = "framefour";
+				Sha_three.className = "textfour";
+				Sha_four.className = "textfive";
+				Slide_two.className = "marchthree";				
+				pagetwomove();
+				document.getElementById("air_box").style.display = "block";
 			}
 			else if(index==4){
-				 large_five.className = "framefive";
-				 large_six.className = "framesix";
-				 Sha_five.className = "textsix";
-				 Sha_six.className = "textseven";
-				 Sha_seven.className = "texteight";				
-				 Slide_three.className = "marcheight";				
-				 pagethreemove();
-				  document.getElementById("air_box").style.display = "block";
+				large_five.className = "framefive";
+				large_six.className = "framesix";
+				Sha_five.className = "textsix";
+				Sha_six.className = "textseven";
+				Sha_seven.className = "texteight";				
+				Slide_three.className = "marcheight";				
+				pagethreemove();
+				document.getElementById("air_box").style.display = "block";
 			}
 			else if(index==5){
-				 large_seven.className = "frameseven";
-				 large_eight.className = "frameeight";
-				 Sha_eight.className = "textnine";
-				 Sha_nine.className = "textten";
-				 Sha_ten.className = "texteleven";
-				 Slide_four.className = "marchten";				
-				 pagefourmove();
-				  document.getElementById("air_box").style.display = "block";
+				large_seven.className = "frameseven";
+				large_eight.className = "frameeight";
+				Sha_eight.className = "textnine";
+				Sha_nine.className = "textten";
+				Sha_ten.className = "texteleven";
+				Slide_four.className = "marchten";				
+				pagefourmove();
+				document.getElementById("air_box").style.display = "block";
 			}
 			else if(index==6){
-				 large_nine.className = "framenine";
-				 large_ten.className = "frameten";
-				 Sha_eleven.className = "texttwelve";
-				 Sha_twelve.className = "textthirteen";
-				 Sha_thirteen.className = "textfourteen";
-				 Slide_five.className = "marchTwelve";				
-				 pagefivemove();
-				  document.getElementById("air_box").style.display = "block";
+				large_nine.className = "framenine";
+				large_ten.className = "frameten";
+				Sha_eleven.className = "texttwelve";
+				Sha_twelve.className = "textthirteen";
+				Sha_thirteen.className = "textfourteen";
+				Slide_five.className = "marchTwelve";				
+				pagefivemove();
+				document.getElementById("air_box").style.display = "block";
 			}
 			if (index == 7) {	
 				list_ele.className = "list";
@@ -616,45 +670,13 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			if (index == 8) {
 				document.getElementById("air_box").style.display = "none";
 			};
-		},
-		beforeMove: function(ele){
-			
 		}
 	});
-
-	// $(document).ready(function(e) {
-	// var progress = $(".progress"),li_width = $("#b04 li").length;
- 	//  var unslider04 = $('#b04').unslider({
-	// 	dots: true,
-	// 	complete:function(index){//自己添加的，官方没有
-	// 		progress.animate({"width":(100/li_width)*(index+1)+"%"});
-	// 	}
-	// }),
-
-	// data04 = unslider04.data('unslider');
-	// $('.unslider-arrow04').click(function() {
- //        var fn = this.className.split(' ')[1];
- //        data04[fn]();
- //    });
-// });
 </script>
 <script type="text/javascript">
-	//背景音乐
-   var audio1 = document.getElementById('qq');
-   var img = document.getElementById('imgmusic');
-   var flag = true;
-   audio1.play();
-   function aa(){
-      if(flag){
-        audio1.pause();
-        flag = !flag;
-        img.setAttribute("class","");
-      }else{
-        flag = !flag;
-        audio1.play();
-        img.setAttribute("class","kk");
-      }   
-   }
+ //    window.onload = function() {
+		
+	// }
 </script>
 <script type="text/javascript" src="{{ asset('js/message.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/slide.js') }}"></script>

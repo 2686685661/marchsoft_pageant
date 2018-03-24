@@ -88,6 +88,7 @@ class GiftsController extends Controller
      */
     public function give_gift(Request $request) {
         $give_all = $request->all();
+        // dd($give_all);
         $give_name = trim($give_all['name']);
         $gifts = $give_all['gifts'];
         if($give_name == '')
@@ -113,6 +114,7 @@ class GiftsController extends Controller
         
         if($insert_id>0) {
             $wait_order = orders::find_order($insert_id);
+
             return responseToJson(0,'/alipay/pay',$wait_order);
         }else {
             return responseToJson(1,'暂时无法支付');
@@ -188,7 +190,9 @@ class GiftsController extends Controller
     public function alipay(Request $request) {
         $id = $request->id;
         $totle = $request->totle;
+
         $alipay = new AlipayController();
+
         $alipay->pay($id,0.01);
 
         orders::update_order_state($id);

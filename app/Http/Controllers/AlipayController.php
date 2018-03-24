@@ -48,7 +48,7 @@ class AlipayController extends Controller
         // $total_amount = $totle;
         $total_amount = '0.01';
         $timeout_express="1m";
-        
+       
         $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
        
         $payRequestBuilder->setSubject($subject);
@@ -56,8 +56,9 @@ class AlipayController extends Controller
         
         $payRequestBuilder->setTotalAmount($total_amount);
         $payRequestBuilder->setTimeExpress($timeout_express);
+
         $payRequestBuilder->setPassbackParams($id);
-        
+         
         require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../libs/alipayDemo/config.php';
         $payResponse = new AlipayTradeService($config);
         
@@ -73,7 +74,6 @@ class AlipayController extends Controller
         if(!$result) {   //这里的对公钥的判定不正确，故加！
             //这里添加更多签名检验
             if($alipaySevice->appid == $arr['app_id']) {
-                dd($this->id);
                 return redirect('/front/celebration');
                 
                 echo '验证成功';
