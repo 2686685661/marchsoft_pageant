@@ -13,31 +13,18 @@
         <button onClick="wxtest();">微信</button>
     </body>
     <script>
-        function test(){
+        function updateOrder(id){
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-            axios.post('/admin/gift/give', {
-                name: "dd",
-                gifts: ["2"],
+            axios.post('/updateOrder', {
+                id : id,
                 _token:token
             })
             .then(function (response) {
-                var data = response.data;
-                if(data.code == 0) {	
-                    window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
-                }else {
-                    $(function(){
-                        $.message({
-                            message:data.msg,
-                            type:'warning'
-                        });
-                    })
-                    
-                }
-                
+                alert(response.data.result);
             })
             .catch(function (error) {
-                console.log(error);
-            });
+                alert(error);
+            });        
         }
         function wxtest(){
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -47,7 +34,11 @@
                 _token:token
             })
             .then(function (response) {
-               callpay(response.data.result);
+                if(response.data.code==1){
+                    callpay(response.data.result);
+                }else{
+                    alert(response.data.msg);
+                }
             })
             .catch(function (error) {
                 console.log(error);
@@ -67,24 +58,19 @@
              }
         }
         function onBridgeReady(result){    
-            alert(result.appid);
-            alert(new Date().getTime()/1000);
-            alert(result.nonce_str);
-            alert("prepay_id="+result.prepay_id);
-            alert(result.paySign);
             WeixinJSBridge.invoke(
                 'getBrandWCPayRequest',{
-                    "appId":result.appid,     //公众号名称，由商户传入     
-                    "timeStamp":new Date().getTime()/1000,         //时间戳，自1970年以来的秒数     
-                    "nonceStr":result.nonce_str, //随机串     
-                    "package":"prepay_id="+result.prepay_id,     
+                    "appId":result.appId,     //公众号名称，由商户传入     
+                    "timeStamp":result.timeStamp,         //时间戳，自1970年以来的秒数     
+                    "nonceStr":result.nonceStr, //随机串     
+                    "package":result.package,     
                     "signType":"MD5",         //微信签名方式：     
                     "paySign":result.paySign //微信签名 
                 }  ,
                 function(res){   
-                    alert(res.err_msg);  
                     if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-                        alert("???");
+                        alert("感谢");
+                        updateOrder(result.payId);
                     }     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
                 }
             ); 

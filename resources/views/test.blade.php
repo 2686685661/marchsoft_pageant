@@ -37,11 +37,11 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 <body id="main_body">
 <script type="text/javascript">
 	// Todo 上线以后要打开检测
-	/*var userInfo = navigator.userAgent;
-	if ((userInfo.indexOf("Windows") != -1) || (userInfo.indexOf("Mac OS") != -1)) {
-		document.getElementById("main_body").style.display = "none";
-		alert("请在手机端打开！");
-	}*/
+	// var userInfo = navigator.userAgent;
+	// if ((userInfo.indexOf("Windows") != -1) || (userInfo.indexOf("Mac OS") != -1)) {
+	// 	document.getElementById("main_body").style.display = "none";
+	// 	alert("请在手机端打开！");
+	// }
 </script>
 	<div class="main">
 		<div class="page page1">
@@ -88,28 +88,28 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page1-upper">
 				<div class="img-one">
 					<div class="Lballoon"></div>
-					<div class="frame1"><img src="{{ asset('img/birth1.png') }}"></div>
+					<div class="frame1" id="enlarge_one"><img src="{{ asset('img/birth1.png') }}"></div>
 				</div>
 				<div>
-					<div class="text1"><img src="{{ asset('img/text1.png') }}"></div>
+					<div class="text1" id="shake_one"><img src="{{ asset('img/text1.png') }}"></div>
 					<!-- <div><img src="img/text2.png"></div> -->
 				</div>
 			</div>
 			<div class="page1-center">
-				<div class="text3"><img src="{{ asset('img/text3.png') }}"></div>
+				<div class="text3" id="shake_three"><img src="{{ asset('img/text3.png') }}"></div>
 				<div>
 					<div class="stars"><img src="{{ asset('img/Stars.png') }}"></div>
-					<div class="frame2"><img src="{{ asset('img/birth2.png') }}"></div>
+					<div class="frame2" id="enlarge_two"><img src="{{ asset('img/birth2.png') }}"></div>
 				</div>
 			</div>
 			<div class="page1-lower">
 				<div>
 					<div class="balloon"></div>
-					<div class="baby"></div>
+					<div class="baby" id="slide_one"></div>
 				</div>
 				<div>
 					<div>
-						<div class="cloud"><img src="{{ asset('img/cloud.png') }}"></div>
+						<div class="cloud"><img src="{{ asset('img/yun.png') }}"></div>
 						<div class="Map"><img src="{{ asset('img/Map.png') }}"></div>
 					</div>
 				</div>
@@ -118,50 +118,50 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div class="page page3">
 			<div class="page1-upper">
 				<div class="Bird"><img src="{{ asset('img/Bird.png') }}"></div>
-				<div class="text4"><img src="{{ asset('img/text4.png') }}"></div>
+				<div class="text4" id="shake_four"><img src="{{ asset('img/text4.png') }}"></div>
 				<div class="aircraft"><img src="{{ asset('img/aircraft.png') }}"></div>
 			</div>
 			<div class="page2-center">
-				<div class="text5"><img src="{{ asset('img/text5.png') }}"></div>
+				<div class="text5" id="shake_five"><img src="{{ asset('img/text5.png') }}"></div>
 				<div>
-					<div class="cloud2"><img src="{{ asset('img/cloud.png') }}"></div>
-					<div class="frame3"><img src="{{ asset('img/th-p1.png') }}"></div>
+					<div class="cloud2"><img src="{{ asset('img/yun.png') }}"></div>
+					<div class="frame3" id="enlarge_three"><img src="{{ asset('img/th-p1.png') }}"></div>
 				</div>
 			</div>
 			<div class="page2-lower">
 				<div>
-					<div class="frame4"></div>
+					<div class="frame4" id="enlarge_four"><img src="{{ asset('img/th_p2.png') }}"></div>
 					<div class="glasses"><img src="{{ asset('img/glasses.png') }}"></div>
 				</div>
-				<div class="three"><img src="{{ asset('img/three.png') }}"></div>
+				<div class="three" id="slide_two"><img src="{{ asset('img/three.png') }}"></div>
 			</div>
 		</div>
 		<div class="page page4">
 			<div class="page3-upper">
 				<div>
 					<div class="Bird2"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame5"><img src="{{ asset('img/eight1.png') }}"></div>
+					<div class="frame5" id="enlarge_five"><img src="{{ asset('img/eight1.png') }}"></div>
 				</div>
 				<div>
-					<div class="cloud3"><img src="{{ asset('img/cloud.png') }}"></div>
+					<div class="cloud3"><img src="{{ asset('img/yun.png') }}"></div>
 					<div class="Bird3"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="text6"><img src="{{ asset('img/text6.png') }}"></div>
+					<div class="text6" id="shake_six"><img src="{{ asset('img/text6.png') }}"></div>
 				</div>
 			</div>
 			<div class="page3-center">
-				<div class="text7"><img src="{{ asset('img/text7.png') }}"></div>
+				<div class="text7" id="shake_seven"><img src="{{ asset('img/text7.png') }}"></div>
 				<div>
 					<div class="balloon3"></div>
-					<div class="frame6"><img src="{{ asset('img/eight2.png') }}"></div>
+					<div class="frame6" id="enlarge_six"><img src="{{ asset('img/eight2.png') }}"></div>
 				</div>
 			</div>
 			<div class="page3-lower">
 				<div>
-					<div class="cloud4"><img src="{{ asset('img/cloud.png') }}"></div>
-					<div class="eight"><img src="{{ asset('img/eight.png') }}"></div>
+					<div class="cloud4"><img src="{{ asset('img/yun.png') }}"></div>
+					<div class="eight" id="slide_three"><img src="{{ asset('img/eight.png') }}"></div>
 				</div>
 				<div>
-					<div class="text8"><img src="{{ asset('img/text8.png') }}"></div>
+					<div class="text8" id="shake_eight"><img src="{{ asset('img/text8.png') }}"></div>
 					<div class="Stars2"><img src="{{ asset('img/Stars.png') }}"></div>
 				</div>
 			</div>
@@ -170,51 +170,51 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page4-upper">
 				<div>
 					<div class="Bicycle"><img src="{{ asset('img/Bicycle.png') }}"></div>
-					<div class="text9"><img src="{{ asset('img/text9.png') }}"></div>
+					<div class="text9" id="shake_nine"><img src="{{ asset('img/text9.png') }}"></div>
 				</div>
 				<div>
 					<div class="Bird4"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame7"><img src="{{ asset('img/ten1.png') }}"></div>
+					<div class="frame7" id="enlarge_seven"><img src="{{ asset('img/ten1.png') }}"></div>
 				</div>
 			</div>
 			<div class="page4-center">
-				<div class="frame8"><img src="{{ asset('img/ten2.png') }}"></div>
+				<div class="frame8" id="enlarge_eight"><img src="{{ asset('img/ten2.png') }}"></div>
 				<div>
 					<div class="tra"><img src="{{ asset('img/TRA.png') }}"></div>
-					<div class="text10"><img src="{{ asset('img/text10.png') }}"></div>
+					<div class="text10" id="shake_ten"><img src="{{ asset('img/text10.png') }}"></div>
 					<div class="Stars3"><img src="{{ asset('img/Stars.png') }}"></div>
 				</div>
 			</div>
 			<div class="page4-lower">
 				<div>
-					<div class="text11"><img src="{{ asset('img/text11.png') }}"></div>
+					<div class="text11" id="shake_eleven"><img src="{{ asset('img/text11.png') }}"></div>
 					<div class="car"><img src="{{ asset('img/car.png') }}"></div>
 				</div>
-				<div class="ten"><img src="{{ asset('img/ten.png') }}"></div>
+				<div class="ten" id="slide_four"><img src="{{ asset('img/ten.png') }}"></div>
 			</div>
 		</div>
 		<div class="page page6">
 			<div class="page5-upper">
 				<div>
 					<div class="Bird5"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame9"><img src="{{ asset('img/twelve1.png') }}"></div>
+					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.png') }}"></div>
 				</div>
 				<div>
 					<div class="camera"><img src="{{ asset('img/camera.png') }}"></div>
-					<div class="text12"><img src="{{ asset('img/text12.png') }}"></div>
+					<div class="text12" id="shake_twelve"><img src="{{ asset('img/text12.png') }}"></div>
 				</div>
 			</div>
 			<div class="page5-center">
 				<div>
 					<div class="balloon4"></div>
-					<div class="text13"><img src="{{ asset('img/text13.png') }}"></div>
+					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
 				</div>
-				<div class="frame10"><img src="{{ asset('img/twelvwe2.png') }}"></div>
+				<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.png') }}"></div>
 			</div>
 			<div class="page5-lower">
-				<div class="Twelve"><img src="{{ asset('img/twelve.png') }}"></div>
+				<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
 				<div>
-					<div class="text14"><img src="{{ asset('img/text14.png') }}"></div>
+					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
 					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
 				</div>
 				
@@ -295,32 +295,57 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 
 
 	<div class="air_box">
-		<div id="air_minbox"><!-- 气泡层 -->
-			<div class="air">
-				<input type="text" placeholder="请留下您的祝福..." id="input">
-				<button id="air"></button>
-			</div>
-			<div class="air_min_box">
-				<div class="air_min bub1">
-					<p id="p1"><span>王琦1：</span>祝三月生日快乐乐乐乐乐</p>
+		<div id="air_box"><!-- 气泡 层 -->
+			<div id="air_minbox">
+				<div class="air" id="air">
+					<input type="text" placeholder="请留下您的祝福..." id="input" disabled>
+					<button id="air"></button>
 				</div>
-				<div class="air_min bub2">
-					<p id="p2"><span>王琦2：</span>祝三月生日快乐</p>
+				<div class="air_min_box" id="air_min_box">
+					<div class="air_min bub1">
+						<p id="p1"><span>王琦1：</span>祝三月生日快乐乐乐乐乐</p>
+					</div>
+					<div class="air_min bub2">
+						<p id="p2"><span>王琦2：</span>祝三月生日快乐</p>
+					</div>
+					<div class="air_min bub3">
+						<p id="p3"><span>王琦3：</span>祝三月生日快乐</p>
+					</div>
 				</div>
-				<div class="air_min bub3">
-					<p id="p3"><span>王琦3：</span>祝三月生日快乐</p>
-				</div>
-			</div>
-			<div class="max_air">
-				<img src="{{ asset('img/shu.jpg') }}" alt="">
-				<div>
-					<p>婚礼纪 送了 百合花</p>
-					<p>百年好合</p>
+				<div class="max_air" id="max_air">
+					<img src="{{ asset('img/call.png') }}" alt="" id="imgchange">
+					<div>
+						<p id="gift_p">桑金超 送了 打call</p>
+						<p id="bless">生日快乐</p>
+					</div>
 				</div>
 			</div>
 		</div>
 			
 		<div id="cover"></div><!-- 遮盖层 -->
+		<div class="pay_select" id="pay_select">
+			<div class="select_box">
+				<p>请选择支付方式：</p>
+				<div>
+					<div class="area" id="zfb">
+						<button></button>
+						<div>
+							<p class="tit">支付宝支付</p>
+							<p class="untit">（手续费为全额的0.6%）</p>
+						</div>
+					</div>
+					<div class="area" id="wx">
+						<button></button>
+						<div>
+							<p class="tit">微信支付</p>
+							<p class="untit">（手续费为全额的1%）</p>
+							<p class="untit">（微信支付请在微信浏览器打开）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
 		<div class="blessing_glass" id="blessing_glass"><!-- 送祝福 -->
 			<div class="blessing_input_box name">
 				<div class="blessing_input">
@@ -370,7 +395,8 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>
 	</div>
-	<div class="gif" id="gif">
+	
+	<!-- <div class="gif" id="gif">
 		<div class="img">
 			<img src="{{ asset('img/xin2.jpg') }}" alt="" width="100%">
 		</div>
@@ -382,7 +408,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<button>我要分享</button>
 			<button id="goon">继续赠送</button>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="music">
 	    <img src="{{ asset('img/music.png') }}" id="imgmusic" onclick="aa()" class="kk">
@@ -395,6 +421,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 <a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
 <a href="http://www.dowebok.com/118.html" style="display: none;">onepage-scroll – jQuery单页/全屏滚动插件</a>
 <script type="text/javascript">
+	document.getElementById("air_box").style.display = "none";
 	var progress = $(".progress"),li_width = $("#b04 li").length;
     var unslider04 = $('#b04').unslider({
 		// dots: true,
@@ -490,92 +517,104 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
     var list_ele = document.getElementById("list_div");
     var pays_ele = document.getElementById("pays_div");
     var thinks_ele = document.getElementById("thinks_div");
-    var b = 2;
+    // page2-6动画监听部分
+    //图片放大效果
+    var large_one = document.getElementById("enlarge_one");
+    var large_two = document.getElementById("enlarge_two");
+    var large_three = document.getElementById("enlarge_three");
+    var large_four = document.getElementById("enlarge_four");
+    var large_five = document.getElementById("enlarge_five");
+    var large_six = document.getElementById("enlarge_six");
+    var large_seven = document.getElementById("enlarge_seven");
+    var large_eight = document.getElementById("enlarge_eight");
+    var large_nine = document.getElementById("enlarge_nine");
+    var large_ten = document.getElementById("enlarge_ten");
+    //文字抖动效果
+    var Sha_one = document.getElementById("shake_one");
+    var Sha_two = document.getElementById("shake_three");
+    var Sha_three = document.getElementById("shake_four");
+    var Sha_four = document.getElementById("shake_five");
+    var Sha_five = document.getElementById("shake_six");
+    var Sha_six = document.getElementById("shake_seven");
+    var Sha_seven = document.getElementById("shake_eight");
+    var Sha_eight = document.getElementById("shake_nine");
+    var Sha_nine = document.getElementById("shake_ten");
+    var Sha_ten = document.getElementById("shake_eleven");
+    var Sha_eleven = document.getElementById("shake_twelve");
+    var Sha_twelve = document.getElementById("shake_thirteen");
+    var Sha_thirteen = document.getElementById("shake_fourteen");
+    //小人滑出效果
+    var Slide_one = document.getElementById("slide_one");
+    var Slide_two = document.getElementById("slide_two");
+    var Slide_three = document.getElementById("slide_three");
+    var Slide_four = document.getElementById("slide_four");
+    var Slide_five = document.getElementById("slide_five");
 
 	$('.main').onepage_scroll({
 		sectionContainer: '.page',
 		pagination: false,
 		direction:"vertical",
 		afterMove: function(index){
-			if(index==2&&b++==2){
-				var frame1 = document.getElementsByClassName('frame1');
-				frame1[0].className="frameone";
-				var frames = document.getElementsByClassName('frame2');
-				frames[0].className="frametwo";
-				var text1 = document.getElementsByClassName('text1');
-				text1[0].className="textone";
-				var text3 = document.getElementsByClassName('text3');
-				text3[0].className="textthree";
-				var one = document.getElementsByClassName('baby');
-				one[0].className="marchbaby";
-				// pagetwomove();
-				// $('.marchthree').animate({left:'50px'},3000);
+			if (index == 1) {
+				document.getElementById("air_box").style.display = "none";
+			}
+			if(index==2){
+				 large_one.className = "frameone";
+				 large_two.className = "frametwo";
+				 Sha_one.className = "textone";
+				 Sha_two.className = "textthree";
+				 Slide_one.className = "marchbaby";
+				 document.getElementById("air_box").style.display = "block";
+				 // Interval();
 			}
 
-			else if(index==3&&b++==3){
-				var frame3 = document.getElementsByClassName('frame3');
-				frame3[0].className="framethree";
-				var frames = document.getElementsByClassName('frame4');
-				frames[0].className="framefour";
-				var text = document.getElementsByClassName('text4');
-				text[0].className="textfour";
-				var texts = document.getElementsByClassName('text5');
-				texts[0].className="textfive";
-				var three = document.getElementsByClassName('three');
-				three[0].className="marchthree";
-				pagetwomove();
-				// $('.marchthree').animate({left:'50px'},3000);
+			else if(index==3){
+				 large_three.className = "framethree";
+				 large_four.className = "framefour";
+				 Sha_three.className = "textfour";
+				 Sha_four.className = "textfive";
+				 Slide_two.className = "marchthree";				
+				 pagetwomove();
+				 document.getElementById("air_box").style.display = "block";
 			}
-			else if(index==4&&b++==4){
-				var frame = document.getElementsByClassName('frame5');
-				frame[0].className="framefive";
-				var frames = document.getElementsByClassName('frame6');
-				frames[0].className="framesix";
-				var text = document.getElementsByClassName('text6');
-				text[0].className="textsix";
-				var texts = document.getElementsByClassName('text7');
-				texts[0].className="textseven";
-				var textss = document.getElementsByClassName('text8');
-				textss[0].className="texteight";
-				var eight = document.getElementsByClassName('eight');
-				eight[0].className="marcheight";
-				pagethreemove();
-				// $('.marcheight').animate({right:'120px'},3000);
+			else if(index==4){
+				 large_five.className = "framefive";
+				 large_six.className = "framesix";
+				 Sha_five.className = "textsix";
+				 Sha_six.className = "textseven";
+				 Sha_seven.className = "texteight";				
+				 Slide_three.className = "marcheight";				
+				 pagethreemove();
+				  document.getElementById("air_box").style.display = "block";
 			}
-			else if(index==5&&b++==5){
-				var frame7 = document.getElementsByClassName('frame7');
-				frame7[0].className="frameseven";
-				var frames = document.getElementsByClassName('frame8');
-				frames[0].className="frameeight";
-				var text = document.getElementsByClassName('text9');
-				text[0].className="textnine";
-				var texts = document.getElementsByClassName('text10');
-				texts[0].className="textten";
-				var textss = document.getElementsByClassName('text11');
-				textss[0].className="texteleven";
-				var ten = document.getElementsByClassName('ten');
-				ten[0].className="marchten";
-				pagefourmove();
+			else if(index==5){
+				 large_seven.className = "frameseven";
+				 large_eight.className = "frameeight";
+				 Sha_eight.className = "textnine";
+				 Sha_nine.className = "textten";
+				 Sha_ten.className = "texteleven";
+				 Slide_four.className = "marchten";				
+				 pagefourmove();
+				  document.getElementById("air_box").style.display = "block";
 			}
-			else if(index==6&&b++==6){
-				var frame7 = document.getElementsByClassName('frame9');
-				frame7[0].className="framenine";
-				var frames = document.getElementsByClassName('frame10');
-				frames[0].className="frameten";
-				var text = document.getElementsByClassName('text12');
-				text[0].className="texttwelve";
-				var texts = document.getElementsByClassName('text13');
-				texts[0].className="textthirteen";
-				var textss = document.getElementsByClassName('text14');
-				textss[0].className="textfourteen";
-				var twelve = document.getElementsByClassName('Twelve');
-				twelve[0].className="marchTwelve";
-				pagefivemove();
+			else if(index==6){
+				 large_nine.className = "framenine";
+				 large_ten.className = "frameten";
+				 Sha_eleven.className = "texttwelve";
+				 Sha_twelve.className = "textthirteen";
+				 Sha_thirteen.className = "textfourteen";
+				 Slide_five.className = "marchTwelve";				
+				 pagefivemove();
+				  document.getElementById("air_box").style.display = "block";
 			}
 			if (index == 7) {	
 				list_ele.className = "list";
 				pays_ele.className = "pay";
 				thinks_ele.className = "think";
+				document.getElementById("air_box").style.display = "block";
+			};
+			if (index == 8) {
+				document.getElementById("air_box").style.display = "none";
 			};
 		},
 		beforeMove: function(ele){

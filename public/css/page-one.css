@@ -278,6 +278,9 @@ figure figcaption{
 	}
 } 
 @media screen and (min-width:320px) and (max-width:360px){
+	#ewmsrc {
+	    margin: 20px 0 0 -16px;
+	}
 	.animation-one .yan-one img{
 		width: 40px;
 	}
@@ -313,9 +316,11 @@ figure figcaption{
 	}
 	.pays img{
 		width: 80px;
+		margin: -20px 0 0 0;
 	}
 	.pay img{
 		width: 80px;
+		margin: -20px 0 0 0;
 	}
 	.thinks img{
 	    width: 145px;
@@ -327,7 +332,7 @@ figure figcaption{
 	}
 	#ewmsrc{
 		width: 250px;
-		margin: 37px 0 0 -16px;
+		
 	}
 	.close1{
 	    height: 25px;
@@ -339,7 +344,7 @@ figure figcaption{
 	}
 	.background .back{
 	    width: 268px;
-    	margin: -36px 0 0 12%;
+    	margin: -66px 0 0 12%;
 	}
 	.gift{
 		top: -24px;
@@ -384,6 +389,9 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:360px) and (max-width:375px){
+	#ewmsrc {
+	    margin: -29px 0 0 20px;
+	}
 	.lists img{
 		width: 350px;
 	}
@@ -392,11 +400,10 @@ figure figcaption{
 	}
 	#ewmsrc{
 		width: 250px;
-		margin: 0 0 0 20px;
 	}
 	.background .back {
 	    width: 310px;
-	    margin: 0px 0 0 -2%;
+	    margin: -44px 0 0 -2%;
 	}
 	.gift-two{
 		top: 3%;
@@ -411,7 +418,7 @@ figure figcaption{
 	}
 	.give img{
 		width: 100px;
-		margin: 6px 10px;
+		margin: 17px 10px;
 	}
 	.give2 img{
 		width: 100px;
@@ -437,7 +444,7 @@ figure figcaption{
 	}
 	.give{
 	    position: absolute;
-        top: 81%;
+        top: 76%;
     	left: 29%;
 	}
 	.give2{
@@ -447,6 +454,9 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:375px) and (max-width:412px){  
+	#ewmsrc {
+	    margin: -29px 0 0 20px;
+	}
     .animation-one .yan-one img{
 		width: 70px;
 	}
@@ -496,7 +506,7 @@ figure figcaption{
 	}
 	#ewmsrc{
 		width: 264px;
-		margin: 0 0 0 35px;
+		margin: -30px 0 0 35px;
 	}
 	.close1{
 	    height: 66px;
@@ -504,7 +514,7 @@ figure figcaption{
     	margin: 43px 0 0 0;
 	}
 	.background .back{
-       	margin: 0px 0 0 -9%;
+       	margin: -44px 0 0 -9%;
     	width: 330px;
 	}
 	.gift-two{
@@ -524,6 +534,9 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:412px) and (max-width:736px){  
+	#ewmsrc {
+	   margin: -30px 0 0 45px;
+	}
 	.animation-three .qiu-one img{
 		width: 50px;
 	}
@@ -551,7 +564,7 @@ figure figcaption{
 	}
 	#ewmsrc{
 		width: 264px;
-		margin: 0 0 0 45px;
+		
 	}
 	.close1{
 	    height: 66px;
@@ -560,7 +573,7 @@ figure figcaption{
 	}
 	.background .back{
 	    width: 350px;
-    	margin: 0px 0 0 -12%;
+    	margin: -38px 0 0 -12%;
 	}
 	.gift{
 		top: 36px;
@@ -595,12 +608,18 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:414px) and (max-width:736px){
+	#ewmsrc {
+	    margin: -29px 0 0 48px;
+	}
 	.background .back{
 	    width: 352px;
     	margin: 0px 0 0 -13%;
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
+	#ewmsrc {
+	    margin: -29px 0 0 20px;
+	}
 	.animation-three .qiu-one img{
 		width: 100px;
 	}

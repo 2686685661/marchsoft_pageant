@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;  
 use App\Http\Controllers\Controller;  
 use EasyWeChat\Factory;
+use App\Models\gifts;
 use App\libs\lib\JsApiPay;
 use App\libs\lib\WxPayApi;
 use App\Models\orders; //订单表
 use Session;
 class WechatController extends Controller 
 {
+    private $gift_price = [];
     public function pay(Request $request){
         $config = [
             'app_id'             => env('WECHAT_PAYMENT_APPID', 'wx2fffc402a50e03a5'),
@@ -20,19 +22,77 @@ class WechatController extends Controller
             'notify_url'         => 'http://jk.mrwangqi.com/payments/wechatNotify',                           // 默认支付结果通知地址
         ];
         $app = Factory::payment($config);
-        $result = $app->order->unify([
-            'body' => '助力三月',
-            'out_trade_no' => time(),
-            'total_fee' => 1,
-            'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
-            'trade_type' => 'JSAPI',
-            'openid' => 'ox1Ngv4q2j6w5rMGZ1xy6Os6Wshg',
-        ]);
-        $paySign=$this->MakeSign($result);
-        $result['paySign']=$paySign;
-        return responseToJson(1,'下单成功',$result);
+
+        $give_name = trim($request->get('name'));
+        $gifts = $request->get('gifts');
+        if($give_name == '')
+            return responseToJson(1,'昵称不能为空');
+        else if(mb_strlen($give_name,'utf-8') >= 10) 
+            return responseToJson(1,'昵称长度不能超过10个字符');
+        else if(!count($gifts)) 
+            return responseToJson(1,'礼物不能为空');
+
+
+        $total = $this->get_gifts_total($gifts);
+        $gifts_id = '';
+        for($i=0;$i<count($gifts);$i++) {
+            if($i == count($gifts)-1) {
+                $gifts_id .= $gifts[$i];
+            }else{
+                $gifts_id .= $gifts[$i].',';
+            }
+        }
+
+        $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
+        $insert_id = orders::insert_gift_order($arr);
+        if($insert_id){
+            $result = $app->order->unify([
+                'body' => '助力三月',
+                'out_trade_no' => time(),
+                'total_fee' => 1,
+                'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+                'trade_type' => 'JSAPI',
+                'openid' => session('openId'),
+            ]);
+            $wcPayParams = [
+                "appId" => 'wx2fffc402a50e03a5',     //公众号名称，由商户传入
+                "timeStamp" => time(),         //时间戳，自1970年以来的秒数
+                "nonceStr" => $result['nonce_str'], //随机串
+                // 通过统一下单接口获取
+                "package" => "prepay_id=".$result['prepay_id'],
+                "signType" => "MD5",         //微信签名方式：
+            ];
+            $paySign=$this->MakeSign($wcPayParams);
+            $wcPayParams['paySign']=$paySign;
+            $wcPayParams['payId']=$insert_id;
+            return responseToJson(1,'下单成功',$wcPayParams);
+        }else{
+            return responseToJson(0,'下单失败',$wcPayParams);
+        }
     }
 
+    /**
+     * 计算前台赠送的礼物总价值
+     * return int $total
+     */
+    private function get_gifts_total($gifts = []) {
+        
+        $total = 0;
+        if($this->gift_price == []) {
+            $this->gift_price = gifts::get_gifts_price();
+        }
+
+
+
+        foreach($gifts as $gift_id) {
+            if(is_stat($gift_id,$this->gift_price)) {
+                $total += $this->gift_price[$gift_id];
+            }
+        }
+
+        return $total;
+    }
+        
     /**
 	 * 生成签名
 	 * @return 签名，本函数不覆盖sign成员变量，如要设置签名需要调用SetSign方法赋值
@@ -73,6 +133,12 @@ class WechatController extends Controller
         echo "dasdasd";
     }
 
+    public function updateOrder(Request $request){
+        $id = $request->get('id');
+        $res=orders::update_order_state($id);
+        return responseToJson(1,'更新结果',$res);
+    }
+
     public function index(Request $request){
         if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { 
             if($request->get('code')){
@@ -91,6 +157,6 @@ class WechatController extends Controller
                 return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
             }
         } 
-        return view('hehe');
+        return view('test');
     }
 }

@@ -7,6 +7,7 @@ window.onload=function(){
 	var cover1 = document.getElementById("cover");
 	var large_one = null;
 	var gift_list = null;//存放礼物页面的6种礼物
+	var json = [];//存放从后台读取出来的礼物
 	var input1 = document.getElementById("input");
 	var input2 = document.getElementById("input2");
 	var input_bless = document.getElementById("input_bless");
@@ -17,7 +18,8 @@ window.onload=function(){
 	var gift_button = document.getElementById("gift_button");
 	var pay = document.getElementById("pay");//支付按钮
 	var heig =  document.body.clientHeight;
-	document.getElementById("gif").style.height = heig+"px";
+	// document.getElementById("gif").style.height = heig+"px";
+	document.getElementById("pay_select").style.height = heig+"px";
 
 	$("#goon").click(function(){
 		$("#gif").css("display","none");
@@ -26,9 +28,7 @@ window.onload=function(){
 	});
 
 
-	// document.getElementById("max_air3").style.display="none";
-	// document.getElementById("max_air2").style.display="none";
-	// document.getElementById("max_air").style.display="none";
+
 	//礼物专区毕业生赠送礼物
 	gift_button.onclick = function(){
 		Area();
@@ -86,21 +86,64 @@ window.onload=function(){
 	}
 
 
-	//读取数据库中的所有礼物
-	// var LW_bless=new Array();//存放从后台读取出来的礼物
-	// bless_gift();
-	// function bless_gift(){
- //    	axios.post('/admin/***/***')
-	// 	.then(function (response) {
-	// 		var data = response.data.result;
-	// 		for (var i = 0; i < data.length; i++) {
-				
-	// 		};
-	// 	})
-	// 	.catch(function (error) {
-	// 	    console.log(error);
-	// 	});
-	// }
+	var count = 0;
+	comment2();
+	function comment2(){
+		setTimeout(function(){
+    		// $("#gift_p").text("1");
+    		// $("#bless").text("1");
+    		// $("#imgchange").attr('src', "{{ asset('img/shu.jpg') }}");
+    	},0);
+    	setTimeout(function(){
+    		
+    	},3000);
+	}
+
+
+	//送礼物气泡淡入淡出效果
+	function show2(){
+		if (count<json.length-1) {
+			count++;
+    	}else{
+    		count=0;
+    	};
+		setTimeout(function(){
+			$("#max_air").fadeToggle(1000);
+		},0);
+		setTimeout(()=>{
+			$("#gift_p").text(json[count].gift);
+	    	$("#bless").text(json[count].bless);
+	    	$("#imgchange").attr('src', '/'+json[count].imgs);
+			$("#max_air").fadeToggle(1000);
+		},2000);
+		setTimeout(function(){
+			show2();
+		},3000);
+	}
+
+
+	// 读取数据库中的所有礼物
+	bless_gift();
+	function bless_gift(){
+    	axios.post('/admin/order/getorder')
+		.then(function (response) {
+			var data = response.data.result;
+			for (var i = 0; i < data.length; i++) {
+				for (var k = 0; k < data[i].gifts_id.length; k++) {
+					var j = {};
+					j.gift = data[i].name+" 送了 "+data[i].gifts_id[k].name;
+			        j.imgs = data[i].gifts_id[k].image;
+			        j.bless = "生日快乐";
+			        json.push(j);
+				};
+			};
+			// console.log(json);
+			show2();
+		})
+		.catch(function (error) {
+		    console.log(error);
+		});
+	}
 
 	//读取数据库中的祝福语
 	var Z_bless=new Array();//存放从后台读取出来的祝福语
@@ -112,6 +155,10 @@ window.onload=function(){
 			for (var i = 0; i < data.length; i++) {
 				Z_bless[i] = data[i].give_name + ":" + data[i].message;
 			};
+			var ifshow = document.getElementById("air_box");
+			// if (ifshow.style.display == "block") {
+				Interval();
+			// };
 		})
 		.catch(function (error) {
 		    console.log(error);
@@ -135,7 +182,7 @@ window.onload=function(){
 	}
 	//更新气泡内容
 	var oer = 0;
-	Interval();
+	
 	function Interval(){
 		setTimeout(function(){
 	    	setTimeout(function(){
@@ -241,11 +288,9 @@ window.onload=function(){
 		});
 	}
 
-
-	
-	
-	//点击支付的时候存放赠送人及礼物，并完成支付
-	pay.onclick = function(){
+	var zfb = document.getElementById('zfb');
+	var wx = document.getElementById('wx');
+	zfb.onclick = function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
 		var gift_arr = [];
@@ -261,28 +306,106 @@ window.onload=function(){
 		})
 		.then(function (response) {
 			var data = response.data;
-			disapear();
+			// disapear();
 			// gif_show();
-			document.getElementById("goon").style.display="block";
+			// document.getElementById("goon").style.display="block";
 			console.log(data.msg);
 			if(data.code == 0) {	
-				// alert("dasda");
-				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				if(data.result.hasOwnProperty("out_trade_no") && data.result.out_trade_no != null) {
+					window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle+'/'+data.result.out_trade_no;
+				}else 
+					window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				
 			}else {
-				// alert("dasda2");
 				$(function(){
 					$.message({
 						message:data.msg,
 						type:'warning'
 					});
 				})
-				
 			}
 			
 		})
 		.catch(function (error) {
 		    console.log(error);
 		});
+	}
+	wx.onclick = function(){
+		wxtest();
+	}
+	function wxtest(){
+		var name = $("#input3").val();//赠送人姓名
+		var list = myArray;//礼物ID
+		var gift_arr = [];
+		for(var i=0;i<list.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr.push(list[i]);
+		}
+		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		axios.post('/wechat', {
+			name: name,
+			gifts: gift_arr,
+			_token:token
+		})
+		.then(function (response) {
+			if(response.data.code==1){
+				callpay(response.data.result);
+			}else{
+				alert(response.data.msg);
+			}
+		})
+		.catch(function (error) {
+			console.log(error);
+		});        
+	}
+	function updateOrder(id){
+		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+		axios.post('/updateOrder', {
+			id : id,
+			_token:token
+		})
+		.then(function (response) {
+			alert(response.data.result);
+		})
+		.catch(function (error) {
+			alert(error);
+		});        
+	}
+	function callpay(result)
+	{
+		if (typeof WeixinJSBridge == "undefined"){
+			if( document.addEventListener ){
+				document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+			}else if (document.attachEvent){
+				document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+				document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+			}
+		 }else{
+			onBridgeReady(result);
+		 }
+	}
+	function onBridgeReady(result){    
+		WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',{
+				"appId":result.appId,     //公众号名称，由商户传入     
+				"timeStamp":result.timeStamp,         //时间戳，自1970年以来的秒数     
+				"nonceStr":result.nonceStr, //随机串     
+				"package":result.package,     
+				"signType":"MD5",         //微信签名方式：     
+				"paySign":result.paySign //微信签名 
+			}  ,
+			function(res){   
+				if(res.err_msg == "get_brand_wcpay_request:ok" ) {
+					updateOrder(result.payId);
+					
+				}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
+			}
+		); 
+	}
+	//点击支付的时候存放赠送人及礼物，并完成支付
+	pay.onclick = function(){
+		document.getElementById('pay_select').style.display = "block";
+		document.getElementById('birth_glass').style.display = "none";
 	}
 
 
@@ -294,13 +417,7 @@ window.onload=function(){
 		show();
 	}
 
-	//送礼物气泡淡入淡出效果
-	$(function(){
-		function show(){
-		   $("#max_air").fadeToggle(1000);
-		}
-		setInterval(show,2000);
-	});
+	
 
 	
 	//标示礼物是否被选中
@@ -352,6 +469,7 @@ window.onload=function(){
 	cover1.onclick=function(){
 		disapear();
 		document.getElementById("blessing").style.display="none";
+		document.getElementById("pay_select").style.display="none";
 	}
 	
 	function show(){
@@ -394,4 +512,47 @@ window.onload=function(){
 			}
 		})
 	}
+
+	(function() {
+
+
+		String.prototype.trim = function (char, type) {
+			if (char) {
+			  if (type == 'left') {
+				return this.replace(new RegExp('^\\'+char+'+', 'g'), '');
+			  } else if (type == 'right') {
+				return this.replace(new RegExp('\\'+char+'+$', 'g'), '');
+			  }
+			  return this.replace(new RegExp('^\\'+char+'+|\\'+char+'+$', 'g'), '');
+			}
+			return this.replace(/^\s+|\s+$/g, '');
+		  };
+	
+
+		var pathname = window.location.pathname;
+		pathname = pathname.trim("/");
+
+		patharr = pathname.split("/");
+		if(patharr.length % 2 != 0) {
+			var trade = patharr[patharr.length - 1];
+			var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+			axios.post('/admin/order/getoneorder',{
+				trade : trade,
+				_token:token
+			}).then(function(response) {
+				if(response.data.code == 0) {
+					
+					for(var i = 0;i < response.data.result.gifts_id.length;i++) {
+						var j = {};
+						j.gift = response.data.result.name+" 送了 "+response.data.result.gifts_id[i].name;
+						j.imgs = response.data.result.gifts_id[i].image;
+						j.bless = "生日快乐";
+						json.unshift(j);
+					}
+				}
+			})
+		}
+	})();
+	
 }
+

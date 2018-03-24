@@ -1,34 +1,9 @@
-.page1{
+.page2,.page3,.page4,.page5,.page6{
 	background: url(../img/bg.png) no-repeat center center;
 	background-size: 100% 100%;
 	width: 100%;
 	height: 100%;
 }
-.page2{
-	background: url(../img/bg.png) no-repeat center center;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 100%;
-}
-.page3{
-	background: url(../img/bg.png) no-repeat center center;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 100%;
-}
-.page4{
-	background: url(../img/bg.png) no-repeat center center;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 100%;
-}
-.page5{
-	background: url(../img/bg.png) no-repeat center center;
-	background-size: 100% 100%;
-	width: 100%;
-	height: 100%;
-}
-
 
 /*   page1   */
 	.page1-upper{
@@ -146,8 +121,8 @@
 		width: 43px;
 		height: 22px;
 		position: relative;
-		top: 47px;
-		left: 21px;
+		/*top: 47px;
+		left: 21px;*/
 	}
 	.cloud img{
 		width: 100%;
@@ -181,26 +156,25 @@
 		height: 33%;
 	}
 	.Bird{
-		width: 101px;
-		height: 36px;
+		/*width: 101px;*/
 		position: relative;
 		top: 64px;
 		left: 20px;
 	}
 	.Bird img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text4{
-		width: 214px;
-		height: 128px;
+		/*width: 214px;*/
+		/*height: 128px;*/
 		position: relative;
 		left: 22px;
 		top: -2px;
 	}
 	.text4 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text5{
 		width: 107px;
@@ -211,7 +185,7 @@
 	}
 	.text5 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.cloud2{
 		width: 41px;
@@ -233,7 +207,7 @@
 	}
 	.aircraft img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.frame3{
 		display: flex;
@@ -258,6 +232,9 @@
 
 	}
 	.frame4{
+		display: flex;
+		justify-content:center;
+		align-items:center;
 		width: 150px;
 		height: 142px;
 		background: url(../img/Photo-frame.png) no-repeat center center;
@@ -276,12 +253,12 @@
 	}
 	.glasses img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.three{
 		opacity: 0;
 		width: 500px;
-		height: 600px;
+		/*height: 600px;*/
 		position: relative;
 		left: 50px;
 		top: 20px;
@@ -289,7 +266,7 @@
 	.three img{
 		opacity: 0;
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 
 	/*   page3   */
@@ -432,8 +409,8 @@
 		width: 149px;
 		height: 116px;
 		position: relative;
-		top: 54px;
-		right: 84px;
+		/*top: 54px;
+		right: 84px;*/
 		/*width: 154px;
 	    position: relative;
 	    top: 73px;
@@ -690,13 +667,13 @@
 		height: 100%;
 	}
 	.balloon4{
-		width: 32px;
-		height: 42px;	
+		width: 47px;
+		height: 54px;	
 		background: url(../img/balloon.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 108px;
-		top: 3px;
+		left: 142px;
+		/*top: 3px;*/
 	}
 	.text13{
 		width: 125px;
@@ -992,8 +969,8 @@
 		width: 56px;
 		height: 19px;
 		position: relative;
-		left: 104px;
-		bottom: 16px;
+		left: 128px;
+    	bottom: 26px;
 	}
 	.glasses img{
 		width: 100%;
@@ -1160,10 +1137,10 @@
 		width: 100%;
 	}
 	.Stars2{
-		width: 27px;
-		position: relative;
-		left: 36px;
-		top: 37px;
+		width: 31px;
+	    position: relative;
+	    left: 26px;
+	    top: 17px;
 	}
 	.Stars2 img{
 		width: 100%;
@@ -1487,18 +1464,20 @@
 		.text3 {
 		    width: 153px;
     		height: 116px;
+    		position: relative;
+    		top: 22px;
 		}
 		.stars {
-		    width: 25px;
+		    width: 29px;
 		    position: relative;
 		    left: 123px;
 		    bottom: 3px;
 		}
 		.frame2 {		    
-		    width: 183px;
-    		height: 165px;
+		    width: 187px;
+		    height: 173px;
 		    left: 15px;
-		    bottom: 29px;		    
+		    bottom: 21px;		    
 		}
 		.frame2 img {
 		    width: 100%;
@@ -1513,27 +1492,7 @@
 		.baby img{
 			opacity: 0;
 		}
-		.balloon {
-		    width: 40px;
-		    height: 52px;	    
-		    left: 137px;
-		    bottom: 43px;
-		}
-		.cloud {
-		    width: 43px;
-		    height: 22px;
-		    position: relative;
-		    top: 20px;
-		    left: 47px;
-		}
-		.Map {
-		    width: 75px;
-		    height: 66px;
-		    position: relative;
-		    top: 49px;
-		    left: 77px;
-		}
-
+		
 
 		/*   page2   */
 		.Bird {
@@ -1550,6 +1509,12 @@
 		    left: 24px;
 		    top: -2px;
 		}
+		.text5{
+			width: 106px;
+		    position: relative;
+		    left: 16px;
+		    top: -10px;
+		}
 		.aircraft {
 		    width: 150px;
     		height: 98px;
@@ -1557,30 +1522,32 @@
 		    left: 2px;
 		    top: 16px;
 		}
-		.cloud2 {
-		    width: 47px;
-		    height: 25px;
-		    position: relative;
-		    left: 134px;
-		    bottom: 42px;
-		}
+		
 		.frame3 {		    
-		    width: 217px;
-		    height: 194px;		    
+		    width: 208px;
+		    height: 188px;
 		    left: 26px;
-		    bottom: 47px;
+    		bottom: 52px;
 		}
 		.frame4 {
 		    width: 162px;
 		    height: 139px;		    
 		    left: 12px;
-		    bottom: 28px;
-		}
-		.march3{
+		    top: 0;
+		}	
+		.glasses {
+		    width: 56px;
+		    height: 19px;
+		    position: relative;
+		    left: 153px;
+		    top: 6px;
+		}		
+		.three{
+			opacity: 0;
 		    width: 282px;
 		    height: 211px;
 		    position: relative;
-		    top: 12px;	    
+		    top: 90px;	    
 		}
 
 
@@ -1630,7 +1597,7 @@
 		    width: 149px;
 		    height: 116px;
 		    position: relative;
-		    top: 67px;
+		    top: 57px;
 		    right: 185px;
 		}
 		.balloon3 {
@@ -1639,8 +1606,7 @@
 		    left: 108px;
 		    top: 10px;
 		}
-		.frame6{
-		    
+		.frame6{		    
 		    width: 195px;
 		    height: 176px;		    
 		    bottom: 8px;
@@ -1652,14 +1618,13 @@
 		.cloud4 {		   
 		    top: 36px;
 		}
-		.texte8 {		    
+		.text8 {		    
 		     top: 67px;
-		     right: 70px;
+		     right: 185px;
 		}
-		.Stars2 {
-		    
+		.Stars2 {		    
 		    left: 40px;
-		    top: 52pxt;
+		    top: 54pxt;
 		}
 
 		/*   page4   */
@@ -1760,10 +1725,10 @@
 		}
 		.frame10 {		    
 		    width: 185px;
-		    height: 165px;	    
+		    height: 165px;
 		    position: relative;
-		    left: 40px;
-		    top: 20px;
+		    left: 34px;
+		    top: 58px;
 		}
 		.march12 {
 		    width: 78px;
@@ -1775,16 +1740,16 @@
 		.text14 {
 		    height: 121px;
 		    position: relative;
-		    top: 16px;
-		    left: 92px;
+		    top: 39px;
+    		left: 105px;
 		}
-		.book {
+		/*.book {
 		    width: 75px;
 		    height: 70px;
 		    left: 200px;
 		    top: 26px;
-		}
-
+		}*/
+		
 }
 
 /*375px*/
@@ -2022,9 +1987,27 @@
 		    left: 33px;
 		    top: 28px;
 		}
+
+
+		/*page5*/
+		.balloon4 {
+		    width: 43px;
+		    height: 54px;
+		    left: 133px;
+		    top: 7px;
+		}
+		.book {
+		    width: 79px;
+		    height: 71px;
+		    position: relative;
+		    left: 193px;
+		    top: 37px;
+		}
 }
 
+/*415-480    动画前+动画后*/
+@media screen and (min-width:416px) and (max-width:480px){
 
-
+}
 
 
