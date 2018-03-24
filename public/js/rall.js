@@ -254,7 +254,7 @@ window.onload=function(){
 			gift_arr.push(list[i]);
 		}
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-		axios.post('/admin/gift/wxgive', {
+		axios.post('/admin/gift/give', {
 			name: name,
 			gifts: gift_arr,
 			_token:token
@@ -266,10 +266,10 @@ window.onload=function(){
 			document.getElementById("goon").style.display="block";
 			console.log(data.msg);
 			if(data.code == 0) {	
-				alert("dasda");
-				// window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
+				// alert("dasda");
+				window.location.href = data.msg + '/' +data.result.id+'/'+data.result.totle;
 			}else {
-				alert("dasda2");
+				// alert("dasda2");
 				$(function(){
 					$.message({
 						message:data.msg,
