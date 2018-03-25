@@ -342,6 +342,7 @@ window.onload=function(){
 					birth = birth + res[i].name + "(" + res[i].price + ")  ";
 					var t = {};
 					t.name = " 送了 "+res[i].name;
+					alert(res[i].image);
 			        t.imgs = res[i].image;
 			        t.bless = "生日快乐";
 			        gifts_jilv.push(t);
