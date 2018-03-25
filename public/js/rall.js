@@ -638,8 +638,10 @@ window.onload=function(){
 						j.gift = response.data.result.name+" 送了 "+response.data.result.gifts_id[i].name;
 						j.imgs = response.data.result.gifts_id[i].image;
 						j.bless = "生日快乐";
-						json.unshift(j);
+						json.splice(5,0,j);
 					}
+					console.log(json);
+					
 				}
 			})
 		}
