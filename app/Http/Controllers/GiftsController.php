@@ -223,7 +223,7 @@ class GiftsController extends Controller
      * 通过指定的支付宝订单号获得礼物名称和图片名称
      */
     public function get_trade_order_info(Request $request) {
-
+       
         $all = $request->all();
         if(array_key_exists('trade',$all) && $all['trade'] != '') {
             $find_order = orders::find_order_trade($all['trade']);

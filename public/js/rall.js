@@ -624,6 +624,7 @@ window.onload=function(){
 				trade : trade,
 				_token:token
 			}).then(function(response) {
+				
 				if(response.data.code == 0) {
 					
 					for(var i = 0;i < response.data.result.gifts_id.length;i++) {

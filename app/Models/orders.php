@@ -71,7 +71,7 @@ class orders extends Model
 
 
     public static function find_orders_info() {
-        $orders_info = DB::table('orders')->where('status',1)->select('id','name','gifts_id')->get()->toArray();
+        $orders_info = DB::table('orders')->where('status',1)->select('id','name','gifts_id')->orderBy('id','desc')->get()->toArray();
         return $orders_info;
     }
 
