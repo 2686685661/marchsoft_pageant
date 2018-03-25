@@ -342,7 +342,6 @@ window.onload=function(){
 					birth = birth + res[i].name + "(" + res[i].price + ")  ";
 					var t = {};
 					t.name = " 送了 "+res[i].name;
-					alert(res[i].image);
 			        t.imgs = res[i].image;
 			        t.bless = "生日快乐";
 			        gifts_jilv.push(t);
@@ -474,7 +473,7 @@ window.onload=function(){
 					updateOrder(result.payId);
 					for (var i = 0; i < gifts_jilv.length; i++) {
 						json[count+2+i].gift = gifts_jilv[i].name;
-						json[count+2+i].imgs = gifts_jilv[i].img;
+						json[count+2+i].imgs = gifts_jilv[i].imgs;
 						json[count+2+i].bless = gifts_jilv[i].bless;
 					};
 					
