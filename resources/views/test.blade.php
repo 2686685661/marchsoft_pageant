@@ -287,7 +287,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		</div>
 	</div>
 
-	<div class="air_box">
+	<div class="air_box" id="box">
 		<div id="air_box"><!-- 气泡 层 -->
 			<div id="air_minbox">
 				<div class="air" id="air">
@@ -636,7 +636,7 @@ var pagess = 1;
 		},
 		afterMove: function(index){
 			if (index == 1) {
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			}
 			if(index==2){
 				 large_one.className = "frameone";
@@ -645,7 +645,7 @@ var pagess = 1;
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
 				 layload(2);
-				 document.getElementById("air_box").style.display = "block";
+				 document.getElementById("box").style.zIndex = 1;
 			}
 
 			else if(index==3){
@@ -656,7 +656,7 @@ var pagess = 1;
 				Slide_two.className = "marchthree";
 				layload(3);				
 				pagetwomove();
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			}
 			else if(index==4){
 				large_five.className = "framefive";
@@ -667,7 +667,7 @@ var pagess = 1;
 				Slide_three.className = "marcheight";
 				layload(4);				
 				pagethreemove();
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			}
 			else if(index==5){
 				large_seven.className = "frameseven";
@@ -678,7 +678,7 @@ var pagess = 1;
 				Slide_four.className = "marchten";
 				layload(5);				
 				pagefourmove();
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			}
 			else if(index==6){
 				large_nine.className = "framenine";
@@ -689,16 +689,16 @@ var pagess = 1;
 				Slide_five.className = "marchTwelve";
 				layload(6);				
 				pagefivemove();
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			}
 			if (index == 7) {	
 				list_ele.className = "list";
 				pays_ele.className = "pay";
 				thinks_ele.className = "think";
-				document.getElementById("air_box").style.display = "block";
+				document.getElementById("box").style.zIndex = 1;
 			};
 			if (index == 8) {
-				document.getElementById("air_box").style.display = "none";
+				document.getElementById("box").style.zIndex = -1;
 			};
 		}
 	});

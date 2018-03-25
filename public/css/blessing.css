@@ -59,13 +59,13 @@ body,div,p{
 	position:fixed !important;
 	bottom: 0;
 	left: 0;
-	width: 100%
+	width: 100%;
 }
 #air_box{
 	position:fixed !important;
 	bottom: 0;
 	left: 0;
-	width: 100%
+	width: 100%;
 }
 #air_minbox{
 	display: flex;
