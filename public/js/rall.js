@@ -29,10 +29,12 @@ window.onload=function(){
 	//感谢页面返回按钮
 	return1.onclick = function(){
 		student.style.display = "none";
+		document.getElementById("box").style.zIndex = 1;
 	}
 	//分享链接按钮
 	share.onclick = function(){
 		student.style.display = "none";
+		document.getElementById("box").style.zIndex = 1;
 	}
 
 	//音乐
@@ -434,6 +436,8 @@ window.onload=function(){
 		.then(function (response) {
 			// alert(response.data.result);
 			student.style.display = "block";
+			document.getElementById('pay_select').style.display = "none";
+			document.getElementById("box").style.zIndex = -1;
 		})
 		.catch(function (error) {
 			alert(error);
