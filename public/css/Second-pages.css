@@ -600,8 +600,6 @@
 		width: 100%;
 	}
 	.balloon4{
-		/*width: 47px;*/
-		/*height: 54px;	*/
 		background: url(../img/balloon.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
@@ -611,29 +609,19 @@
 	}
 	.text13{
 		width: 125px;
-		/*height: 68px;*/
 		position: relative;
 	}
 	.text13 img{
 		width: 100%;
 	}
 	.text14{
-	    /*width: 136px;*/
 	    position: relative;
-	    /*top: 32px;*/
-	    /*left: -79px;*/
-	    /*top: 51px;*/
-	    /*left: -64px;*/
 	}
 	.text14 img{
 		width: 100%;
 	}
 	.Twelve{
 		width: 281px;
-		/*height: 750px;*/
-		/*position: relative;*/
-		/*right: 80px;*/
-		/*bottom: 45px;*/
 	}
 	.Twelve img{
 		opacity: 0;	
