@@ -92,6 +92,8 @@
 	opacity: 0;
 }
 .pay img{
+	position: relative;
+	cursor: pointer;
 	margin: 0 0 0 10%;
 	width: 150px;
 	animation: pay 6s ease 0s infinite normal; /*名字 总时间 频率 开始时间 次数*/;
@@ -171,6 +173,7 @@
     position: relative;
     left: 0px;
 	position: absolute;
+	cursor: pointer;
 	top: 20px;
 	left: 0;
 }
@@ -214,6 +217,7 @@ figure figcaption{
 .give img{
 	width: 100px;
     margin: 15px 10px;
+    cursor: pointer;
     text-align: center;
 }
 .give2 img{
@@ -221,6 +225,126 @@ figure figcaption{
     margin: 15px 10px;
     text-align: center;
 }
+/*感谢页面*/
+.student{
+	display: none;
+	position: absolute;	
+	top: 0;
+	background: url(../img/stu.png) no-repeat center center;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 640px;
+	overflow: hidden;
+}
+.return{
+	position: absolute;
+    top: 507px;
+	left: 9px;
+}
+.return img{
+    width: 72px; 
+    cursor: pointer;   
+}
+.share{
+	position: absolute;
+    top: 490px;
+	right: 9px;
+}
+.share img{
+    width: 72px; 
+    cursor: pointer;   
+}
+.happy{
+	position: absolute;
+	top: 0;
+	left: 5px;
+}
+.happy img{
+	width: 337px;
+}
+.bai{
+	position: absolute;
+	top: 95px;
+	right: 50px;
+}
+.bai img{
+	width: 250px;
+}
+.stu{
+	position: absolute;
+	top: 321px;
+	right: 66px;
+}
+.stu img{
+	width: 220px;
+}
+@media screen and (min-width:320px) and (max-width:359px){		
+	.return {
+	    top: 477px;
+	    left: 16px;
+	}
+	.share {
+	    top: 454px;
+        right: -13px;
+	}
+	.bai img {
+	    width: 200px;
+	}
+	.bai {
+	    right: 32px;
+	}
+	.stu {
+	    right: 30px;
+	}
+}
+@media screen and (min-width:360px) and (max-width:374px){
+}
+@media screen and (min-width:375px) and (max-width:411px){	
+	.bai {
+	    right: 58px;
+	}
+	.stu {
+	    top: 349px;
+	    right: 76px;
+	}
+}
+@media screen and (min-width:412px) and (max-width:413px){	
+	.happy {
+	    left: 34px;
+	}
+	.bai {
+	    right: 76px;
+	}
+	.stu {
+	    top: 339px;
+	    right: 87px;
+	}
+}
+@media screen and (min-width:414px) and (max-width:500px){	
+	.return {
+	    top: 599px;
+	    left: 36px;
+	}
+	.share {
+	    top: 579px;
+	    right: 24px;
+	}
+	.happy {
+	    left: 36px;
+	}
+	.bai {
+	    right: 72px;
+	    top: 127px;
+	}
+	.stu {
+	    top: 416px;
+	    right: 83px;
+	}
+}
+
+
+
+/*//*/
 @media screen and (max-width:360px){ 
 	.animation-one .yan-one img{
 		width: 55px;
@@ -274,6 +398,7 @@ figure figcaption{
 	.close1{
 	    height: 66px;
     	width: 336px;
+    	cursor: pointer;
     	margin: 43px 0 0 0;
 	}
 } 
@@ -337,7 +462,7 @@ figure figcaption{
 	.close1{
 	    height: 25px;
     	width: 336px;
-    	margin: 43px 0 0 0;
+    	margin: 67px 0 0 -38px;
 	}
 	#closebt img {
     	width: 25px;
@@ -389,6 +514,9 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:360px) and (max-width:375px){
+	.banner{
+	    top: 45px;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}
@@ -649,15 +777,39 @@ figure figcaption{
 	}
 	.list img{
 		width: 777px;
+		margin: 13% auto 0 auto;
 	}
 	.thinks img{
 		width: 145px;
 	}
 	.think img{
-		width: 145px;
+		width: 211px;
+	    position: relative;
+	    top: -113px;
+	    left: -30px;
+	}
+	.pay>img{
+		top: -54px;
 	}
 	.background .back {
-    	width: 550px;
-    	margin: 1px 0 0 13%;
+	    width: 398px;
+	    margin: 0px 0 0 -14%;
 	}
+	#ewmsrc {
+	    width: 364px;
+	}
+	.page8 .title img {
+	    margin: 12px 0% 0 44%;
+	}
+	.gift figure img ,.gift-two figure img{
+	    width: 89px;
+    	padding: 5px;
+	}
+	.gift{
+	    right: 51px;
+	}
+	.gift-two{
+		left: 0;
+	}
+
 }

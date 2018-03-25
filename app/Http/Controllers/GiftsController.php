@@ -88,6 +88,7 @@ class GiftsController extends Controller
      */
     public function give_gift(Request $request) {
         $give_all = $request->all();
+        // dd($give_all);
         $give_name = trim($give_all['name']);
         $gifts = $give_all['gifts'];
         if($give_name == '')
@@ -108,11 +109,13 @@ class GiftsController extends Controller
             }
         }
 
-        $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total];
+        $out_trade_no = get_rand_string();
+        $arr = ['give_name'=>$give_name,'gifts_id'=>$gifts_id,'total'=>$total,'out_trade_no'=>$out_trade_no];
         $insert_id = orders::insert_gift_order($arr);
         
         if($insert_id>0) {
             $wait_order = orders::find_order($insert_id);
+
             return responseToJson(0,'/alipay/pay',$wait_order);
         }else {
             return responseToJson(1,'暂时无法支付');
@@ -188,12 +191,10 @@ class GiftsController extends Controller
     public function alipay(Request $request) {
         $id = $request->id;
         $totle = $request->totle;
+        $out_trade_no = $request->out_trade_no;
         $alipay = new AlipayController();
-        $alipay->pay($id,0.01);
-
-        orders::update_order_state($id);
-
-
+        $alipay->pay($id,0.01,$out_trade_no);
+        // orders::update_order_state($id);
     }
 
 
@@ -215,6 +216,28 @@ class GiftsController extends Controller
            $order->gifts_id = $this->get_gift_namimg($order->gifts_id);
        }
        return responseToJson(0,'',$orders_info);
+    }
+
+
+    /**
+     * 通过指定的支付宝订单号获得礼物名称和图片名称
+     */
+    public function get_trade_order_info(Request $request) {
+       
+        $all = $request->all();
+        if(array_key_exists('trade',$all) && $all['trade'] != '') {
+            $find_order = orders::find_order_trade($all['trade']);
+            foreach($find_order as $key => $value) {
+                if($key == 'gifts_id' && (strpos($value,',') > 0)) {
+                    $order->$key = explode(',',$value);
+                }
+                else continue;
+                
+            }
+            $find_order->gifts_id = $this->get_gift_namimg($find_order->gifts_id);
+            return responseToJson(0,'',$find_order);
+        }
+
     }
 
 }

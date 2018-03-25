@@ -1,6 +1,9 @@
 <?php
 namespace App\Http\Controllers; 
 
+
+// use DB;
+use App\Models\orders;
 use Illuminate\Http\Request;  
 use App\Http\Controllers\Controller;  
 
@@ -39,16 +42,16 @@ class AlipayController extends Controller
     private $id = 0;
 
     //payRequestBuilder
-    public function pay($id = 0,$totle = 0) {
-
+    public function pay($id = 0,$totle = 0,$out_trade_no = null) {
+        // dd($out_trade_no);
         $this->id = $id;
-
-        $out_trade_no = get_rand_string();
+        // if($out_trade_no !=null)
+        // $out_trade_no = get_rand_string();
         $subject = 'marchsoft捐赠';
         // $total_amount = $totle;
         $total_amount = '0.01';
         $timeout_express="1m";
-        
+       
         $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
        
         $payRequestBuilder->setSubject($subject);
@@ -56,8 +59,9 @@ class AlipayController extends Controller
         
         $payRequestBuilder->setTotalAmount($total_amount);
         $payRequestBuilder->setTimeExpress($timeout_express);
+
         $payRequestBuilder->setPassbackParams($id);
-        
+         
         require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../libs/alipayDemo/config.php';
         $payResponse = new AlipayTradeService($config);
         
@@ -73,9 +77,12 @@ class AlipayController extends Controller
         if(!$result) {   //这里的对公钥的判定不正确，故加！
             //这里添加更多签名检验
             if($alipaySevice->appid == $arr['app_id']) {
-                dd($this->id);
-                return redirect('/front/celebration');
-                
+                // dd($this->id);
+                if($arr['out_trade_no'] != null) {
+                    orders::update_order_state_trade($arr['out_trade_no']);
+
+                    return redirect('/front/celebration/'.$arr['out_trade_no']);
+                }
                 echo '验证成功';
             }else {
                 echo '验证失败';
