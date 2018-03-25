@@ -337,7 +337,7 @@ figure figcaption{
 	.close1{
 	    height: 25px;
     	width: 336px;
-    	margin: 43px 0 0 0;
+    	margin: 43px 0 0 -30px;
 	}
 	#closebt img {
     	width: 25px;
@@ -389,6 +389,9 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:360px) and (max-width:375px){
+	.banner{
+	    top: 45px;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}
@@ -657,7 +660,26 @@ figure figcaption{
 		width: 145px;
 	}
 	.background .back {
-    	width: 550px;
-    	margin: 1px 0 0 13%;
+	    width: 398px;
+	    margin: 0px 0 0 -14%;
 	}
+	#ewmsrc {
+	    width: 364px;
+	}
+	.page8 .title img {
+	    margin: 12px 0% 0 44%;
+	}
+	.gift figure img {
+	    width: 110px;
+	}
+	.gift{
+	    right: 51px;
+	}
+	.gift-two figure img {
+	    width: 110px;
+	}
+	.gift-two{
+		left: 0;
+	}
+
 }

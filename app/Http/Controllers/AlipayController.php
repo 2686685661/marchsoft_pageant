@@ -51,7 +51,7 @@ class AlipayController extends Controller
         // $total_amount = $totle;
         $total_amount = '0.01';
         $timeout_express="1m";
-        
+       
         $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
        
         $payRequestBuilder->setSubject($subject);
@@ -59,8 +59,9 @@ class AlipayController extends Controller
         
         $payRequestBuilder->setTotalAmount($total_amount);
         $payRequestBuilder->setTimeExpress($timeout_express);
+
         $payRequestBuilder->setPassbackParams($id);
-        
+         
         require dirname ( __FILE__ ).DIRECTORY_SEPARATOR.'./../../libs/alipayDemo/config.php';
         $payResponse = new AlipayTradeService($config);
         
@@ -82,9 +83,6 @@ class AlipayController extends Controller
 
                     return redirect('/front/celebration/'.$arr['out_trade_no']);
                 }
-               
-                
-                
                 echo '验证成功';
             }else {
                 echo '验证失败';

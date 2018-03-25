@@ -13,9 +13,12 @@
  * SDK工作目录
  * 存放日志，AOP缓存数据
  */
+// dd(defined("AOP_SDK_WORK_DIR"));
+// dd(__DIR__);
 if (!defined("AOP_SDK_WORK_DIR"))
 {
 	define("AOP_SDK_WORK_DIR", "/tmp/");
+	// define("AOP_SDK_WORK_DIR", "D:\wamp64\www\marchsoft_pageant\app\libs\alipayDemo\\tmp_li\\");
 }
 /**
  * 是否处于开发模式
