@@ -18,15 +18,22 @@ window.onload=function(){
 	var sent_bless = document.getElementById("sent_bless");
 	var gift_button = document.getElementById("gift_button");
 	var pay = document.getElementById("pay");//支付按钮
+	var student = document.getElementById("student");
+	var return1 = document.getElementById("return");
+	var share = document.getElementById("share");
 	var heig =  document.body.clientHeight;
-	// document.getElementById("gif").style.height = heig+"px";
 	document.getElementById("pay_select").style.height = heig+"px";
+	student.style.height = heig + "px";
 
-	$("#goon").click(function(){
-		$("#gif").css("display","none");
-		show();
-		document.getElementById("blessing").style.display="block";
-	});
+
+	//感谢页面返回按钮
+	return1.onclick = function(){
+		student.style.display = "none";
+	}
+	//分享链接按钮
+	share.onclick = function(){
+		student.style.display = "none";
+	}
 
 	//音乐
 	var setConfig = {
@@ -425,8 +432,8 @@ window.onload=function(){
 			_token:token
 		})
 		.then(function (response) {
-			alert(response.data.result);
-
+			// alert(response.data.result);
+			student.style.display = "block";
 		})
 		.catch(function (error) {
 			alert(error);

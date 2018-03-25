@@ -10,45 +10,28 @@
 		display: flex;
 		height: 33%;
 	}
-	.Lballoon{
-		width: 29px;
-		height: 36px;
+	.Lballoon{		
 		transform:rotate(-30deg);
-		position: relative;
-		left: 53px;
-		top: 12px;
+		position: relative;		
 		background: url(../img/Lballoon.png) no-repeat center center;
 		background-size: 100% 100%;
 	}
 	.frame1{
-		display: flex;
-		width: 171px;
-		height: 141px;
+		display: flex;		
 		position: relative;
-		left: 8px; 
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		justify-content:center;
 		align-items:center;
 	}
 	.frame1 img{
-		opacity: 0;
-		width: 95%;
-		position: relative;
-		top: 7px;
-		transform:rotate(-201deg);
+		opacity: 0;		
 	}
-	.text1{
-		width: 142px;
-		height: 79px;
-		position: relative;
-		top: 56px;
-		left: 5px;
-	}
+	.text1{		
+		position: relative;	
+	}	
 	.text1 img{
-		/*opacity: 0;*/
 		width: 100%;
-		height: 100%;
 	}
 	.page1-center{
 		display: flex;
@@ -56,88 +39,64 @@
 	}
 	.text3{
 		width: 142px;
-		height: 105px;
 	}
 	.text3 img{
-		/*opacity: 0;*/
 		width: 100%;
-		height: 100%;
 		position: relative;
-		top: 16px;
 	}
 	.stars{
-		width: 25px;
 		position: relative;
-		left: 109px;
-		bottom: 10px;
 	}
 	.stars img{
 		width: 100%;
-		height: 100%;
 	}
 	.frame2{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 158px;
-		height: 140px;
 		position: relative;
-		left: 13px;
-		bottom: 29px;
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(25deg);
 	}
 	.frame2 img{
-		opacity: 0;
-		width: 100%;
-		position: relative;
-		top: 7px;
+		opacity: 0;		
 	}
 	.page1-lower{
 		display: flex;
 		height: 33%;
 	}
 	.balloon{
-		width: 40px;
-		height: 52px;	
+		/*width: 40px;*/
 		background: url(../img/balloon.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(7deg);
 		position: relative;
-		left: 121px;
-		bottom: 7px;
+		/*left: 121px;*/
+		/*bottom: 7px;*/
 	}
 	.baby{
-		width: 176px;
-		height: 205px;	
+		/*width: 176px;*/
 		background: url(../img/baby.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(2deg);
 		position: relative;
-		bottom: 66px;
+		/*bottom: 66px;*/
 	}
 	.cloud{
-		width: 43px;
-		height: 22px;
 		position: relative;
 		/*top: 47px;
-		left: 21px;*/
+    	left: 21px;*/
 	}
 	.cloud img{
 		width: 100%;
-		height: 100%;
 	}
 	.Map{
-		width: 75px;
-		height: 66px;
-		position: relative;
-		top: 75px;
-		left: 43px;
+		/*width: 75px;*/
+		position: relative;		
 	}
 	.Map img{
 		width: 100%;
-		height: 100%;
 	}
 
 
@@ -158,52 +117,47 @@
 	.Bird{
 		/*width: 101px;*/
 		position: relative;
-		top: 64px;
-		left: 20px;
+		/*top: 64px;*/
+		/*left: 20px;*/
 	}
 	.Bird img{
 		width: 100%;
-		/*height: 100%;*/
 	}
 	.text4{
-		/*width: 214px;*/
-		/*height: 128px;*/
 		position: relative;
-		left: 22px;
-		top: -2px;
+		/*left: 22px;*/
+		/*top: -2px;*/
 	}
 	.text4 img{
 		width: 100%;
-		/*height: 100%;*/
 	}
 	.text5{
-		width: 107px;
-		height: 148px;
+		/*width: 107px;*/
+		/*height: 148px;*/
 		position: relative;
-		left: 16px;
-		bottom: 13px;
+		/*left: 16px;*/
+		/*bottom: 13px;*/
 	}
 	.text5 img{
 		width: 100%;
-		/*height: 100%;*/
 	}
 	.cloud2{
-		width: 41px;
-		height: 21px;
+		/*width: 41px;*/
+		/*height: 21px;*/
 		position: relative;
 		left: 134px;
-		bottom: 53px;
+		/*bottom: 53px;*/
 	}
 	.cloud2 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.aircraft{
-		width: 186px;
-		height: 78px;
+		/*width: 186px;*/
+		/*height: 78px;*/
 		position: relative;
-		left: 2px; 
-		top: 8px;
+		/*left: 2px; */
+		/*top: 8px;*/
 	}
 	.aircraft img{
 		width: 100%;
@@ -213,43 +167,43 @@
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 182px;
-		height: 155px;
+		/*width: 182px;*/
+		/*height: 155px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(25deg);
 		position: relative;
-		left: 26px;
-		bottom: 38px;
+		/*left: 26px;*/
+		/*bottom: 38px;*/
 	}
 	.frame3 img{
 		opacity: 0;
-		transform:rotate(-24deg);
-		width: 100%;
-		position: relative;
-		top: 16px;
-		right: 5px;
+		/*transform:rotate(-24deg);*/
+		/*width: 100%;*/
+		/*position: relative;*/
+		/*top: 16px;*/
+		/*right: 5px;*/
 
 	}
 	.frame4{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 150px;
-		height: 142px;
+		/*width: 150px;*/
+		/*height: 142px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(-9deg);
 		position: relative;
-		left: 12px;
-		bottom: 23px;
+		/*left: 12px;*/
+		/*bottom: 23px;*/
 	}
 	.glasses{
-		width: 56px;
-		height: 19px;
+		/*width: 56px;*/
+		/*height: 19px;*/
 		position: relative;
-		left: 104px;
-		bottom: 16px;
+		/*left: 104px;*/
+		/*bottom: 16px;*/
 	}
 	.glasses img{
 		width: 100%;
@@ -260,12 +214,12 @@
 		width: 500px;
 		/*height: 600px;*/
 		position: relative;
-		left: 50px;
-		top: 20px;
+		/*left: 50px;*/
+		/*top: 20px;*/
 	}
 	.three img{
 		opacity: 0;
-		width: 100%;
+		/*width: 100%;*/
 		/*height: 100%;*/
 	}
 
@@ -286,101 +240,101 @@
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 164px;
-		height: 141px;
+		/*width: 164px;*/
+		/*height: 141px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 9px;
-		top: 10px;
+		/*left: 9px;*/
+		/*top: 10px;*/
 	}
 	.frame5 img{
 		opacity: 0;
-		width: 80%;
-		position: relative;
-		top: 7px;
+		/*width: 80%;*/
+		/*position: relative;*/
+		/*top: 7px;*/
 	}
 	.frame6{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 174px;
-		height: 160px;
+		/*width: 174px;*/
+		/*height: 160px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(21deg);
 		position: relative;
-		bottom: 26px;
+		/*bottom: 26px;*/
 	}
 	.frame6 img{
 		opacity: 0;
-		width: 97%;
+		/*width: 97%;
 		transform:rotate(-20deg);
 		position: relative;
 		top: 7px;
-		right: 2px;
+		right: 2px;*/
 	}
 	.Bird2{
-		width: 48px;
-		height: 34px;
+		/*width: 48px;*/
+		/*height: 34px;*/
 		position: relative;
-		top: 21px;
-		left: 36px;
+		/*top: 21px;*/
+		/*left: 36px;*/
 	}
 	.Bird2 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.cloud3{
-		width: 53px;
-		height: 27px;
+		/*width: 53px;*/
+		/*height: 27px;*/
 		position: relative;
-		top: 26px;
+		/*top: 26px;*/
 	}
 	.cloud3 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.Bird3{
-		width: 120px;
+		/*width: 120px;*/
 		/*height: 80px;*/
 		position: relative;
-		top: 40px;
-		left: 390px;
+		/*top: 40px;*/
+		/*left: 390px;*/
 	}
 	.Bird3 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text6{
 		width: 157px;
-		height: 94px;
+		/*height: 94px;*/
 		position: relative;
-		bottom: 38px;
+		/*bottom: 38px;*/
 		/*right: 73px;*/
 	}
 	.text6 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text7{
-		height: 151px;
+		/*height: 151px;*/
 		position: relative;
-		left: 6px;
-		top: 16px;
+		/*left: 6px;*/
+		/*top: 16px;*/
 	}
 	.text7 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.balloon3{
-		width: 35px;
-		height: 43px;	
+		/*width: 35px;*/
+		/*height: 43px;	*/
 		background: url(../img/Lballoon.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 110px;
-		bottom: 10px;
+		/*left: 110px;*/
+		/*bottom: 10px;*/
 	}
 
 	.eight{
@@ -388,33 +342,27 @@
 	}
 	.eight img{
 		opacity: 0;
-		width: 100%;
-		height: 100%;
+		/*width: 100%;*/
+		/*height: 100%;*/
 		position: relative;
 		/*right: 120px;*/
-		bottom: 41px;
+		/*bottom: 41px;*/
 	}
 	.cloud4{
-		width: 44px;
-		height: 22px;
+		/*width: 44px;*/
+		/*height: 22px;*/
 		position: relative;
-		top: 20px;
-		left: 146px;
+		/*top: 20px;*/
+		/*left: 146px;*/
 	}
 	.cloud4 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text8{
 		width: 149px;
-		height: 116px;
-		position: relative;
-		/*top: 54px;
-		right: 84px;*/
-		/*width: 154px;
-	    position: relative;
-	    top: 73px;
-	    right: 84px;*/
+		/*height: 116px;*/
+		position: relative;		
 	}
 	.text8 img{
 		width: 100%;
@@ -427,7 +375,7 @@
 	}
 	.Stars2 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 
 
@@ -448,95 +396,95 @@
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 176px;
-		height: 159px;
+		/*width: 176px;*/
+		/*height: 159px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(22deg);
 		position: relative;
-		left: 6px;
-		bottom: 3px;
+		/*left: 6px;*/
+		/*bottom: 3px;*/
 	}
 	.frame7 img{
 		opacity: 0;
-		width: 95%;
+		/*width: 95%;
 		transform:rotate(-25deg);
 		position: relative;
-		top: 9px;	
+		top: 9px;*/	
 	}
 	.frame8{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 153px;
-		height: 135px;
+		/*width: 153px;*/
+		/*height: 135px;*/
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 9px;
-		top: 11px;
+		/*left: 9px;*/
+		/*top: 11px;*/
 	}
 	.frame8 img{
 		opacity: 0;
-		transform:rotate(-11deg);
+		/*transform:rotate(-11deg);
 		width: 83%;
 		position: relative;
-		top: 6px;
+		top: 6px;*/
 	}
 	.Bicycle{
-		width: 77px;
-		height: 48px;
+		/*width: 77px;*/
+		/*height: 48px;*/
 		position: relative;
-		top: 26px;
-		left: 24px;
+		/*top: 26px;*/
+		/*left: 24px;*/
 	}
 	.Bicycle img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.Bird4{
 		width: 37px;
-		height: 26px;
+		/*height: 26px;*/
 		position: relative;
-		top: 15px;
-		left: 111px;
+		/*top: 15px;*/
+		/*left: 111px;*/
 	}
 	.Bird4 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text9{
-		width: 136px;
-		height: 90px;
+		/*width: 136px;*/
+		/*height: 90px;*/
 		position: relative;
 		/*left: 50px;*/
-		top: 36px;
+		/*top: 36px;*/
 	}
 	.text9 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.tra{
-		width: 52px;
-		height: 40px; 
+		/*width: 52px;*/
+		/*height: 40px; */
 		position: relative;
 		left: 2px;
 		top: -10px;
 	}
 	.tra img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.text10{
-		width: 149px;
-		height: 111px;
+		/*width: 149px;*/
+		/*height: 111px;*/
 		position: relative;
-		left: 15px;
-		bottom: 16px;
+		/*left: 15px;*/
+		/*bottom: 16px;*/
 	}
 	.text10 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.Stars3{
 		width: 27px;
@@ -546,18 +494,18 @@
 	}
 	.Stars3 img{
 		width: 100%;
-		height: 100%
+		/*height: 100%*/
 	}
 	.text11{
 		width: 152px;
-		height: 114px;
+		/*height: 114px;*/
 		position: relative;
 		left: 19px;
 		top: 18px;
 	}
 	.text11 img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.car{
 		width: 54px;
@@ -567,7 +515,7 @@
 	}
 	.car img{
 		width: 100%;
-		height: 100%;
+		/*height: 100%;*/
 	}
 	.ten{
 		height: 288px;
@@ -577,7 +525,7 @@
 	}
 	.ten img{
 		opacity: 0;
-		height: 100%;
+		/*height: 100%;*/
 	}
 
 
@@ -595,129 +543,109 @@
 		display: flex;
 		height: 33%;
 	}
+	/*.page5-upper,.page5-center,.page5-lower{
+		justify-content:center;
+	}*/
 	.frame9{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 157px;
-		height: 134px;
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 13px;
-		top: 18px;
 	}
 	.frame9 img{
 		opacity: 0;
-		width: 90%;
-		position: relative;
-		top: 16px;
 	}
 	.frame10{
 		display: flex;
 		justify-content:center;
 		align-items:center;
-		width: 176px;
-		height: 152px;
 		background: url(../img/Photo-frame.png) no-repeat center center;
 		background-size: 100% 100%;
 		transform:rotate(22deg);
 		position: relative;
-		left: 12px;
-		top: 39px;
 	}
 	.frame10 img{
 		opacity: 0;
-		width: 81%;
+		/*width: 81%;
 		transform:rotate(-10deg);
 		position: relative;
-		top: 7px;
+		top: 7px;*/
 	}
 	.Bird5{
 		width: 52px;
-		height: 34px;
 		position: relative;
 		top: 19px;
 		left: 42px;
 	}
 	.Bird5 img{
 		width: 100%;
-		height: 100%;
 	}
 	.camera{
 		width: 87px;
-		height: 60px;
 		position: relative;
 		top: 22px;
 		left: 40px;
 	}
 	.camera img{
 		width: 100%;
-		height: 100%;
 	}
 	.text12{
-		width: 147px;
-		height: 110px;
 		position: relative;
 		left: 17px;
 		top: 39px;
 	}
 	.text12 img{
 		width: 100%;
-		height: 100%;
 	}
 	.balloon4{
-		width: 47px;
-		height: 54px;	
+		/*width: 47px;*/
+		/*height: 54px;	*/
 		background: url(../img/balloon.png) no-repeat center center;
 		background-size: 100% 100%;
 		position: relative;
-		left: 142px;
-		/*top: 3px;*/
+	}
+	.balloon4 img{
+		width: 100%;
 	}
 	.text13{
 		width: 125px;
-		height: 68px;
+		/*height: 68px;*/
 		position: relative;
-		left: 14px;
-		top: 24px;
-		/*bottom: 71px;*/
 	}
 	.text13 img{
 		width: 100%;
-		/*height: 100%;*/
-	}
-	.Twelve{
-		width: 850px;
-		height: 750px;
-		position: relative;
-		right: 80px;
-		bottom: 45px;
-	}
-	.Twelve img{
-		opacity: 0;
-		/*width: 100%;*/
-		height: 100%;
 	}
 	.text14{
-		height: 102px;
-		position: relative;
-		top: 18px;
-		left: 77px;
+	    /*width: 136px;*/
+	    position: relative;
+	    /*top: 32px;*/
+	    /*left: -79px;*/
+	    /*top: 51px;*/
+	    /*left: -64px;*/
 	}
 	.text14 img{
-		/*width: 100%;*/
-		height: 100%;
+		width: 100%;
 	}
+	.Twelve{
+		width: 281px;
+		/*height: 750px;*/
+		/*position: relative;*/
+		/*right: 80px;*/
+		/*bottom: 45px;*/
+	}
+	.Twelve img{
+		opacity: 0;	
+	}	
+
 	.book{
 		width: 88px;
-		height: 76px;
 		position: relative;
 		left: 169px;
 	}
 	.book img{
 		width: 100%;
-		height: 100%;
 	}
 
 
@@ -732,42 +660,24 @@
 	.Lballoon{
 		width: 29px;
 		height: 36px;
-		transform:rotate(-30deg);
-		position: relative;
 		left: 53px;
 		top: 12px;
-		background: url(../img/Lballoon.png) no-repeat center center;
-		background-size: 100% 100%;
 	}
 	.frame1{
-		display: flex;
 		width: 171px;
 		height: 141px;
-		position: relative;
 		left: 8px; 
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		justify-content:center;
-		align-items:center;
 	}
 	.frame1 img{
 		opacity: 0;
-		width: 95%;
-		position: relative;
-		top: 7px;
-		transform:rotate(-201deg);
 	}
 	.text1{
 		width: 142px;
-		height: 79px;
-		position: relative;
 		top: 56px;
 		left: 5px;
 	}
 	.text1 img{
-		/*opacity: 0;*/
 		width: 100%;
-		height: 100%;
 	}
 	.page1-center{
 		display: flex;
@@ -775,43 +685,27 @@
 	}
 	.text3{
 		width: 142px;
-		height: 105px;
 	}
 	.text3 img{
-		/*opacity: 0;*/
 		width: 100%;
-		height: 100%;
-		position: relative;
 		top: 16px;
 	}
 	.stars{
 		width: 25px;
-		position: relative;
 		left: 109px;
 		bottom: 10px;
 	}
 	.stars img{
 		width: 100%;
-		height: 100%;
 	}
 	.frame2{
-		display: flex;
-		justify-content:center;
-		align-items:center;
-		width: 158px;
-		height: 140px;
-		position: relative;
+		width: 159px;
+    	height: 150px;
 		left: 13px;
 		bottom: 29px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(25deg);
 	}
 	.frame2 img{
-		opacity: 0;
-		width: 100%;
-		position: relative;
-		top: 7px;
+		opacity: 0;		
 	}
 	.page1-lower{
 		display: flex;
@@ -819,50 +713,23 @@
 	}
 	.balloon{
 		width: 40px;
-		height: 52px;	
-		background: url(../img/balloon.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(7deg);
-		position: relative;
+		height: 52px;			
 		left: 121px;
 		bottom: 7px;
 	}
 	.baby{
-		opacity: 0;
-		width: 176px;
-		height: 205px;	
-		background: url(../img/baby.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(2deg);
-		position: relative;
-		bottom: 66px;
-	}
-	.baby img{
-		opacity: 0;
+		width: 184px;
+		opacity: 0;		
 	}
 	.cloud{
-		width: 43px;
-		height: 22px;
-		position: relative;
+		width: 43px;		
 		top: 47px;
-		left: 21px;
-	}
-	.cloud img{
-		width: 100%;
-		height: 100%;
 	}
 	.Map{
-		width: 75px;
-		height: 66px;
-		position: relative;
-		top: 75px;
-		left: 43px;
+		width: 60px;
+	    top: 75px;
+	    left: 36px;
 	}
-	.Map img{
-		width: 100%;
-		height: 100%;
-	}
-
 
 
 	/*   page2   */
@@ -880,115 +747,69 @@
 	}
 	.Bird{
 		width: 101px;
-		height: 36px;
 		position: relative;
 		top: 64px;
 		left: 20px;
 	}
 	.Bird img{
 		width: 100%;
-		height: 100%;
 	}
 	.text4{
 		width: 214px;
-		height: 128px;
 		position: relative;
 		left: 22px;
 		top: -2px;
 	}
 	.text4 img{
 		width: 100%;
-		height: 100%;
 	}
 	.text5{
 		width: 107px;
-		height: 148px;
 		position: relative;
 		left: 16px;
 		bottom: 13px;
 	}
 	.text5 img{
 		width: 100%;
-		height: 100%;
 	}
 	.cloud2{
 		width: 41px;
-		height: 21px;
 		position: relative;
 		left: 134px;
 		bottom: 53px;
 	}
 	.cloud2 img{
 		width: 100%;
-		height: 100%;
 	}
 	.aircraft{
 		width: 186px;
-		height: 78px;
 		position: relative;
 		left: 2px; 
 		top: 8px;
 	}
 	.aircraft img{
 		width: 100%;
-		height: 100%;
 	}
-	.frame3{
-		display: flex;
-		justify-content:center;
-		align-items:center;
-		width: 182px;
-		height: 155px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(25deg);
-		position: relative;
+	.frame3{	
 		left: 26px;
 		bottom: 38px;
 	}
 	.frame3 img{
-		opacity: 0;
-		transform:rotate(-24deg);
-		width: 100%;
-		position: relative;
-		top: 16px;
-		right: 5px;
-
-	}
-	.frame4{
-		width: 150px;
-		height: 142px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(-9deg);
-		position: relative;
-		left: 12px;
-		bottom: 23px;
-	}
+		opacity: 0;	
+	}	
 	.glasses{
 		width: 56px;
-		height: 19px;
 		position: relative;
 		left: 128px;
     	bottom: 26px;
 	}
 	.glasses img{
 		width: 100%;
-		height: 100%;
-	}
-	.three{
-		opacity: 0;
-		width: 500px;
-		height: 600px;
-		position: relative;
-		left: 50px;
-		top: 20px;
 	}
 	.three img{
-		opacity: 0;
-		width: 100%;
-		height: 100%;
+		opacity: 0;		
 	}
+
 
 	/*   page3   */
 	.page3-upper{
@@ -1004,85 +825,55 @@
 		height: 33%;
 	}
 	.frame5{
-		display: flex;
-		justify-content:center;
-		align-items:center;
 		width: 164px;
-		height: 141px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		position: relative;
+		height: 141px;	
 		left: 9px;
 		top: 10px;
 	}
 	.frame5 img{
-		opacity: 0;
-		width: 80%;
-		position: relative;
-		top: 7px;
+		opacity: 0;	
 	}
-	.frame6{
-		display: flex;
-		justify-content:center;
-		align-items:center;
+	.frame6{		
 		width: 174px;
-		height: 160px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(21deg);
-		position: relative;
+		height: 160px;	
 		bottom: 26px;
 	}
 	.frame6 img{
 		opacity: 0;
-		width: 97%;
-		transform:rotate(-20deg);
-		position: relative;
-		top: 7px;
-		right: 2px;
 	}
 	.Bird2{
 		width: 48px;
-		height: 34px;
 		position: relative;
 		top: 21px;
 		left: 36px;
 	}
 	.Bird2 img{
 		width: 100%;
-		height: 100%;
 	}
 	.cloud3{
 		width: 53px;
-		height: 27px;
 		position: relative;
 		top: 26px;
 	}
 	.cloud3 img{
 		width: 100%;
-		height: 100%;
 	}
 	.Bird3{
 		width: 120px;
-		height: 80px;
 		position: relative;
 		top: 40px;
 		left: 390px;
 	}
 	.Bird3 img{
 		width: 100%;
-		height: 100%;
 	}
 	.text6{
 		width: 157px;
-		height: 94px;
 		position: relative;
 		bottom: 38px;
-		/*right: 73px;*/
 	}
 	.text6 img{
 		width: 100%;
-		height: 100%;
 	}
 	.text7{
 		height: 151px;
@@ -1096,39 +887,27 @@
 	}
 	.balloon3{
 		width: 35px;
-		height: 43px;	
-		background: url(../img/Lballoon.png) no-repeat center center;
-		background-size: 100% 100%;
-		position: relative;
+		height: 43px;		
 		left: 110px;
 		bottom: 10px;
 	}
-
 	.eight{
 		width: 361px;
 	}
 	.eight img{
-		opacity: 0;
-		width: 100%;
-		height: 100%;
-		position: relative;
-		/*right: 120px;*/
-		bottom: 41px;
+		opacity: 0;		
 	}
 	.cloud4{
 		width: 44px;
-		height: 22px;
 		position: relative;
 		top: 20px;
 		left: 146px;
 	}
 	.cloud4 img{
 		width: 100%;
-		height: 100%;
 	}
 	.text8{
 		width: 149px;
-		height: 116px;
 		position: relative;
 		top: 54px;
 		right: 203px;
@@ -1139,12 +918,11 @@
 	.Stars2{
 		width: 31px;
 	    position: relative;
-	    left: 26px;
-	    top: 17px;
+	    left: 35px;
+	    top: 30px;
 	}
 	.Stars2 img{
 		width: 100%;
-		height: 100%;
 	}
 
 
@@ -1163,98 +941,66 @@
 		height: 33%;
 	}
 	.frame7{
-		display: flex;
-		justify-content:center;
-		align-items:center;
 		width: 176px;
 		height: 159px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(22deg);
-		position: relative;
 		left: 6px;
 		bottom: 3px;
 	}
 	.frame7 img{
 		opacity: 0;
-		width: 95%;
-		transform:rotate(-25deg);
-		position: relative;
-		top: 9px;	
 	}
 	.frame8{
-		display: flex;
-		justify-content:center;
-		align-items:center;
 		width: 153px;
 		height: 135px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		position: relative;
 		left: 9px;
 		top: 11px;
 	}
 	.frame8 img{
 		opacity: 0;
-		transform:rotate(-11deg);
-		width: 83%;
-		position: relative;
-		top: 6px;
 	}
 	.Bicycle{
 		width: 77px;
-		height: 48px;
 		position: relative;
 		top: 26px;
 		left: 24px;
 	}
 	.Bicycle img{
 		width: 100%;
-		height: 100%;
 	}
 	.Bird4{
 		width: 37px;
-		height: 26px;
 		position: relative;
 		top: 15px;
 		left: 111px;
 	}
 	.Bird4 img{
 		width: 100%;
-		height: 100%;
 	}
 	.text9{
 		width: 136px;
-		height: 90px;
 		position: relative;
-		/*left: 50px;*/
 		top: 36px;
 	}
 	.text9 img{
 		width: 100%;
-		height: 100%;
 	}
 	.tra{
 		width: 52px;
-		height: 40px; 
 		position: relative;
 		left: 2px;
 		top: -10px;
 	}
 	.tra img{
 		width: 100%;
-		height: 100%;
 	}
 	.text10{
 		width: 149px;
-		height: 111px;
 		position: relative;
 		left: 15px;
 		bottom: 16px;
 	}
 	.text10 img{
 		width: 100%;
-		height: 100%;
 	}
 	.Stars3{
 		width: 27px;
@@ -1264,18 +1010,15 @@
 	}
 	.Stars3 img{
 		width: 100%;
-		height: 100%
 	}
 	.text11{
 		width: 152px;
-		height: 114px;
 		position: relative;
 		left: 19px;
 		top: 18px;
 	}
 	.text11 img{
 		width: 100%;
-		height: 100%;
 	}
 	.car{
 		width: 54px;
@@ -1285,7 +1028,6 @@
 	}
 	.car img{
 		width: 100%;
-		height: 100%;
 	}
 	.ten{
 		height: 288px;
@@ -1295,7 +1037,6 @@
 	}
 	.ten img{
 		opacity: 0;
-		height: 100%;
 	}
 
 
@@ -1314,128 +1055,73 @@
 		height: 33%;
 	}
 	.frame9{
-		display: flex;
-		justify-content:center;
-		align-items:center;
 		width: 157px;
 		height: 134px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
 		position: relative;
 		left: 13px;
 		top: 18px;
 	}
 	.frame9 img{
 		opacity: 0;
-		width: 90%;
-		position: relative;
-		top: 16px;
 	}
 	.frame10{
-		display: flex;
-		justify-content:center;
-		align-items:center;
 		width: 176px;
 		height: 152px;
-		background: url(../img/Photo-frame.png) no-repeat center center;
-		background-size: 100% 100%;
-		transform:rotate(22deg);
-		position: relative;
 		left: 12px;
 		top: 39px;
 	}
 	.frame10 img{
-		opacity: 0;
-		width: 81%;
-		transform:rotate(-10deg);
-		position: relative;
-		top: 7px;
+		opacity: 0;	
 	}
 	.Bird5{
 		width: 52px;
-		height: 34px;
 		position: relative;
 		top: 19px;
 		left: 42px;
 	}
 	.Bird5 img{
 		width: 100%;
-		height: 100%;
 	}
 	.camera{
 		width: 87px;
-		height: 60px;
 		position: relative;
 		top: 22px;
 		left: 40px;
 	}
 	.camera img{
 		width: 100%;
-		height: 100%;
 	}
 	.text12{
 		width: 147px;
-		height: 110px;
 		position: relative;
 		left: 17px;
 		top: 39px;
 	}
 	.text12 img{
 		width: 100%;
-		height: 100%;
 	}
 	.balloon4{
-		width: 32px;
-		height: 42px;	
-		background: url(../img/balloon.png) no-repeat center center;
-		background-size: 100% 100%;
-		position: relative;
-		left: 108px;
-		top: 3px;
-	}
-	.text13{
-		width: 125px;
-		height: 68px;
-		position: relative;
-		left: 14px;
-		top: 24px;
-		/*bottom: 71px;*/
-	}
+		width: 40px;
+	    height: 52px;
+	    left: 108px;
+	    top: 3px;
+	}	
 	.text13 img{
 		width: 100%;
-		/*height: 100%;*/
-	}
-	.Twelve{
-		width: 850px;
-		height: 750px;
-		position: relative;
-		right: 80px;
-		bottom: 45px;
 	}
 	.Twelve img{
-		opacity: 0;
-		/*width: 100%;*/
-		height: 100%;
+		opacity: 0;	
 	}
-	.text14{
-		height: 102px;
-		position: relative;
-		top: 18px;
-		left: 77px;
-	}
-	.text14 img{
-		/*width: 100%;*/
-		height: 100%;
+	.Twelve {
+	    width: 209px;		    
 	}
 	.book{
 		width: 88px;
-		height: 76px;
 		position: relative;
 		left: 169px;
 	}
 	.book img{
 		width: 100%;
-		height: 100%;
 	}
 }
 
@@ -1456,14 +1142,12 @@
 		}
 		.text1 {
 		    width: 153px;
-    		height: 82px;
 		    position: relative;
 		    top: 73px;
 		    left: 5px;
 		}
 		.text3 {
 		    width: 153px;
-    		height: 116px;
     		position: relative;
     		top: 22px;
 		}
@@ -1485,13 +1169,8 @@
 		}
 		.baby {
 			opacity: 0;
-		    width: 178px;
-		    height: 222px;
-		    bottom: 117px;
-		}
-		.baby img{
-			opacity: 0;
-		}
+		    width: 184px;
+		}	
 		
 
 		/*   page2   */
@@ -1583,7 +1262,6 @@
 		    height: 99px;		 
 		    left: 8px;
 		    top: 43px;
-
 		}
 		
 		.text7{
@@ -1616,7 +1294,9 @@
 		    height: 277px;	    
 		}
 		.cloud4 {		   
+		    width: 50px;
 		    top: 36px;
+		    left: 140px;
 		}
 		.text8 {		    
 		     top: 67px;
@@ -1677,50 +1357,37 @@
     		bottom: -19px;
 		}
 		.text11{
-		    width: 154pxt;
-		     position: relative;
+		    width: 154px;
+		    position: relative;
 		    left: 32px;
     		top: 35px;
 		}
-		.march10 {
-		    height: 293px;
-		    position: relative;
-		    top: 27px;
-		    /*right: -137px !important;*/
-		}
-		.march10 img{
-			position: relative;
-			/*right: 20px;*/
-		    /*right: -137px;*/
-		}
-
+		
 
 		/*   page5   */
 		.frame9 {
 		    width: 161px;
 		    height: 145px;	    
-		    left: 11px;
+		    left: 7px;
 		    top: 25px;
 		}
 		.text12 {
 		    width: 154px;
-		    height: 113px;
 		    position: relative;
-		    left: 33px;
-		    top: 43px;
+		    left: 10px;
+    		top: 31px;
 		}
 		.camera {	    
 		    left: 68px;
 		}
 		.balloon4 {
 		    width: 35px;
-		    height: 45px;		    
 		    left: 118px;
 		    top: -5px;
 		}
 		.text13 {
 		    width: 125px;
-		    left: 24px;
+		    left: 10px;
 		    top: 47px;
 		}
 		.frame10 {		    
@@ -1730,25 +1397,9 @@
 		    left: 34px;
 		    top: 58px;
 		}
-		.march12 {
-		    width: 78px;
-		    height: 255px;
-		    position: relative;
-		    top: 38px;
-		    left: -162px;
+		.Bird5 {	    
+		    left: 16px;
 		}
-		.text14 {
-		    height: 121px;
-		    position: relative;
-		    top: 39px;
-    		left: 105px;
-		}
-		/*.book {
-		    width: 75px;
-		    height: 70px;
-		    left: 200px;
-		    top: 26px;
-		}*/
 		
 }
 
@@ -1767,14 +1418,12 @@
 	}
 	.text1 {
 	    width: 159px;
-	    height: 90px;
 	    position: relative;
 	    top: 75px;
 	    left: 17px;
 	}
 	.text3{
 	    width: 160px;
-	    height: 120px;
 	}
 	.frame2 {	   
 	    width: 194px;
@@ -1792,8 +1441,6 @@
 	.baby {
 		opacity: 0;
 	    width: 194px;
-	    height: 237px;	    
-	    bottom: 67px;
 	}
 	.balloon {
 	    width: 45px;
@@ -1803,14 +1450,12 @@
 	}
 	.cloud {
 	    width: 48px;
-	    height: 25px;
 	    position: relative;
 	    top: 81px;
 	    left: 38px;
 	}
 	.Map {
 	    width: 80px;
-	    height: 68px;
 	    position: relative;
 	    top: 113px;
 	    left: 69px;
@@ -1822,17 +1467,23 @@
 	    top: 64px;
 	}
 	.text4{
-		height: 147px;
+		left: 18px;
+	    width: 182px;
+	    position: relative;
+	}
+	.aircraft {
+	    width: 109px;
+	    position: relative;
+	    left: -3px;
+	    top: 13px;
 	}
 	.text5 {
 	    width: 122px;
-	    height: 167px;
 	    left: 16px;
 	    bottom: 9px;
 	}
 	.cloud2 {
 	    width: 50px;
-	    height: 27px;
 	    left: 145px;
 	    bottom: 57px;
 	}
@@ -1866,27 +1517,27 @@
 	}
 	.Bird2 {
 	    width: 66px;
-	    height: 45px;	    
+	    /*height: 45px;	    */
 	}
 	.cloud3 {
 	    width: 55px;
-	    height: 30px;
+	    /*height: 30px;*/
 	}
 	.text6 {
 	    width: 178px;
-	    height: 99px;
+	    /*height: 99px;*/
 	    /*top: -18px;*/
 	    left: 5px;
 	    /*right: 73px;*/
 	}
 	.text7 {
 	    width: 172px;
-	    height: 170px;
+	    /*height: 170px;*/
 	    top: 38px;
 	}
 	.balloon3 {
 	    width: 37px;
-	    height: 45px;
+	    /*height: 45px;*/
 	    left: 108px;
 	    top: 8px;
 	}
@@ -1895,9 +1546,9 @@
 	    height: 196px;
 	    bottom: 5px;
 	}
-	.march8 {
+	.eight {
 	    width: 263px;
-	    height: 294px;
+	    /*height: 294px;*/
 	    bottom: 45px;
 	}
 	.cloud4 {
@@ -1908,7 +1559,7 @@
 	.text8 {
 	    width: 154px;
 	    top: 73px;
-	    right: 171px;
+	    right: 73px;
 	}
 	.Stars2 {
 	    width: 32px;
@@ -1991,17 +1642,17 @@
 
 		/*page5*/
 		.balloon4 {
-		    width: 43px;
-		    height: 54px;
+		    width: 45px;
+    		height: 57px;
 		    left: 133px;
 		    top: 7px;
 		}
 		.book {
-		    width: 79px;
+		    width: 62px;
 		    height: 71px;
 		    position: relative;
-		    left: 193px;
-		    top: 37px;
+		    left: 9px;
+		    top: 51px;
 		}
 }
 
