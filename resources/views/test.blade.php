@@ -315,6 +315,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>
 			
+	</div>
 		<div id="cover"></div><!-- 遮盖层 -->
 		<div class="pay_select" id="pay_select">
 			<div class="select_box">
@@ -386,7 +387,6 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				<button id="go">赠送礼物</button>
 			</div>
 		</div>
-	</div>
 	
 	<!-- 感谢页面 -->
 	<div class="student" id="student">
@@ -636,7 +636,7 @@ var pagess = 1;
 		},
 		afterMove: function(index){
 			if (index == 1) {
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			if(index==2){
 				 large_one.className = "frameone";
@@ -645,7 +645,7 @@ var pagess = 1;
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
 				 // layload(2);
-				 document.getElementById("box").style.zIndex = 1;
+				 document.getElementById("box").style.zIndex = 0;
 			}
 
 			else if(index==3){
@@ -656,7 +656,7 @@ var pagess = 1;
 				Slide_two.className = "marchthree";
 				// layload(3);				
 				pagetwomove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==4){
 				large_five.className = "framefive";
@@ -667,7 +667,7 @@ var pagess = 1;
 				Slide_three.className = "marcheight";
 				// layload(4);				
 				pagethreemove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==5){
 				large_seven.className = "frameseven";
@@ -678,7 +678,7 @@ var pagess = 1;
 				Slide_four.className = "marchten";
 				// layload(5);				
 				pagefourmove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==6){
 				large_nine.className = "framenine";
@@ -689,13 +689,13 @@ var pagess = 1;
 				Slide_five.className = "marchTwelve";
 				// layload(6);				
 				pagefivemove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			if (index == 7) {	
 				list_ele.className = "list";
 				pays_ele.className = "pay";
 				thinks_ele.className = "think";
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			};
 			if (index == 8) {
 				document.getElementById("box").style.zIndex = -1;

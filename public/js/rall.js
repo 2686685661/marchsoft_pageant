@@ -17,6 +17,7 @@ window.onload=function(){
 	var birth_glass = document.getElementById("birth_glass");
 	var sent_bless = document.getElementById("sent_bless");
 	var gift_button = document.getElementById("gift_button");
+	var gift_button2 = document.getElementById("gift_button2");
 	var pay = document.getElementById("pay");//支付按钮
 	var student = document.getElementById("student");
 	var return1 = document.getElementById("return");
@@ -24,7 +25,6 @@ window.onload=function(){
 	var heig =  document.body.clientHeight;
 	document.getElementById("pay_select").style.height = heig+"px";
 	student.style.height = heig + "px";
-
 
 	//感谢页面返回按钮
 	return1.onclick = function(){
@@ -72,6 +72,7 @@ window.onload=function(){
 	function Area(){
 		var gift_Arr = new Array();
 		gift_list = document.getElementsByTagName("figure");
+
 		var beng2 = 0;
 		for (var i = 0; i < gift_list.length; i++) {
 			if (gift_list[i].className=='sative') {
@@ -107,10 +108,7 @@ window.onload=function(){
 					birth = birth + res[i].name + "(" + res[i].price + ")  "
 				};
 			};
-			birth_glass.style.display="block";
-			document.getElementById("blessing").style.display="none";
-			document.getElementById("input3").focus();
-			show();
+			ssh();
 			$("#birth_list").val(birth);
 		})
 		.catch(function (error) {
@@ -118,6 +116,12 @@ window.onload=function(){
 		});
 	}
 
+	function ssh(){
+		birth_glass.style.display="block";
+		document.getElementById("blessing").style.display="none";
+		document.getElementById("input3").focus();
+		show();
+	}
 
 	var count = 0;
 	comment2();
@@ -240,8 +244,8 @@ window.onload=function(){
 
 	//存放留言
 	sent_bless.onclick = function(){
-		var name = $("#input2").val();
-		var message = $("#input_bless").val();
+		var name = $("#input2").val().trim();
+		var message = $("#input_bless").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
@@ -250,7 +254,7 @@ window.onload=function(){
 			});
 			return;
 		};
-		if (name.length>=10) {
+		if (name.length>10) {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
 				form = layui.form;
@@ -266,7 +270,7 @@ window.onload=function(){
 			});
 			return;
 		};
-		if (message.length>=10) {
+		if (message.length>10) {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
 				form = layui.form;
@@ -347,10 +351,7 @@ window.onload=function(){
 			        gifts_jilv.push(t);
 				};
 			};
-			birth_glass.style.display="block";
-			document.getElementById("blessing").style.display="none";
-			document.getElementById("input3").focus();
-			show();
+			ssh();
 			$("#birth_list").val(birth);
 		})
 		.catch(function (error) {
@@ -445,8 +446,7 @@ window.onload=function(){
 			alert(error);
 		});        
 	}
-	function callpay(result)
-	{
+	function callpay(result){
 		if (typeof WeixinJSBridge == "undefined"){
 			if( document.addEventListener ){
 				document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
