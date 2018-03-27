@@ -46,6 +46,10 @@ Route::group(['prefix' => 'admin'],function() {
         Route::post("/getorder",'GiftsController@get_orders_info');
 
         Route::post('/getoneorder','GiftsController@get_trade_order_info');
+
+        Route::post('/findThree','GiftsController@get_three_top_order');
+
+        Route::post('/findPersonal','GiftsController@get_personal_totle_rank');
     });
 });
 
