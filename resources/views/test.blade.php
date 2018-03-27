@@ -82,19 +82,19 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page1-upper">
 				<div class="img-one">
 					<div class="Lballoon"></div>
-					<div class="frame1" id="enlarge_one"><img src="" guoyu-src="{{ asset('img/birth1.png') }}"
+					<div class="frame1" id="enlarge_one"><img src="{{ asset('img/birth1.png') }}"
                     ></div>
 				</div>
 				<div>
-					<div class="text1" id="shake_one"><img src="" guoyu-src="{{ asset('img/text1.png') }}"></div>
+					<div class="text1" id="shake_one"><img src="{{ asset('img/text1.png') }}"></div>
 					<!-- <div><img src="img/text2.png"></div> -->
 				</div>
 			</div>
 			<div class="page1-center">
-				<div class="text3" id="shake_three"><img src="" guoyu-src="{{ asset('img/text3.png') }}"></div>
+				<div class="text3" id="shake_three"><img src="{{ asset('img/text3.png') }}"></div>
 				<div>
-					<div class="stars"><img src="" guoyu-src="{{ asset('img/Stars.png') }}"></div>
-					<div class="frame2" id="enlarge_two"><img src="" guoyu-src="{{ asset('img/birth2.png') }}"></div>
+					<div class="stars"><img src="{{ asset('img/Stars.png') }}"></div>
+					<div class="frame2" id="enlarge_two"><img src="{{ asset('img/birth2.png') }}"></div>
 				</div>
 			</div>
 			<div class="page1-lower">
@@ -104,113 +104,113 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 				<div>
 					<div>
-						<div class="cloud"><img src="" guoyu-src="{{ asset('img/yun.png') }}"></div>
-						<div class="Map"><img src="" guoyu-src="{{ asset('img/Map.png') }}"></div>
+						<div class="cloud"><img src="{{ asset('img/yun.png') }}"></div>
+						<div class="Map"><img src="{{ asset('img/Map.png') }}"></div>
 					</div>
 				</div>
 			</div>						
 		</div>
 		<div class="page page3">
 			<div class="page1-upper">
-				<div class="Bird"><img src="" guoyu-src="{{ asset('img/Bird.png') }}"></div>
-				<div class="text4" id="shake_four"><img src="" guoyu-src="{{ asset('img/text4.png') }}"></div>
-				<div class="aircraft"><img src="" guoyu-src="{{ asset('img/aircraft.png') }}"></div>
+				<div class="Bird"><img src="{{ asset('img/Bird.png') }}"></div>
+				<div class="text4" id="shake_four"><img src="{{ asset('img/text4.png') }}"></div>
+				<div class="aircraft"><img src="{{ asset('img/aircraft.png') }}"></div>
 			</div>
 			<div class="page2-center">
-				<div class="text5" id="shake_five"><img src="" guoyu-src="{{ asset('img/text5.png') }}"></div>
+				<div class="text5" id="shake_five"><img src="{{ asset('img/text5.png') }}"></div>
 				<div>
-					<div class="cloud2"><img src="" guoyu-src="{{ asset('img/yun.png') }}"></div>
-					<div class="frame3" id="enlarge_three"><img src="" guoyu-src="{{ asset('img/th-p1.png') }}"></div>
+					<div class="cloud2"><img src="{{ asset('img/yun.png') }}"></div>
+					<div class="frame3" id="enlarge_three"><img src="{{ asset('img/th-p1.png') }}"></div>
 				</div>
 			</div>
 			<div class="page2-lower">
 				<div>
-					<div class="frame4" id="enlarge_four"><img src="" guoyu-src="{{ asset('img/th_p2.png') }}"></div>
-					<div class="glasses"><img src="" guoyu-src="{{ asset('img/glasses.png') }}"></div>
+					<div class="frame4" id="enlarge_four"><img src="{{ asset('img/th_p2.png') }}"></div>
+					<div class="glasses"><img src="{{ asset('img/glasses.png') }}"></div>
 				</div>
-				<div class="three" id="slide_two"><img src="" guoyu-src="{{ asset('img/three.png') }}"></div>
+				<div class="three" id="slide_two"><img src="{{ asset('img/three.png') }}"></div>
 			</div>
 		</div>
 		<div class="page page4">
 			<div class="page3-upper">
 				<div>
-					<div class="Bird2"><img src="" guoyu-src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame5" id="enlarge_five"><img src="" guoyu-src="{{ asset('img/eight1.png') }}"></div>
+					<div class="Bird2"><img src="{{ asset('img/Bird.png') }}"></div>
+					<div class="frame5" id="enlarge_five"><img src="{{ asset('img/eight1.png') }}"></div>
 				</div>
 				<div>
-					<div class="cloud3"><img src="" guoyu-src="{{ asset('img/yun.png') }}"></div>
-					<div class="Bird3"><img src="" guoyu-src="{{ asset('img/Bird.png') }}"></div>
-					<div class="text6" id="shake_six"><img src="" guoyu-src="{{ asset('img/text6.png') }}"></div>
+					<div class="cloud3"><img src="{{ asset('img/yun.png') }}"></div>
+					<div class="Bird3"><img src="{{ asset('img/Bird.png') }}"></div>
+					<div class="text6" id="shake_six"><img src="{{ asset('img/text6.png') }}"></div>
 				</div>
 			</div>
 			<div class="page3-center">
-				<div class="text7" id="shake_seven"><img src="" guoyu-src="{{ asset('img/text7.png') }}"></div>
+				<div class="text7" id="shake_seven"><img src="{{ asset('img/text7.png') }}"></div>
 				<div>
 					<div class="balloon3"></div>
-					<div class="frame6" id="enlarge_six"><img src="" guoyu-src="{{ asset('img/eight2.png') }}"></div>
+					<div class="frame6" id="enlarge_six"><img src="{{ asset('img/eight2.png') }}"></div>
 				</div>
 			</div>
 			<div class="page3-lower">
 				<div>
-					<div class="cloud4"><img src="" guoyu-src="{{ asset('img/yun.png') }}"></div>
-					<div class="eight" id="slide_three"><img src="" guoyu-src="{{ asset('img/eight.png') }}"></div>
+					<div class="cloud4"><img src="{{ asset('img/yun.png') }}"></div>
+					<div class="eight" id="slide_three"><img src="{{ asset('img/eight.png') }}"></div>
 				</div>
 				<div>
-					<div class="text8" id="shake_eight"><img src="" guoyu-src="{{ asset('img/text8.png') }}"></div>
-					<div class="Stars2"><img src="" guoyu-src="{{ asset('img/Stars.png') }}"></div>
+					<div class="text8" id="shake_eight"><img src="{{ asset('img/text8.png') }}"></div>
+					<div class="Stars2"><img src="{{ asset('img/Stars.png') }}"></div>
 				</div>
 			</div>
 		</div>
 		<div class="page page5">
 			<div class="page4-upper">
 				<div>
-					<div class="Bicycle"><img src="" guoyu-src="{{ asset('img/Bicycle.png') }}"></div>
-					<div class="text9" id="shake_nine"><img src="" guoyu-src="{{ asset('img/text9.png') }}"></div>
+					<div class="Bicycle"><img src="{{ asset('img/Bicycle.png') }}"></div>
+					<div class="text9" id="shake_nine"><img src="{{ asset('img/text9.png') }}"></div>
 				</div>
 				<div>
-					<div class="Bird4"><img src="" guoyu-src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame7" id="enlarge_seven"><img src="" guoyu-src="{{ asset('img/ten1.png') }}"></div>
+					<div class="Bird4"><img src="{{ asset('img/Bird.png') }}"></div>
+					<div class="frame7" id="enlarge_seven"><img src="{{ asset('img/ten1.png') }}"></div>
 				</div>
 			</div>
 			<div class="page4-center">
-				<div class="frame8" id="enlarge_eight"><img src="" guoyu-src="{{ asset('img/ten2.png') }}"></div>
+				<div class="frame8" id="enlarge_eight"><img src="{{ asset('img/ten2.png') }}"></div>
 				<div>
-					<div class="tra"><img src="" guoyu-src="{{ asset('img/TRA.png') }}"></div>
-					<div class="text10" id="shake_ten"><img src="" guoyu-src="{{ asset('img/text10.png') }}"></div>
-					<div class="Stars3"><img src="" guoyu-src="{{ asset('img/Stars.png') }}"></div>
+					<div class="tra"><img src="{{ asset('img/TRA.png') }}"></div>
+					<div class="text10" id="shake_ten"><img src="{{ asset('img/text10.png') }}"></div>
+					<div class="Stars3"><img src="{{ asset('img/Stars.png') }}"></div>
 				</div>
 			</div>
 			<div class="page4-lower">
 				<div>
-					<div class="text11" id="shake_eleven"><img src="" guoyu-src="{{ asset('img/text11.png') }}"></div>
+					<div class="text11" id="shake_eleven"><img src="{{ asset('img/text11.png') }}"></div>
 					<div class="car"><img src="{{ asset('img/car.png') }}"></div>
 				</div>
-				<div class="ten" id="slide_four"><img src="" guoyu-src="{{ asset('img/ten.png') }}"></div>
+				<div class="ten" id="slide_four"><img src="{{ asset('img/ten.png') }}"></div>
 			</div>
 		</div>
 		<div class="page page6">
 			<div class="page5-upper">
 				<div>
-					<div class="Bird5"><img src="" guoyu-src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame9" id="enlarge_nine"><img src="" guoyu-src="{{ asset('img/twelve1.png') }}"></div>
+					<div class="Bird5"><img src="{{ asset('img/Bird.png') }}"></div>
+					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.png') }}"></div>
 				</div>
 				<div>
-					<div class="camera"><img src="" guoyu-src="{{ asset('img/camera.png') }}"></div>
-					<div class="text12" id="shake_twelve"><img src="" guoyu-src="{{ asset('img/text12.png') }}"></div>
+					<div class="camera"><img src="{{ asset('img/camera.png') }}"></div>
+					<div class="text12" id="shake_twelve"><img src="{{ asset('img/text12.png') }}"></div>
 				</div>
 			</div>
 			<div class="page5-center">
 				<div>
 					<div class="balloon4"></div>
-					<div class="text13" id="shake_thirteen"><img src="" guoyu-src="{{ asset('img/text13.png') }}"></div>
+					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
 				</div>
-				<div class="frame10" id="enlarge_ten"><img src="" guoyu-src="{{ asset('img/twelvwe2.png') }}"></div>
+				<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.png') }}"></div>
 			</div>
 			<div class="page5-lower">
-				<div class="Twelve" id="slide_five"><img src="" guoyu-src="{{ asset('img/twelve.png') }}"></div>
+				<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
 				<div>
-					<div class="text14" id="shake_fourteen"><img src="" guoyu-src="{{ asset('img/text14.png') }}"></div>
-					<div class="book"><img src="" guoyu-src="{{ asset('img/book.png') }}"></div>	
+					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
+					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
 				</div>
 			</div>
 		</div>
@@ -315,6 +315,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>
 			
+	</div>
 		<div id="cover"></div><!-- 遮盖层 -->
 		<div class="pay_select" id="pay_select">
 			<div class="select_box">
@@ -386,7 +387,6 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				<button id="go">赠送礼物</button>
 			</div>
 		</div>
-	</div>
 	
 	<!-- 感谢页面 -->
 	<div class="student" id="student">
@@ -517,27 +517,27 @@ var pagess = 1;
     }, false);
     //手指离开屏幕
     //图片懒加载以下
-    var current_page = 2;
-    var seeHeight = document.documentElement.clientHeight;
-    var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-    var temp = seeHeight + scrollTop;
-    function layload(current_page){
-    	var aImg = $('.page'+current_page+" img"); 
-    	var len = aImg.length;
-    	var n = 0;//存储图片加载到的位置，避免每次都从第一张图片开始遍历	
-    	// console.log('onscroll',len);
+    // var current_page = 2;
+    // var seeHeight = document.documentElement.clientHeight;
+    // var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    // var temp = seeHeight + scrollTop;
+    // function layload(current_page){
+    // 	var aImg = $('.page'+current_page+" img"); 
+    // 	var len = aImg.length;
+    // 	var n = 0;//存储图片加载到的位置，避免每次都从第一张图片开始遍历	
+    // 	// console.log('onscroll',len);
         
-     //    console.log(seeHeight,"   ",scrollTop);
-        for (var i = n; i < len; i++) {
-            if (aImg[i].offsetTop < temp) {
-                if (aImg[i].getAttribute('src') == '') {
-                    aImg[i].src = aImg[i].getAttribute('guoyu-src');
-                }
-                // n = i + 1;
-                // console.log('n = ' + n);
-            }
-        }
-    }
+    //  //    console.log(seeHeight,"   ",scrollTop);
+    //     for (var i = n; i < len; i++) {
+    //         if (aImg[i].offsetTop < temp) {
+    //             if (aImg[i].getAttribute('src') == '') {
+    //                 aImg[i].src = aImg[i].getAttribute('guoyu-src');
+    //             }
+    //             // n = i + 1;
+    //             // console.log('n = ' + n);
+    //         }
+    //     }
+    // }
     //图片懒加载以上
     document.addEventListener("touchend", function(e) {
         var endx, endy;
@@ -636,7 +636,7 @@ var pagess = 1;
 		},
 		afterMove: function(index){
 			if (index == 1) {
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			if(index==2){
 				 large_one.className = "frameone";
@@ -644,8 +644,8 @@ var pagess = 1;
 				 Sha_one.className = "textone";
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
-				 layload(2);
-				 document.getElementById("box").style.zIndex = 1;
+				 // layload(2);
+				 document.getElementById("box").style.zIndex = 0;
 			}
 
 			else if(index==3){
@@ -654,9 +654,9 @@ var pagess = 1;
 				Sha_three.className = "textfour";
 				Sha_four.className = "textfive";
 				Slide_two.className = "marchthree";
-				layload(3);				
+				// layload(3);				
 				pagetwomove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==4){
 				large_five.className = "framefive";
@@ -665,9 +665,9 @@ var pagess = 1;
 				Sha_six.className = "textseven";
 				Sha_seven.className = "texteight";				
 				Slide_three.className = "marcheight";
-				layload(4);				
+				// layload(4);				
 				pagethreemove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==5){
 				large_seven.className = "frameseven";
@@ -676,9 +676,9 @@ var pagess = 1;
 				Sha_nine.className = "textten";
 				Sha_ten.className = "texteleven";
 				Slide_four.className = "marchten";
-				layload(5);				
+				// layload(5);				
 				pagefourmove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==6){
 				large_nine.className = "framenine";
@@ -687,15 +687,15 @@ var pagess = 1;
 				Sha_twelve.className = "textthirteen";
 				Sha_thirteen.className = "textfourteen";
 				Slide_five.className = "marchTwelve";
-				layload(6);				
+				// layload(6);				
 				pagefivemove();
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			}
 			if (index == 7) {	
 				list_ele.className = "list";
 				pays_ele.className = "pay";
 				thinks_ele.className = "think";
-				document.getElementById("box").style.zIndex = 1;
+				document.getElementById("box").style.zIndex = 0;
 			};
 			if (index == 8) {
 				document.getElementById("box").style.zIndex = -1;

@@ -17,6 +17,7 @@ window.onload=function(){
 	var birth_glass = document.getElementById("birth_glass");
 	var sent_bless = document.getElementById("sent_bless");
 	var gift_button = document.getElementById("gift_button");
+	var gift_button2 = document.getElementById("gift_button2");
 	var pay = document.getElementById("pay");//支付按钮
 	var student = document.getElementById("student");
 	var return1 = document.getElementById("return");
@@ -25,14 +26,17 @@ window.onload=function(){
 	document.getElementById("pay_select").style.height = heig+"px";
 	student.style.height = heig + "px";
 
-
 	//感谢页面返回按钮
 	return1.onclick = function(){
+		document.getElementById("box").style.zIndex = 1;
 		student.style.display = "none";
+		disapear();
 	}
 	//分享链接按钮
 	share.onclick = function(){
 		student.style.display = "none";
+		document.getElementById("box").style.zIndex = 1;
+		disapear();
 	}
 
 	//音乐
@@ -65,20 +69,22 @@ window.onload=function(){
 	gift_button2.onclick = function(){
 		Area();
 	}
+	var gift_Arr = new Array();
 	function Area(){
-		var gift_Arr = new Array();
 		gift_list = document.getElementsByTagName("figure");
+		var gift_Arr0 = new Array();
 		var beng2 = 0;
 		for (var i = 0; i < gift_list.length; i++) {
 			if (gift_list[i].className=='sative') {
-				if (i<6) {
-					gift_Arr[i] = gift_list[i].getAttribute("value");
-				}else{
-					gift_Arr[i] = gift_list[i].getAttribute("value")+2;
-				};
+				// if (i<6) {
+					gift_Arr0[i] = gift_list[i].getAttribute("value");
+				// }
+				// else{
+				// 	gift_Arr0[i] = gift_list[i].getAttribute("value");
+				// };
 				beng2=1;
 			}else{
-				gift_Arr[i] = -1;
+				gift_Arr0[i] = -1;
 			}
 		};
 		if (beng2==0) {
@@ -93,20 +99,31 @@ window.onload=function(){
 		axios.post('/admin/gift/getgift')
 		.then(function (response) {
 			var res = response.data.result;
-			for (var i=0; i <8; i++) {
-				if (res[i].id==gift_Arr[i]) {
-					birth = birth + res[i].name + "(" + res[i].price + ")  "
+			gifts_jilv = [];
+			gift_Arr = [];
+			for (var i=0; i <6; i++) {
+				if (res[i].id==gift_Arr0[i]) {
+					birth = birth + res[i].name + "(" + res[i].price + ")  ";
+					var t = {};
+					t.name = " 送了 "+res[i].name;
+			        t.imgs = res[i].image;
+			        t.bless = "生日快乐";
+			        gift_Arr.push(t);
 				};
 			};
-			for (var i=8; i <16; i++) {
-				if (res[i].id==gift_Arr[i]) {
-					birth = birth + res[i].name + "(" + res[i].price + ")  "
+			for (var i=6; i <12; i++) {
+				var p = i+2;
+				if (res[p].id==gift_Arr0[i]) {
+					birth = birth + res[p].name + "(" + res[p].price + ")  ";
+					var t = {};
+					t.name = " 送了 "+res[p].name;
+			        t.imgs = res[p].image;
+			        t.bless = "生日快乐";
+			        gift_Arr.push(t);
 				};
 			};
-			birth_glass.style.display="block";
-			document.getElementById("blessing").style.display="none";
-			document.getElementById("input3").focus();
-			show();
+			console.log(gift_Arr);
+			ssh();
 			$("#birth_list").val(birth);
 		})
 		.catch(function (error) {
@@ -114,6 +131,12 @@ window.onload=function(){
 		});
 	}
 
+	function ssh(){
+		birth_glass.style.display="block";
+		document.getElementById("blessing").style.display="none";
+		document.getElementById("input3").focus();
+		show();
+	}
 
 	var count = 0;
 	comment2();
@@ -236,8 +259,8 @@ window.onload=function(){
 
 	//存放留言
 	sent_bless.onclick = function(){
-		var name = $("#input2").val();
-		var message = $("#input_bless").val();
+		var name = $("#input2").val().trim();
+		var message = $("#input_bless").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
@@ -246,7 +269,7 @@ window.onload=function(){
 			});
 			return;
 		};
-		if (name.length>=10) {
+		if (name.length>10) {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
 				form = layui.form;
@@ -262,7 +285,7 @@ window.onload=function(){
 			});
 			return;
 		};
-		if (message.length>=10) {
+		if (message.length>10) {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
 				form = layui.form;
@@ -330,9 +353,9 @@ window.onload=function(){
 		var birth="";
 		axios.post('/admin/gift/getgift')
 		.then(function (response) {
-			console.log(response);
 			var res = response.data.result;
 			gifts_jilv = [];
+			gift_Arr = [];
 			for (var i=0; i <res.length; i++) {
 				if (res[i].id==myArray[i]) {
 					birth = birth + res[i].name + "(" + res[i].price + ")  ";
@@ -343,10 +366,7 @@ window.onload=function(){
 			        gifts_jilv.push(t);
 				};
 			};
-			birth_glass.style.display="block";
-			document.getElementById("blessing").style.display="none";
-			document.getElementById("input3").focus();
-			show();
+			ssh();
 			$("#birth_list").val(birth);
 		})
 		.catch(function (error) {
@@ -359,16 +379,20 @@ window.onload=function(){
 	zfb.onclick = function(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
-		var gift_arr = [];
+		var list2 = gift_Arr;//礼物ID
+		var gift_arr2 = [];
 		for(var i=0;i<list.length;i++) {
 			if(list[i] == -1) continue;
-			gift_arr.push(list[i]);
+			gift_arr2.push(list[i]);
 		}
-		// console.log(gift_arr);
+		for(var i=0;i<list2.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr2.push(list[i]);
+		}
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		axios.post('/admin/gift/give', {
 			name: name,
-			gifts: gift_arr,
+			gifts: gift_arr2,
 			_token:token
 		})
 		.then(function (response) {
@@ -403,15 +427,22 @@ window.onload=function(){
 	function wxtest(){
 		var name = $("#input3").val();//赠送人姓名
 		var list = myArray;//礼物ID
-		var gift_arr = [];
+		var list2 = gift_Arr;//礼物ID
+		var gift_arr2 = [];
 		for(var i=0;i<list.length;i++) {
 			if(list[i] == -1) continue;
-			gift_arr.push(list[i]);
+			gift_arr2.push(list[i]);
 		}
+		for(var i=0;i<list2.length;i++) {
+			if(list[i] == -1) continue;
+			gift_arr2.push(list[i]);
+		}
+		console.log(gift_arr2);
+		console.log(gift_Arr);
 		var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 		axios.post('/wechat', {
 			name: name,
-			gifts: gift_arr,
+			gifts: gift_arr2,
 			_token:token
 		})
 		.then(function (response) {
@@ -433,14 +464,15 @@ window.onload=function(){
 		})
 		.then(function (response) {
 			// alert(response.data.result);
+			document.getElementById('pay_select').style.display = "none";
+			document.getElementById("box").style.zIndex = -1;
 			student.style.display = "block";
 		})
 		.catch(function (error) {
 			alert(error);
 		});        
 	}
-	function callpay(result)
-	{
+	function callpay(result){
 		if (typeof WeixinJSBridge == "undefined"){
 			if( document.addEventListener ){
 				document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
@@ -467,7 +499,7 @@ window.onload=function(){
 					updateOrder(result.payId);
 					for (var i = 0; i < gifts_jilv.length; i++) {
 						json[count+2+i].gift = gifts_jilv[i].name;
-						json[count+2+i].imgs = gifts_jilv[i].img;
+						json[count+2+i].imgs = gifts_jilv[i].imgs;
 						json[count+2+i].bless = gifts_jilv[i].bless;
 					};
 					
@@ -486,7 +518,7 @@ window.onload=function(){
 			});
 			return;
 		};
-		if (name.length>=10) {
+		if (name.length>10) {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
 				form = layui.form;
@@ -498,6 +530,10 @@ window.onload=function(){
 		document.getElementById('birth_glass').style.display = "none";
 		for (var i = 0; i < gifts_jilv.length; i++) {
 			gifts_jilv[i].name = name + gifts_jilv[i].name;
+		};
+		for (var i = 0; i < gift_Arr.length; i++) {
+			gift_Arr[i].name = name + gift_Arr[i].name;
+			gifts_jilv[i] = gift_Arr[i];
 		};
 		console.log(gifts_jilv);
 	}

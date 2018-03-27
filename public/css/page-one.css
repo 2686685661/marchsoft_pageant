@@ -342,8 +342,6 @@ figure figcaption{
 	}
 }
 
-
-
 /*//*/
 @media screen and (max-width:360px){ 
 	.animation-one .yan-one img{
@@ -430,8 +428,12 @@ figure figcaption{
 	.animation-three .qiu-two img{
 		width: 30px;
 	}
+
+	.animation-three .pao {
+	    margin: 0 0 0 45%;
+	}
 	.animation-three .pao img{
-		width: 130px;
+		width: 180px;
 	}
 	.lists img{
 		width: 320px;
@@ -512,6 +514,7 @@ figure figcaption{
 	    top: 87%;
     	left: 50%;
 	}
+
 }
 @media screen and (min-width:360px) and (max-width:375px){
 	.banner{
@@ -609,8 +612,11 @@ figure figcaption{
 	.animation-three .qiu-two img{
 		width: 30px;
 	}
+	.animation-three .pao {
+	    margin: -27px 0 0 47%;
+	}
 	.animation-three .pao img{
-		width: 140px;
+		width: 210px;
 	}
 	.lists img{
 		width: 375px;
@@ -742,6 +748,12 @@ figure figcaption{
 	.background .back{
 	    width: 352px;
     	margin: 0px 0 0 -13%;
+	}
+	.animation-three .pao img {
+	    width: 218px;
+	}
+	.animation-three .pao {
+	    margin: -16px 0 0 48%;
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){

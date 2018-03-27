@@ -1853,7 +1853,6 @@
 		}	
 		.textone {
 		    width: 181px;
-		    /*height: 107px;*/
 		    position: relative;
 		    top: 80px;
 		    left: 13px;
@@ -1865,7 +1864,6 @@
 		}
 		.text1 {
 		    width: 181px;
-		    /*height: 107px;*/
 		    position: relative;
 		    top: 80px;
 		    left: 13px;
@@ -2374,7 +2372,7 @@
 
 
 /*769-992ipad   动画前+动画后*/
-@media screen and (min-width:768px) and (max-width:992px){
+@media screen and (min-width:768px) and (max-width:1928px){
 	 /*页面居中*/
 		.page1-upper,.page1-center,.page1-lower,.page2-upper,.page2-center,.page2-lower,.page3-upper,.page3-center,.page3-lower,.page4-upper,.page4-center,.page4-lower,.page5-upper,.page5-center,.page5-lower{
 			justify-content: center;
