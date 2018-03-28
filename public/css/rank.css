@@ -1,0 +1,107 @@
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+
+    background-color: transparent;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    }
+
+    .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    }
+    .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: #e4e5e6;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th {
+    text-align: center;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    }
+    .weui-btn {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14px;
+    padding-right: 14px;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    line-height: 2.55555556;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    }
+    .weui-btn_primary {
+    background-color: #eab242;
+    }
+    #donation-button-container {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    }
+    .more {
+    margin-bottom: 50px;
+    }
+    #style {
+    width: 100%;
+    height: 39px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    }
+    #style b {
+    line-height: 39px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    /*color: #000;*/
+    }
+    .active {
+    color: #E6A531;
+    border-bottom: 3px solid #E6A531;
+    }
+    #style b:nth-of-type(1){
+    margin: 0;
+    }
+    .more,.no_more,.all {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #666;
+    text-align: center;
+    }
+    .more,.all {
+    cursor: pointer;
+    }
+    .all_tr {
+    display: none;
+    }
+    .no_more {
+    visibility: hidden;
+    }
+    #donation-button-container a {
+    margin: 0 auto;
+    }
+    #donation-button-container {
+    padding: 15px 0;
+    }
+    .table tr td:nth-of-type(1),.table tr td:nth-of-type(2){
+    min-width: 80px;
+    }

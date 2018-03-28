@@ -66,9 +66,9 @@ window.onload=function(){
 	gift_button.onclick = function(){
 		Area();
 	}
-	gift_button2.onclick = function(){
-		Area();
-	}
+	// gift_button2.onclick = function(){
+	// 	Area();
+	// }
 	var gift_Arr = new Array();
 	function Area(){
 		gift_list = document.getElementsByTagName("figure");
@@ -498,11 +498,16 @@ window.onload=function(){
 				if(res.err_msg == "get_brand_wcpay_request:ok" ) {
 					updateOrder(result.payId);
 					for (var i = 0; i < gifts_jilv.length; i++) {
-						json[count+2+i].gift = gifts_jilv[i].name;
-						json[count+2+i].imgs = gifts_jilv[i].imgs;
-						json[count+2+i].bless = gifts_jilv[i].bless;
+						if (json.length>=count+4+i) {
+							json[count+4+i].gift = gifts_jilv[i].name;
+							json[count+4+i].imgs = gifts_jilv[i].imgs;
+							json[count+4+i].bless = gifts_jilv[i].bless;
+						}else{
+							json[0+i].gift = gifts_jilv[i].name;
+							json[0+i].imgs = gifts_jilv[i].imgs;
+							json[0+i].bless = gifts_jilv[i].bless;
+						};
 					};
-					
 				}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
 			}
 		); 

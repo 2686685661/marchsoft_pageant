@@ -75,5 +75,42 @@ class orders extends Model
         return $orders_info;
     }
 
+    public static function find_top_three_order() {
+        $sum_totle_handle = orders::find_totle_rank_handle();
 
+        $find_orders = $sum_totle_handle->take(3)->get()->map(function($order,$index) {
+
+            $order->rank = $index +1;
+            return $order;
+        });
+        // $find_orders = DB::table('orders')->where('status',1)->select('name',DB::raw('sum(totle) as sumtotal'))->groupBy('name')->orderBy('sumtotal','desc')->take(3)->get();
+        return $find_orders;
+
+    }
+
+    private static function find_totle_rank_handle() {
+        $find_handle = DB::table('orders')->where('status',1)->select('name',DB::raw('sum(totle) as sumtotal'))->groupBy('name')->orderBy('sumtotal','desc');
+        return $find_handle;
+    }
+
+    public static function find_personal_sumtotle($val,$type = 0) {
+        $name = null;
+        $sum_totle_rank = null;
+        if($type == 0) {  //当支付宝支付时
+            $name = orders::find_order_trade($val)->name;
+        }else if($type == 1) $name = $val;
+        $sum_totle_rank = orders::find_totle_rank_handle()->get();
+       
+        $personal_rank = null;
+        for($i = 1; $i <= count($sum_totle_rank); $i++) {
+            if($name == $sum_totle_rank[$i]->name) {
+                $sum_totle_rank[$i]->rank = $i;
+                $personal_rank = $sum_totle_rank[$i];
+                break;
+            }
+        }
+       
+
+        return $personal_rank;
+    }
 }

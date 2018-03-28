@@ -240,4 +240,37 @@ class GiftsController extends Controller
 
     }
 
+
+    /**
+     * 获取送礼金额排名前三的记录
+     */
+    public function get_three_top_order() {
+
+        $find_three = orders::find_top_three_order();
+        // dd($find_three);
+        return count($find_three) > 0 ? responseToJson(0,'',$find_three) : responseToJson(1,'数据库查询失败');
+        
+    }
+
+
+    /**
+     * 获取自己送礼金额排名的记录
+     */
+    public function get_personal_totle_rank(Request $request) {
+        $trade_arr = $request->all();
+        $find_personal = null;
+
+        // dd($trade_arr);
+
+        if(array_key_exists('trade',$trade_arr) && $trade_arr['trade'] != '') {
+            $find_personal = orders::find_personal_sumtotle($trade_arr['trade']);
+        }else if(array_key_exists('name',$trade_arr) && $trade_arr['name'] != '') {
+            $find_personal = orders::find_personal_sumtotle($trade_arr['trade'],1);
+        }
+
+        // dd($find_personal);
+
+        return $find_personal != null ? responseToJson(0,'',$find_personal) : responseToJson(1,'数据库查询失败');
+    }
+
 }

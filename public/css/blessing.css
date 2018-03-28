@@ -592,6 +592,7 @@ body,div,p{
 .button{
 	display: flex;
 	justify-content:center;
+	display: none;
 }
 #graduate{
 	color: red;
