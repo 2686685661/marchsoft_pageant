@@ -217,6 +217,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div class="page page7" >
 			<div class="lists" id="list_div">
 				<img src="{{ asset('img/list.png') }}" alt="列表">
+				<div class="mores" id="mores">
+					<p><a href="http://juankuan.marchsoft.cn/home/Person/Ranking ">更多</a></p>
+				</div>
 			</div>
 			<div class="pays" id="pays_div">
 				<img src="{{ asset('img/pay.png') }}" alt="气泡" id="ClickMe">
@@ -254,22 +257,24 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="title">
 				<img src="{{ asset('img/title.png') }}" alt="标题">
 			</div>
-			<div class="banner-two b04" id="b04">
-				<ul>
-					<li class="slider-item">
-						<div class="code-img" style="width:300px;">
-		    				<div class="background" id="ewmsrc">
-								<img src="{{ asset('img/back.png') }}" alt="" class="back">
-								<div class="gift" id="gift">
-									
-								</div>
-								<div class="give">
-									<img src="{{ asset('img/bo.png') }}" alt="" id="gift_button">
-								</div>
+			<div class="banner-two" >
+				<div class="slider-item">
+					<div class="code-img" style="width:300px;">
+	    				<div class="background" id="ewmsrc">
+							<img src="{{ asset('img/back.png') }}" alt="" class="back">
+							<div class="gift" id="gift">
+								
 							</div>
-		    			</div>
-					</li>
-					<li class="slider-item">
+							<div class="give">
+								<img src="{{ asset('img/bo.png') }}" alt="" id="gift_button">
+							</div>
+						</div>
+						<div class="message_button top">
+							<p><img src="{{ asset('img/smile.png') }}" alt="">大家放心送，礼物都会转入三月软件工作室哦！</p>		
+						</div>
+	    			</div>
+				</div>
+					<!-- <li class="slider-item">
 						<div class="code-img">
 		    				<div class="background" id="ewmsrc">
 								<img src="{{ asset('img/back-2.png') }}" alt="" class="back">
@@ -281,8 +286,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 								</div>
 							</div>
 		    			</div>	
-					</li>
-				</ul>
+					</li> -->
 		 	</div>	
 		</div>
 	</div>
@@ -370,6 +374,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>
 		<div class="blessing" id="blessing"><!-- 赠送礼物 -->
+
 			<div class="blessing_message">
 				<div class="blessing_message_large" id="blessing_message_large1">
 					
@@ -589,6 +594,7 @@ var pagess = 1;
     var list_ele = document.getElementById("list_div");
     var pays_ele = document.getElementById("pays_div");
     var thinks_ele = document.getElementById("thinks_div");
+    var mores_ele = document.getElementById("mores");
     // page2-6动画监听部分
     //图片放大效果
     var large_one = document.getElementById("enlarge_one");
@@ -695,6 +701,7 @@ var pagess = 1;
 				list_ele.className = "list";
 				pays_ele.className = "pay";
 				thinks_ele.className = "think";
+				mores_ele.className = "more";
 				document.getElementById("box").style.zIndex = 0;
 			};
 			if (index == 8) {
