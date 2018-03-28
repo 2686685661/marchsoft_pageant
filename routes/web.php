@@ -60,6 +60,10 @@ Route::group(['prefix' => 'front'],function() {
 	Route::get("celebration/{trade?}",'WechatController@index');
 
     Route::get("hehe",'WechatController@index');
+
+    Route::get('rank/{type}/{parameter?}',function() {
+        return view('rank');
+    });
 });
 
 

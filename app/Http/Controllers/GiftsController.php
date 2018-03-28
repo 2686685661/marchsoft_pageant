@@ -260,6 +260,8 @@ class GiftsController extends Controller
         $trade_arr = $request->all();
         $find_personal = null;
 
+        // dd($trade_arr);
+
         if(array_key_exists('trade',$trade_arr) && $trade_arr['trade'] != '') {
             $find_personal = orders::find_personal_sumtotle($trade_arr['trade']);
         }else if(array_key_exists('name',$trade_arr) && $trade_arr['name'] != '') {
