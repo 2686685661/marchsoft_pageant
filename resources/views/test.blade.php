@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 <title>十二周年庆</title>
 <link rel="stylesheet" href="{{ asset('css/onepage-scroll.css') }}" />
 <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -11,8 +12,8 @@
 <link rel="stylesheet" href="{{ asset('css/page7.css') }}">
 <link rel="stylesheet" href="{{ asset('css/blessing.css') }}">
 <link rel="stylesheet" href="{{ asset('css/message.css') }}">
-<link rel="stylesheet" href="{{ asset('css/Second-pages.css') }}">
 <link rel="stylesheet" href="{{ asset('css/moveone.css') }}">
+<link rel="stylesheet" href="{{ asset('css/Second-pages.css') }}">
 <link rel="stylesheet" href="{{ asset('layui/css/layui.css') }}">
 <script type="text/javascript" src="{{ asset('js/jquery-1.9.0.min.js') }}"></script>
 <style>
@@ -81,17 +82,18 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div class="page page2">
 			<div class="page1-upper">
 				<div class="img-one">
-					<div class="Lballoon"></div>
+					<div class="Lballoon"><img src="{{ asset('img/Lballoon.png') }}"></div>
 					<div class="frame1" id="enlarge_one"><img src="{{ asset('img/birth1.png') }}"
                     ></div>
 				</div>
 				<div>
 					<div class="text1" id="shake_one"><img src="{{ asset('img/text1.png') }}"></div>
-					<!-- <div><img src="img/text2.png"></div> -->
 				</div>
 			</div>
 			<div class="page1-center">
-				<div class="text3" id="shake_three"><img src="{{ asset('img/text3.png') }}"></div>
+				<div>
+					<div class="text3" id="shake_three"><img src="{{ asset('img/text3.png') }}"></div>
+				</div>
 				<div>
 					<div class="stars"><img src="{{ asset('img/Stars.png') }}"></div>
 					<div class="frame2" id="enlarge_two"><img src="{{ asset('img/birth2.png') }}"></div>
@@ -100,7 +102,8 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page1-lower">
 				<div>
 					<div class="balloon"></div>
-					<div class="baby" id="slide_one"></div>
+					<div class="baby" id="slide_one"><img src="{{ asset('img/baby.png') }}">
+					</div>
 				</div>
 				<div>
 					<div>
@@ -117,7 +120,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				<div class="aircraft"><img src="{{ asset('img/aircraft.png') }}"></div>
 			</div>
 			<div class="page2-center">
-				<div class="text5" id="shake_five"><img src="{{ asset('img/text5.png') }}"></div>
+				<div>
+					<div class="text5" id="shake_five"><img src="{{ asset('img/text5.png') }}"></div>
+				</div>
 				<div>
 					<div class="cloud2"><img src="{{ asset('img/yun.png') }}"></div>
 					<div class="frame3" id="enlarge_three"><img src="{{ asset('img/th-p1.png') }}"></div>
@@ -128,7 +133,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="frame4" id="enlarge_four"><img src="{{ asset('img/th_p2.png') }}"></div>
 					<div class="glasses"><img src="{{ asset('img/glasses.png') }}"></div>
 				</div>
-				<div class="three" id="slide_two"><img src="{{ asset('img/three.png') }}"></div>
+				<div>
+					<div class="three" id="slide_two"><img src="{{ asset('img/three.png') }}"></div>
+				</div>
 			</div>
 		</div>
 		<div class="page page4">
@@ -144,7 +151,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 			</div>
 			<div class="page3-center">
-				<div class="text7" id="shake_seven"><img src="{{ asset('img/text7.png') }}"></div>
+				<div>
+					<div class="text7" id="shake_seven"><img src="{{ asset('img/text7.png') }}"></div>
+				</div>
 				<div>
 					<div class="balloon3"></div>
 					<div class="frame6" id="enlarge_six"><img src="{{ asset('img/eight2.png') }}"></div>
@@ -173,7 +182,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 			</div>
 			<div class="page4-center">
-				<div class="frame8" id="enlarge_eight"><img src="{{ asset('img/ten2.png') }}"></div>
+				<div>
+					<div class="frame8" id="enlarge_eight"><img src="{{ asset('img/ten2.png') }}"></div>
+				</div>
 				<div>
 					<div class="tra"><img src="{{ asset('img/TRA.png') }}"></div>
 					<div class="text10" id="shake_ten"><img src="{{ asset('img/text10.png') }}"></div>
@@ -185,7 +196,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="text11" id="shake_eleven"><img src="{{ asset('img/text11.png') }}"></div>
 					<div class="car"><img src="{{ asset('img/car.png') }}"></div>
 				</div>
-				<div class="ten" id="slide_four"><img src="{{ asset('img/ten.png') }}"></div>
+				<div>
+					<div class="ten" id="slide_four"><img src="{{ asset('img/ten.png') }}"></div>
+				</div>
 			</div>
 		</div>
 		<div class="page page6">
@@ -204,10 +217,14 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="balloon4"></div>
 					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
 				</div>
-				<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.png') }}"></div>
+				<div>
+					<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.png') }}"></div>
+				</div>
 			</div>
 			<div class="page5-lower">
-				<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
+				<div>
+					<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
+				</div>
 				<div>
 					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
 					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
@@ -217,9 +234,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div class="page page7" >
 			<div class="lists" id="list_div">
 				<img src="{{ asset('img/list.png') }}" alt="列表">
-				<div class="mores" id="mores">
-					<p><a href="http://juankuan.marchsoft.cn/home/Person/Ranking ">更多</a></p>
-				</div>
+			</div>
+			<div class="mores" id="mores">
+				<a href="http://juankuan.marchsoft.cn/home/Person/Ranking "><img src="{{ asset('img/mgive.png') }}" alt="更多"></a>
 			</div>
 			<div class="pays" id="pays_div">
 				<img src="{{ asset('img/pay.png') }}" alt="气泡" id="ClickMe">
@@ -650,6 +667,7 @@ var pagess = 1;
 				 Sha_one.className = "textone";
 				 Sha_two.className = "textthree";
 				 Slide_one.className = "marchbaby";
+				 pageonemove();
 				 // layload(2);
 				 document.getElementById("box").style.zIndex = 0;
 			}
