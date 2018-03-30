@@ -37,6 +37,7 @@ window.onload=function(){
 		student.style.display = "none";
 		document.getElementById("box").style.zIndex = 1;
 		disapear();
+		tiaoZhuan();
 	}
 
 	//音乐
@@ -219,13 +220,13 @@ window.onload=function(){
 	comment();
 	function comment(){
 		setTimeout(function(){
-    		$("#p1").text("王琦1：三月生日快乐");
+    		$("#p1").text("尤奇勤：生日快乐");
     	},0);
     	setTimeout(function(){
-    		$("#p2").text("王琦2：三月生日快乐");
+    		$("#p2").text("巩一杰：生日快乐");
     	},1000);
     	setTimeout(function(){
-    		$("#p3").text("王琦3：三月生日快乐");
+    		$("#p3").text("徐红：生日快乐");
     	},1000);
     	setTimeout(function(){
     		
@@ -514,7 +515,8 @@ window.onload=function(){
 	}
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
-		var name = $("#input3").val();
+
+		var name = $("#input3").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
@@ -629,7 +631,7 @@ window.onload=function(){
 				var giftArr = data.result; 
 				
 				for (var i = 0; i<giftArr.length/2; i++) {
-					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><p class="img-p"><img src="/'+ giftArr[i].image+'"></p><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
 					if (i<6) {
 						gift_large.append('<figure value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><figcaption>'+giftArr[i].name+'</figcaption><figcaption>¥'+giftArr[i].price +'</figcaption></figure>');
 					};
@@ -645,9 +647,8 @@ window.onload=function(){
 		})
 	}
 
+	/**支付宝同步回调时调用该匿名函数 */
 	(function() {
-
-
 		String.prototype.trim = function (char, type) {
 			if (char) {
 			  if (type == 'left') {
@@ -663,8 +664,10 @@ window.onload=function(){
 
 		var pathname = window.location.pathname;
 		pathname = pathname.trim("/");
-
 		patharr = pathname.split("/");
+
+		// var patharr = strHandle();
+
 		if(patharr.length % 2 != 0) {
 			var trade = patharr[patharr.length - 1];
 			var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -682,12 +685,53 @@ window.onload=function(){
 						j.bless = "生日快乐";
 						json.splice(5,0,j);
 					}
-					console.log(json);
-					
 				}
 			})
 		}
 	})();
+
 	
+	function tiaoZhuan() {
+		
+		var patharr = strHandle();
+		
+		// if(patharr.length % 2 != 0) { //支付宝支付
+		// 	window.location.href = '/front/rank/0/' + patharr[patharr.length - 1];
+		// }else if(patharr.length % 2 == 0) {   //微信支付
+		// 	var name = $("#input2").val().trim();
+		// 	if(name != '') {
+		// 		window.location.href = '/front/rank/1/' + name;
+		// 	}
+		// }
+
+		if(patharr.length % 2 == 0) {
+			var name = $("#input3").val().trim();
+			if(name != '') {
+				window.location.href = '/front/rank/1/' + name;
+			}
+		}
+	}
+	
+
+	function strHandle() {
+		String.prototype.trim = function (char, type) {
+			if (char) {
+			  if (type == 'left') {
+				return this.replace(new RegExp('^\\'+char+'+', 'g'), '');
+			  } else if (type == 'right') {
+				return this.replace(new RegExp('\\'+char+'+$', 'g'), '');
+			  }
+			  return this.replace(new RegExp('^\\'+char+'+|\\'+char+'+$', 'g'), '');
+			}
+			return this.replace(/^\s+|\s+$/g, '');
+		  };
+
+		var pathname = window.location.pathname;
+		pathname = pathname.trim("/");
+
+		patharr = pathname.split("/");
+
+		return patharr;
+	}
 }
 

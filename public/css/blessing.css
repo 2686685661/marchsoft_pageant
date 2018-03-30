@@ -492,6 +492,7 @@ body,div,p{
 	bottom: 0;
 	width: 100%;
 	opacity: 0.7;
+	cursor: pointer;
 	background-color: #000;
 }
 .blessing_input_box{
@@ -546,18 +547,30 @@ body,div,p{
 	width: 63%;
 }
 .blessing_message{
-	width: 200%;
+	width: 100%;
 	display: flex;
 	justify-content:center;
-	overflow: hidden;
 	margin: 7px 0;
+	margin: 0 auto;
 }
 .blessing_message_large{
-	display: flex;
-	flex-wrap:wrap;
-	justify-content:center;
+	width: 100%;
+	/*display: flex;*/
+	/*display: -webkit-flex;*/
+	/*flex-wrap:wrap;*/
+	/*-webkit-flex-wrap:wrap;*/
+	/*justify-content:center;*/
+	/*-webkit-justify-content: center;*/
+	overflow: hidden;
 	position: relative;
 	left: 0px;
+}
+.blessing_message_large div {
+	display: inline-block;
+}
+.img-p {
+	height: 45px;
+
 }
 .message_large_one{
 	width: 48px;
@@ -574,7 +587,7 @@ body,div,p{
 	border:1px red solid;
 	background-size:18px;
 }
-.message_large_one>img{
+.message_large_one .img-p>img{
 	width: 30px;
 }
 .message_large_one>p{
@@ -654,20 +667,29 @@ body,div,p{
 	.blessing_input>span {
 	    padding-left: 7px;
 	}
+	.blessing_message{
+		width: 98%;
+	}
 } 
 @media screen and (min-width:375px) and (max-width:410px){  
     .message_large_one{
 		margin: 5px;
 		padding: 10px 14px;
 	} 
+	.blessing_message{
+		width: 94%;
+	}
 }
-@media screen and (min-width:410px){  
+@media screen and (min-width:410px) and (max-width:767px){  
     .message_large_one{
 		margin: 9px;
 		padding: 10px 16px;
 	} 
 	.message_button>button{
 		padding: 0 26px 5px;
+	}
+	.blessing_message{
+		width: 97%;
 	}
 }
 @media screen and (min-width:768px) and (max-width:992px){
@@ -970,6 +992,9 @@ body,div,p{
 		width: 150px;
 		font-size: 21px;
 	}
+	.blessing{
+		padding-top: 16px;
+	}
 	.blessing, .blessing_glass{
 		padding-bottom: 23px;
 	}
@@ -1003,6 +1028,15 @@ body,div,p{
 	.area>button{
 		width: 51px;
     	height: 51px;
+	}
+	.message_large_one .img-p>img{
+		width: 61px;
+	}
+	.img-p{
+		height: 91px;
+	}
+	.blessing_message{
+		width: 85%;
 	}
 }
 

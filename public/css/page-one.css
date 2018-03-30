@@ -1,5 +1,5 @@
 .top p{
-    margin:-13px 0 0 75px !important;
+	margin: -15px 0 0 71px !important;
 }
 .animation-one .yan-one img{
 	margin: -100px 0 0 10%;
@@ -88,32 +88,45 @@
 	position: relative;
 }
 .mores{
-	position: absolute;
-    top: 82%;
-    right: 30%;
-    display: none;
+    position: absolute;
+    top: 60.5%;
+    right: 25%;
+    opacity: 0;
 }
 .more{
-	transition: 2s;
-	position: absolute;
-    top: 82%;
-    right: 30%;
-    display: block;
+	transition: 3s;
+    position: absolute;
+   	top: 60.5%;
+    right: 25%;
+    opacity: 1;
+}
+.mores img{
+	width: 200px !important; 
+	cursor: pointer;
+}
+.more img{
+    width: 200px !important; 
+    cursor: pointer;
 }
 .list img{
 	width: 400px;
 	margin: 20% auto 0 auto;
 	animation: qiu 1s 1 linear;
 }
+#closebt{
+	cursor: pointer;
+}
 .pays img{
 	margin: 0 0 0 10%;
 	width: 150px;
+	cursor: pointer;
 	opacity: 0;
 }
 .pay img{
 	position: relative;
 	cursor: pointer;
 	margin: 0 0 0 10%;
+	cursor: pointer;
 	width: 150px;
 	animation: pay 6s ease 0s infinite normal; /*名字 总时间 频率 开始时间 次数*/;
 }
@@ -344,9 +357,16 @@ figure figcaption{
 /*//*/
 @media screen and (max-width:320px){
 	.top p {
-	    margin: -47px 0 0 60px !important;
-	    font-size: 2px !important;
-	    z-index: 1000;
+	    margin: -34px 0 0 71px !important;
+	    z-index: 100;
+	}
+	.mores {
+        top: 62%;
+    	right: 20%;
+	}
+	.more {
+        top: 62%;
+    	right: 20%;
 	}
 	.background .back {
 	    width: 290px;
@@ -570,6 +590,17 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:375px) and (max-width:412px){  
+	.top p {
+	    margin: -17px 0 0 85px !important;
+	}
+	.mores{
+        top: 62%;
+    	right: 25%;
+	}
+	.more {
+        top: 62%;
+    	right: 25%;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}
@@ -647,8 +678,16 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:412px) and (max-width:736px){  
-	.top p{
-	    margin:-22px 0 0 98px !important;
+	.top p {
+	    margin: -22px 0 0 95px !important;
+	}
+	.mores{
+	    top: 64.5%;
+    	right: 26%;
+	}
+	.more{
+       	top: 64.5%;
+    	right: 26%;
 	}
 	#ewmsrc {
 	   margin: -30px 0 0 45px;
@@ -709,6 +748,14 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:414px) and (max-width:736px){
+	.mores{
+	    top: 63.5%;
+    	right: 28%;
+	}
+	.more {
+	    top: 63.5%;
+    	right: 28%;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 48px;
 	}
@@ -724,6 +771,17 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
+	.mores {
+       	top: 74.5%;
+		right: 38%;
+	}
+	.more {
+       	top: 74.5%;
+		right: 38%;
+	}
+	.more img {
+	    width: 282px;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}

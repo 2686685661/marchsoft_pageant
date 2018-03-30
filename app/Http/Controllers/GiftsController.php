@@ -227,9 +227,10 @@ class GiftsController extends Controller
         $all = $request->all();
         if(array_key_exists('trade',$all) && $all['trade'] != '') {
             $find_order = orders::find_order_trade($all['trade']);
+            
             foreach($find_order as $key => $value) {
                 if($key == 'gifts_id' && (strpos($value,',') > 0)) {
-                    $order->$key = explode(',',$value);
+                    $find_order->$key = explode(',',$value);
                 }
                 else continue;
                 
@@ -260,12 +261,10 @@ class GiftsController extends Controller
         $trade_arr = $request->all();
         $find_personal = null;
 
-        // dd($trade_arr);
-
         if(array_key_exists('trade',$trade_arr) && $trade_arr['trade'] != '') {
             $find_personal = orders::find_personal_sumtotle($trade_arr['trade']);
         }else if(array_key_exists('name',$trade_arr) && $trade_arr['name'] != '') {
-            $find_personal = orders::find_personal_sumtotle($trade_arr['trade'],1);
+            $find_personal = orders::find_personal_sumtotle($trade_arr['name'],1);
         }
 
         // dd($find_personal);

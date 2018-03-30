@@ -16,6 +16,7 @@ $config = array (
 		//同步跳转
 		'return_url' => "http://jk.mrwangqi.com/alipay/return",
 		//http://mitsein.com/alipay.trade.wap.pay-PHP-UTF-8/return_url.php
+		// jk.mrwangqi.com
 
 		//编码格式
 		'charset' => "UTF-8",
