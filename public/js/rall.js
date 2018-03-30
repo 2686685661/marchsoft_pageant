@@ -36,7 +36,7 @@ window.onload=function(){
 	share.onclick = function(){
 		student.style.display = "none";
 		document.getElementById("box").style.zIndex = 1;
-		// disapear();
+		disapear();
 		tiaoZhuan();
 	}
 

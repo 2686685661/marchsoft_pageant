@@ -617,6 +617,19 @@
 	.texteleven, .text11 {
 	    margin: 1.625rem 0 0 1.5rem;
 	}
+	.text13, .textthirteen {
+	    width: 10.5rem;
+	    margin: 6.2rem 0 0 0.8rem;
+	}
+	.framethree, .frame3 {
+	    margin: 12.375rem 0 0 0.8125rem;
+	}
+	.framesix, .frame6 {
+	    margin: 25px 0 0 0.5rem;
+	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 1rem;
+	}
 }
 
 /*360&&375 */
@@ -657,6 +670,10 @@
 	    margin: -0.6875rem 0 0 -1rem;
 	    /*position: relative;*/
 	}
+	.text13, .textthirteen {
+	    width: 10rem;
+	    margin: 5.2rem 0 0 0.625rem;
+	}
 	.textfourteen, .text14 {
 	    /*width: 10.0625rem;*/
 	    margin: 0.9375rem 0 0 1.625rem;
@@ -686,10 +703,19 @@
 	    transform: rotate(16deg);
 	}
 	.marchten {
-	    /*height: 21.375rem;*/
 	    margin: -2.625rem 0 0 -5.9375rem;
-	    /*position: relative;*/
-	    /*left: 12.5rem;*/
+	}
+	.frametwo, .frame2 {
+	    margin: 0.625rem 0 0 0rem;
+	}
+	.framethree, .frame3 {
+	    margin: 12.375rem 0 0 0.8125rem;
+	}
+	.framesix, .frame6 {
+	    margin: 25px 0 0 -0.125rem;
+	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 0.4375rem;
 	}
 }
 
@@ -896,6 +922,9 @@
 	    width: 4rem;
 	    left: 13.25rem;
 	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 0.4375rem;
+	}
 }
 
 /*414-767  动画前+动画后*/
@@ -928,6 +957,13 @@
 	}
 	.textfourteen, .text14 {
 	    margin: 2.1rem 0 0 2.625rem;
+	}
+	.text13, .textthirteen {
+	    width: 11rem;
+	    margin: 6.2rem 0 0 1.625rem;
+	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 0.4375rem;
 	}
 	
 }	
