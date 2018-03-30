@@ -49,7 +49,7 @@ class AlipayController extends Controller
         // $out_trade_no = get_rand_string();
         $subject = 'marchsoft捐赠';
         // $total_amount = $totle;
-        $total_amount = '0.02';
+        $total_amount = $totle;
         $timeout_express="1m";
        
         $payRequestBuilder = new AlipayTradeWapPayContentBuilder();
@@ -83,9 +83,9 @@ class AlipayController extends Controller
 
                     return redirect('/front/celebration/'.$arr['out_trade_no']);
                 }
-                echo '验证成功';
+                echo 'success';
             }else {
-                echo '验证失败';
+                echo 'fail';
             }
         }
 

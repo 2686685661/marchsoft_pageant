@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/rank.css') }}">
     <script src="{{ asset('js/axios.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/rank.js') }}"></script>
-    <title>ranking</title>
+    <title>排行榜</title>
 
 </head>
 <body>

@@ -81,6 +81,7 @@ class orders extends Model
         $find_orders = $sum_totle_handle->take(3)->get()->map(function($order,$index) {
 
             $order->rank = $index +1;
+            $order->sumtotal = sprintf("%.2f",$order->sumtotal);
             return $order;
         });
         // $find_orders = DB::table('orders')->where('status',1)->select('name',DB::raw('sum(totle) as sumtotal'))->groupBy('name')->orderBy('sumtotal','desc')->take(3)->get();
