@@ -193,7 +193,7 @@ class GiftsController extends Controller
         $totle = $request->totle;
         $out_trade_no = $request->out_trade_no;
         $alipay = new AlipayController();
-        $alipay->pay($id,0.01,$out_trade_no);
+        $alipay->pay($id,$totle,$out_trade_no);
         // orders::update_order_state($id);
     }
 

@@ -38,7 +38,7 @@ window.onload=function(){
                     var td2 = document.createElement("td");
                     th.innerHTML = response.data.result[i].rank;
                     td1.innerHTML = response.data.result[i].name;
-                    td2.innerHTML = response.data.result[i].sumtotal + '元';
+                    td2.innerHTML = parseFloat(response.data.result[i].sumtotal).toFixed(2) + '元';
                     tr.appendChild(th);
                     tr.appendChild(td1);
                     tr.appendChild(td2);
