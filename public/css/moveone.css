@@ -632,8 +632,8 @@
 	}
 }
 
-/*360&&375 */
-@media screen and (min-width:360px) and (max-width:390px){		
+/*360*/
+@media screen and (min-width:360px) and (max-width:370px){		
 	html {
 		font-size: 14px;
 	}
@@ -719,6 +719,94 @@
 	}
 }
 
+/*375 */
+@media screen and (min-width:371px) and (max-width:390px){
+	html {
+		font-size: 14px;
+	}
+
+	.cloud4 {
+	    /*width: 3.2rem;*/
+	    /*position: absolute;*/
+	    left: 9.3125rem;
+	    top: 2.125rem;
+	}
+	.marchbaby img {
+	    /*width: 95%;*/
+	    /*position: relative;*/
+	    /*left: -14.625rem;*/
+	    top: 3px;
+	}
+	.marcheight {
+	    /* position: relative; */
+	    /* width: 18.5rem; */
+	    margin: -1.25rem 0 0 -4.5rem;
+	}
+	.texteight, .text8 {
+	    /*width: 10.9375rem;*/
+	    margin: 3.125rem 0 0 0;
+	}
+	.Stars2 {
+	    /*width: 2.125rem;*/
+	    /*position: absolute;*/
+	    left: 21rem;
+	    top: 10.1875rem;
+	}
+	.marchTwelve {
+	    width: 18rem;
+	    margin: -0.6875rem 0 0 -1rem;
+	    /*position: relative;*/
+	}
+	.text13, .textthirteen {
+	    width: 10rem;
+	    margin: 5.2rem 0 0 0.625rem;
+	}
+	.textfourteen, .text14 {
+	    /*width: 10.0625rem;*/
+	    margin: 0.9375rem 0 0 1.625rem;
+	}
+	.texteleven, .text11 {
+	    /*width: 12rem;*/
+	    margin: 0.625rem 0 0 1.5rem;
+	}
+	.framethree img {
+	    margin: 1.4625rem 0 0 -0.15rem;
+	}
+	.car {
+	    top: 8rem;
+	}
+	.book {
+	    width: 15.625rem;
+	    position: absolute;
+	    left: -1rem;
+	    top: 7rem;
+	    transform: rotate(16deg);
+	}
+	.marchten {
+	    margin: -2.625rem 0 0 -5.9375rem;
+	}
+	.text13, .textthirteen {
+	    width: 10rem;
+	    margin: 5.2rem 0 0 1.6254rem;
+	}
+	.frametwo, .frame2 {
+	    margin: 0.625rem 0 0 0rem;
+	}
+	.framethree, .frame3 {
+	    margin: 12.375rem 0 0 0.8125rem;
+	}
+	.framesix, .frame6 {
+	    margin: 25px 0 0 0.5rem;
+	}
+	.framesix img {
+	    transform: rotate(-20deg);
+	    width: 89%;
+	    margin: 1.7rem 0 0 1.3rem;
+	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 0.4375rem;
+	}
+}
 
 /*412  动画前+动画后*/
 @media screen and (min-width:391px) and (max-width:412px) {

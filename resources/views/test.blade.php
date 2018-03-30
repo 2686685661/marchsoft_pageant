@@ -253,17 +253,17 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<ul>
 						<li class="slider-item">
 							<div class="code-img">
-			    				<img id="ewmsrc" src="{{ asset('img/1.png') }}">
+			    				<img id="ewmsrc" src="{{ asset('img/2.png') }}">
 			    			</div>
 						</li>
 						<li class="slider-item">
 							<div class="code-img">
-			    				<img id="ewmsrc" src="{{ asset('img/2.png') }}">
+			    				<img id="ewmsrc" src="{{ asset('img/3.png') }}">
 			    			</div>	
 						</li>
 						<li class="slider-item">
 							<div class="code-img">
-			    				<img id="ewmsrc" src="{{ asset('img/3.png') }}">
+			    				<img id="ewmsrc" src="{{ asset('img/1.png') }}">
 			    			</div>	
 						</li>
 					</ul>

@@ -49,7 +49,7 @@ class WechatController extends Controller
             $result = $app->order->unify([
                 'body' => '助力三月',
                 'out_trade_no' => time(),
-                'total_fee' => 1,
+                'total_fee' => $total*100,
                 'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
                 'trade_type' => 'JSAPI',
                 'openid' => session('openId'),
@@ -140,8 +140,8 @@ class WechatController extends Controller
     }
 
     public function index(Request $request){
-        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { 
-            if($request->get('code')){
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'MicroMessenger') !== false) { //如果是微信浏览器
+            if($request->get('code')){  //如果有code参数
                 $code=$request->get('code');
                 $get_token_url="https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2fffc402a50e03a5&secret=956397f1970f6d1b114a8ac835bc0a77&code=".$code."&grant_type=authorization_code";
                 $ch = curl_init();
@@ -149,11 +149,11 @@ class WechatController extends Controller
                 curl_setopt($ch,CURLOPT_HEADER,0);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
                 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
-                $openid = curl_exec($ch);
-                $Id=json_decode($openid);
+                $openid = curl_exec($ch);   //拿code换区opeid存session
+                $Id=json_decode($openid);   
                 session(['openId' => $Id->openid]);
                 curl_close($ch);
-            }else{
+            }else{  //没有code就先 跳转 然后回调到这里 执行上面的if获取Openid
                 return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
             }
         } 
