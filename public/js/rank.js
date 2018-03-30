@@ -22,7 +22,7 @@ window.onload=function(){
           var type = '';  //标示是支付宝支付还是微信支付 ０支付宝, 1微信
 
           if(patharr.length % 2 == 0) {
-            parameter = patharr[patharr.length - 1];
+            parameter = decodeURI(patharr[patharr.length - 1]);
             type = patharr[patharr.length - 2];
           }
         
@@ -46,7 +46,6 @@ window.onload=function(){
                 }
             }
           });
-
           if(parameter != '') {
             var token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             if(type == 0) {
@@ -64,6 +63,7 @@ window.onload=function(){
                     _token:token
                 }).then(function(response) {
                     if(response.data.code == 0) {
+                        
                         insertMy(response.data.result);
                     }
                 })
