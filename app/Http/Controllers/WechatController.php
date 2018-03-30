@@ -45,7 +45,7 @@ class WechatController extends Controller
                  'key'                => 'def56bbd76f33932dbce862cd87d59de',
                  'cert_path'          => '/var/www/marchsoft_pageant/public/path/to/apiclient_cert.pem', // XXX: 绝对路径！！！！
                  'key_path'           => '/var/www/marchsoft_pageant/public/path/to/apiclient_key.pem',      // XXX: 绝对路径！！！！
-                 'notify_url'         => 'http://jk.marchsoft.cn/payments/wechatNotify',  
+                 'notify_url'         => 'http://jk.mrwangqi.com/payments/wechatNotify',  
              ],
          ];
 
@@ -88,7 +88,7 @@ class WechatController extends Controller
                 'body' => '助力三月',
                 'out_trade_no' => $out_trade_no,
                 'total_fee' => 1,
-                'notify_url' => 'http://jk.marchsoft.cn/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
+                'notify_url' => 'http://jk.mrwangqi.com/payments/wechatNotify', // 支付结果通知网址，如果不设置则会使用配置里的默认地址
                 'trade_type' => 'JSAPI',
                 'openid' => session('openId'),
             ];
@@ -213,7 +213,7 @@ class WechatController extends Controller
                 session(['openId' => $Id->openid]);
                 curl_close($ch);
             }else{  //没有code就先 跳转 然后回调到这里 执行上面的if获取Openid
-                return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.marchsoft.cn/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
+                return redirect("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx2fffc402a50e03a5&redirect_uri=http://jk.mrwangqi.com/front/hehe&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect");                
             }
         } 
         return view('test');
