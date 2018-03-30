@@ -674,6 +674,10 @@
 	    width: 10rem;
 	    margin: 5.2rem 0 0 0.625rem;
 	}
+	.textseven, .text7 {
+	    width: 10rem;
+	    margin: 2.625rem 0 0 0.7rem;
+	}
 	.textfourteen, .text14 {
 	    /*width: 10.0625rem;*/
 	    margin: 0.9375rem 0 0 1.625rem;

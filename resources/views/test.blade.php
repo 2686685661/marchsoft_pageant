@@ -201,36 +201,6 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 			</div>
 		</div>
-		<div class="page page6">
-			<div class="page5-upper">
-				<div>
-					<div class="Bird5"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.jpg') }}"></div>
-				</div>
-				<div>
-					<div class="camera"><img src="{{ asset('img/camera.png') }}"></div>
-					<div class="text12" id="shake_twelve"><img src="{{ asset('img/text12.png') }}"></div>
-				</div>
-			</div>
-			<div class="page5-center">
-				<div>
-					<div class="balloon4"></div>
-					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
-				</div>
-				<div>
-					<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.jpg') }}"></div>
-				</div>
-			</div>
-			<div class="page5-lower">
-				<div>
-					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
-					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
-				</div>
-				<div>
-					<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
-				</div>
-			</div>
-		</div>
 		<div class="page page7" >
 			<div class="lists" id="list_div">
 				<img src="{{ asset('img/list.png') }}" alt="列表">
@@ -270,6 +240,37 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
   			 	</div>
 		    </div>
 		</div>
+		<div class="page page6">
+			<div class="page5-upper">
+				<div>
+					<div class="Bird5"><img src="{{ asset('img/Bird.png') }}"></div>
+					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.jpg') }}"></div>
+				</div>
+				<div>
+					<div class="camera"><img src="{{ asset('img/camera.png') }}"></div>
+					<div class="text12" id="shake_twelve"><img src="{{ asset('img/text12.png') }}"></div>
+				</div>
+			</div>
+			<div class="page5-center">
+				<div>
+					<div class="balloon4"></div>
+					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
+				</div>
+				<div>
+					<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.jpg') }}"></div>
+				</div>
+			</div>
+			<div class="page5-lower">
+				<div>
+					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
+					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
+				</div>
+				<div>
+					<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
+				</div>
+			</div>
+		</div>
+		
 		<div class="page page8">
 			<div class="title">
 				<img src="{{ asset('img/title.png') }}" alt="标题">
@@ -705,6 +706,13 @@ var pagess = 1;
 				document.getElementById("box").style.zIndex = 0;
 			}
 			else if(index==6){
+				list_ele.className = "list";
+				pays_ele.className = "pay";
+				thinks_ele.className = "think";
+				mores_ele.className = "more";
+				document.getElementById("box").style.zIndex = 0;
+			}
+			if (index == 7) {	
 				large_nine.className = "framenine";
 				large_ten.className = "frameten";
 				Sha_eleven.className = "texttwelve";
@@ -713,13 +721,8 @@ var pagess = 1;
 				Slide_five.className = "marchTwelve";
 				// layload(6);				
 				pagefivemove();
-				document.getElementById("box").style.zIndex = 0;
-			}
-			if (index == 7) {	
-				list_ele.className = "list";
-				pays_ele.className = "pay";
-				thinks_ele.className = "think";
-				mores_ele.className = "more";
+				
+				
 				document.getElementById("box").style.zIndex = 0;
 			};
 			if (index == 8) {
