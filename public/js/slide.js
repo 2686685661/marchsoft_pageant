@@ -12,7 +12,7 @@ function pagefourmove(){
 }
 function pagefivemove(){
 	// setTimeout(function(){
-	$('.marchTwelve').animate({left:'190px'},3000);
+	$('.marchTwelve').animate({left:'-220px'},3000);
 		// $('.Lballoon').animate({left:'50px'},3000);
 	// },dealy*1)
 	// console.log(1);

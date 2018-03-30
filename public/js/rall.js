@@ -631,7 +631,7 @@ window.onload=function(){
 				var giftArr = data.result; 
 				
 				for (var i = 0; i<giftArr.length/2; i++) {
-					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
+					father.append('<div class="message_large_one" value="'+giftArr[i].id+'"><p class="img-p"><img src="/'+ giftArr[i].image+'"></p><p>'+giftArr[i].name+'</p><span>¥'+giftArr[i].price +'</span></div>');
 					if (i<6) {
 						gift_large.append('<figure value="'+giftArr[i].id+'"><img src="/'+ giftArr[i].image+'"><figcaption>'+giftArr[i].name+'</figcaption><figcaption>¥'+giftArr[i].price +'</figcaption></figure>');
 					};

@@ -114,7 +114,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>						
 		</div>
 		<div class="page page3">
-			<div class="page1-upper">
+			<div class="page2-upper">
 				<div class="Bird"><img src="{{ asset('img/Bird.png') }}"></div>
 				<div class="text4" id="shake_four"><img src="{{ asset('img/text4.png') }}"></div>
 				<div class="aircraft"><img src="{{ asset('img/aircraft.png') }}"></div>
@@ -130,7 +130,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 			<div class="page2-lower">
 				<div>
-					<div class="frame4" id="enlarge_four"><img src="{{ asset('img/th_p2.png') }}"></div>
+					<div class="frame4" id="enlarge_four"><img src="{{ asset('img/th_p2.jpg') }}"></div>
 					<div class="glasses"><img src="{{ asset('img/glasses.png') }}"></div>
 				</div>
 				<div>
@@ -205,7 +205,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			<div class="page5-upper">
 				<div>
 					<div class="Bird5"><img src="{{ asset('img/Bird.png') }}"></div>
-					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.png') }}"></div>
+					<div class="frame9" id="enlarge_nine"><img src="{{ asset('img/twelve1.jpg') }}"></div>
 				</div>
 				<div>
 					<div class="camera"><img src="{{ asset('img/camera.png') }}"></div>
@@ -218,16 +218,16 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					<div class="text13" id="shake_thirteen"><img src="{{ asset('img/text13.png') }}"></div>
 				</div>
 				<div>
-					<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.png') }}"></div>
+					<div class="frame10" id="enlarge_ten"><img src="{{ asset('img/twelvwe2.jpg') }}"></div>
 				</div>
 			</div>
 			<div class="page5-lower">
 				<div>
-					<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
-				</div>
-				<div>
 					<div class="text14" id="shake_fourteen"><img src="{{ asset('img/text14.png') }}"></div>
 					<div class="book"><img src="{{ asset('img/book.png') }}"></div>	
+				</div>
+				<div>
+					<div class="Twelve" id="slide_five"><img src="{{ asset('img/twelve.png') }}"></div>
 				</div>
 			</div>
 		</div>
@@ -336,7 +336,7 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 			</div>
 		</div>	
 	</div>
-	
+
 		<div id="cover"></div><!-- 遮盖层 -->
 		<div class="pay_select" id="pay_select">
 			<div class="select_box">
