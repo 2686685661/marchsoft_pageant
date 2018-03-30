@@ -557,15 +557,18 @@ body,div,p{
 }
 .blessing_message_large{
 	width: 100%;
-	display: flex;
+	/*display: flex;
 	display: -webkit-flex;
 	flex-wrap:wrap;
 	-webkit-flex-wrap:wrap;
 	justify-content:center;
-	-webkit-justify-content: center;
+	-webkit-justify-content: center;*/
 	overflow: hidden;
 	position: relative;
 	left: 0px;
+}
+.blessing_message_large div {
+	display: inline-block;
 }
 .message_large_one{
 	width: 48px;
