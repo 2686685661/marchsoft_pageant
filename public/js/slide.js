@@ -20,9 +20,9 @@ function pagefivemove(){
 
 
 //获取页面最少高度+给页面设置最小高度
-var min_hight = document.body.offsetHeight;
-var page = document.getElementsByClassName("page");
-for (var i = 0; i < page.length; i++) {
-	page[i].style.minHeight = min_hight+"px";
-};
+// var min_hight = document.body.offsetHeight;
+// var page = document.getElementsByClassName("page");
+// for (var i = 0; i < page.length; i++) {
+// 	page[i].style.minHeight = min_hight+"px";
+// };
 
