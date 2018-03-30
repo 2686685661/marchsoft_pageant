@@ -89,19 +89,22 @@
 }
 .mores{
     position: absolute;
-    top: 37.5%;
+    top: 60.5%;
     right: 25%;
     opacity: 0;
 }
 .more{
 	transition: 3s;
     position: absolute;
-    top: 37.5%;
+   	top: 60.5%;
     right: 25%;
     opacity: 1;
 }
+.mores img{
+	width: 200px !important; 
+}
 .more img{
-    width: 200px;
+    width: 200px !important; 
 }
 .list img{
 	width: 400px;
@@ -351,11 +354,11 @@ figure figcaption{
 	    z-index: 100;
 	}
 	.mores {
-        top: 38%;
+        top: 62%;
     	right: 20%;
 	}
 	.more {
-	    top: 38%;
+        top: 62%;
     	right: 20%;
 	}
 	.background .back {
@@ -584,12 +587,12 @@ figure figcaption{
 	    margin: -17px 0 0 85px !important;
 	}
 	.mores{
-	    top: 39%;
-	    right: 23%;
+        top: 62%;
+    	right: 25%;
 	}
 	.more {
-	    top: 39%;
-	    right: 23%;
+        top: 62%;
+    	right: 25%;
 	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
@@ -672,11 +675,11 @@ figure figcaption{
 	    margin: -22px 0 0 95px !important;
 	}
 	.mores{
-	    top: 43.5%;
+	    top: 64.5%;
     	right: 26%;
 	}
 	.more{
-        top: 43.5%;
+       	top: 64.5%;
     	right: 26%;
 	}
 	#ewmsrc {
@@ -739,12 +742,12 @@ figure figcaption{
 }
 @media screen and (min-width:414px) and (max-width:736px){
 	.mores{
-	    top: 39.5%;
-	    right: 28%;
+	    top: 63.5%;
+    	right: 28%;
 	}
 	.more {
-	    top: 39.5%;
-	    right: 28%;
+	    top: 63.5%;
+    	right: 28%;
 	}
 	#ewmsrc {
 	    margin: -29px 0 0 48px;
@@ -761,9 +764,13 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
+	.mores {
+       	top: 74.5%;
+		right: 38%;
+	}
 	.more {
-        top: 49.5%;
-    	right: 31%;
+       	top: 74.5%;
+		right: 38%;
 	}
 	.more img {
 	    width: 282px;

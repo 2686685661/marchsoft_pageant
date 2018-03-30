@@ -234,9 +234,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 		<div class="page page7" >
 			<div class="lists" id="list_div">
 				<img src="{{ asset('img/list.png') }}" alt="列表">
-			</div>
-			<div class="mores" id="mores">
-				<a href="http://juankuan.marchsoft.cn/home/Person/Ranking "><img src="{{ asset('img/mgive.png') }}" alt="更多"></a>
+				<div class="mores" id="mores">
+					<a href="http://juankuan.marchsoft.cn/home/Person/Ranking "><img src="{{ asset('img/mgive.png') }}" alt="更多"></a>
+				</div>
 			</div>
 			<div class="pays" id="pays_div">
 				<img src="{{ asset('img/pay.png') }}" alt="气泡" id="ClickMe">
