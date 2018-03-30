@@ -317,19 +317,19 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				</div>
 				<div class="air_min_box" id="air_min_box">
 					<div class="air_min bub1">
-						<p id="p1"><span>王琦1：</span>祝三月生日快乐乐乐乐乐</p>
+						<p id="p1"><span>尤奇勤：</span>生日快乐</p>
 					</div>
 					<div class="air_min bub2">
-						<p id="p2"><span>王琦2：</span>祝三月生日快乐</p>
+						<p id="p2"><span>巩一杰：</span>生日快乐</p>
 					</div>
 					<div class="air_min bub3">
-						<p id="p3"><span>王琦3：</span>祝三月生日快乐</p>
+						<p id="p3"><span>徐红：</span>生日快乐</p>
 					</div>
 				</div>
 				<div class="max_air" id="max_air">
 					<img src="{{ asset('img/call.png') }}" alt="" id="imgchange">
 					<div>
-						<p id="gift_p">桑金超 送了 打call</p>
+						<p id="gift_p">尤奇勤 送了 打call</p>
 						<p id="bless">生日快乐</p>
 					</div>
 				</div>
