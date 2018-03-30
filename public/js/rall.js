@@ -36,7 +36,7 @@ window.onload=function(){
 	share.onclick = function(){
 		student.style.display = "none";
 		document.getElementById("box").style.zIndex = 1;
-		// disapear();
+		disapear();
 		tiaoZhuan();
 	}
 
@@ -515,6 +515,7 @@ window.onload=function(){
 	}
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
+
 		var name = $("#input3").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
@@ -689,15 +690,22 @@ window.onload=function(){
 		}
 	})();
 
-
-
 	
 	function tiaoZhuan() {
+		
 		var patharr = strHandle();
-		if(patharr.length % 2 != 0) { //支付宝支付
-			window.location.href = '/front/rank/0/' + patharr[patharr.length - 1];
-		}else if(patharr.length % 2 == 0) {   //微信支付
-			var name = $("#input2").val().trim();
+		
+		// if(patharr.length % 2 != 0) { //支付宝支付
+		// 	window.location.href = '/front/rank/0/' + patharr[patharr.length - 1];
+		// }else if(patharr.length % 2 == 0) {   //微信支付
+		// 	var name = $("#input2").val().trim();
+		// 	if(name != '') {
+		// 		window.location.href = '/front/rank/1/' + name;
+		// 	}
+		// }
+
+		if(patharr.length % 2 == 0) {
+			var name = $("#input3").val().trim();
 			if(name != '') {
 				window.location.href = '/front/rank/1/' + name;
 			}
