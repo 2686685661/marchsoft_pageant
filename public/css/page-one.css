@@ -102,24 +102,31 @@
 }
 .mores img{
 	width: 200px !important; 
+	cursor: pointer;
 }
 .more img{
     width: 200px !important; 
+    cursor: pointer;
 }
 .list img{
 	width: 400px;
 	margin: 20% auto 0 auto;
 	animation: qiu 1s 1 linear;
 }
+#closebt{
+	cursor: pointer;
+}
 .pays img{
 	margin: 0 0 0 10%;
 	width: 150px;
+	cursor: pointer;
 	opacity: 0;
 }
 .pay img{
 	position: relative;
 	cursor: pointer;
 	margin: 0 0 0 10%;
+	cursor: pointer;
 	width: 150px;
 	animation: pay 6s ease 0s infinite normal; /*名字 总时间 频率 开始时间 次数*/;
 }
