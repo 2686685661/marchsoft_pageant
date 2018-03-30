@@ -219,13 +219,13 @@ window.onload=function(){
 	comment();
 	function comment(){
 		setTimeout(function(){
-    		$("#p1").text("王琦1：三月生日快乐");
+    		$("#p1").text("尤奇勤：生日快乐");
     	},0);
     	setTimeout(function(){
-    		$("#p2").text("王琦2：三月生日快乐");
+    		$("#p2").text("巩一杰：生日快乐");
     	},1000);
     	setTimeout(function(){
-    		$("#p3").text("王琦3：三月生日快乐");
+    		$("#p3").text("徐红：生日快乐");
     	},1000);
     	setTimeout(function(){
     		
