@@ -475,6 +475,9 @@ body,div,p{
 		transform: translateY(0px);
 	}
 }
+.blessing{
+	overflow-x:hidden; 
+}
 .blessing,.blessing_glass{
 	display: none;
 	position: absolute;

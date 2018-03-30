@@ -334,9 +334,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 					</div>
 				</div>
 			</div>
-		</div>
-			
+		</div>	
 	</div>
+	
 		<div id="cover"></div><!-- 遮盖层 -->
 		<div class="pay_select" id="pay_select">
 			<div class="select_box">

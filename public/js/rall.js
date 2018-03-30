@@ -514,7 +514,7 @@ window.onload=function(){
 	}
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
-		var name = $("#input3").val();
+		var name = $("#input3").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,
