@@ -114,7 +114,7 @@ address, cite, dfn, em, var {
 	bottom:70px;
 	z-index:3;
 }
-.banner-two .dots li{
+.banner-two .dots .li{
 	display:inline-block;
 	width:10px;
 	height:10px;
@@ -128,7 +128,7 @@ address, cite, dfn, em, var {
 	-moz-transition:background .5s,opacity .5s;
 	transition:background .5s,opacity .5s
 }
-.banner-two .dots li.active{
+.banner-two .dots .li.active{
 	background:#fff;
 	opacity:1;
 }
@@ -152,20 +152,20 @@ address, cite, dfn, em, var {
 .banner-two #ar{
 	right:15px
 }
-.banner-two ul{
+.banner-two .ul{
 	z-index: 1;
 	width: 800px;
 	height: 640px;
 	overflow: hidden;
 }
-.banner-two ul .slider-item {
+.banner-two .ul .slider-item {
 	width:400px; 
 	float: left;
 	height:640px; 
 	position: relative; 
 	overflow: hidden;
 }
-.banner-two ul .slider-item .slider-title {
+.banner-two .ul .slider-item .slider-title {
 	position: absolute;
 	left: 0;
 	bottom: 0px;

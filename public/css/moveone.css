@@ -1,82 +1,42 @@
-
-/*   page1   */
-.frameone{
-	display: flex;
-	width: 171px;
-	height: 141px;
-	position: relative;
-	left: 8px; 
+/*相框*/
+.frameone,.frametwo,.framethree,.framefour,.framefive,.framesix,.frameseven,.frameeight,.framenine,.frameten{
 	background: url(../img/Photo-frame.png) no-repeat center center;
 	background-size: 100% 100%;
-	justify-content:center;
-	align-items:center;
 }
-.frameone img{
-	width: 95%;
-	position: relative;
-	top: 7px;
-	animation:first 2s;
-	-moz-animotion:first 2s;
-	-webkit-animotion:first 2s;
-	-o-animotion:first 2s; 
-	width: 84%;
-	transform:rotate(-10deg);
-}
-.frametwo{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	position: relative;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(25deg);
-}
-.frametwo img{
+/*照片动画*/
+.frameone img,.frametwo img,.framethree img,.framefour img,.framefive img,.framesix img,.frameseven img,.frameeight img,.framenine img,.frameten img{
 	width: 100%;
-	position: relative;
-	animation:first 4s;
-	-moz-animotion:first 4s;
-	-webkit-animotion:first 4s;
-	-o-animotion:first 4s; 
-	transform:rotate(-21deg);
-}
-.framefour img{	
-	animation:first 4s;
-	-moz-animotion:first 4s;
-	-webkit-animotion:first 4s;
-	-o-animotion:first 4s; 
-	transform:rotate(-21deg);
-}
-
+	animation:first 3s;
+	-moz-animotion:first 3s;
+	-webkit-animotion:first 3s;
+	-o-animotion:first 3s; 
+ }
 @keyframes first{
-		0%{transform: scale(0.3);}
-	}
-
-	@-webkit-keyframes first{
-		0%{transform: scale(0.3);}
-	}
-
-	@-moz-keyframes first{
-		0%{transform: scale(0.3);}
-	}
-
-	@-o-keyframes first{
-		0%{transform: scale(0.3);}
+	0%{transform: scale(0.3);}
 }
 
-.textone{
-	width: 142px;
-	/*height: 79px;*/
-	position: relative;
-	top: 56px;
-	left: 5px;
+@-webkit-keyframes first{
+	0%{transform: scale(0.3);}
 }
-.textone img{
+
+@-moz-keyframes first{
+	0%{transform: scale(0.3);}
+}
+@-o-keyframes first{
+	0%{transform: scale(0.3);}
+}
+
+/*文字动画*/
+.textone img,.textthree img,.textfour img,.textfive img,.textsix img,.textseven img,.texteight img,.textnine img,.textten img,.texteleven img,.texttwelve img,.textthirteen img,.textfourteen img{
 	width: 100%;
-	/*height: 100%;*/
 	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
 }
-
+.textthree img,.textfive img,.textseven img,.textten img,.textthirteen img{
+	animation: beat 6s ease 4s 1 normal;
+}
+.texteight img,.texteleven img,.textfourteen img{
+	animation: beat 6s ease 5s 1 normal;
+}
 @keyframes beat {
 	0% {
 		transform: translateY(0px);
@@ -106,2809 +66,930 @@
 		transform: translateY(0px);
 	}
 }
-.textthree{
-	width: 142px;
-	/*height: 105px;*/
-}
-.textthree img{
-	width: 100%;
-	/*height: 100%;*/
-	position: relative;
-	top: 16px;
-	animation: beat 5s ease 4s 1 normal;
-}
-
-.marchbaby{
-	/*width: 176px;*/
-	/*height: 205px;	*/
-	background: url(../img/baby.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(2deg);
-	position: relative;
-	/*bottom: 66px;*/
-}
-.marchbaby{
-	 -webkit-animation: slideOut 2.5s ease-in-out;
-     -moz-animation: slideOut 2.5s ease-in-out;
-     -o-animation: slideOut 2.5s ease-in-out;
-     -ms-animation: slideOut 2.5s ease-in-out;
-     animation: slideOut 2.5s ease-in-out;
-}
-@-webkit-keyframes slideOut{
-    0%{ transform: translateX(-200px);}
-    100%{ transform: translateX(0px); }
-}
-@-moz-keyframes slideOut{
-    0%{ left: -200px; }
-    100%{ left: 0px; }
-}
-@-o-keyframes slideOut{
-    0%{ left: -200px; }
-    100%{ left: 0px; }
-}
-@-ms-keyframes slideOut{
-    0%{ left: -200px; }
-    100%{ left: 0px; }
-}
-@keyframes slideOut{
-    0%{ left: -200px; }
-    100%{ left: 0px; }
-}
 
 
-/*   page2   */
-
-.textfour img{
-	width: 100%;
-	animation: beat 5s ease 4s 1 normal;
-}
-.textfive{
-	width: 107px;
-	/*height: 148px;*/
-	position: relative;
-	left: 16px;
-	bottom: 13px;
-}
-.textfive img{
-	width: 100%;
-	animation: beat 5s ease 5s 1 normal;
-}
-.framethree{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 182px;
-	height: 155px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(25deg);
-	position: relative;
-}
-.framethree img{
-	transform:rotate(-23deg);
-	width: 100%;
-	position: relative;
-	top: 6px;
-	right: 2px;
-	animation:first 3s;
-	-moz-animotion:first 3s;
-	-webkit-animotion:first 3s;
-	-o-animotion:first 3s; 
-}
-.framefour{
-	/*width: 150px;*/
-	/*height: 142px;*/
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(-9deg);
-	position: relative;
-	/*left: 12px;*/
-	/*bottom: 23px;*/
-}
-.framefour img{
-    transform: rotate(-10deg);
-    position: relative;
-    
-}
-.marchthree{
-	width: 312px;
-	position: relative;
-	left: 10px;
-}
-.marchthree img{
-	width: 90%;
-	position: relative;
-	left: 122px;
-}
-
-/*    page3   */
-
-.framefive{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 164px;
-	height: 141px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	position: relative;
-	left: 9px;
-	top: 10px;
-}
-.framefive img{
-	width: 80%;
-	position: relative;
-	top: 7px;
-	transform:rotate(-10deg);
-	animation:first 2s;
-	-moz-animotion:first 2s;
-	-webkit-animotion:first 2s;
-	-o-animotion:first 2s;
-}
-.framesix{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 174px;
-	height: 160px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(21deg);
-	position: relative;
-	bottom: 26px;
-}
-.framesix img{
-	width: 97%;
-	transform:rotate(-20deg);
-	position: relative;
-	top: 7px;
-	right: 2px;
-	animation:first 5s;
-	-moz-animotion:first 5s;
-	-webkit-animotion:first 5s;
-	-o-animotion:first 5s;
-}
-.textsix{
-	width: 157px;
-	/*height: 94px;*/
-	position: relative;
-	bottom: 38px;
-}
-.textsix img{
-	width: 100%;
-	/*height: 100%;*/
-	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.textseven{
-	position: relative;
-	left: 6px;
-	top: 16px;
-}
-.textseven img{
-	width: 100%;
-	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.marcheight{
-	width: 242px;
-	/*height: 251px;*/
-	position: relative;
-	right: 185px;
-	bottom: 41px;
-}
-.marcheight img{
-	width: 100%;
-	/*height: 100%;*/
-	position: relative;
-}
-.texteight{
-	width: 149px;
-	/*height: 116px;*/
-	position: relative;
-}
-.texteight img{
-	width: 100%;
-	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-
-
-/*   page4   */
-.frameseven{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 176px;
-	height: 159px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(22deg);
-	position: relative;
-	left: 6px;
-	bottom: 3px;
-}
-.frameseven img{
-	width: 95%;
-	transform:rotate(-23deg);
-	position: relative;
-	top: 9px;	
-	animation:first 3s;
-	-moz-animotion:first 3s;
-	-webkit-animotion:first 3s;
-	-o-animotion:first 3s;
-}
-.frameeight{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 153px;
-	height: 135px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	position: relative;
-	left: 9px;
-	top: 11px;
-}
-.frameeight img{
-	transform:rotate(-11deg);
-	width: 83%;
-	position: relative;
-	top: 6px;
-	animation:first 6s;
-	-moz-animotion:first 6s;
-	-webkit-animotion:first 6s;
-	-o-animotion:first 6s;
-}
-.textnine{
-	width: 135px;
-	height: 87px;
-	position: relative;
-	top: 40px;
-}
-.textnine img{
-	width: 100%;
-	/*height: 100%;*/
-	animation: beat 6s ease 3s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.textten{
-	width: 149px;
-	/*height: 111px;*/
-	position: relative;
-	left: 15px;
-	bottom: 16px;
-}
-.textten img{
-	width: 100%;
-	/*height: 100%;*/
-	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.texteleven{
-	width: 152px;
-	/*height: 114px;*/
-	position: relative;
-	left: 19px;
-	top: 18px;
-}
-.texteleven img{
-	width: 100%;
-	/*height: 100%;*/
-	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.marchten{
-	height: 288px;
-	position: relative;
-	top: 12px;
-	right: -93px;
-}
-.marchten img{
-	height: 100%;
-	position: relative;
-	bottom: 45px;
-}
-
-
-
-/*   page5   */
-.framenine{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 157px;
-	height: 134px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	position: relative;
-	left: 13px;
-	top: 18px;
-	
-}
-.framenine img{
-	transform:rotate(-10deg);
-	width: 84%;
-	position: relative;
-	top: 7px;
-	animation:first 3s;
-	-moz-animotion:first 3s;
-	-webkit-animotion:first 3s;
-	-o-animotion:first 3s;
-}
-.frameten{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	width: 176px;
-	height: 152px;
-	background: url(../img/Photo-frame.png) no-repeat center center;
-	background-size: 100% 100%;
-	transform:rotate(22deg);
-	position: relative;
-}
-.frameten img{
-	width: 81%;
-	transform:rotate(-10deg);
-	position: relative;
-	top: 7px;
-	animation:first 6s;
-	-moz-animotion:first 6s;
-	-webkit-animotion:first 6s;
-	-o-animotion:first 6s;
-}
-.texttwelve{
-	width: 147px;
-	/*height: 110px;*/
-	position: relative;
-	left: 17px;
-	top: 39px;
-}
-.texttwelve img{
-	width: 100%;
-	/*height: 100%;*/
-	animation: beat 6s ease 4s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.textthirteen{
-	width: 125px;
-	/*height: 68px;*/
-	position: relative;
-	/*left: 14px;*/
-	/*top: 24px;*/
-}
-.textthirteen img{
-	width: 100%;
-	animation: beat 6s ease 5s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.textfourteen{
-	/*height: 102px;*/
-	position: relative;
-	/*top: 18px;*/
-	/*left: 77px;*/
-}
-.textfourteen img{
-	width: 100%;
-	animation: beat 6s ease 6s 1 normal; /*名字 总时间 频率 开始时间 次数*/
-}
-.marchTwelve{
-	width: 55px;
-	position: relative;
-	left: -162px;	
-}
-.marchTwelve img{
-	position: relative;
-	/*bottom: 45px;*/
-}
-
-/*320*/
-@media screen and (min-width:310px) and (max-width:340px) {
-				
-		/*page2*/
-		.frameone img{
-			width: 80%;
-		}
-		.frametwo{			
-			width: 159px;
-    		height: 150px;
-			left: 13px;
-			bottom: 29px;			
-		}
-		.frametwo img{			
-			top: 7px;			
-		}
-		.marchbaby{
-			width: 184px;
-		    height: 215px;
-    		bottom: 78px;
-		}						
-		.textfour{
-			width: 185px;
-		    position: relative;
-		    top: 10px;
-		    left: 15px;
-		}
-		.text4{
-			width: 185px;
-		    position: relative;
-		    top: 10px;
-		    left: 15px;
-		}
-		.framethree{
-			width: 182px;
-    		height: 155px;
-			position: relative;
-		    left: 23px;
-		    bottom: 50px;		
-		}
-		.framethree img{
-			width: 97%;
-			top: 9px;
-		}
-		.frame3{
-			width: 182px;
-    		height: 155px;
-			position: relative;
-		    left: 23px;
-		    bottom: 50px;		
-		}
-
-
-		/*page3*/
-		.texteight {
-		    width: 149px;
-		    position: relative;
-		    right: 76px;
-		    top: 47px;
-		}
-		.text8 {
-		    width: 149px;
-		    position: relative;
-		    right: 195px;
-		    top: 47px;
-		}
-		.framefour{
-			width: 150px;
-    		height: 142px;
-    		left: 14px;
-    		bottom: 29px;
-		}
-		.framefour img{
-			width: 83%;
-		    top: 33px;
-		    left: 14px;
-		}
-		.frame4{
-			width: 150px;
-    		height: 142px;
-    		left: 14px;
-    		bottom: 29px;
-		}
-		.frame4 img{
-			opacity: 0;			
-		}
-	
-		.framenine {
-		   left: 17px;
-		}
-		.frame9 {
-		   left: 17px;
-		}
-		.camera {
-	        top: 22px;
-	    	left: 49px;
-		}
-		.texttwelve {
-	    	left: 15px;
-	    	top: 54px;
-		}
-		.text12 {
-	    	left: 15px;
-	    	top: 54px;
-		}
-		.frameten {
-		    left: 8px;
-	    	top: 48px;
-		}
-		.frame10 {
-		    left: 8px;
-	    	top: 48px;
-		}
-		.textthirteen {
-			width: 125px;
-		    left: 9px;
-    		top: 34px;
-		}
-		.text13 {
-			width: 125px;
-		    left: 9px;
-    		top: 34px;
-		}
-		.book {
-		    left: 154px;
-	    	top: 0px;
-		}
-		
-
-		/*page5*/
-		.marchTwelve {
-		    width: 206px;		    
-		}
-		.marchTwelve img {
-			width: 100%;
-		    bottom: -11px;
-    		left: 4px;
-		}
-		.textfourteen {
-			width: 117px;
-		    top: 38px;
-		    left: -65px;
-		}
-		.text14 {
-			width: 117px;
-		    top: 38px;
-		    left: -65px;
-		}
-		.text14 img{
-			width: 100%;
-		}
-		.book {
-		    width: 62px;
-		    left: 10px;
-    		top: 33px;
-		}
-}
-
-/*360*/
-@media screen and (min-width:355px) and (max-width:365px) {				
-
-		/*    page1   */
-		.Lballoon{
-			width: 36px;
-		    left: 58px;
-		    top: 11px;		   
-		}
-		.frameone{			
-	    	width: 191px;
-    		height: 170px;		   
-		    left: 8px;
-	    	bottom: 7px;		    
-		}
-		.textone {
-		    width: 153px;
-		    position: relative;
-		    top: 73px;
-		    left: 5px;
-		}
-		.textthree {
-		    width: 153px;
-    		position: relative;
-    		top: 22px;
-		}
-		.stars {
-		    width: 25px;
-		    position: relative;
-		    left: 123px;
-		    bottom: 3px;
-		}
-		.frametwo {		    
-		    width: 187px;
-		    height: 173px;
-		    left: 15px;
-		    bottom: 21px;		    
-		}
-		.frametwo img {
-		    width: 100%;
-		    top: 10px;
-		}
-		.marchbaby{
-			width: 184px;
-		    height: 227px;
-		    bottom: 65px;
-		}
-		.baby img{
-			opacity: 0;
-		}
-		.balloon {
-		    width: 43px;
-		    height: 54px;
-		    left: 141px;
-		    top: 18px;
-		}
-		.cloud {
-		    width: 46px;
-		    position: relative;
-		    top: 79px;
-    		left: 36px;
-		}
-		.Map {
-		    width: 75px;
-		    position: relative;
-		    top: 107px;
-    		left: 77px;
-		}
-
-
-		/*   page2   */
-		.Bird {
-		    width: 83px;
-		    position: relative;
-		    top: 64px;
-		    left: 26px;
-		}
-		.textfour{
-		    width: 189px;
-		    position: relative;
-		    left: 24px;
-		    top: -2px;
-		}
-		.textfive{
-			width: 106px;
-		    position: relative;
-		    left: 16px;
-		    top: -10px;
-		}
-		.aircraft {
-		    width: 150px;
-		    position: relative;
-		    left: 2px;
-		    top: 16px;
-		}
-		.cloud2 {
-		    width: 47px;
-		    position: relative;
-		    left: 152px;
-		    bottom: 70px;
-		}
-		.framethree {		    
-		    width: 208px;
-		    height: 188px;
-		    left: 26px;
-		    bottom: 52px;
-		}
-		.framefour {
-		    width: 162px;
-		    height: 139px;		    
-		    left: 12px;
-		    top: 0;
-		}	
-		.framefour img{
-			width: 80%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 28px;
-		    left: 16px;
-		}
-		.frame4 img{
-			opacity: 0;
-		}			
-		.marchthree{
-		    width: 282px;	    
-		}
-
-
-		/*   page3   */
-		.Bird2 {
-		    width: 64px;
-		    position: relative;
-		    top: 21px;
-		    left: 36px;
-		}
-		.framefive {		    
-		    width: 183px;
-		    height: 166px;		    
-		    left: 9px;
-		    top: 29px;
-		}
-		.cloud3 {
-		    width: 53px;
-		    position: relative;
-		    top: 60px;
-		}
-		.Bird3 {
-		    width: 56px;
-		    position: relative;
-		    top: 25px;
-		    left: 115px;
-		}
-		.textsix{
-		    width: 189px;
-		    left: 8px;
-		    top: 43px;
-		}
-		
-		.textseven{
-		    width: 161px;
-		    position: relative;
-		    left: 6px;
-		    top: 37px;
-		}
-		.texteight {
-		    width: 149px;
-		    position: relative;
-		    top: 67px;
-		    right: 70px;
-		}
-		.balloon3 {
-		    width: 35px;
-		    left: 108px;
-		    top: 10px;
-		}
-		.framesix{	    
-		    width: 195px;
-		    height: 176px;		    
-		    bottom: 8px;
-		}
-		.marcheight {
-		    width: 263px;
-		}
-		.marcheight img{
-			width: 100%;
-		    top: 12px;
-		    right: 14px;
-		}
-		.cloudfour {		   
-		    top: 36px;
-		}
-		
-		.Stars2 {
-		    left: 40px;
-		    top: 54px;
-		}
-
-
-		/*   page4   */
-		.Bicycle {
-		    width: 88px;
-		    position: relative;
-		    top: 26px;
-		    left: 24px;
-		}
-		.Bird4 {
-		    width: 50px;
-		    top: 22px;
-		    left: 126px;
-		}
-		.textnine {
-		    width: 142px;
-		    top: 40px;
-		}
-		.frameseven {		    
-		    width: 200px;
-		    height: 179px;  
-		    left: 9px;
-		}
-		.frameeight {		    
-		    width: 178px;
-		    height: 166px;		    
-		    left: 9px;
-		    top: 11px;
-		}
-		.tra {
-		    width: 63px;
-		    left: 2px;
-		    top: -10px;
-		}
-		.textten {
-		    width: 169px;
-		    position: relative;
-		    left: 13px;
-		    bottom: 10px;
-		}
-		.Stars3 {
-		    width: 31px;
-		    position: relative;
-		    left: 14px;
-    		bottom: -19px;
-		}
-		.texteleven{
-		    width: 154px;
-		    position: relative;
-		    left: 32px;
-    		top: 35px;
-		}
-		.marchten {
-		    height: 293px;
-		    position: relative;
-		    top: 31px;
-		}
-		.marchten img{
-			position: relative;
-		    right: -40px;
-		}
-
-
-		/*   page5   */
-		.framenine {
-		    width: 161px;
-		    height: 145px;	    
-		    left: 7px;
-		    top: 25px;
-		}
-		.texttwelve {
-		    width: 154px;
-		    position: relative;
-		    left: 10px;
-    		top: 31px;
-		}
-		.texttwelve img{
-			width: 100%;
-		}
-		.camera {	    
-		    left: 24px;
-		}
-		.balloon4 {
-		    width: 44px;
-		    height: 54px;
-		    left: 94px;
-		    top: 8px;
-		}
-		.textthirteen {
-		    width: 130px;
-		    left: 10px;
-		    top: 47px;
-		}
-		.frameten {		    
-		    width: 185px;
-		    height: 165px;	    
-		    position: relative;
-		    left: 34px;
-    		top: 58px;
-		}
-		.frameten img {
-		    width: 81%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 7px;    
-		}
-		.marchTwelve {
-		   width: 543px;
-		}
-		.Twelve {
-		   width: 543px;
-		}
-		.marchTwelve img{
-			width: 100%;
-			bottom: -16px;
-		}
-		.textfourteen{
-		    position: relative;
-		    top: 53px;
-		    left: -73px;
-		    width: 128px;
-		}
-		.text14{
-		    position: relative;
-		    top: 53px;
-		    left: -153px;
-		    width: 128px;
-		}
-		.book {
-		    width: 71px;
-		    position: relative;
-		    left: 18px;
-    		top: 31px;
-		}
-
-}
-
-/*375*/
-@media screen and (min-width:370px) and (max-width:390px){
-	/*.page2,.page3,.page4,.page5,.page6{
-			min-height: 736px;
-		}*/
-
-	/*.Lballoon {
-	    width: 35px;
-	    height: 43px;
-	    left: 58px;
-	    top: 11px;
-	}*/
-	.frameone {	    
-	    width: 193px;
-	    height: 167px;
-	    left: 17px;   
-	}
-	.frametwo img{
-		top: 9px;
-	}
-	.textone {
-	    width: 159px;
-	    position: relative;
-	    top: 75px;
-	    left: 17px;
-	}
-	.textthree {
-	    width: 160px;
-	}
-	.frametwo {	   
-	    width: 194px;
-	    height: 182px;
-	    left: 13px;
-	    bottom: 29px;	    
-	    transform: rotate(23deg);
-	}
-	.stars {
-	    width: 31px;
-	    position: relative;
-	    left: 125px;
-	    bottom: 0px;
-	}
-	.marchbaby {
-	    width: 205px;
-    	height: 234px;	    
-	    bottom: 72px;
-	}
-	
-
-	/*   page2   */
-	.Bird {	    
-	    top: 64px;
-	}
-	.textfour{
-		left: 18px;
-	    width: 182px;
-	    position: relative;
-	}
-	.textfive {
-	    width: 122px;
-	    left: 16px;
-	    bottom: 9px;
-	}
-	.cloud2 {
-	    width: 50px;
-	    left: 145px;
-	    bottom: 57px;
-	}
-	.framethree {    
-	    width: 212px;
-	    height: 193px;	    
-	    transform: rotate(22deg);	   
-	    left: 32px;
-	    bottom: 60px;
-	}
-	.framethree img{
-		top: 10px;
-	}
-	.framefour {
-	    width: 162px;
-	    height: 147px;	   
-	    transform: rotate(-10deg);
-	    left: 12px;
-	    bottom: 25px;
-	} 
-	.framefour img{
-		width: 83%;
-	    transform: rotate(-10deg);
-	    position: relative;
-	    top: 33px;
-	    left: 14px;
-	}
-	.frame4 img{
-		opacity: 0;	
-	}
-	.glasses {  
-	    left: 141px;
-	    bottom: 24px;
-	    width: 50px;
-	}
-	.marchthree {
-    	height: 233px;   
-	}
-	.marchthree img {
-	    bottom: 15px;
-	}
-
-
-	/*   page3   */
-	.framefive {    
-	    width: 198px;
-	    height: 180px;	    
-	}
-	.Bird2 {
-	    width: 66px;
-	    left: 47px;
-    	top: 20px;
-	}
-	.Bird3 {
-	    width: 58px;
-	    position: relative;
-	    top: 2px;
-	    left: 101px;
-	}
-	.cloud3 {
-	    width: 53px;
-    	top: 43px;
-	}
-	.textsix {
-	    width: 178px;
-	    top: 20px;
-	}
-	.text6 {
-	    top: 20px;
-	}
-	.textseven {
-	    width: 172px;
-	    top: 38px;
-	}
-	.balloon3 {
-	    width: 37px;
-	    height: 45px;
-	    left: 108px;
-	    top: 8px;
-	}
-	.framesix {
-	    width: 208px;
-	    height: 196px;
-	    position: relative;
-	    bottom: 5px;
-	}
-	.marcheight {
-	    width: 263px;
-	    bottom: 17px;
-	}
-	.cloud4 {
-	    width: 47px;
-	    left: 147px;
-    	top: 49px;
-	}
-	.texteight {
-	    width: 154px;
-	    position: relative;
-	    top: 73px;
-	    right: 73px;
-	}
-	.Stars2 {
-	    width: 32px;
-	    position: relative;
-	    left: 45px;
-    	top: 55px;
-	}
-
-
-		/*   page4   */
-		.Bicycle {
-		    width: 98px;
-		    height: 63px;
-		    position: relative;
-		    top: 30px;
-		    left: 24px;
-		}
-		.frameseven {		  
-		    width: 218px;
-		    height: 197px;		    
-		    transform: rotate(20deg);
-		    left: 2px;
-		    top: 5px;
-		}
-		.Bird4 {
-		    width: 49px;
-		    height: 32px;
-		    top: 22px;
-		    left: 141px;
-		}
-		.textnine {
-		    width: 147px;
-		    height: 98px;
-		    top: 55px;
-		}
-		.frameeight {		    
-		    width: 191px;
-		    height: 166px;	    
-		    top: 18px;
-		}
-		.frameeight img {
-		    top: 8px;
-		}
-		.textten {
-		    width: 180px;
-		    height: 131px;
-		    left: 8px;
-		    top: 5px;
-		}
-		.tra {
-		    width: 61px;
-		    height: 50px;
-		    top: 7px;
-		}
-		.Stars3 {
-		    width: 32px;
-		    left: 4px;		    
-		}
-		.texteleven {
-		    width: 172px;
-		    height: 128px;
-		    position: relative;
-		    left: 30px;
-		    top: 36px;
-		}
-		.marchten img {
-		    position: relative;
-		    right: -43px;
-		}
-		.marchten {
-		    height: 294px;
-		    top: 37px;
-		}
-		.car {
-		    width: 63px;
-		    position: relative;
-		    left: 33px;
-		    top: 28px;
-		}
-
-
-		/*page5*/
-		.framenine{		
-			width: 179px;
-    		height: 165px;
-			position: relative;	
-			top: 35px;	
-		}
-		.framenine img{
-			top: 9px;
-		}
-		.frame9{
-			width: 179px;
-    		height: 165px;
-			position: relative;
-			top: 35px;
-		}
-		.texttwelve {
-		    width: 162px;
-		    height: 115px;
-		    position: relative;
-		    left: 17px;
-		    top: 39px;
-		}
-		.text12 {
-		    width: 162px;
-		    height: 115px;
-		    position: relative;
-		    left: 17px;
-		    top: 39px;
-		}
-		.frameten{
-			position: relative;
-		    top: 44px;
-		    left: 46px;
-		    width: 192px;
-		    height: 175px;
-		}
-		.frame10{
-			position: relative;
-		    top: 44px;
-		    left: 46px;
-		    width: 192px;
-		    height: 175px;
-		}
-		.textthirteen {
-		    width: 132px;
-		    height: 68px;
-		    position: relative;
-		    left: 22px;
-		    top: 40px;
-		}
-		.text13 {
-		    width: 132px;
-		    height: 68px;
-		    position: relative;
-		    left: 22px;
-		    top: 40px;
-		}
-		.marchTwelve{
-			width: 281px;
-    		top: -28px;
-		}
-		.marchTwelve img{
-			width: 100%；
-			right: 8px;
-		}
-		.textfourteen {
-		    width: 136px;
-		    position: relative;
-		    top: 32px;
-		    left: -79px;
-		}
-		.text14 {
-		    width: 136px;
-		    position: relative;
-		    top: 32px;
-		    left: -79px;
-		}
-		.balloon4{
-			width: 47px;
-			height: 58px;	
-		}
-}
-
-/*412&&414  动画前+动画后*/
-@media screen and (min-width:411px) and (max-width:415px) {
-		
-	/*.page2,.page3,.page4,.page5,.page6{
-			min-height: 736px;
-		}*/
+/*页面布局以下*/
 	/*page1*/
+	.page1-upper,.page1-center,.page1-lower{
+		display: flex;
+		position: relative;
+	}
+	.page1-upper:nth-child(1){
+		width: 50%;
+	}
+	.page1-upper:nth-child(2){
+		/*align-self:center;*/
+		width: 50%;
+	}
+	.page1-center:nth-child(1){
+		width: 30%;
+	}
+	.page1-center:nth-child(2){
+		width: 60%;
+	}
+	.page1-lower:nth-child(1){
+		width: 60%;
+	}
+	.page1-lower:nth-child(2){
+		width: 40%;
+	}
 	.Lballoon {
-	    width: 39px;
-	    height: 45px;
+	    width: 2.4375rem;
 	    transform: rotate(-25deg);
-	    position: relative;
-	    left: 71px;
-	    top: 12px;
+	    align-self:center;
+	    position: absolute;
+	    left: 3.85rem;
+    	top: 0.8rem;
 	}
-	.frameone {
-	    width: 223px;
-	    height: 201px;
-	    left: 17px;
+	.Lballoon img{
+		width: 100%;
+	}
+	.frameone,.frame1 {
+	    width: 13.9375rem;
+	    height: 12.5625rem;
+	    margin: 20% 0 0 4%;
+	}
+	.frameone img{
+		transform: rotate(-10deg);
+		width: 80%;
+		margin: 2.9rem 0 0 1.3125rem;
 	}	
-	.textone {
-	    width: 181px;
-	    height: 107px;
-	    position: relative;
-	    top: 80px;
-	    left: 13px;
+	.textone,.text1{
+	    width: 11.2125rem;
+    	padding-top: 4.995rem;
 	}
-	.frame1 {
-	    width: 223px;
-	    height: 201px;
-	    left: 17px;
+	.textthree,.text3 {
+	    width: 11.1875rem;
+	    margin: 3rem 0 0 0;
 	}
-	.text1 {
-	    width: 181px;
-	    height: 107px;
-	    position: relative;
-	    top: 80px;
-	    left: 13px;
-	}
-	.textthree {
-	    width: 179px;
-	    height: 138px;
-	    position: relative;
-	    top: 14px;
-	}
-	.text3 {
-	   width: 179px;
-	   height: 138px;
-	   position: relative;
-	   top: 14px;
-	}
-	.frametwo {
-	    width: 213px;
-	    height: 209px;
-	    bottom: 26px;
-	}
-	.frame2 {
-	    width: 213px;
-	    height: 209px;
-	    bottom: 26px;
+	.frametwo,.frame2 {
+		transform: rotate(25deg);
+	    width: 13.312rem;
+	    height: 13.0625rem;
+	    margin: 0.625rem 0 0 0.5rem;
 	}
 	.frametwo img {
-	    top: 11px;
+		margin: 1.625rem 0 0 0;
+		transform: rotate(-21deg);
+    	width: 99%;
 	}
 	.stars {
-	    width: 32px;
-	    position: relative;
-	    left: 141px;
+	    width: 2.3rem;
+	    position: absolute;
+	    left: 20.125rem;
+	    top: 0.325rem;
+	}
+	.stars img{
+		width: 100%;
 	}
 	.balloon {
-	    width: 56px;
-	    height: 69px;
+		position: absolute;
+		left: 10.25rem;
+    	top: 2.1875rem;
+	    width: 3.5rem;
+	    height: 4.3125rem;
 	    transform: rotate(10deg);
-	    position: relative;
-	    left: 186px;
+	}
+	.balloon img{
+		width: 82%;
 	}
 	.baby {
 		opacity: 0;
-		width: 242px;
+		width: 15.125rem;
 	}
 	.marchbaby {
-	    width: 242px;
-	    height: 276px;
+	    width: 15.125rem;
+	    height: 17.25rem;
 	    position: relative;
-	    bottom: 98px;
+	}
+	.marchbaby img{
+		width: 95%;
+		position: relative;
+    	left: -14.625rem;
+    	top: 30px;
 	}
 	.cloud {
-	    width: 57px;
-	    height: 30px;
-	    position: relative;
-	    top: 82px;
-	    left: 33px;
+	    width: 3.5625rem;
+	    margin: 6.875rem 0 0 0.625rem;
 	}
 	.Map {
-	    width: 86px;
-	    height: 73px;
-	    position: relative;
-	    top: 111px;
-	    left: 52px;
+	    width: 5.375rem;
+	    height: 4.565rem;
+	    margin: 2.5rem 0 0 3.4375rem;
+	}
+	.Map img{
+		width: 100%;
 	}
 
 
 	/*   page2   */
+	.page2-upper,.page2-center,.page2-lower{
+		display: flex;
+		position: relative;
+	}
+	.page2-center:nth-child(1){
+		width: 40%;
+	}
+	.page2-center:nth-child(2){
+		align-self:center;
+		width: 60%;
+	}
+	.page2-lower:nth-child(1){
+		width: 50%;
+	}
+	.page2-lower:nth-child(2){
+		width: 50%;
+	}
 	.Bird {
-	    width: 84px;
-	    height: 50px;
-	    position: relative;
-	    top: 85px;
-	    left: 26px;
+	    width: 4.25rem;
+	    position: absolute;
+	    left: 2.0625rem;
+	    top: 4.75rem;
 	}
-	.text4 {
-	    width: 195px;
-	    height: 152px;
-	    left: 28px;
-	    top: 18px;
+	.text4,.textfour {
+	    width: 10.3875rem;
+	    position: absolute;
+	    left: 7.25rem;
 	}
-	.textfour {
-	    width: 195px;
-	    height: 152px;
-	    position: relative;
-	    left: 28px;
-	    top: 18px;
-	}
-	
 	.aircraft {
-	    width: 156px;
-	    height: 116px;
-	    position: relative;
-	    left: 7px;
-	    top: 15px;
+	    width: 7.9rem;
+	    position: absolute;
+	    left: 17.875rem;
+	    top: 1.1875rem;
 	}
-	.textfive {
-	    width: 131px;
-	    height: 186px;
-	    position: relative;
-	    left: 20px;
-    	top: 14px;
-	}
-	.text5 {
-	    width: 131px;
-	    height: 186px;
-	    position: relative;
-	    left: 20px;
-    	top: 14px;
+	.textfive,.text5 {
+	    width: 8.1875rem;
+    	margin: 13.8125rem 0 0 1.6875rem;
 	}
 	.cloud2 {
-	    width: 56px;
-	    height: 29px;
-	    position: relative;
-	    left: 180px;
-    	top: -48px;
+	    width: 2.9rem;
+	    position: absolute;
+	    top: 10.6875rem;
+    	left: 18.9375rem;
 	}
-	.framethree {
-	    width: 237px;
-	    height: 218px;
+	.framethree,.frame3 {
+	    width: 14.8125rem;
+	    height: 13.625rem;
 	    transform: rotate(24deg);
-	    position: relative;
-	    left: 43px;
-    	bottom: 67px;
+	    margin: 12.375rem 0 0 0.8125rem;
 	}
 	.framethree img{
-		top: 12px;
+		transform: rotate(-23deg);
+		width: 100%;
+		margin: 1.0625rem 0 0 -0.25rem;
 	}
-	.frame3 {
-	    width: 237px;
-	    height: 218px;
-	    transform: rotate(24deg);
-	    position: relative;
-	    left: 43px;
-    	bottom: 67px;
-	}
-	.framefour {
-	    width: 193px;
-	    height: 167px;
+	.framefour,.frame4 {
+	    width: 12.0625rem;
+	    height: 10.4375rem;
 	    transform: rotate(-6deg);
-	    position: relative;
-	    left: 14px;
-    	top: -21px;
-	}
-	.frame4 {
-	    width: 193px;
-	    height: 167px;
-	    transform: rotate(-6deg);
-	    position: relative;
-	    left: 14px;
-    	top: -21px;
+	    margin: 1.4375rem 0 0 0.875rem;
 	}
 	.framefour img{
-		width: 83%;
+		margin: 2.125rem 0 0 1.1875rem;
+		width: 81%;
 	    transform: rotate(-10deg);
-	    position: relative;
-	    top: 33px;
-	    left: 14px;
-	}
-	.frame4 img{
-		opacity: 0;
 	}
 	.glasses {
-	    width: 64px;
-	    height: 23px;
-	    position: relative;
-	    left: 168px;
+		position: absolute;
+	    left: 9.25rem;
+	    top: 12.3125rem;
+	    width: 4rem;
+	}
+	.glasses img{
+		width: 100%;
 	}
 	.marchthree {
-	    height: 245px;
-	    position: relative;
-	    left: 10px;
-	    top: 6px;
+		position: relative;
+		left: 13.75rem;
+	    width: 14.3125rem;
+    	margin: 2.9375rem 0 0 -1rem;
 	}
+	.marchthree img{
+		width: 90%;
+	}
+
 
 	/*   page3   */
-	.Bird2 {
-	    width: 55px;
-	    top: 20px;
-	    left: 45px;
+	.page3-upper,.page3-center,.page3-lower{
+		display: flex;
+		position: relative;
 	}
-	.framefive {
-	    width: 208px;
-	    height: 191px;
-	    position: relative;
-	    left: 10px;
-	    top: 9px;
+	.page3-upper:nth-child(1){
+		width: 50%;
+	}
+	.page3-upper:nth-child(2){
+		width: 50%;
+	}
+	.page3-center:nth-child(1){
+		width: 40%;
+	}
+	.page3-center:nth-child(2){
+		width: 60%;
+	}
+	.page3-lower:nth-child(1){
+		width: 50%;
+	}
+	.page3-lower:nth-child(2){
+		width: 50%;
+	}
+	.Bird2 {
+	    width: 3.4375rem;
+	    position: absolute;
+	    top: 1.625rem;
+	    left: 3.3125rem;
+	}
+	.framefive,.frame5 {
+	    width: 13rem;
+	    height: 11.9375rem;
+	    margin: 3.375rem 0 0 0.8125rem;
 	}
 	.framefive img{
-		position: relative;
-		top:9px;
-	}
-	.frame5 {
-	    width: 208px;
-	    height: 191px;
-	    position: relative;
-	    left: 10px;
-	    top: 9px;
-	}
-	.frame5 img{
-		position: relative;
-		top: 9px;
+		width: 80%;
+    	transform: rotate(-10deg);
+		margin: 2.625rem 0 0 1.3125rem;
 	}
 	.cloud3 {
-	    width: 59px;
-	    position: relative;
-	    top: 38px;
+	    width: 3.3875rem;
+	    position: absolute;
+	    top: 3.5625rem;
+	    right: -3.375rem;
 	}
 	.Bird3 {
-	    width: 56px;
-	    position: relative;
-	    top: 5px;
-	    left: 132px;
+	    width: 3rem;
+	    position: absolute;
+	    left: 22rem;
+	    top: 2.5rem;
 	}
-	.textsix {
-	    width: 197px;
-	    position: relative;
-	    top: 20px;
+	.textsix,.text6 {
+	    width: 12.3125rem;
+	    margin: 8.625rem 0 0 -0.1875rem;
 	}
-	.text6 {
-	    width: 197px;
-	    position: relative;
-	    top: 20px;
-	    /*right: 50px;*/
+	.textseven,.text7 {
+	    width: 11.5625rem;
+        margin: 0.625rem 0 0 0.3125rem;
 	}
-	.textseven {
-	    width: 185px;
-	    position: relative;
-	    left: 5px;
-	    top: 38px;
+	.framesix,.frame6 {
+		transform: rotate(22deg);
+	    width: 13.9375rem;
+	    height: 12.5rem;
+	    margin: 0px 0 0 -0.125rem;
 	}
-	.text7 {
-	    width: 185px;
-	    position: relative;
-	    left: 5px;
-	    top: 38px;
-	}
-	.framesix {
-	    width: 223px;
-	    height: 200px;
-	    position: relative;
-	    bottom: 32px;
-	}
-	.frame6 {
-	    width: 223px;
-	    height: 200px;
-	    position: relative;
-	    bottom: 32px;
+	.framesix img{
+		transform: rotate(-20deg);
+		width: 95%;
+    	margin: 1.375rem 0 0.25rem;
 	}
 	.balloon3 {
-	    width: 39px;
-	    height: 46px;
-	    position: relative;
-	    left: 116px;
-	    bottom: 7px;
+	    width: 2.25rem;
+	    height: 2.70rem;
+	    position: absolute;
+	    top: -1.625rem;
+	    left: 19.6875rem;
 	}
 	.marcheight {
-	    width: 296px;
-	    position: relative;
-	    right: 185px;
-	    bottom: 31px;
-	}
-	.eight{
-		width: 296px;
+		position: relative;
+	    width: 18.5rem;
+	    margin: 1.75rem 0 0 -2.8125rem;
 	}
 	.marcheight img {
-	    right: 19px;
+		width: 100%;
+	    position: relative;
+    	right: 14.1875rem;
 	}
 	.cloud4 {
-	    width: 55px;
-	    position: relative;
-	    top: 34px;
-    	left: 157px;
+	    width: 3.2rem;
+	    position: absolute;
+	    left: 10.3125rem;
+	    top: 4.125rem;
 	}
-	.texteight {
-	    width: 175px;
-	    position: relative;
-	    top: 73px;
-    	right: 98px;
-	}
-	.text8 {
-	    width: 175px;
-	    position: relative;
-	    top: 73px;
-	    right: 98px;
+	.texteight,.text8 {
+	    width: 10.9375rem;
+	    margin: 6.125rem 0 0 -8rem;
 	}
 	.Stars2 {
-	    width: 34px;
-	    position: relative;
-	    left: 35px;
-    	 top: 54px;
+	    width: 2.125rem;
+	    position: absolute;
+	    left: 20.5rem;
+	    top: 13.1875rem;
 	}
-
 
 	/*   page4   */
+	.page4-upper,.page4-center,.page4-lower{
+		display: flex;
+		position: relative;
+	}
+	.page4-upper:nth-child(1){
+		width: 50%;
+	}
+	.page4-upper:nth-child(2){
+		width: 50%;
+	}
+	.page4-center:nth-child(1){
+		width: 60%;
+	}
+	.page4-center:nth-child(2){
+		width: 40%;
+	}
+	.page4-lower:nth-child(1){
+		width: 50%;
+	}
+	.page4-lower:nth-child(2){
+		width: 50%;
+	}
 	.Bicycle {
-	    width: 101px;
-	    top: 41px;
-	    left: 36px;
+	    width: 6.3125rem;
+	    position: absolute;
+	    top: 2.375rem;
+	    left: 2.875rem;
 	}
-	.textnine {
-	    width: 164px;
-	    position: relative;
-	    top: 65px;
+	.textnine,.text9 {
+	    width: 10.25rem;
+	    margin: 6.9375rem 0 0 0;
 	}
-	.text9 {
-	    width: 164px;
-	    position: relative;
-	    top: 65px;
+	.frameseven,.frame7 {
+		transform: rotate(22deg);
+	    width: 14.0625rem;
+	    height: 12.5625rem;
+	    margin: 2.0625rem 0 0 0.875rem;
 	}
-	.frameseven {
-	    width: 225px;
-	    height: 201px;
-	    position: relative;
-	    left: 17px;
-	    bottom: -25px;
-	}
-	.frame7 {
-	    width: 225px;
-	    height: 201px;
-	    position: relative;
-	    left: 17px;
-	    bottom: -25px;
+	.frameseven img{
+		transform: rotate(-22deg);
+		width: 92%;
+    	margin: 1.4375rem 0 0 0.5625rem;
 	}
 	.Bird4 {
-	    width: 53px;
-	    position: relative;
-	    top: 45px;
-	    left: 158px;
+	    width: 3rem;
+	    position: absolute;
+	    left: 19.5rem;
+	    top: 1.875rem;
 	}
-	.frameeight {
-	    width: 197px;
-	    height: 178px;
-	    position: relative;
-	    top: 16px;
+	.frameeight,.frame8 {
+	    width: 12.3125rem;
+	    height: 11.125rem;
+	    margin: 1.125rem 0 0 0.625rem;
 	}
-	.frame8 {
-	    width: 197px;
-	    height: 178px;
-	    position: relative;
-	    top: 16px;
+	.frameeight img{
+		transform: rotate(-11deg);
+    	width: 83%;
+		margin: 2.3125rem 0 0 1rem;
 	}
 	.tra {
-	    width: 67px;
-	    position: relative;
-	    left: 2px;
-	    top: 15px;
+	    width: 3.1875rem;
+	    position: absolute;
+	    left: 12.25rem;
+    	top: 1.125rem;
 	}
-	.textten {
-	    width: 203px;
-		position: relative;
-	    left: 15px;
-	    bottom: -13px;
-	}
-	.text10 {
-	    width: 203px;
-		position: relative;
-	    left: 15px;
-	    bottom: -13px;
+	.textten,.text10 {
+	    width: 12.6875rem;
+	    margin: 4.0625rem 0 0 0px;
 	}
 	.Stars3 {
-	    width: 35px;
-	    position: relative;
-	    left: 9px;
-	    bottom: -26px;
+	    width: 2rem;
 	}
-	.texteleven {
-	    width: 201px;
-		position: relative;	
-	    left: 29px;
-	    top: 55px;
-	}
-	.text11 {
-	    width: 201px;
-	    /*height: 135px;*/
-		position: relative;	
-	    left: 29px;
-	    top: 55px;
+	.texteleven,.text11 {
+	    width: 12rem;
+    	margin: 2.625rem 0 0 1.5rem;
 	}
 	.car {
-	    width: 57px;
-	    position: relative;
-	    left: 30px;
-    	top: 39px;
+	    width: 4rem;
+	    position: absolute;
+	    left: 1.3125rem;
+    	top: 10rem;
 	}
 	.marchten {
-	    height: 342px;
+	    height: 21.375rem;
+	    margin: -0.625rem 0 0 -5.9375rem;
 	    position: relative;
-	    top: 27px;
+	    left: 12.5rem;
+	}
+	.marchten img{
+		height: 100%;
 	}
 
 
 	/*   page5   */
+	.page5-upper,.page5-center,.page5-lower{
+		display: flex;
+		position: relative;
+	}
+	.page5-upper:nth-child(1){
+		width: 50%;
+	}
+	.page5-upper:nth-child(2){
+		width: 50%;
+	}
+	.page5-center:nth-child(1){
+		width: 50%;
+	}
+	.page5-center:nth-child(2){
+		width: 50%;
+	}
+	.page5-lower:nth-child(1){
+		width: 50%;
+	}
+	.page5-lower:nth-child(2){
+		width: 50%;
+	}
+	.Bird5 {
+	    width: 3.25rem;
+	    position: absolute;
+	    top: 1.6875rem;
+	    left: 3.75rem;
+	}
+	.camera {
+	    width: 5.8125rem;
+	    position: absolute;
+	    left: 17.125rem;
+	    top: 1.875rem;
+	}
 	.Twelve{
-		opacity: 0;
-		width: 39px;
+		width: 2.4375rem;
 	}
 	.marchTwelve {
-	    width: 39px;
+	    width: 18.4375rem;
+	    margin: -1.6875rem 0 0 -1.75rem;
 	    position: relative;
-	    top: -10px;
 	}
-	.textfourteen {
-	    width: 161px;
-	    position: relative;
-	    top: 41px;
-	    left: 157px;
+	.marchTwelve img{
+		width: 100%;
+		position: relative;
+    	left: -12.0625rem;
 	}
-	.text14 {
-	    width: 161px;
-	    position: relative;
-	    top: 41px;
-	    left: 157px;
+	.textfourteen,.text14 {
+	    width: 10.0625rem;
+	    margin: 1.9375rem 0 0 -4.375rem;
 	}
 	.book {
-	    width: 74px;
-	    position: relative;
-	    left: 263px;
-	    top: 35px;
+	    width: 4.625rem;
+	    position: absolute;
+	    left: 18.5625rem;
+    	top: 9.375rem;
 	}
-	.framenine {
-        width: 195px;
-	    height: 165px;
-	    left: 14px;
-	    top: 47px;
+	.framenine,.frame9 {
+        width: 12.1875rem;
+	    height: 10.3125rem;
+	    margin: 3.4375rem 0 0 0.8125rem;
 	}
-	.frame9{
-		width: 195px;
-	    height: 165px;
-	    left: 14px;
-	    top: 47px;
+	.framenine img{
+		transform: rotate(-10deg);
+		width: 82%;
+    	margin: 2.125rem 0 0 1.125rem;
 	}
-	.frame10{
-		left: 42px;
-	    top: 29px;
-	    width: 200px;
-	    height: 183px;
-	}
-	.frameten {
-		left: 42px;
-	    top: 29px;
-	    width: 200px;
-	    height: 183px;
+	.frame10,.frameten{
+		transform: rotate(19deg);
+	    width: 13.5rem;
+	    height: 12.4375rem;
+	    margin: 4.125rem 0 0 0.4375rem;
 	}
 	.frameten img {
-	    width: 81%;
+	    width: 82%;
+    	margin: 2.6875rem 0 0 1.25rem;
 	    transform: rotate(-10deg);
-	    position: relative;
-	    top: 8px;   
 	}
-	.text12{
-	   	left: 25px;
-        width: 189px;
-    	height: 137px;
+	.text12,.texttwelve{
+        width: 11.8125rem;
+        margin: 6.5rem 0 0 0.375rem;
 	}
-	.texttwelve {
-	   	left: 25px;
-        width: 189px;
-    	height: 137px;
-	}
-	.text13 {
-	    width: 160px;
-	    position: relative;
-	    left: 28px;
-	    top: 32px;
-	}
-	.textthirteen {
-	    width: 160px;
-	    position: relative;
-	    left: 28px;
-	    top: 32px;
+	.text13,.textthirteen {
+	    width: 9rem;
+    	margin: 6.9375rem 0 0 1.625rem;
 	}
 	.balloon4 {
-	    width: 45px;
-	    height: 57px;
-	    left: 142px;
-	    top: 12px;
-	}	
+	    width: 2.8rem;
+	    height: 3.5rem;
+	    position: absolute;
+	    left: 8rem;
+	    transform: rotate(-32deg);
+	}
+	/*页面布局以上*/
+
+/*媒体查询以下*/
+/*320 */
+@media screen and (min-width:320px) and (max-width:359px){		
+	html {
+		font-size: 12px;	
+	}
+
+	.Stars2 {
+	    width: 2.125rem;
+	    position: absolute;
+	    left: 22.5rem;
+	    top: 15rem;
+	}
+	.texteight, .text8 {
+	    width: 10.9375rem;
+	    margin: 7.125rem 0 0 -1rem;
+	}
+	.marcheight {
+	    width: 23rem;
+	    margin: -0.25rem 0 0 -7.8125rem;
+	}
+	.cloud4 {
+	    left: 12.3125rem;
+	}
+	.textfourteen, .text14 {
+	    margin: 1.9375rem 0 0 -0.375rem;
+	}
+	.marchTwelve {
+	    margin: -0.6875rem 0 0 -5rem;
+	}
+	.book {
+	    left: 19.5625rem;
+	}
+	.marchten {
+	    margin: 0.375rem 0 0 -5.9375rem;
+	}
+	.car {
+	    top: 12rem;
+	}
+	.texteleven, .text11 {
+	    margin: 4.625rem 0 0 1.5rem;
+	}
 }
 
-/*415-768大屏幕手机    动画前+动画后*/
-@media screen and (min-width:416px) and (max-width:767px){	
+/*360&&375 */
+@media screen and (min-width:360px) and (max-width:390px){		
+	html {
+		font-size: 14px;
+	}
+
+	.cloud4 {
+	    /*width: 3.2rem;*/
+	    /*position: absolute;*/
+	    left: 9.3125rem;
+	    top: 5.125rem;
+	}
+	.marcheight {
+	    /*position: relative;*/
+	    /*width: 18.5rem;*/
+	    margin: 1.75rem 0 0 -4.8125rem;
+	}
+	.texteight, .text8 {
+	    /*width: 10.9375rem;*/
+	    margin: 6.125rem 0 0 -1rem;
+	}
+	.Stars2 {
+	    /*width: 2.125rem;*/
+	    /*position: absolute;*/
+	    left: 21rem;
+	    top: 13.1875rem;
+	}
+	.marchTwelve {
+	    width: 18rem;
+	    margin: -1.6875rem 0 0 -3.0rem;
+	    /*position: relative;*/
+	}
+	.textfourteen, .text14 {
+	    /*width: 10.0625rem;*/
+	    margin: 1.9375rem 0 0 -2.375rem;
+	}
+	.framethree img {
+	    margin: 1.4625rem 0 0 -0.15rem;
+	}
+}
+
+
+/*412  动画前+动画后*/
+@media screen and (min-width:391px) and (max-width:412px) {
+	html {
+		font-size: 14px;
+	}
+
+	/*page1*/
+	.Lballoon {
+	    left: 7.5rem;
+	    top: 1.3rem;
+	}
+	.frameone, .frame1 {
+	    margin: 21% 0 0 13%;
+	}
+	.textone, .text1 {
+	    padding-top: 5.995rem;
+	    padding-left: 33px;
+	}
+	.stars {
+	    left: 22.5rem;
+    	top: 5px; 
+	}
+	.textthree, .text3 {
+	    margin: 3rem 0 0 22px;
+	}
+	.frametwo, .frame2 {
+	    margin: 1rem 0 0 1.5rem;
+	}
+	.marchbaby {
+	    left: 15px;
+	}
+	.balloon {
+	    left: 12.25rem;
+	}
+	.cloud {
+	    margin: 6.875rem 0 0 2.625rem;
+	}
+	.Map {
+	    margin: 2.5rem 0 0 6.4375rem;
+	}
+
+	/*page2*/
+	.Bird {
+	    left: 3.0625rem;
+	}
+	.text4, .textfour {
+	    left: 8.25rem;
+	}
+	.aircraft {
+	    left: 18.875rem;
+	    top: 1.8rem;
+	}
+	.cloud2 {
+	    top: 11.6875rem;
+	    left: 21.9375rem;
+	}
+	.textfive, .text5 {
+	    margin: 13.8125rem 0 0 2.6875rem;
+	}
+	.framethree, .frame3 {
+	    margin: 12.375rem 0 0 2rem;
+	}
+	.framefour, .frame4 {
+	    margin: 1.4375rem 0 0 1.875rem;
+	}
+	.marchthree {
+	    margin: 2.9375rem 0 0 1rem;
+	}
+	.glasses {
+	    left: 10.25rem;
+	    top: 12rem;
+	}
+
+	/*page3*/
+	.Bird2 {
+	    top: 2.625rem;
+	    left: 5.3125rem;
+	}
+	.framefive, .frame5 {
+	    margin: 4.375rem 0 0 2rem;
+	}
+	.cloud3 {
+	    top: 4.5625rem;
+	    right: -3.375rem;
+	}
+	.Bird3 {
+	    left: 24rem;
+	    top: 3.5rem;
+	}
+	.textsix, .text6 {
+	    margin: 9.625rem 0 0 0.8125rem;
+	}
+	.textseven, .text7 {
+	    margin: 1.625rem 0 0 1.9rem;
+	}
+	.balloon3 {
+	    top: -0.625rem;
+	    left: 22.6875rem;
+	}
+	.framesix, .frame6 {
+	    transform: rotate(22deg);
+	    width: 13.9375rem;
+	    height: 12.5rem;
+	    margin: 16px 0 0 0.875rem;
+	}
+	.cloud4 {
+	    left: 11.3125rem;
+	    top: 3.125rem;
+	}
+	.marcheight {
+		width: 21.5rem;
+	    margin: -1.25rem 0 0 -4.8125rem;
+	}
+	.texteight, .text8 {
+	    margin: 5.125rem 0 0 -1rem;
+	}
+	.Stars2 {
+	    left: 23rem;
+	    top: 12.1875rem;
+	}
+
+
+	/*page4*/
+	.Bicycle {
+	    top: 2.375rem;
+	    left: 3.5rem;
+	}
+	.textnine, .text9 {
+	    margin: 6.9375rem 0 0 27px;
+	}
+	.Bird4 {
+	    left: 19.5rem;
+	    top: 3rem;
+	}
+	.frameseven, .frame7 {
+	    margin: 4.0625rem 0 0 1rem;
+	}
+	.frameeight, .frame8 {
+	    width: 12.3125rem;
+	    height: 11.125rem;
+	    margin: 1.125rem 0 0 1.625rem;
+	}
+	.texteleven, .text11 {
+	    margin: 2.625rem 0 0 2.5rem;
+	}
+	.textten, .text10 {
+	    margin: 4.0625rem 0 0 15px;
+	}
+	.car {
+	    left: 2.3125rem;
+	    top: 11rem;
+	}
+	.marchten {
+	    margin: -0.625rem 0 0 -4.9375rem;
+	}
+
+
+	/*page5*/
+	.Bird5 {
+	    top: 2.6875rem;
+	    left: 4.75rem;
+	}
+	.framenine, .frame9 {
+	    margin: 4.4375rem 0 0 1.8125rem;
+	}
+	.camera {
+	    left: 18.125rem;
+	    top: 1.875rem;
+	}
+	.text12, .texttwelve {
+	    margin: 6.5rem 0 0 1.375rem;
+	}
+	.balloon4 {
+	    left: 8rem;
+	    top: 10px;
+	}
+	.text13, .textthirteen {
+	    margin: 6.9375rem 0 0 2.625rem;
+	}
+	.frame10, .frameten {
+	    margin: 4.125rem 0 0 1.4375rem;
+	}
+	.marchTwelve {
+	    margin: -0.6875rem 0 0 -2.9rem;
+	}
+	.textfourteen, .text14 {
+	    margin: 1.9375rem 0 0 -2.375rem;
+	}
+	.book {
+	    left: 20.5625rem;
+	    top: 9.375rem;
+	}
+	.tra {
+	    width: 4rem;
+	    left: 13.25rem;
+	}
+}
+
+/*414-767  动画前+动画后*/
+@media screen and (min-width:413px) and (max-width:417px) {
+	html {
+		font-size: 15px;
+	}
+	.cloud4 {
+	    left: 12.3125rem;
+    	top: 6.125rem;
+	}
+	.texteight, .text8 {
+	    margin: 9.125rem 0 0 -4rem;
+	}
+	.Stars2 {
+	    left: 22.5rem;
+    	top: 16.1875rem;
+	}
+	.marcheight {
+	    width: 22.5rem;
+	    margin: 1.75rem 0 0 -3.8125rem;
+	}
+	.marchten {
+	    height: 23.375rem;
+	    margin: 1.375rem 0 0 -5.9375rem;
+	}
+	.marchTwelve {
+	    width: 19.4375rem;
+	    margin: 0.3125rem 0 0 -1.75rem;
+	}
+	.textfourteen, .text14 {
+	    margin: 3.9375rem 0 0 -4.375rem;
+	}
+	.book {
+	    left: 20.5625rem;
+	    top: 11.375rem;
+	}
+}	
+
+@media screen and (min-width:418px) and (max-width:767px){
 	
+	html {
+		font-size: 19px;
+	}
 	.page1-upper,.page1-center,.page1-lower,.page2-upper,.page2-center,.page2-lower,.page3-upper,.page3-center,.page3-lower,.page4-upper,.page4-center,.page4-lower,.page5-upper,.page5-center,.page5-lower{
-			justify-content: center;
+			/*justify-content: flex-end;*/
+			margin: 0 auto;
 		}
-
-		/*page1*/
-		.Lballoon {
-		    width: 39px;
-		    height: 45px;
-		    transform: rotate(-25deg);
-		    position: relative;
-		    left: 71px;
-		    top: 12px;
+		.page1-lower{
+			margin: 0 0 0 7.75rem;
 		}
-		.frameone {
-		    width: 223px;
-		    height: 201px;
-		    left: 17px;
-		}	
-		.textone {
-		    width: 181px;
-		    position: relative;
-		    top: 80px;
-		    left: 13px;
+		.page2-lower,.page2-upper{
+			margin: 0 0 0 6.75rem;
 		}
-		.frame1 {
-		    width: 223px;
-		    height: 201px;
-		    left: 17px;
+		.page3-lower{
+			margin: 0 0 0 9.75rem;
 		}
-		.text1 {
-		    width: 181px;
-		    position: relative;
-		    top: 80px;
-		    left: 13px;
+		.page3-upper,.page4-lower{
+			margin: 0 0 0 6.75rem;
 		}
-		.textthree {
-		    width: 179px;
-		    /*height: 138px;*/
-		    position: relative;
-		    top: 14px;
+		.page4-upper{
+			margin: 0 0 0 6.75rem;
 		}
-		.text3 {
-		   width: 179px;
-		   /*height: 138px;*/
-		   position: relative;
-		   top: 14px;
+		.page4-center{
+			margin: 0 0 0 6.75rem;
 		}
-		.frametwo {
-		    width: 213px;
-		    height: 209px;
-		    bottom: 26px;
+		.page5-lower{
+			margin: 0 0 0 9.75rem;
 		}
-		.frame2 {
-		    width: 213px;
-		    height: 209px;
-		    bottom: 26px;
-		}
-		.frametwo img {
-		    top: 11px;
-		}
-		.stars {
-		    width: 32px;
-		    position: relative;
-		    left: 141px;
-		}
-		.balloon {
-		    width: 56px;
-		    height: 69px;
-		    transform: rotate(10deg);
-		    position: relative;
-		    left: 186px;
-		}
-		.baby {
-			opacity: 0;
-			width: 242px;
-		}
-		.marchbaby {
-		    width: 242px;
-		    height: 276px;
-		    position: relative;
-		    bottom: 98px;
-		}
-		.cloud {
-		    width: 57px;
-		    /*height: 30px;*/
-		    position: relative;
-		    top: 82px;
-		    left: 33px;
-		}
-		.Map {
-		    width: 86px;
-		    /*height: 73px;*/
-		    position: relative;
-		    top: 111px;
-		    left: 52px;
-		}
-
-
-		/*   page2   */
-		.Bird {
-		    width: 84px;
-		    height: 50px;
-		    position: relative;
-		    top: 85px;
-		    left: 26px;
-		}
-		.text4 {
-		    width: 195px;
-		    left: 28px;
-		    top: 18px;
-		}
-		.textfour {
-		    width: 195px;
-		    position: relative;
-		    left: 28px;
-		    top: 18px;
-		}
-		.aircraft {
-		    width: 156px;
-		    position: relative;
-		    left: 7px;
-		    top: 15px;
-		}
-		.textfive {
-		    width: 148px;
-		    position: relative;
-		    left: -10px;
-		    top: -22px;
-		}
-		.text5 {
-		    width: 148px;
-		    position: relative;
-		    left: -10px;
-		    top: -22px;
-		}
-		.cloud2 {
-		    width: 56px;
-		    position: relative;
-		    left: 150px;
-	    	top: -33px;
-		}
-		.framethree {
-		    width: 237px;
-		    height: 218px;
-		    transform: rotate(24deg);
-		    position: relative;
-		    left: 13px;
-		    bottom: 45px;
-		}
-		.frame3 {
-		    width: 237px;
-		    height: 218px;
-		    transform: rotate(24deg);
-		    position: relative;
-		    left: 13px;
-		    bottom: 45px;
-		}
-		.framefour {
-		    width: 214px;
-	    	height: 190px;
-		    transform: rotate(-6deg);
-		    position: relative;
-		    left: 14px;
-	    	top: -21px;
-		}
-		.frame4 {
-		    width: 214px;
-	    	height: 190px;
-		    transform: rotate(-6deg);
-		    position: relative;
-		    left: 100px;
-	    	top: -21px;
-		}
-		.framefour img{
-			width: 81%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 39px;
-		    left: 20px;
-		}
-		.frame4 img{
-			opacity: 0;
-			/*width: 83%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 33px;
-		    left: 14px;*/
-		}
-		.glasses {
-		    width: 64px;
-		    position: relative;
-		    left: 168px;
-		}
-		.marchthree {
-			width: 268px;
-		    position: relative;
-		    left: 10px;
-		    top: -32px;
-		}
-		.three img{
-			width: 268px;
-		}
-
-		/*   page3   */
-		.Bird2 {
-		    width: 72px;
-	    	top: 58px;
-	    	left: 34px;
-		}
-		.framefive {
-		    width: 243px;
-		    height: 219px;
-		    position: relative;
-		    left: 5px;
-		    top: 54px;
-		}
-		.framefive img{
-			position: relative;
-			top:9px;
-		}
-		.frame5 {
-		    width: 243px;
-		    height: 219px;
-		    position: relative;
-		    left: 5px;
-		    top: 54px;
-		}
-		.frame5 img{
-			position: relative;
-			top: 9px;
-		}
-		.cloud3 {
-		    width: 59px;
-		    /*height: 31px;*/
-		    position: relative;
-		    top: 76px;
-		}
-		.Bird3 {
-		    width: 64px;
-		    /* height: 39px; */
-		    position: relative;
-		    top: 54px;
-		    left: 124px;
-		}
-		.textsix {
-		    width: 197px;
-		    position: relative;
-		    top: 77px;
-		}
-		.text6 {
-		    width: 225px;
-		    position: relative;
-		    /*left: 5px;*/
-		    top: 77px;
-		}
-		.textseven {
-		    width: 177px;
-		    position: relative;
-		    left: 5px;
-		    top: 66px;
-		}
-		.text7 {
-		    width: 177px;
-		    /*height: 178px;*/
-		    position: relative;
-		    left: 5px;
-		    top: 38px;
-		}
-		.framesix {
-		    width: 242px;
-		    height: 226px;
-		    position: relative;
-		    /*bottom: -67px;*/
-		    left: 8px;
-		}
-		.frame6 {
-		    width: 242px;
-		    height: 226px;
-		    position: relative;
-		    /*bottom: -67px;*/
-		    left: 8px;
-		}
-		.balloon3 {
-		    width: 49px;
-		    height: 61px;
-		    position: relative;
-		    left: 116px;
-		    bottom: 7px;
-		}
-		.marcheight {
-		    width: 296px;
-		    /*height: 324px;*/
-		    position: relative;
-		    right: 185px;
-		    bottom: 78px;
-		}
-		.marcheight img {
-		    right: 7px;
+		.page5-center,.page5-upper{
+			margin: 0 0 0 6.75rem;
 		}
 		.cloud4 {
-		    width: 55px;
-		    position: relative;
-		    top: 10px;
-    		left: 179px;
+		    left: 7.6rem;
+		    top: 5.125rem;
 		}
-		.texteight {
-		    width: 184px;
-		    position: relative;
-		    top: 2px;
-    		right: 56px;
-		}
-		.text8 {
-		    width: 184px;
-		    position: relative;
-		    top: 2px;
-    		right: 56px;
+		.texteight, .text8 {
+		    margin: 6.125rem 0 0 -5rem;
 		}
 		.Stars2 {
-		    width: 41px;
-		    position: relative;
-		    left: 66px;
-    		top: 14px;
+		    left: 19.5rem;
+		    top: 14.1875rem;
 		}
-
-
-		/*   page4   */
-		.Bicycle {
-		    width: 101px;
-		    /*height: 65px;*/
-		    top: 41px;
-		    left: 36px;
+		.cloud3 {
+		    right: 2.625rem;
 		}
-		.textnine {
-		    width: 191px;
-		    position: relative;
-		    top: 65px;
+		.textsix, .text6 {
+		    margin: 8rem 0 0 0.8125rem;
 		}
-		.text9 {
-		    width: 191px;
-		    position: relative;
-		    top: 65px;
-		}
-		.frameseven {
-		    width: 243px;
-		    height: 225px;
-		    position: relative;
-		    left: 17px;
-		    bottom: -25px;
-		}
-		.frame7 {
-		    width: 243px;
-		    height: 225px;
-		    position: relative;
-		    left: 17px;
-		    bottom: -25px;
-		}
-		.Bird4 {
-		    width: 70px;
-		    /*height: 31px;*/
-		    position: relative;
-		    top: 45px;
-		    left: 158px;
-		}
-		.frameeight {
-		    width: 236px;
-		    height: 216px;
-		    position: relative;
-		    top: 16px;
-		}
-		.frameeight img{
-			top: 11px;
-		}
-		.frame8 {
-		    width: 236px;
-		    height: 216px;
-		    position: relative;
-		    top: 16px;
-		}
-		.tra {
-		    width: 97px;
-		}
-		.textten {
-		    width: 231px;
-		    position: relative;
-		    left: 32px;
-		    bottom: 24px;
-		}
-		.text10 {
-		    width: 231px;
-		    position: relative;
-		    left: 32px;
-		    bottom: 24px;
-		}
-		.Stars3 {
-		    width: 43px;
-		    position: relative;
-		    left: 13px;
-		    bottom: 0px;
-		}
-		.texteleven {
-		    width: 222px;
-		    /*height: 135px;*/
-			position: relative;	
-		    left: 50px;
-		    top: 55px;
-		}
-		.text11 {
-		    width: 222px;
-		    /*height: 135px;*/
-			position: relative;	
-		    left: 50px;
-		    top: 55px;
-		}
-		.car {
-		    width: 64px;
-		    position: relative;
-		    left: 60px;
-	    	top: 66px;
-		}
-		.marchten {
-		    height: 342px;
-		    position: relative;
-		    top: 27px;
-		    /*left: 0;*/
-		}
-		.marchten img {
-		    right: -82px;
-		}
-
-
-		/*   page5   */
-		.Bird5 {
-		    width: 70px;
-		    position: relative;
-		    top: 46px;
-		    left: 42px;
-		}
-		.camera {
-		    width: 87px;
-		    position: relative;
-		    top: 53px;
-		    left: 9px;
-		}
-		.Twelve{
-			opacity: 0;
-			width: 309px;
-		}
-		.marchTwelve {
-		    width: 309px;
-		    position: relative;
-		    top: -44px;
-		}
-		.marchTwelve img{
-			width: 100%;
-		}
-		.textfourteen {
-		    width: 146px;
-		    position: relative;
-		    top: -4px;
-    		left: -91px;
-		}
-		.text14 {
-		    width: 146px;
-		    position: relative;
-		    top: -4px;
-    		left: -91px;
-		}
-		.book {
-		    width: 79px;
-		    position: relative;
-		    left: 26px;
-		    top: -3px;
-		}
-		.framenine {
-	        width: 201px;
-    		height: 181px;
-		    left: 14px;
-		    top: 47px;
-		}
-		.framenine img{
-			top: 11px;
-		}
-		.frame9{
-			width: 201px;
-    		height: 181px;
-		    left: 14px;
-		    top: 47px;
-		}
-		.frame10{
-			left: 42px;
-		    top: 42px;
-		    width: 216px;
-		    height: 190px;
-		}
-		.frameten {
-			left: 42px;
-		    top: 42px;
-		    width: 216px;
-		    height: 190px;
-		}
-		.frameten img {
-		    width: 81%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 8px;   
-		}
-		.text12{
-		   	left: 14px;
-		    top: 65px;
-		    width: 192px;
-		}
-		.texttwelve {
-		   	left: 14px;
-		    top: 65px;
-		    width: 192px;
-		}
-		.text13 {
-		    width: 152px;
-		    position: relative;
-		    left: 24px;
-		    top: 32px;
-		}
-		.textthirteen {
-		    width: 152px;
-		    position: relative;
-		    left: 24px;
-		    top: 32px;
-		}
-		.balloon4 {
-		    width: 45px;
-		    height: 57px;
-		    left: 156px;
-    		top: -25px;
-		}
-
 }
-
 
 /*769-992ipad   动画前+动画后*/
-@media screen and (min-width:768px) and (max-width:1928px){
+@media screen and (min-width:768px) and (max-width:1024px){
+	 
+		html {
+			font-size: 20px;
+		}
+	
 	 /*页面居中*/
 		.page1-upper,.page1-center,.page1-lower,.page2-upper,.page2-center,.page2-lower,.page3-upper,.page3-center,.page3-lower,.page4-upper,.page4-center,.page4-lower,.page5-upper,.page5-center,.page5-lower{
-			justify-content: center;
+			/*justify-content: flex-end;*/
+			margin: 0 auto;
 		}
-
-		/*page1*/
-		.Lballoon {
-		    width: 39px;
-		    height: 45px;
-		    transform: rotate(-25deg);
-		    position: relative;
-		    left: 71px;
-		    top: 12px;
+		.page1-lower{
+			margin: 0 0 0 10.75rem;
 		}
-		.frameone {
-		    width: 223px;
-		    height: 201px;
-		    left: 17px;
-		}	
-		.textone {
-		    width: 181px;
-		    /*height: 107px;*/
-		    position: relative;
-		    top: 80px;
-		    left: 13px;
+		.page2-lower,.page2-upper{
+			margin: 0 0 0 6.75rem;
 		}
-		.frame1 {
-		    width: 223px;
-		    height: 201px;
-		    left: 17px;
+		.page3-lower{
+			margin: 0 0 0 9.75rem;
 		}
-		.text1 {
-		    width: 181px;
-		    /*height: 107px;*/
-		    position: relative;
-		    top: 80px;
-		    left: 13px;
+		.page3-upper,.page4-lower{
+			margin: 0 0 0 6.75rem;
 		}
-		.textthree {
-		    width: 179px;
-		    /*height: 138px;*/
-		    position: relative;
-		    top: 14px;
+		.page4-upper{
+			margin: 0 0 0 6.75rem;
 		}
-		.text3 {
-		   width: 179px;
-		   /*height: 138px;*/
-		   position: relative;
-		   top: 14px;
+		.page4-center{
+			margin: 0 0 0 6.75rem;
 		}
-		.frametwo {
-		    width: 213px;
-		    height: 209px;
-		    bottom: 26px;
+		.page5-lower{
+			margin: 0 0 0 9.75rem;
 		}
-		.frame2 {
-		    width: 213px;
-		    height: 209px;
-		    bottom: 26px;
-		}
-		.frametwo img {
-		    top: 11px;
-		}
-		.stars {
-		    width: 32px;
-		    position: relative;
-		    left: 141px;
-		}
-		.balloon {
-		    width: 56px;
-		    height: 69px;
-		    transform: rotate(10deg);
-		    position: relative;
-		    left: 186px;
-		}
-		.baby {
-			opacity: 0;
-			width: 242px;
-		}
-		.marchbaby {
-		    width: 242px;
-		    height: 276px;
-		    position: relative;
-		    bottom: 98px;
-		}
-		.cloud {
-		    width: 57px;
-		    /*height: 30px;*/
-		    position: relative;
-		    top: 82px;
-		    left: 33px;
-		}
-		.Map {
-		    width: 86px;
-		    /*height: 73px;*/
-		    position: relative;
-		    top: 111px;
-		    left: 52px;
-		}
-
-
-		/*   page2   */
-		.Bird {
-		    width: 84px;
-		    height: 50px;
-		    position: relative;
-		    top: 85px;
-		    left: 26px;
-		}
-		.text4 {
-		    width: 195px;
-		    left: 28px;
-		    top: 18px;
-		}
-		.textfour {
-		    width: 195px;
-		    position: relative;
-		    left: 28px;
-		    top: 18px;
-		}
-		.aircraft {
-		    width: 156px;
-		    position: relative;
-		    left: 7px;
-		    top: 15px;
-		}
-		.textfive {
-		    width: 148px;
-		    position: relative;
-		    left: -10px;
-		    top: -22px;
-		}
-		.text5 {
-		    width: 148px;
-		    position: relative;
-		    left: -10px;
-		    top: -22px;
-		}
-		.cloud2 {
-		    width: 56px;
-		    position: relative;
-		    left: 150px;
-	    	top: -33px;
-		}
-		.framethree {
-		    width: 237px;
-		    height: 218px;
-		    transform: rotate(24deg);
-		    position: relative;
-		    left: 13px;
-		    bottom: 45px;
-		}
-		.frame3 {
-		    width: 237px;
-		    height: 218px;
-		    transform: rotate(24deg);
-		    position: relative;
-		    left: 13px;
-		    bottom: 45px;
-		}
-		.framefour {
-		    width: 214px;
-	    	height: 190px;
-		    transform: rotate(-6deg);
-		    position: relative;
-		    left: 14px;
-	    	top: -21px;
-		}
-		.frame4 {
-		    width: 214px;
-	    	height: 190px;
-		    transform: rotate(-6deg);
-		    position: relative;
-		    left: 14px;
-	    	top: -21px;
-		}
-		.framefour img{
-			width: 81%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 39px;
-		    left: 20px;
-		}
-		.frame4 img{
-			opacity: 0;
-			/*width: 83%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 33px;
-		    left: 14px;*/
-		}
-		.glasses {
-		    width: 64px;
-		    position: relative;
-		    left: 168px;
-		}
-		.marchthree {
-			width: 268px;
-		    position: relative;
-		    left: 10px;
-		    top: -32px;
-		}
-
-		/*   page3   */
-		.Bird2 {
-		    width: 72px;
-	    	top: 58px;
-	    	left: 34px;
-		}
-		.framefive {
-		    width: 243px;
-		    height: 219px;
-		    position: relative;
-		    left: 5px;
-		    top: 54px;
-		}
-		.framefive img{
-			position: relative;
-			top:9px;
-		}
-		.frame5 {
-		    width: 243px;
-		    height: 219px;
-		    position: relative;
-		    left: 5px;
-		    top: 54px;
-		}
-		.frame5 img{
-			position: relative;
-			top: 9px;
-		}
-		.cloud3 {
-		    width: 59px;
-		    /*height: 31px;*/
-		    position: relative;
-		    top: 76px;
-		}
-		.Bird3 {
-		    width: 64px;
-		    /* height: 39px; */
-		    position: relative;
-		    top: 54px;
-		    left: 124px;
-		}
-		.textsix {
-		    width: 197px;
-		    /*height: 109px;*/
-		    position: relative;
-		    top: 28px;
-		}
-		.text6 {
-		    width: 225px;
-		    position: relative;
-		    left: 5px;
-		    top: 66px;
-		}
-		.textseven {
-		    width: 225px;
-		    position: relative;
-		    left: 5px;
-		    top: 66px;
-		}
-		.text7 {
-		    width: 185px;
-		    /*height: 178px;*/
-		    position: relative;
-		    left: 5px;
-		    top: 38px;
-		}
-		.framesix {
-		    width: 242px;
-		    height: 226px;
-		    position: relative;
-		    /*bottom: -67px;*/
-		    left: 8px;
-		}
-		.frame6 {
-		    width: 242px;
-		    height: 226px;
-		    position: relative;
-		    /*bottom: -67px;*/
-		    left: 8px;
-		}
-		.balloon3 {
-		    width: 49px;
-		    height: 61px;
-		    position: relative;
-		    left: 116px;
-		    bottom: 7px;
-		}
-		.marcheight {
-		    width: 296px;
-		    /*height: 324px;*/
-		    position: relative;
-		    right: 185px;
-		    bottom: 31px;
-		}
-		.marcheight img {
-		    right: 19px;
+		.page5-center,.page5-upper{
+			margin: 0 0 0 6.75rem;
 		}
 		.cloud4 {
-		    width: 55px;
-		    /*height: 29px;*/
-		    position: relative;
-		    top: 34px;
-	    	left: 157px;
+		    left: 6.6rem;
+		    top: 5.125rem;
 		}
-		.texteight {
-		    width: 175px;
-		    /*height: 120px;*/
-		    position: relative;
-		    top: 73px;
-	    	right: 98px;
-		}
-		.text8 {
-		    width: 175px;
-		    /*height: 120px;*/
-		    position: relative;
-		    top: 67px;
-		    right: 158px;
+		.texteight, .text8 {
+		    margin: 6.125rem 0 0 -5rem;
 		}
 		.Stars2 {
-		    width: 41px;
-		    position: relative;
-		    left: 29px;
-		    top: 74px;
+		    left: 19.5rem;
+		    top: 14.1875rem;
 		}
-
-
-		/*   page4   */
-		.Bicycle {
-		    width: 101px;
-		    /*height: 65px;*/
-		    top: 41px;
-		    left: 36px;
+		.cloud3 {
+		    right: 2.625rem;
 		}
-		.textnine {
-		    width: 191px;
-		    position: relative;
-		    top: 65px;
+		.textsix, .text6 {
+		    margin: 8rem 0 0 0.8125rem;
 		}
-		.text9 {
-		    width: 191px;
-		    position: relative;
-		    top: 65px;
-		}
-		.frameseven {
-		    width: 243px;
-		    height: 225px;
-		    position: relative;
-		    left: 17px;
-		    bottom: -25px;
-		}
-		.frame7 {
-		    width: 243px;
-		    height: 225px;
-		    position: relative;
-		    left: 17px;
-		    bottom: -25px;
-		}
-		.Bird4 {
-		    width: 70px;
-		    /*height: 31px;*/
-		    position: relative;
-		    top: 45px;
-		    left: 158px;
-		}
-		.frameeight {
-		    width: 236px;
-		    height: 216px;
-		    position: relative;
-		    top: 16px;
-		}
-		.frameeight img{
-			top: 11px;
-		}
-		.frame8 {
-		    width: 236px;
-		    height: 216px;
-		    position: relative;
-		    top: 16px;
-		}
-		.tra {
-		    width: 97px;
-		}
-		.textten {
-		    width: 231px;
-		    position: relative;
-		    left: 32px;
-		    bottom: 24px;
-		}
-		.text10 {
-		    width: 231px;
-		    position: relative;
-		    left: 32px;
-		    bottom: 24px;
-		}
-		.Stars3 {
-		    width: 43px;
-		    position: relative;
-		    left: 13px;
-		    bottom: 0px;
-		}
-		.texteleven {
-		    width: 222px;
-		    /*height: 135px;*/
-			position: relative;	
-		    left: 50px;
-		    top: 55px;
-		}
-		.text11 {
-		    width: 222px;
-		    /*height: 135px;*/
-			position: relative;	
-		    left: 50px;
-		    top: 55px;
-		}
-		.car {
-		    width: 64px;
-		    position: relative;
-		    left: 60px;
-	    	top: 66px;
-		}
-		.marchten {
-		    height: 342px;
-		    position: relative;
-		    top: 27px;
-		    /*left: 0;*/
-		}
-		.marchten img {
-		    right: -82px;
-		}
-
-
-		/*   page5   */
-		.Bird5 {
-		    width: 70px;
-		    position: relative;
-		    top: 46px;
-		    left: 42px;
-		}
-		.camera {
-		    width: 87px;
-		    position: relative;
-		    top: 53px;
-		    left: 9px;
-		}
-		.Twelve{
-			opacity: 0;
-			width: 39px;
-		}
-		.marchTwelve {
-		    width: 309px;
-		    position: relative;
-		    top: -44px;
-		}
-		.marchTwelve img{
-			width: 100%;
-		}
-		.textfourteen {
-		    width: 199px;
-		    position: relative;
-		    top: -13px;
-		    left: -78px;
-		}
-		.text14 {
-		    width: 199px;
-		    position: relative;
-		    top: -13px;
-		    left: -78px;
-		}
-		.book {
-		    width: 87px;
-		    position: relative;
-		    left: 49px;
-		    top: -8px;
-		}
-		.framenine {
-	        width: 195px;
-		    height: 165px;
-		    left: 14px;
-		    top: 47px;
-		}
-		.framenine img{
-			top: 13px;
-		}
-		.frame9{
-			width: 195px;
-		    height: 165px;
-		    left: 14px;
-		    top: 47px;
-		}
-		.frame10{
-			left: 42px;
-		    top: 29px;
-		    width: 246px;
-		    height: 229px;
-		}
-		.frameten {
-			left: 42px;
-		    top: 29px;
-		    width: 246px;
-		    height: 229px;
-		}
-		.frameten img {
-		    width: 81%;
-		    transform: rotate(-10deg);
-		    position: relative;
-		    top: 8px;   
-		}
-		.text12{
-		   	left: 14px;
-		    top: 65px;
-		    width: 231px;
-		}
-		.texttwelve {
-		   	left: 14px;
-		    top: 65px;
-		    width: 231px;
-		}
-		.text13 {
-		    width: 211px;
-		    position: relative;
-		    left: -4px;
-		    top: 32px;
-		}
-		.textthirteen {
-		    width: 211px;
-		    position: relative;
-		    left: -4px;
-		    top: 32px;
-		}
-		.balloon4 {
-		    width: 45px;
-		    height: 57px;
-		    left: 173px;
-	    	top: -2px;
-		}
+		
 }
+/*媒体查询以上*/
+

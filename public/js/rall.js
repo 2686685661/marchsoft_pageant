@@ -67,9 +67,9 @@ window.onload=function(){
 	gift_button.onclick = function(){
 		Area();
 	}
-	gift_button2.onclick = function(){
-		Area();
-	}
+	// gift_button2.onclick = function(){
+	// 	Area();
+	// }
 	var gift_Arr = new Array();
 	function Area(){
 		gift_list = document.getElementsByTagName("figure");
@@ -220,13 +220,13 @@ window.onload=function(){
 	comment();
 	function comment(){
 		setTimeout(function(){
-    		$("#p1").text("王琦1：三月生日快乐");
+    		$("#p1").text("尤奇勤：生日快乐");
     	},0);
     	setTimeout(function(){
-    		$("#p2").text("王琦2：三月生日快乐");
+    		$("#p2").text("巩一杰：生日快乐");
     	},1000);
     	setTimeout(function(){
-    		$("#p3").text("王琦3：三月生日快乐");
+    		$("#p3").text("徐红：生日快乐");
     	},1000);
     	setTimeout(function(){
     		
@@ -499,18 +499,23 @@ window.onload=function(){
 				if(res.err_msg == "get_brand_wcpay_request:ok" ) {
 					updateOrder(result.payId);
 					for (var i = 0; i < gifts_jilv.length; i++) {
-						json[count+2+i].gift = gifts_jilv[i].name;
-						json[count+2+i].imgs = gifts_jilv[i].imgs;
-						json[count+2+i].bless = gifts_jilv[i].bless;
+						if (json.length>=count+4+i) {
+							json[count+4+i].gift = gifts_jilv[i].name;
+							json[count+4+i].imgs = gifts_jilv[i].imgs;
+							json[count+4+i].bless = gifts_jilv[i].bless;
+						}else{
+							json[0+i].gift = gifts_jilv[i].name;
+							json[0+i].imgs = gifts_jilv[i].imgs;
+							json[0+i].bless = gifts_jilv[i].bless;
+						};
 					};
-					
 				}     // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。 
 			}
 		); 
 	}
 	//点击支付的时候存放赠送人及礼物，并完成支付
 	pay.onclick = function(){
-		var name = $("#input3").val();
+		var name = $("#input3").val().trim();
 		if (name=="") {
 			layui.use(['layer', 'form'], function(){
 				var layer = layui.layer,

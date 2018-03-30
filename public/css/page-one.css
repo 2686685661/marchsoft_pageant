@@ -1,3 +1,6 @@
+.top p{
+	margin: -15px 0 0 71px !important;
+}
 .animation-one .yan-one img{
 	margin: -100px 0 0 10%;
 }
@@ -80,6 +83,28 @@
 	width: 400px;
 	margin: 180px auto 0 auto;
 	opacity: 0;
+}
+.list{
+	position: relative;
+}
+.mores{
+    position: absolute;
+    top: 60.5%;
+    right: 25%;
+    opacity: 0;
+}
+.more{
+	transition: 3s;
+    position: absolute;
+   	top: 60.5%;
+    right: 25%;
+    opacity: 1;
+}
+.mores img{
+	width: 200px !important; 
+}
+.more img{
+    width: 200px !important; 
 }
 .list img{
 	width: 400px;
@@ -177,16 +202,6 @@
 	top: 20px;
 	left: 0;
 }
-.gift-two{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    left: 0px;
-	position: absolute;
-	top: 20px;
-	left: 30px;
-}
 figure{
     width: 100px;
     margin: 6px 10px;
@@ -209,20 +224,10 @@ figure figcaption{
     top: 80%;
     left: 32%;
 }
-.give2{
-    position: absolute;
-    top: 80%;
-    left: 32%;
-}
 .give img{
 	width: 100px;
     margin: 15px 10px;
     cursor: pointer;
-    text-align: center;
-}
-.give2 img{
-	width: 100px;
-    margin: 15px 10px;
     text-align: center;
 }
 /*感谢页面*/
@@ -343,6 +348,36 @@ figure figcaption{
 }
 
 /*//*/
+@media screen and (max-width:320px){
+	.top p {
+	    margin: -34px 0 0 71px !important;
+	    z-index: 100;
+	}
+	.mores {
+        top: 62%;
+    	right: 20%;
+	}
+	.more {
+        top: 62%;
+    	right: 20%;
+	}
+	.background .back {
+	    width: 290px;
+	    margin: 0px 0 0 -5%;
+	}
+	.list img{
+		width: 363px;
+	    margin: 13% auto 0 -20px;
+	}
+	.pays img{
+		width: 100px;
+	    margin: -23px 0 0 10%;
+	}
+	.pay img{
+		width: 100px;
+	    margin: -23px 0 0 10%;
+	}
+}
 @media screen and (max-width:360px){ 
 	.animation-one .yan-one img{
 		width: 55px;
@@ -373,6 +408,7 @@ figure figcaption{
 	}
 	.lists img{
 		width: 363px;
+	 	margin: 13% auto 0 -20px;
 	}
 	.list img{
 		width: 363px;
@@ -399,8 +435,16 @@ figure figcaption{
     	cursor: pointer;
     	margin: 43px 0 0 0;
 	}
+	.gift{
+		left: 12px;
+    	width: 246px;
+    	top: 23px;
+	}
+	.give {
+		left: 27%;
+	}
 } 
-@media screen and (min-width:320px) and (max-width:360px){
+@media screen and (min-width:321px) and (max-width:360px){
 	#ewmsrc {
 	    margin: 20px 0 0 -16px;
 	}
@@ -474,21 +518,12 @@ figure figcaption{
     	margin: -66px 0 0 12%;
 	}
 	.gift{
-		top: -24px;
+    	width: 265px;
     	left: 36px;
-    	width: 228px;
+    	top: -28px;
 	}
 	.gift figure{
 		width: 90px;
-		/*margin: 5px 10px;*/
-	}
-	.gift-two{
-	    top: -30px;
-    	left: 38px;
-    	width: 280px;
-	}
-	.gift-two figure{
-		width: 85px;
 	}
 	figure figcaption{
 		font-size: 10px;
@@ -500,23 +535,13 @@ figure figcaption{
 	    margin: -6px 10px;
         width: 78px;
 	}
-	.give2 img{
-	    margin: -6px 10px;
-        width: 78px;
-	}
 	.give{
 	    position: absolute;
         top: 87%;
     	left: 39%;
 	}
-	.give2{
-	    position: absolute;
-	    top: 87%;
-    	left: 50%;
-	}
-
 }
-@media screen and (min-width:360px) and (max-width:375px){
+@media screen and (min-width:360px) and (max-width:374px){
 	.banner{
 	    top: 45px;
 	}
@@ -536,55 +561,39 @@ figure figcaption{
 	    width: 310px;
 	    margin: -44px 0 0 -2%;
 	}
-	.gift-two{
-		top: 3%;
-    	left: 2%;
-    	width: 318px;
-	}
-	.gift-two img{
-		width: 100px;
-	}
-	.gift-two figure{
-		/*margin: 10px 10px;*/
-	}
 	.give img{
 		width: 100px;
 		margin: 17px 10px;
-	}
-	.give2 img{
-		width: 100px;
-		margin: 6px 10px;
 	}
 	.give{
 		margin: 0;
 	}
 	.gift{
-		left: 12px;
-    	width: 250px;
-    	top: 22px;
+		left: 18px;
+    	width: 274px;
+    	top: 41px;
 	}
 	.gift figure{
 		width: 93px;
 	}
-	.gift-two{
-	    top: 5%;
-	}
-	.gift-two figure {
-   	 	/*margin: 17px 10px;*/
-   	 	width: 96px;
-	}
 	.give{
 	    position: absolute;
-        top: 76%;
-    	left: 29%;
-	}
-	.give2{
-	    position: absolute;
-        top: 81%;
-    	left: 40%;
+        top: 79%;
+    	left: 36%;
 	}
 }
 @media screen and (min-width:375px) and (max-width:412px){  
+	.top p {
+	    margin: -17px 0 0 85px !important;
+	}
+	.mores{
+        top: 62%;
+    	right: 25%;
+	}
+	.more {
+        top: 62%;
+    	right: 25%;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}
@@ -651,23 +660,28 @@ figure figcaption{
        	margin: -44px 0 0 -9%;
     	width: 330px;
 	}
-	.gift-two{
-		top: 4%;
-		left: 7%;
-		width: 267px;
-	}	
+	.gift{
+		left: 6px;
+		top: 37px;
+	}
 	.give{
 	    position: absolute;
-	    top: 80%;
-        left: 26%;
-	}
-	.give2{
-	    position: absolute;
-	    top: 80%;
-        left: 34%;
+        top: 79%;
+    	left: 31%;
 	}
 }
 @media screen and (min-width:412px) and (max-width:736px){  
+	.top p {
+	    margin: -22px 0 0 95px !important;
+	}
+	.mores{
+	    top: 64.5%;
+    	right: 26%;
+	}
+	.more{
+       	top: 64.5%;
+    	right: 26%;
+	}
 	#ewmsrc {
 	   margin: -30px 0 0 45px;
 	}
@@ -698,7 +712,6 @@ figure figcaption{
 	}
 	#ewmsrc{
 		width: 264px;
-		
 	}
 	.close1{
 	    height: 66px;
@@ -710,7 +723,9 @@ figure figcaption{
     	margin: -38px 0 0 -12%;
 	}
 	.gift{
-		top: 36px;
+	    top: 43px;
+		width: 265px;
+		left: 12px;
 	}
 	.gift figure{
 		width: 110px;
@@ -718,30 +733,22 @@ figure figcaption{
 	.gift-two figure{
 		width: 110px;
 	}
-	.gift-two{
-	    top: 7%;
-    	left: 2%;
-    	width: 312px;
-	}
-	.gift-two img{
-		width: 110px;
-	}
 	.give{
-		left: 27%;
-	}
-	.give2{
-	    position: absolute;
-	    top: 80%;
-    	left: 38%;
+	    left: 31%;
 	}
 	.give img{
 		width: 100px;
 	}
-	.give2 img{
-		width: 100px;
-	}
 }
 @media screen and (min-width:414px) and (max-width:736px){
+	.mores{
+	    top: 63.5%;
+    	right: 28%;
+	}
+	.more {
+	    top: 63.5%;
+    	right: 28%;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 48px;
 	}
@@ -757,6 +764,17 @@ figure figcaption{
 	}
 }
 @media screen and (min-width:768px) and (max-width:1024px){
+	.mores {
+       	top: 74.5%;
+		right: 38%;
+	}
+	.more {
+       	top: 74.5%;
+		right: 38%;
+	}
+	.more img {
+	    width: 282px;
+	}
 	#ewmsrc {
 	    margin: -29px 0 0 20px;
 	}
@@ -818,10 +836,7 @@ figure figcaption{
     	padding: 5px;
 	}
 	.gift{
-	    right: 51px;
+	    right: 36px;
+        top: 50px;
 	}
-	.gift-two{
-		left: 0;
-	}
-
 }

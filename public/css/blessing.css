@@ -475,6 +475,9 @@ body,div,p{
 		transform: translateY(0px);
 	}
 }
+/*.blessing{
+	overflow-x:hidden; 
+}*/
 .blessing,.blessing_glass{
 	display: none;
 	position: absolute;
@@ -546,18 +549,26 @@ body,div,p{
 	width: 63%;
 }
 .blessing_message{
-	width: 200%;
-	display: flex;
-	justify-content:center;
+	width: 100%;
+	/*display: flex;*/
+	/*justify-content:center;*/
 	overflow: hidden;
 	margin: 7px 0;
 }
 .blessing_message_large{
-	display: flex;
+	width: 100%;
+	/*display: flex;
+	display: -webkit-flex;
 	flex-wrap:wrap;
+	-webkit-flex-wrap:wrap;
 	justify-content:center;
+	-webkit-justify-content: center;*/
+	overflow: hidden;
 	position: relative;
 	left: 0px;
+}
+.blessing_message_large div {
+	display: inline-block;
 }
 .message_large_one{
 	width: 48px;
@@ -592,6 +603,7 @@ body,div,p{
 .button{
 	display: flex;
 	justify-content:center;
+	display: none;
 }
 #graduate{
 	color: red;
