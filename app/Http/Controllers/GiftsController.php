@@ -227,9 +227,10 @@ class GiftsController extends Controller
         $all = $request->all();
         if(array_key_exists('trade',$all) && $all['trade'] != '') {
             $find_order = orders::find_order_trade($all['trade']);
+            
             foreach($find_order as $key => $value) {
                 if($key == 'gifts_id' && (strpos($value,',') > 0)) {
-                    $order->$key = explode(',',$value);
+                    $find_order->$key = explode(',',$value);
                 }
                 else continue;
                 
