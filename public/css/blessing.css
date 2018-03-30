@@ -550,12 +550,13 @@ body,div,p{
 }
 .blessing_message{
 	width: 100%;
-	display: flex;
-	justify-content:center;
+	/*display: flex;*/
+	/*justify-content:center;*/
 	overflow: hidden;
 	margin: 7px 0;
 }
 .blessing_message_large{
+	width: 100%;
 	display: flex;
 	flex-wrap:wrap;
 	justify-content:center;
