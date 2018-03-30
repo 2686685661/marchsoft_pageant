@@ -396,9 +396,9 @@ p.title { position: relative; top: 35%; font: 700 40px "Microsoft Yahei"; color:
 				<div class="blessing_message_large" id="blessing_message_large1">
 					
 				</div>
-				<div class="blessing_message_large" id="blessing_message_large2">
+				<!-- <div class="blessing_message_large" id="blessing_message_large2">
 					
-				</div>
+				</div> -->
 			</div>
 			<div class="button">
 				<button id="graduate">毕业生</button>
